@@ -1,0 +1,248 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Apple Shop</title>
+
+    <link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+    <link href='https://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+
+    {% block head_js %}{% endblock head_js %}
+</head>
+
+<body>
+    <!-- Fixed masthead -->
+    <nav class="navbar navbar-masthead navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button id="menubutton" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><span id="brandicon" class="glyphicon glyphicon-apple"></span> The Apple Shop</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right desktop-navbar">
+                    <li>
+                        {% if app_path == "/" %}
+                        <a href="{% url 'index' %}"><i class="fa fa-home active-app"></i></a>
+                        {% else %}
+                        <a href="{% url 'index' %}"><i class="fa fa-home"></i></a>
+                        {% endif %}
+                    </li>
+                    <li>
+                        {% if "product" in app_path %}
+                        <a href="{% url 'products' %}"><span class="glyphicon glyphicon-apple active-app"></span></a>
+                        {% else %}
+                        <a href="{% url 'products' %}"><span class="glyphicon glyphicon-apple"></span></a>
+                        {% endif %}
+                    </li>
+                    <li>
+                        {% if "review" in app_path %}
+                        <a href="{% url 'get_reviews' %}"><i class="fa fa-comment active-app"></i></a>
+                        {% else %}
+                        <a href="{% url 'get_reviews' %}"><i class="fa fa-comment"></i></a>
+                        {% endif %}
+                    </li>
+                    <li>
+                        {% if "wishlist" in app_path %}
+                        <a href="{% url 'view_wishlist' %}"><i class="fa fa-star active-app"></i>
+                            {% else %}
+                            <a href="{% url 'view_wishlist' %}"><i class="fa fa-star"></i>
+                                {% endif %}
+                                {%if wishlist_count > 0 %}
+                                <label class="badge badge-warning"><b>{{ wishlist_count }}</b></label>
+                                {% endif %}
+                            </a>
+                    </li>
+                    {% if user.is_authenticated %}
+                    <li>
+                        {% if "profile" in app_path %}
+                        <a href="{% url 'profile' %}"><i class="fa fa-user active-app"></i></a>
+                        {% else %}
+                        <a href="{% url 'profile' %}"><i class="fa fa-user"></i></a>
+                        {% endif %}
+                    </li>
+                    <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i></a></li>
+                    {%  else %}
+                    <li>
+                        {% if "register" in app_path %}
+                        <a href="{% url 'registration' %}"><i class="fa fa-user-plus active-app"></i></a>
+                        {%  else %}
+                        <a href="{% url 'registration' %}"><i class="fa fa-user-plus"></i></a>
+                        {% endif %}
+                    </li>
+                    <li>
+                        {% if "login" in app_path %}
+                        <a href="{% url 'login' %}"><i class="fa fa-sign-in active-app"></i></a>
+                        {%  else %}
+                        <a href="{% url 'login' %}"><i class="fa fa-sign-in"></i></a>
+                        {% endif %}
+                    </li>
+                    {% endif %}
+                    <li>
+                        {% if "cart" in app_path %}
+                        <a href="{% url 'view_cart' %}"><i class="fa fa-shopping-cart active-app"></i>
+                            {% else %}
+                            <a href="{% url 'view_cart' %}"><i class="fa fa-shopping-cart"></i>
+                                {% endif %}
+                                {%if product_count > 0 %}
+                                <label class="badge badge-warning"><b>{{ product_count }}</b></label>
+                                {% endif %}
+                            </a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right mobile-navbar">
+                    <li>
+                        {% if app_path == "/" %}
+                        <a href="{% url 'index' %}"><i class="fa fa-home active-app"></i> Topsellers</a>
+                        {% else %}
+                        <a href="{% url 'index' %}"><i class="fa fa-home"></i> Topsellers</a>
+                        {% endif %}
+                    </li>
+                    <li>
+                        {% if "product" in app_path %}
+                        <a href="{% url 'products' %}"><span class="glyphicon glyphicon-apple active-app"></span> Products</a>
+                        {% else %}
+                        <a href="{% url 'products' %}"><span class="glyphicon glyphicon-apple"></span> Products</a>
+                        {% endif %}
+                    </li>
+                    <li>
+                        {% if "review" in app_path %}
+                        <a href="{% url 'get_reviews' %}"><i class="fa fa-comment active-app"></i> Reviews</a>
+                        {% else %}
+                        <a href="{% url 'get_reviews' %}"><i class="fa fa-comment"></i> Reviews</a>
+                        {% endif %}
+                    </li>
+                    <li>
+                        {% if "wishlist" in app_path %}
+                        <a href="{% url 'view_wishlist' %}"><i class="fa fa-star active-app"></i> Wishlist
+                            {% else %}
+                            <a href="{% url 'view_wishlist' %}"><i class="fa fa-star"></i> Wishlist
+                                {% endif %}
+                                {%if wishlist_count > 0 %}
+                                <label class="badge badge-warning"><b>{{ wishlist_count }}</b></label>
+                                {% endif %}
+                            </a>
+                    </li>
+                    {% if user.is_authenticated %}
+                    <li>
+                        {% if "profile" in app_path %}
+                        <a href="{% url 'profile' %}"><i class="fa fa-user active-app"></i> Profile</a>
+                        {% else %}
+                        <a href="{% url 'profile' %}"><i class="fa fa-user"></i> Profile</a>
+                        {% endif %}
+                    </li>
+                    <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> Log Out</a></li>
+                    {%  else %}
+                    <li>
+                        {% if "register" in app_path %}
+                        <a href="{% url 'registration' %}"><i class="fa fa-user-plus active-app"></i> Register</a>
+                        {%  else %}
+                        <a href="{% url 'registration' %}"><i class="fa fa-user-plus"></i> Register</a>
+                        {% endif %}
+                    </li>
+                    <li>
+                        {% if "login" in app_path %}
+                        <a href="{% url 'login' %}"><i class="fa fa-sign-in active-app"></i> Log In</a>
+                        {%  else %}
+                        <a href="{% url 'login' %}"><i class="fa fa-sign-in"></i> Log In</a>
+                        {% endif %}
+                    </li>
+                    {% endif %}
+                    <li>
+                        {% if "cart" in app_path %}
+                        <a href="{% url 'view_cart' %}"><i class="fa fa-shopping-cart active-app"></i> Cart
+                            {% else %}
+                            <a href="{% url 'view_cart' %}"><i class="fa fa-shopping-cart"></i> Cart
+                                {% endif %}
+                                {%if product_count > 0 %}
+                                <label class="badge badge-warning"><b>{{ product_count }}</b></label>
+                                {% endif %}
+                            </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    {% if messages %}
+    <div class="alert alert-success">
+        <div class="messages">
+            {% for message in messages %}
+            {{ message }}
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+    <div class="container">
+
+        {% block content %}{% endblock %}
+    </div>
+    <nav class="navbar navbar-masthead navbar-default navbar-fixed-bottom" id="bottomnavbar">
+        <div class="container">
+            <div class="navbar-header">
+                <ul class="nav navbar-nav navbar-right" id="bottombar">
+                    <li class="quicklinks">
+                        {% if app_path == "/" %}
+                        <a href="{% url 'index' %}"><i class="fa fa-home active-app"></i></a>
+                        {% else %}
+                        <a href="{% url 'index' %}"><i class="fa fa-home"></i></a>
+                        {% endif %}
+                    </li>
+                    <li class="quicklinks">
+                        {% if "product" in app_path %}
+                        <a href="{% url 'products' %}"><span class="glyphicon glyphicon-apple products-icon active-app"></a>
+                        {% else %}
+                        <a href="{% url 'products' %}"><span class="glyphicon glyphicon-apple products-icon"></a>
+                        {% endif %}
+                    </li>
+                    <li class="quicklinks">
+                        {% if "wishlist" in app_path %}
+                        <a href="{% url 'view_wishlist' %}"><i class="fa fa-star active-app"></i>
+                            {% else %}
+                            <a href="{% url 'view_wishlist' %}"><i class="fa fa-star"></i>
+                                {% endif %}
+                                {%if wishlist_count > 0 %}
+                                <label class="badge badge-warning">{{ wishlist_count }}</label>
+                                {% endif %}
+                            </a>
+                    </li>
+                    <li class="quicklinks">
+                        {% if "cart" in app_path %}
+                        <a href="{% url 'view_cart' %}"><i class="fa fa-shopping-cart active-app"></i>
+                            {% else %}
+                            <a href="{% url 'view_cart' %}"><i class="fa fa-shopping-cart"></i>
+                                {% endif %}
+                                {%if product_count > 0 %}
+                                <label class="badge badge-warning">{{ product_count }}</label>
+                                {% endif %}
+                            </a>
+                    </li>
+                    <li class="quicklinks">
+                        {% if "accounts" in app_path %}
+                        <a href="{% url 'profile' %}"><i class="fa fa-user active-app"></i> </a>
+                        {% else %}
+                        <a href="{% url 'profile' %}"><i class="fa fa-user"></i></a>
+                        {% endif %}
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <script src="{% static 'js/appleshop.js' %}"></script>
+</body>
+
+</html>

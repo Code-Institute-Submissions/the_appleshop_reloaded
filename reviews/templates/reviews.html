@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+{% load bootstrap_tags %}
+{% block head_js %}
+{% endblock head_js %}
+{% block content %}
+<div class="reviewsWrapper ha">
+    <div class="row row-flex">
+
+        <div class="searchFieldWrapper ha">
+            <div class="display">
+                <form action="{% url 'review_search' %}" method="GET">
+                    <input type="text" name="q">
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+
+        {% if reviews %}
+        {% for review in reviews %}
+        <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">
+            <div class="panel-body">
+                <h3 class="review-headline ha"><a href="{% url 'review_detail' review.id %}">{{ review.title }}</a></h3>
+                {% if review.image %}
+                <img src="{{ MEDIA_URL }}{{review.image}}" alt="image of {{review.product.name}} review"
+                    style="width:200px;height:150px;">
+                {% endif %}
+                <p></p>
+                <p class="product-description">{{ review.comment|truncatewords:10 }}</p>
+                <p><span class="boldtext">Published by:</span> {{ review.author }} </p>
+                <p><span class="boldtext">Published on:</span> {{ review.created_date }} </p>
+                <div class="review-quickstats">
+                    <div class="quickstats-key vh"><i class="fa fa-eye"></i></div>
+                    <div class="quickstats-value">{{ review.view_count }}</div>
+                    <div class="quickstats-key vh">Rating:</div>
+                    <div class="quickstats-value">{{review.rating }}</div>
+                </div>
+                <div id="review-btn-bar" class="ha">
+                    <a id="back-to-product-btn" href="{% url 'product_detail' review.product.id %}" class="btn">Back to
+                        {{ review.product.name }}</a>
+                    {% if user.is_authenticated and review.author.id == user.id %}
+                    <a id="edit-review-btn" href="{% url 'edit_review' review.id %}" class="btn">Edit Review</a>
+                    <div id="review-del-req-btn" class="btn" onclick="showDeletePopup()">Delete</div>
+
+                    <div id="confirmDeletePopup" class="vh">
+                        <div id="deletePopupMessage" class="ha">Delete Review?</div>
+                        <a id="deleteConfirmBtn" href="{% url 'delete_review' review.id %}" class="btn">Delete
+                            Review</a>
+                        <div id="deleteCancelBtn" class="btn" onclick="closeDeletePopup()">Cancel</div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <p>No results have been found.</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

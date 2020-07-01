@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load bootstrap_tags %}
+
+
+{% block page_title %}{{ user }}'s Profile{% endblock %}
+{% block page_heading %}{{ user }}'s Profile{% endblock %}
+
+{% block content %}
+
+<div class="profileWrapper">
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs ha" role="tablist">
+        <li role="presentation" class="active"><a class="profile-tabs" href="#address" aria-controls="address" role="tab"
+                data-toggle="tab">Address</a></li>
+        <li role="presentation"><a class="profile-tabs" href="#orders" aria-controls="orders" role="tab" data-toggle="tab">Orders</a></li>
+    </ul>
+
+    <!-- Tab panes for address details and orders -->
+    <div class="tab-content ha">
+            <!-- Tab panes for address details-->
+
+        <div role="tabpanel" class="tab-pane active tab-address" id="address">
+            {% if user_addressform.full_name.value == "" %}
+            <p>No record found, please enter your shipping address.</p>
+            {% else %}
+            <div class="ha" id="profile-shipping-label">Your current shipping address.</div>
+            {% endif %}
+            <form method="POST" action="{% url 'profile' %}">
+                {% csrf_token %}
+                {{ user_addressform | as_bootstrap }}
+                <button type="submit" class="btn btn updateAddressBtn">Update Address!</button>
+            </form>
+        </div>
+
+        <!-- Tab panes for order details-->
+        <div role="tabpanel" class="tab-pane tab-orders" id="orders">
+            <div class="order_container">
+                <div class="orderline_header">Order number</div>
+                <div class="orderline_header">Product</div>
+                <div class="orderline_header">Quantity</div>
+                <hr>
+                {% if user_orders %}
+                {% for order in user_orders %}
+                <div class="orderline_value">{{order.order}}</div>
+                <div class="orderline_value">{{order.product}}</div>
+                <div class="orderline_value">{{order.quantity}}</div>
+                {% endfor %}
+                {% else %}
+                <p>Your have not placed orders yet.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
