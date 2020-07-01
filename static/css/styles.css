@@ -41,7 +41,7 @@
   .container > .navbar-header {
     margin-left: 0;
     margin-right: 0;
-    height: 12vw;
+    height: 13vw;
   }
   .container {
     padding-left: 0;
@@ -49,6 +49,10 @@
   }
   .desktop-navbar {
     display: none;
+  }
+  .mobile-list-items {
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
   .navbar-nav {
     margin: 7.5px 0;
@@ -63,6 +67,9 @@
   }
   #menubutton {
     margin-top: 15px;
+  }
+  .alert {
+    margin-bottom: 0;
   }
   .icon-bar {
     background-color: #fff;
@@ -79,11 +86,15 @@
   .badge-warning[href] {
     background-color: #c67605;
   }
-  .productWrapper {
+  .product-image {
+    width: 50vw;
+    height: 37.5vw;
+  }
+  .product-wrapper {
     padding-bottom: 20vw;
     background-color: #9e988fcb;
   }
-  .searchFieldWrapper {
+  .search-field-wrapper {
     width: 100%;
     padding-bottom: 10vw;
   }
@@ -119,7 +130,6 @@
     background-color: cornsilk;
   }
   .product-quickstats {
-    width: 50%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -127,13 +137,13 @@
         flex-wrap: wrap;
     position: absolute;
     top: 15vw;
-    left: 50vw;
+    left: 56vw;
   }
   .quickstats-key {
-    width: 30%;
+    width: 40%;
   }
   .quickstats-value {
-    width: 68%;
+    width: 60%;
   }
   .product-stats {
     width: 50%;
@@ -150,8 +160,9 @@
     position: absolute;
     left: 88.7%;
   }
-  .addWishBtn,
-  .removeWishBtn, .addReviewBtn {
+  .add-wish-btn,
+  .remove-wish-btn,
+  .add-review-btn {
     border: none;
     background-color: transparent;
   }
@@ -211,10 +222,10 @@
     left: 88.7%;
     top: 7%;
   }
-  .addReviewBtn {
+  .add-review-btn {
     font-size: 5.5vw;
   }
-  .wishlistWrapper {
+  .wishlist-wrapper {
     padding-bottom: 25vw;
     background-color: #9e988fcb;
     min-height: 82vh;
@@ -228,14 +239,14 @@
   .wishlist-remove-Btn i {
     font-size: 5.5vw;
   }
-  .stariconNotAdded,
-  .stariconAdded {
+  .staricon-not-added,
+  .staricon-added {
     font-size: 5.5vw;
   }
-  .stariconNotAdded {
+  .staricon-not-added {
     color: #971616;
   }
-  .stariconAdded {
+  .staricon-added {
     color: green;
   }
   .product-description {
@@ -254,28 +265,25 @@
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin: 7.5px 0;
   }
   #bottombar .quicklinks {
-    width: 22vw;
+    width: 20vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    font-size: 4.5vw;
+    font-size: 7.5vw;
+    height: 20px;
+  }
+  .nav > li > a {
+    padding: 0;
   }
   .active-app {
     color: rgba(255, 0, 0, 0.5);
   }
-  .products-icon {
-    margin-bottom: 5px;
-  }
-  .profileWrapper {
+  .profile-wrapper {
     padding-bottom: 20vw;
   }
   .nav-tabs {
@@ -283,9 +291,9 @@
   }
   .form-control,
   .profile-tabs,
-  .orderline_header,
-  .orderline_value,
-  .updateAddressBtn {
+  .orderline-header,
+  .orderline-value,
+  .update-address-btn {
     font-family: "Dosis", sans-serif;
     font-size: 3.5vw;
     font-weight: 900;
@@ -299,7 +307,7 @@
   .tab-orders {
     width: 95vw;
   }
-  .order_container {
+  .order-container {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -310,8 +318,8 @@
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .orderline_header,
-  .orderline_value {
+  .orderline-header,
+  .orderline-value {
     width: 33%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -329,7 +337,7 @@
     font-family: "Dosis", sans-serif;
     font-size: 4vw;
   }
-  .updateAddressBtn {
+  .update-address-btn {
     background-color: lightblue;
   }
   .addcard-icon {
@@ -380,7 +388,7 @@
     margin-left: 5px;
     margin-right: 5px;
   }
-  #confirmDeletePopup {
+  #confirm-delete-popup {
     background-color: beige;
     border-radius: 5px;
     border: 1px solid grey;
@@ -396,17 +404,17 @@
     -webkit-transition: opacity .5s ease-in-out;
     transition: opacity .5s ease-in-out;
   }
-  #deletePopupMessage {
+  #delete-popup-message {
     width: 80%;
     font-family: "Dosis", sans-serif;
     font-size: 4vw;
   }
-  #deleteConfirmBtn {
+  #delete-confirm-btn {
     background-color: lightcoral;
     color: black;
     margin-right: 2px;
   }
-  #deleteCancelBtn {
+  #delete-cancel-btn {
     background-color: lightslategray;
     margin-left: 2px;
     font-family: "Dosis", sans-serif;
@@ -482,7 +490,7 @@
   .active-app {
     color: rgba(255, 0, 0, 0.5);
   }
-  .order_container {
+  .order-container {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -493,7 +501,7 @@
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .orderline_header, .orderline_value {
+  .orderline-header, .orderline-value {
     width: 33%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -504,9 +512,6 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  .mobile-navbar, .navbar-right {
-    display: none;
   }
 }
 /*# sourceMappingURL=styles.css.map */

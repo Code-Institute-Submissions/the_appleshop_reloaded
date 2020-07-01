@@ -7,7 +7,7 @@
 
 {% block content %}
 
-<div class="profileWrapper">
+<div class="profile-wrapper">
 
     <!-- Nav tabs -->
     <ul class="nav nav-tabs ha" role="tablist">
@@ -29,22 +29,22 @@
             <form method="POST" action="{% url 'profile' %}">
                 {% csrf_token %}
                 {{ user_addressform | as_bootstrap }}
-                <button type="submit" class="btn btn updateAddressBtn">Update Address!</button>
+                <button type="submit" class="btn btn update-address-btn">Update Address!</button>
             </form>
         </div>
 
         <!-- Tab panes for order details-->
         <div role="tabpanel" class="tab-pane tab-orders" id="orders">
-            <div class="order_container">
-                <div class="orderline_header">Order number</div>
-                <div class="orderline_header">Product</div>
-                <div class="orderline_header">Quantity</div>
+            <div class="order-container">
+                <div class="orderline-header">Order number</div>
+                <div class="orderline-header">Product</div>
+                <div class="orderline-header">Quantity</div>
                 <hr>
                 {% if user_orders %}
                 {% for order in user_orders %}
-                <div class="orderline_value">{{order.order}}</div>
-                <div class="orderline_value">{{order.product}}</div>
-                <div class="orderline_value">{{order.quantity}}</div>
+                <div class="orderline-value">{{order.order}}</div>
+                <div class="orderline-value">{{order.product}}</div>
+                <div class="orderline-value">{{order.quantity}}</div>
                 {% endfor %}
                 {% else %}
                 <p>Your have not placed orders yet.</p>

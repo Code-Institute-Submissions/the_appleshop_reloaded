@@ -70,6 +70,8 @@
         width: 95vw;
     }
 
+    // bottom navbar
+
     #bottomnavbar {
         display: none;
     }
@@ -82,21 +84,19 @@
         color: rgba(255, 0, 0, 0.5);
     }
 
-    .order_container {
+    .order-container {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
 
     }
-    .orderline_header, .orderline_value {
+    .orderline-header, .orderline-value {
         width: 33%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .mobile-navbar, .navbar-right {
-        display: none;
-    }
+   
 }

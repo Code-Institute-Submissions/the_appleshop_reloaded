@@ -1,13 +1,13 @@
 # Fullstack Django Milestone Project: The appleshop
 
 
-LIVELINK: https://the-appleshop.herokuapp.com/products/ <br>
-GITHUB: https://github.com/poldi2018/the_appleshop
+LIVELINK: https://https://the-appleshop-reloaded.herokuapp.com/ <br>
+GITHUB: https://github.com/poldi2018/the_appleshop_reloaded
 
 The Django admin panel can be accessed with following credentials.
 
 * login: admin
-* password: Test12345
+* password: Codeinstitute
 
 
 [![Build Status](https://travis-ci.org/poldi2018/the_appleshop_reloaded.svg?branch=master)](https://travis-ci.org/poldi2018/the_appleshop_reloaded)
@@ -405,9 +405,7 @@ https://YOUR_HEROKU_APP_NAME.herokuapp.com
 
 # Current issues
 
-I just saw there is no update of review_count when a new review is saved. The counter is still on zero.
-Beside this not working functionality, this shop site needs to have some improvement on
-graphical content and should be updated with future features to implement.
+This shop site could need to have some improvement on graphical content and should be updated with future features to implement.
 
 
 # Acknowledgements

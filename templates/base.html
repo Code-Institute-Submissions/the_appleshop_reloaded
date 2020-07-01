@@ -104,28 +104,28 @@
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right mobile-navbar">
-                    <li>
+                    <li class="mobile-list-items">
                         {% if app_path == "/" %}
                         <a href="{% url 'index' %}"><i class="fa fa-home active-app"></i> Topsellers</a>
                         {% else %}
                         <a href="{% url 'index' %}"><i class="fa fa-home"></i> Topsellers</a>
                         {% endif %}
                     </li>
-                    <li>
+                    <li class="mobile-list-items">
                         {% if "product" in app_path %}
                         <a href="{% url 'products' %}"><span class="glyphicon glyphicon-apple active-app"></span> Products</a>
                         {% else %}
                         <a href="{% url 'products' %}"><span class="glyphicon glyphicon-apple"></span> Products</a>
                         {% endif %}
                     </li>
-                    <li>
+                    <li class="mobile-list-items">
                         {% if "review" in app_path %}
                         <a href="{% url 'get_reviews' %}"><i class="fa fa-comment active-app"></i> Reviews</a>
                         {% else %}
                         <a href="{% url 'get_reviews' %}"><i class="fa fa-comment"></i> Reviews</a>
                         {% endif %}
                     </li>
-                    <li>
+                    <li class="mobile-list-items">
                         {% if "wishlist" in app_path %}
                         <a href="{% url 'view_wishlist' %}"><i class="fa fa-star active-app"></i> Wishlist
                             {% else %}
@@ -137,23 +137,24 @@
                             </a>
                     </li>
                     {% if user.is_authenticated %}
-                    <li>
+                    <li class="mobile-list-items">
                         {% if "profile" in app_path %}
                         <a href="{% url 'profile' %}"><i class="fa fa-user active-app"></i> Profile</a>
                         {% else %}
                         <a href="{% url 'profile' %}"><i class="fa fa-user"></i> Profile</a>
                         {% endif %}
                     </li>
-                    <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> Log Out</a></li>
-                    {%  else %}
-                    <li>
+                    <li class="mobile-list-items">
+                        <a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> Log Out</a></li>
+                    {% else %}
+                    <li class="mobile-list-items">
                         {% if "register" in app_path %}
                         <a href="{% url 'registration' %}"><i class="fa fa-user-plus active-app"></i> Register</a>
                         {%  else %}
                         <a href="{% url 'registration' %}"><i class="fa fa-user-plus"></i> Register</a>
                         {% endif %}
                     </li>
-                    <li>
+                    <li class="mobile-list-items">
                         {% if "login" in app_path %}
                         <a href="{% url 'login' %}"><i class="fa fa-sign-in active-app"></i> Log In</a>
                         {%  else %}
@@ -161,7 +162,7 @@
                         {% endif %}
                     </li>
                     {% endif %}
-                    <li>
+                    <li class="mobile-list-items">
                         {% if "cart" in app_path %}
                         <a href="{% url 'view_cart' %}"><i class="fa fa-shopping-cart active-app"></i> Cart
                             {% else %}
@@ -192,7 +193,7 @@
     </div>
     <nav class="navbar navbar-masthead navbar-default navbar-fixed-bottom" id="bottomnavbar">
         <div class="container">
-            <div class="navbar-header">
+            <div class="navbar-header navbar-header-bottombar">
                 <ul class="nav navbar-nav navbar-right" id="bottombar">
                     <li class="quicklinks">
                         {% if app_path == "/" %}

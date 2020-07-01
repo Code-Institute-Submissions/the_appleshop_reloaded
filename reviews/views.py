@@ -48,9 +48,8 @@ def create_review(request, pk):
                 review.author.id = request.user.id
                 review.product.pk = pk
                 review.name = product.name
-                print(product)
                 product.review_count+=1
-                product.save
+                product.save()
                 review.save()
                 return redirect(review_detail, review.pk)
         else:

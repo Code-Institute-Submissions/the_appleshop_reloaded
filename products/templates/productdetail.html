@@ -5,7 +5,7 @@
 {% endblock head_js %}
 {% block content %}
 
-<div class="productWrapper ha">
+<div class="product-wrapper ha">
 
     <div class="row row-flex">
         <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">
@@ -17,7 +17,7 @@
                     {% csrf_token %}
                     <span class="input-group-btn">
                         <input type="text" name="jumper" value="" hidden>
-                        <button class="removeWishBtn" type="submit"><i class="fa fa-star stariconAdded"></i></button>
+                        <button class="remove-wish-btn" type="submit"><i class="fa fa-star staricon-added"></i></button>
                     </span>
                 </form>
                 {% else %}
@@ -25,7 +25,7 @@
                     action="{% url 'add_to_wishlist' product.id %}">
                     {% csrf_token %}
                     <span class="input-group-btn">
-                        <button class="addWishBtn" type="submit"><i class="fa fa-star stariconNotAdded"></i></button>
+                        <button class="add-wish-btn" type="submit"><i class="fa fa-star staricon-not-added "></i></button>
                     </span>
                 </form>
                 {% endif %}
@@ -36,13 +36,13 @@
                     action="{% url 'new_review' product.id %}">
                     {% csrf_token %}
                     <span class="input-group-btn">
-                        <button class="addReviewBtn" type="submit"><i class="fa fa-comment"></i></button>
+                        <button class="add-review-btn" type="submit"><i class="fa fa-comment"></i></button>
                     </span>
                 </form>
                 {% endif %}
 
 
-                <img src="{{ MEDIA_URL }}{{product.image}}" alt="image of {{product.name}}"
+                <img class="product-image" src="{{ MEDIA_URL }}{{product.image}}" alt="image of {{product.name}}"
                     style="width:200px;height:150px;">
 
                 <div class="product-headline"><b>{{product.name}}</b></div>

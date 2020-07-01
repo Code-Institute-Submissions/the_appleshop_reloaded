@@ -8,15 +8,14 @@
 {% endblock head_js %}
 
 {% block content %}
-<div class="wishlistWrapper ha">
+<div class="wishlist-wrapper ha">
     <div class="row row-flex">
         {% if cart_items %}
         {% for item in cart_items %}
         <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">
             <div class="panel-body">
 
-                <img src="{{ MEDIA_URL }}{{item.product.image}}" alt="image of {{item.product.name}}"
-                    style="width:200px;height:150px;">
+                <img class="product-image" src="{{ MEDIA_URL }}{{item.product.image}}" alt="image of {{item.product.name}}">
 
                 <div class="product-quickstats">
                     <div class="quickstats-key vh"><i class="fa fa-eye"></i></div>

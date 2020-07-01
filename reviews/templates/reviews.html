@@ -7,7 +7,7 @@
 <div class="reviewsWrapper ha">
     <div class="row row-flex">
 
-        <div class="searchFieldWrapper ha">
+        <div class="search-field-wrapper ha">
             <div class="display">
                 <form action="{% url 'review_search' %}" method="GET">
                     <input type="text" name="q">
@@ -42,11 +42,11 @@
                     <a id="edit-review-btn" href="{% url 'edit_review' review.id %}" class="btn">Edit Review</a>
                     <div id="review-del-req-btn" class="btn" onclick="showDeletePopup()">Delete</div>
 
-                    <div id="confirmDeletePopup" class="vh">
-                        <div id="deletePopupMessage" class="ha">Delete Review?</div>
+                    <div id="confirm-delete-popup" class="vh">
+                        <div id="delete-popup-message" class="ha">Delete Review?</div>
                         <a id="deleteConfirmBtn" href="{% url 'delete_review' review.id %}" class="btn">Delete
                             Review</a>
-                        <div id="deleteCancelBtn" class="btn" onclick="closeDeletePopup()">Cancel</div>
+                        <div id="delete-cancel-btn" class="btn" onclick="closeDeletePopup()">Cancel</div>
                     </div>
                     {% endif %}
                 </div>

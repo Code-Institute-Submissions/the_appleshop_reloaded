@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="productWrapper ha">
+<div class="product-wrapper ha">
 
     <div class="row row-flex">
-        <div class="searchFieldWrapper ha">
+        <div class="search-field-wrapper ha">
             <div class="display">
                 <form action="{% url 'product_search' %}" method="GET">
                     <input type="text" name="q">
@@ -19,25 +19,24 @@
         <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">
             <div class="panel-body">
                 {% if product.id in wishlist %}
-                <form class="wishform" id="addwishlist{{product.id}}" method="POST"
+                <form class="wishform" method="POST"
                     action="{% url 'remove_from_wishlist' product.id %}">
                     {% csrf_token %}
                     <span class="input-group-btn">
                         <input type="text" name="jumper" value="" hidden>
-                        <button class="addWishBtn" type="submit"><i class="fa fa-star stariconAdded"></i></button>
+                        <button class="add-wish-btn" type="submit"><i class="fa fa-star staricon-added"></i></button>
                     </span>
                 </form>
                 {% else %}
-                <form class="wishform" id="addwishlist{{product.id}}" method="POST"
+                <form class="wishform" method="POST"
                     action="{% url 'add_to_wishlist' product.id %}">
                     {% csrf_token %}
                     <span class="input-group-btn">
-                        <button class="addWishBtn" type="submit"><i class="fa fa-star stariconNotAdded"></i></button>
+                        <button class="add-wish-btn" type="submit"><i class="fa fa-star staricon-not-added"></i></button>
                     </span>
                 </form>
                 {% endif %}
-                <img src="{{ MEDIA_URL }}{{product.image}}" alt="image of {{product.name}}"
-                    style="width:200px;height:150px;">
+                <img class="product-image" src="{{ MEDIA_URL }}{{product.image}}" alt="image of {{product.name}}">
 
 <div class="product-quickstats">
     <div class="quickstats-key vh"><i class="fa fa-eye"></i></div>
