@@ -10,7 +10,7 @@ The Django admin panel can be accessed with following credentials.
 * password: Test12345
 
 
-[![Build Status](https://travis-ci.org/poldi2018/the_appleshop.svg?branch=master)](https://travis-ci.org/poldi2018/the_appleshop)
+[![Build Status](https://travis-ci.org/poldi2018/the_appleshop_reloaded.svg?branch=master)](https://travis-ci.org/poldi2018/the_appleshop_reloaded)
 
 
 
