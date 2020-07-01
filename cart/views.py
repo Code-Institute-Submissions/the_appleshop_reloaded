@@ -36,6 +36,9 @@ def adjust_cart(request, id):
     Adjust the quantity of the specified product to the specified
     amount
     """
+    if not request.POST.get('quantity'):
+        messages.success(request, "Please enter a value greater than 0")
+        return redirect(reverse('view_cart'))
     quantity = int(request.POST.get('quantity'))
     cart = request.session.get('cart', {})
     if quantity > 0:
