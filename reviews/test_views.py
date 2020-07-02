@@ -56,7 +56,7 @@ class TestReviewViews(TestCase):
         response = self.client.get('/reviews/new/1', content_type="html/text",
                                    follow=True)
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, "editform.html")
+        self.assertTemplateUsed(response, "editreview.html")
         self.assertIn(b'required-field', response.content)
 
     def test_create_review_notpurchased_product_view(self):
@@ -119,7 +119,7 @@ class TestReviewViews(TestCase):
         response = self.client.get('/reviews/1/edit/',
                                    content_type="html/text", follow=True)
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, "editform.html")
+        self.assertTemplateUsed(response, "editreview.html")
         self.assertIn(b'Fantastic!', response.content)
 
     def test_edit_review_get_notloggedin_view(self):

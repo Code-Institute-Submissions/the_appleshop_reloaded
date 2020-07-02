@@ -33,15 +33,118 @@
 }
 
 @media screen and (max-width: 414px) and (max-height: 823px) and (orientation: portrait) {
+  .login-wrapper {
+    height: 70vh;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  #loginform {
+    width: 90vw;
+  }
+  .password-reset-wrapper {
+    height: 70vh;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .accountform {
+    width: 90vw;
+    padding-top: 20px;
+  }
+  .emailfield-resetform-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+  }
+  #password-reset-label {
+    padding-right: 5px;
+    width: 30%;
+  }
+  .passwordresetform {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .cart-wrapper {
+    padding-bottom: 25vw;
+    background-color: #9e988fcb;
+    min-height: 82vh;
+  }
+  .profile-wrapper {
+    padding-bottom: 20vw;
+  }
+  .nav-tabs {
+    margin-top: 3vw;
+  }
+  .form-control,
+  .profile-tabs,
+  .orderline-header,
+  .orderline-value,
+  .update-address-btn {
+    font-family: "Dosis", sans-serif;
+    font-size: 3.5vw;
+    font-weight: 900;
+  }
+  .tab-content {
+    width: 100%;
+  }
+  .tab-address {
+    width: 80vw;
+  }
+  .tab-orders {
+    width: 95vw;
+  }
+  .order-container {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .orderline-header,
+  .orderline-value {
+    width: 33%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #profile-shipping-label {
+    padding-top: 8vw;
+    padding-bottom: 8vw;
+    font-family: "Dosis", sans-serif;
+    font-size: 4vw;
+  }
+  .update-address-btn {
+    background-color: lightblue;
+  }
   body {
     font-family: "Dosis", sans-serif;
     padding-top: 60px;
     font-size: 4vw;
   }
+  .page-headline {
+    font-family: "Dosis", sans-serif;
+    font-size: 7vw;
+  }
   .container > .navbar-header {
     margin-left: 0;
     margin-right: 0;
-    height: 13vw;
+    height: 15vw;
   }
   .container {
     padding-left: 0;
@@ -51,11 +154,12 @@
     display: none;
   }
   .mobile-list-items {
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 15px;
   }
   .navbar-nav {
-    margin: 7.5px 0;
+    margin: 14.5px 0;
   }
   #brandicon {
     color: #b61d18;
@@ -63,7 +167,7 @@
   }
   .navbar-brand {
     font-family: "Dosis", sans-serif;
-    font-size: 5vw;
+    font-size: 7vw;
   }
   #menubutton {
     margin-top: 15px;
@@ -73,18 +177,6 @@
   }
   .icon-bar {
     background-color: #fff;
-  }
-  .accountform {
-    padding-top: 20px;
-  }
-  .badge {
-    padding-left: 9px;
-    padding-right: 9px;
-    border-radius: 9px;
-  }
-  .label-warning[href],
-  .badge-warning[href] {
-    background-color: #c67605;
   }
   .product-image {
     width: 50vw;
@@ -105,9 +197,6 @@
     width: 150px;
     height: 150px;
     margin: 0 auto;
-  }
-  caption p {
-    word-wrap: break-word;
   }
   .row.row-flex {
     display: -webkit-box;
@@ -154,6 +243,12 @@
         flex-wrap: wrap;
     top: 15vw;
     left: 50vw;
+  }
+  .stats-key {
+    width: 25%;
+  }
+  .stats-value {
+    width: 60%;
   }
   .wishform {
     width: 8vw;
@@ -263,8 +358,6 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
   }
   #bottombar .quicklinks {
     width: 20vw;
@@ -277,68 +370,24 @@
     font-size: 7.5vw;
     height: 20px;
   }
+  .products-icon {
+    top: -1px;
+    font-size: 7.3vw;
+  }
   .nav > li > a {
     padding: 0;
   }
+  .badge {
+    padding-left: 9px;
+    padding-right: 9px;
+    border-radius: 9px;
+  }
+  .label-warning[href],
+  .badge-warning[href] {
+    background-color: #c67605;
+  }
   .active-app {
     color: rgba(255, 0, 0, 0.5);
-  }
-  .profile-wrapper {
-    padding-bottom: 20vw;
-  }
-  .nav-tabs {
-    margin-top: 3vw;
-  }
-  .form-control,
-  .profile-tabs,
-  .orderline-header,
-  .orderline-value,
-  .update-address-btn {
-    font-family: "Dosis", sans-serif;
-    font-size: 3.5vw;
-    font-weight: 900;
-  }
-  .tab-content {
-    width: 100%;
-  }
-  .tab-address {
-    width: 80vw;
-  }
-  .tab-orders {
-    width: 95vw;
-  }
-  .order-container {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .orderline-header,
-  .orderline-value {
-    width: 33%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  #profile-shipping-label {
-    padding-top: 8vw;
-    padding-bottom: 8vw;
-    font-family: "Dosis", sans-serif;
-    font-size: 4vw;
-  }
-  .update-address-btn {
-    background-color: lightblue;
   }
   .addcard-icon {
     font-size: 3vw;

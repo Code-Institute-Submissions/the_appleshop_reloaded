@@ -1,5 +1,13 @@
 @media screen and (max-width: 414px) and (max-height: 823px) and (orientation: portrait) {
 
+    @import "pages/_login-page.scss";
+    @import "pages/_password-reset-page.scss";
+    @import "pages/_cart-page.scss";
+    @import "pages/_products-page.scss";
+    @import "pages/_productdetails-page.scss";
+    @import "pages/_profile-page.scss";
+
+
     // fontsize definitions
     $delPopupFontSize: 4vw;
 
@@ -7,6 +15,11 @@
         font-family: $dosisFont;
         padding-top: 60px;
         font-size: 4vw;
+    }
+
+    .page-headline {
+        font-family: $dosisFont;
+        font-size: 7vw;
     }
 
     // footer {
@@ -17,14 +30,15 @@
     //     color: #A9A9A9;
     // }
 
+    // navbar header
+
     .container>.navbar-header {
         margin: {
             left: 0;
             right: 0;
         }
 
-        height: 13vw;
-
+        height: 15vw;
     }
 
     .container {
@@ -41,13 +55,14 @@
     .mobile-list-items {
 
         margin: {
-            top: 15px;
-            bottom: 15px;
+            top: 20px;
+            bottom: 20px;
+            left: 15px;
         }
     }
 
     .navbar-nav {
-        margin: 7.5px 0;
+        margin: 14.5px 0;
     }
 
     #brandicon {
@@ -57,8 +72,7 @@
 
     .navbar-brand {
         font-family: $dosisFont;
-        font-size: 5vw;
-
+        font-size: 7vw;
     }
 
     #menubutton {
@@ -73,29 +87,13 @@
         background-color: #fff;
     }
 
-    .accountform {
-        padding-top: 20px;
-    }
-
-    .badge {
-        padding-left: 9px;
-        padding-right: 9px;
-        -webkit-border-radius: 9px;
-        -moz-border-radius: 9px;
-        border-radius: 9px;
-    }
-
-    .label-warning[href],
-    .badge-warning[href] {
-        background-color: #c67605;
-    }
+    
 
     // product card
 
     .product-image {
         width: 50vw;
         height: 37.5vw;
-
     }
 
     .product-wrapper {
@@ -118,10 +116,7 @@
         margin: 0 auto;
     }
 
-    caption p {
-        word-wrap: break-word;
-    }
-
+    
     .row.row-flex {
         display: flex;
         flex-wrap: wrap;
@@ -170,6 +165,18 @@
         top: 15vw;
         left: 50vw;
     }
+
+    .stats-key {
+        width: 25%;
+    }
+
+    .stats-value {
+        width: 60%;
+    }
+
+
+
+
 
     .wishform {
         width: 8vw;
@@ -314,7 +321,6 @@
 
     #bottombar {
         display: flex;
-        flex-wrap: wrap;
     }
 
     #bottombar .quicklinks {
@@ -325,9 +331,27 @@
         height: 20px;
     }
 
+    .products-icon {
+        top: -1px;
+        font-size: 7.3vw;
+    }
+
     .nav>li>a {
         padding: 0;
 
+    }
+
+    .badge {
+        padding-left: 9px;
+        padding-right: 9px;
+        -webkit-border-radius: 9px;
+        -moz-border-radius: 9px;
+        border-radius: 9px;
+    }
+
+    .label-warning[href],
+    .badge-warning[href] {
+        background-color: #c67605;
     }
 
     .active-app {
@@ -336,65 +360,7 @@
 
     // profile page
 
-    .profile-wrapper {
-        padding-bottom: 20vw;
-    }
-
-    .nav-tabs {
-        margin-top: 3vw;
-    }
-
-    .form-control,
-    .profile-tabs,
-    .orderline-header,
-    .orderline-value,
-    .update-address-btn {
-        font-family: $dosisFont;
-        font-size: 3.5vw;
-        font-weight: 900;
-    }
-
-
-    .tab-content {
-        width: 100%;
-    }
-
-    .tab-address {
-        width: 80vw;
-    }
-
-    .tab-orders {
-        width: 95vw;
-    }
-
-    .order-container {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .orderline-header,
-    .orderline-value {
-        width: 33%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #profile-shipping-label {
-        padding: {
-            top: 8vw;
-            bottom: 8vw;
-        }
-
-        font-family: $dosisFont;
-        font-size: 4vw;
-    }
-
-    .update-address-btn {
-        background-color: lightblue;
-    }
+   
 
     // cart styles
 

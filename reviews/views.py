@@ -55,7 +55,7 @@ def create_review(request, pk):
         else:
             form = ReviewForm(instance=review)
 
-        return render(request, 'editform.html', {'form': form})
+        return render(request, 'editreview.html', {'form': form})
     else:
         return redirect(reverse('get_reviews'))
 
@@ -77,7 +77,7 @@ def edit_review(request, pk):
         else:
             form = ReviewForm(instance=review)
 
-        return render(request, 'editform.html', {'form': form})
+        return render(request, 'editreview.html', {'form': form})
 
     else:
         return redirect(reverse('get_reviews'))

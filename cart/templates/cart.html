@@ -8,14 +8,18 @@
 {% endblock head_js %}
 
 {% block content %}
-<div class="wishlist-wrapper ha">
+<div class="cart-wrapper ha">
+    <div class="page-headline">
+        Your cart
+    </div>
     <div class="row row-flex">
         {% if cart_items %}
         {% for item in cart_items %}
         <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">
             <div class="panel-body">
 
-                <img class="product-image" src="{{ MEDIA_URL }}{{item.product.image}}" alt="image of {{item.product.name}}">
+                <img class="product-image" src="{{ MEDIA_URL }}{{item.product.image}}"
+                    alt="image of {{item.product.name}}">
 
                 <div class="product-quickstats">
                     <div class="quickstats-key vh"><i class="fa fa-eye"></i></div>
@@ -58,7 +62,8 @@
                 {% else %}
                 <p class="shipping-fee ha">incl. {{shippingfee}} EUR Shipping</p>
                 {% endif %}
-                <p id="totalamount" class="ha">Total <span class="glyphicon glyphicon-euro" aria-hidden="true"> </span> {{ total }}</p>
+                <p id="totalamount" class="ha">Total <span class="glyphicon glyphicon-euro" aria-hidden="true"> </span>
+                    {{ total }}</p>
                 <a href="{% url 'checkout' %}" class="btn btn-success" role="button"><span
                         class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span> Checkout</a>
                 {% else %}

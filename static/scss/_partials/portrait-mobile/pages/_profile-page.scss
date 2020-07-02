@@ -1,0 +1,59 @@
+.profile-wrapper {
+    padding-bottom: 20vw;
+}
+
+.nav-tabs {
+    margin-top: 3vw;
+}
+
+.form-control,
+.profile-tabs,
+.orderline-header,
+.orderline-value,
+.update-address-btn {
+    font-family: $dosisFont;
+    font-size: 3.5vw;
+    font-weight: 900;
+}
+
+
+.tab-content {
+    width: 100%;
+}
+
+.tab-address {
+    width: 80vw;
+}
+
+.tab-orders {
+    width: 95vw;
+}
+
+.order-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.orderline-header,
+.orderline-value {
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#profile-shipping-label {
+    padding: {
+        top: 8vw;
+        bottom: 8vw;
+    }
+
+    font-family: $dosisFont;
+    font-size: 4vw;
+}
+
+.update-address-btn {
+    background-color: lightblue;
+}
