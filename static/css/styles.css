@@ -83,7 +83,7 @@
   }
   #password-reset-label {
     padding-right: 5px;
-    width: 30%;
+    width: 44%;
   }
   .passwordresetform {
     width: 50%;
@@ -92,6 +92,9 @@
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+  .passwordresetform #email-input-field {
+    width: 100%;
   }
   .cart-wrapper {
     padding-bottom: 25vw;
