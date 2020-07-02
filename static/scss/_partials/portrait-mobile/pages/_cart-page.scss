@@ -3,3 +3,63 @@
     background-color: #9e988fcb;
     min-height: 82vh;
 }
+
+.addcard-icon {
+    font-size: 3vw;
+}
+
+.checkout-summary-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.checkout-summary {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 60%;
+}
+
+.empty-cart-Wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.no-cart-items {
+    width: 80%;
+    font-size: 5.5vw;
+}
+
+.no-cart-items a {
+    font-size: 5.5vw;
+}
+
+.input-group-addon {
+    font-size: 4vw;
+}
+
+.amend-btn {
+    width: 25vw;
+    font-size: 5.0vw;
+}
+
+.shipping-fee, #totalamount {
+    width: 100%;
+    font-size: 6vw;
+}
+
+.glyphicon-euro {
+    margin: {
+        left: 5px;
+        right: 5px;
+    }
+}
+
+.checkout-btn {
+    font-family: $dosisFont;
+    font-size: 7.0vw;
+    width: 40%;
+}

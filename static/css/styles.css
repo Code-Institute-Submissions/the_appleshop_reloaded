@@ -75,6 +75,87 @@
     background-color: #9e988fcb;
     min-height: 82vh;
   }
+  .addcard-icon {
+    font-size: 3vw;
+  }
+  .checkout-summary-wrapper {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .checkout-summary {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 60%;
+  }
+  .empty-cart-Wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .no-cart-items {
+    width: 80%;
+    font-size: 5.5vw;
+  }
+  .no-cart-items a {
+    font-size: 5.5vw;
+  }
+  .input-group-addon {
+    font-size: 4vw;
+  }
+  .amend-btn {
+    width: 25vw;
+    font-size: 5.0vw;
+  }
+  .shipping-fee, #totalamount {
+    width: 100%;
+    font-size: 6vw;
+  }
+  .glyphicon-euro {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .checkout-btn {
+    font-family: "Dosis", sans-serif;
+    font-size: 7.0vw;
+    width: 40%;
+  }
+  .product-wrapper {
+    padding-bottom: 20vw;
+    background-color: #9e988fcb;
+  }
+  .search-field-wrapper {
+    width: 100%;
+    padding-bottom: 10vw;
+  }
+  .product-description {
+    min-height: 40px;
+  }
+  .product-headline {
+    font-family: "Dosis", sans-serif;
+    font-size: 7.5vw;
+  }
+  .product-image {
+    width: 50vw;
+    height: 37.5vw;
+  }
   .profile-wrapper {
     padding-bottom: 20vw;
   }
@@ -87,7 +168,7 @@
   .orderline-value,
   .update-address-btn {
     font-family: "Dosis", sans-serif;
-    font-size: 3.5vw;
+    font-size: 5.5vw;
     font-weight: 900;
   }
   .tab-content {
@@ -135,11 +216,13 @@
   body {
     font-family: "Dosis", sans-serif;
     padding-top: 60px;
-    font-size: 4vw;
+    font-size: 5.5vw;
   }
   .page-headline {
     font-family: "Dosis", sans-serif;
-    font-size: 7vw;
+    font-size: 10vw;
+    padding-top: 4vw;
+    width: 100%;
   }
   .container > .navbar-header {
     margin-left: 0;
@@ -177,26 +260,6 @@
   }
   .icon-bar {
     background-color: #fff;
-  }
-  .product-image {
-    width: 50vw;
-    height: 37.5vw;
-  }
-  .product-wrapper {
-    padding-bottom: 20vw;
-    background-color: #9e988fcb;
-  }
-  .search-field-wrapper {
-    width: 100%;
-    padding-bottom: 10vw;
-  }
-  .product {
-    background-size: contain;
-    background-position: center center;
-    background-repeat: no-repeat;
-    width: 150px;
-    height: 150px;
-    margin: 0 auto;
   }
   .row.row-flex {
     display: -webkit-box;
@@ -261,99 +324,6 @@
     border: none;
     background-color: transparent;
   }
-  .reviewsWrapper {
-    padding-top: 5vw;
-    padding-bottom: 20vw;
-    background-color: #9e988fcb;
-  }
-  .editReviewWrapper {
-    padding-bottom: 20vw;
-    background-color: #9e988fcb;
-    min-height: 82vh;
-    padding-top: 10vw;
-  }
-  .review-quickstats {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    position: absolute;
-    width: 50%;
-    top: 22vw;
-    left: 52vw;
-  }
-  #review-btn-bar {
-    width: 100%;
-  }
-  #back-to-product-btn,
-  #edit-review-btn,
-  #review-del-req-btn {
-    width: 28%;
-    font-family: "Dosis", sans-serif;
-    font-size: 3vw;
-    color: white;
-  }
-  #back-to-product-btn {
-    background-color: #89ac89;
-    margin-right: 2px;
-  }
-  #edit-review-btn {
-    background-color: #8d90ad;
-    margin-left: 2px;
-    margin-right: 2px;
-  }
-  #review-del-req-btn {
-    background-color: #b11919;
-    margin-left: 2px;
-  }
-  .review-headline {
-    font-family: "Dosis", sans-serif;
-    font-size: 5.5vw;
-  }
-  .revform {
-    width: 8vw;
-    position: absolute;
-    left: 88.7%;
-    top: 7%;
-  }
-  .add-review-btn {
-    font-size: 5.5vw;
-  }
-  .wishlist-wrapper {
-    padding-bottom: 25vw;
-    background-color: #9e988fcb;
-    min-height: 82vh;
-  }
-  .wishlist-remove-Btn {
-    width: 8vw;
-    position: absolute;
-    left: 88.7%;
-    color: #bd0000;
-  }
-  .wishlist-remove-Btn i {
-    font-size: 5.5vw;
-  }
-  .staricon-not-added,
-  .staricon-added {
-    font-size: 5.5vw;
-  }
-  .staricon-not-added {
-    color: #971616;
-  }
-  .staricon-added {
-    color: green;
-  }
-  .product-description {
-    min-height: 40px;
-  }
-  .productcard {
-    width: 95vw;
-  }
-  .product-headline {
-    font-family: "Dosis", sans-serif;
-    font-size: 5.5vw;
-  }
   #bottombar {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -388,85 +358,6 @@
   }
   .active-app {
     color: rgba(255, 0, 0, 0.5);
-  }
-  .addcard-icon {
-    font-size: 3vw;
-  }
-  .checkout-summary-wrapper {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .checkout-summary {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    width: 60%;
-  }
-  .empty-cart-Wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .no-cart-items {
-    width: 80%;
-  }
-  .shipping-fee {
-    width: 100%;
-  }
-  #totalamount {
-    width: 100%;
-  }
-  .glyphicon-euro {
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-  #confirm-delete-popup {
-    background-color: beige;
-    border-radius: 5px;
-    border: 1px solid grey;
-    width: 50vw;
-    height: 25vw;
-    position: absolute;
-    opacity: 0.0;
-    z-index: -1;
-    top: 30%;
-    left: 18%;
-    -webkit-transform: translateZ(-10px);
-            transform: translateZ(-10px);
-    -webkit-transition: opacity .5s ease-in-out;
-    transition: opacity .5s ease-in-out;
-  }
-  #delete-popup-message {
-    width: 80%;
-    font-family: "Dosis", sans-serif;
-    font-size: 4vw;
-  }
-  #delete-confirm-btn {
-    background-color: lightcoral;
-    color: black;
-    margin-right: 2px;
-  }
-  #delete-cancel-btn {
-    background-color: lightslategray;
-    margin-left: 2px;
-    font-family: "Dosis", sans-serif;
   }
 }
 

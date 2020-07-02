@@ -1,0 +1,29 @@
+.wishlist-wrapper {
+    padding-bottom: 25vw;
+    background-color: #9e988fcb;
+    min-height: 82vh;
+}
+
+.wishlist-remove-Btn {
+    width: 8vw;
+    position: absolute;
+    left: 88.7%;
+    color: rgb(189, 0, 0);
+}
+
+.wishlist-remove-Btn i {
+    font-size: 5.5vw;
+}
+
+.staricon-not-added ,
+.staricon-added {
+    font-size: 5.5vw;
+}
+
+.staricon-not-added {
+    color: rgb(151, 22, 22);
+}
+
+.staricon-added {
+    color: green;
+}

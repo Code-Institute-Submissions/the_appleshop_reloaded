@@ -14,12 +14,14 @@
     body {
         font-family: $dosisFont;
         padding-top: 60px;
-        font-size: 4vw;
+        font-size: 5.5vw;
     }
 
     .page-headline {
         font-family: $dosisFont;
-        font-size: 7vw;
+        font-size: 10vw;
+        padding-top: 4vw;
+        width: 100%;
     }
 
     // footer {
@@ -91,30 +93,7 @@
 
     // product card
 
-    .product-image {
-        width: 50vw;
-        height: 37.5vw;
-    }
-
-    .product-wrapper {
-        padding-bottom: 20vw;
-        background-color: #9e988fcb;
-
-    }
-
-    .search-field-wrapper {
-        width: 100%;
-        padding-bottom: 10vw;
-    }
-
-    .product {
-        background-size: contain;
-        background-position: center center;
-        background-repeat: no-repeat;
-        width: 150px;
-        height: 150px;
-        margin: 0 auto;
-    }
+    
 
     
     .row.row-flex {
@@ -174,10 +153,6 @@
         width: 60%;
     }
 
-
-
-
-
     .wishform {
         width: 8vw;
         position: absolute;
@@ -190,131 +165,6 @@
         border: none;
         background-color: transparent;
     }
-
-
-    // reviews
-
-    .reviewsWrapper {
-        padding-top: 5vw;
-        padding-bottom: 20vw;
-        background-color: #9e988fcb;
-        //min-height: 82vh;
-    }
-
-    .editReviewWrapper {
-        padding-bottom: 20vw;
-        background-color: #9e988fcb;
-        min-height: 82vh;
-        padding-top: 10vw;
-    }
-
-    .review-quickstats {
-        display: flex;
-        flex-wrap: wrap;
-        position: absolute;
-        width: 50%;
-        top: 22vw;
-        left: 52vw;
-    }
-
-    #review-btn-bar {
-        width: 100%
-    }
-
-
-    #back-to-product-btn,
-    #edit-review-btn,
-    #review-del-req-btn {
-        width: 28%;
-        font-family: $dosisFont;
-        font-size: 3vw;
-        color: rgb(255, 255, 255);
-    }
-
-    #back-to-product-btn {
-        background-color: rgb(137, 172, 137);
-        margin-right: 2px;
-    }
-
-    #edit-review-btn {
-        background-color: rgb(141, 144, 173);
-
-        margin: {
-            left: 2px;
-            right: 2px;
-        }
-
-    }
-
-    #review-del-req-btn {
-        background-color: rgb(177, 25, 25);
-        margin-left: 2px;
-
-    }
-
-    .review-headline {
-        font-family: $dosisFont;
-        font-size: 5.5vw;
-    }
-
-    .revform {
-        width: 8vw;
-        position: absolute;
-        left: 88.7%;
-        top: 7%;
-    }
-
-
-    .add-review-btn {
-        font-size: 5.5vw;
-
-    }
-
-    // wishlist
-
-    .wishlist-wrapper {
-        padding-bottom: 25vw;
-        background-color: #9e988fcb;
-        min-height: 82vh;
-    }
-
-    .wishlist-remove-Btn {
-        width: 8vw;
-        position: absolute;
-        left: 88.7%;
-        color: rgb(189, 0, 0);
-    }
-
-    .wishlist-remove-Btn i {
-        font-size: 5.5vw;
-    }
-
-    .staricon-not-added ,
-    .staricon-added {
-        font-size: 5.5vw;
-    }
-
-    .staricon-not-added {
-        color: rgb(151, 22, 22);
-    }
-
-    .staricon-added {
-        color: green;
-    }
-
-    .product-description {
-        min-height: 40px;
-    }
-
-    .productcard {
-        width: 95vw;
-    }
-
-    .product-headline {
-        font-family: $dosisFont;
-        font-size: 5.5vw;
-    }
-
 
 
     // bottom linkbar
@@ -356,93 +206,5 @@
 
     .active-app {
         color: rgba(255, 0, 0, 0.5);
-    }
-
-    // profile page
-
-   
-
-    // cart styles
-
-    .addcard-icon {
-        font-size: 3vw;
-    }
-
-    .checkout-summary-wrapper {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .checkout-summary {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 60%;
-    }
-
-    .empty-cart-Wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .no-cart-items {
-        width: 80%
-    }
-
-    .shipping-fee {
-        width: 100%;
-    }
-
-    #totalamount {
-        width: 100%
-    }
-
-    .glyphicon-euro {
-        margin: {
-            left: 5px;
-            right: 5px;
-        }
-    }
-
-    // delete popup
-
-    #confirm-delete-popup {
-        background-color: beige;
-        border-radius: 5px;
-        border: 1px solid grey;
-        width: 50vw;
-        height: 25vw;
-        position: absolute;
-        opacity: 0.0;
-        z-index: -1;
-        top: 30%;
-        left: 18%;
-        transform: translateZ(-10px);
-        transition: opacity .5s ease-in-out;
-    }
-
-    #delete-popup-message {
-        width: 80%;
-
-        font: {
-            family: $dosisFont;
-            size: $delPopupFontSize;
-        }
-    }
-
-    #delete-confirm-btn {
-        background-color: lightcoral;
-        color: black;
-        margin-right: 2px;
-    }
-
-    #delete-cancel-btn {
-        background-color: lightslategray;
-        margin-left: 2px;
-        font-family: $dosisFont;
-
     }
 }
