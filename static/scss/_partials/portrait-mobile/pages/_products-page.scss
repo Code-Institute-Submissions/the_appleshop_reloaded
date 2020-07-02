@@ -9,15 +9,33 @@
     padding-bottom: 10vw;
 }
 
-.product-description {
-    min-height: 40px;
+.product-image {
+    width: 50vw;
+    height: 37.5vw;
 }
 
 .product-headline {
     font-family: $dosisFont;
     font-size: 7.5vw;
 }
-.product-image {
-    width: 50vw;
-    height: 37.5vw;
+
+.product-description {
+    min-height: 40px;
 }
+
+.product-quickstats {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 12vw;
+    left: 56vw;
+}
+
+.quickstats-key {
+    width: 40%;
+}
+
+.quickstats-value {
+    width: 60%;
+}
+

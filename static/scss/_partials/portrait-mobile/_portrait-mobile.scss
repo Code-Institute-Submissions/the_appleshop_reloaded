@@ -19,7 +19,7 @@
 
     .page-headline {
         font-family: $dosisFont;
-        font-size: 10vw;
+        font-size: 7vw;
         padding-top: 4vw;
         width: 100%;
     }
@@ -61,6 +61,7 @@
             bottom: 20px;
             left: 15px;
         }
+
         font-size: 6.5vw;
 
     }
@@ -91,13 +92,6 @@
         background-color: #fff;
     }
 
-    
-
-    // product card
-
-    
-
-    
     .row.row-flex {
         display: flex;
         flex-wrap: wrap;
@@ -121,53 +115,6 @@
         border: 1px solid #ddd;
         background-color: cornsilk;
     }
-
-    .product-quickstats {
-        display: flex;
-        flex-wrap: wrap;
-        position: absolute;
-        top: 15vw;
-        left: 56vw;
-    }
-
-    .quickstats-key {
-        width: 40%;
-    }
-
-    .quickstats-value {
-        width: 60%;
-    }
-
-    .product-stats {
-        width: 50%;
-        display: flex;
-        flex-wrap: wrap;
-        //position: absolute;
-        top: 15vw;
-        left: 50vw;
-    }
-
-    .stats-key {
-        width: 25%;
-    }
-
-    .stats-value {
-        width: 60%;
-    }
-
-    .wishform {
-        width: 8vw;
-        position: absolute;
-        left: 88.7%;
-    }
-
-    .add-wish-btn,
-    .remove-wish-btn,
-    .add-review-btn {
-        border: none;
-        background-color: transparent;
-    }
-
 
     // bottom linkbar
 

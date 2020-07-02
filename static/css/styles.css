@@ -41,6 +41,18 @@
   #loginform {
     width: 90vw;
   }
+  #reset-register-wrapper {
+    width: 100%;
+  }
+  #password-reset-link {
+    width: 40%;
+  }
+  #or-div {
+    width: 10%;
+  }
+  #register-link {
+    width: 40%;
+  }
   .password-reset-wrapper {
     height: 70vh;
     -ms-flex-line-pack: center;
@@ -145,16 +157,59 @@
     width: 100%;
     padding-bottom: 10vw;
   }
-  .product-description {
-    min-height: 40px;
+  .product-image {
+    width: 50vw;
+    height: 37.5vw;
   }
   .product-headline {
     font-family: "Dosis", sans-serif;
     font-size: 7.5vw;
   }
-  .product-image {
-    width: 50vw;
-    height: 37.5vw;
+  .product-description {
+    min-height: 40px;
+  }
+  .product-quickstats {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    position: absolute;
+    top: 12vw;
+    left: 56vw;
+  }
+  .quickstats-key {
+    width: 40%;
+  }
+  .quickstats-value {
+    width: 60%;
+  }
+  .wishform {
+    width: 8vw;
+    position: absolute;
+    left: 88.7%;
+  }
+  .add-wish-btn,
+  .remove-wish-btn,
+  .add-review-btn {
+    border: none;
+    background-color: transparent;
+  }
+  .product-stats {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    top: 15vw;
+    left: 50vw;
+  }
+  .stats-key {
+    width: 25%;
+  }
+  .stats-value {
+    width: 60%;
   }
   .profile-wrapper {
     padding-bottom: 20vw;
@@ -223,7 +278,7 @@
   }
   .page-headline {
     font-family: "Dosis", sans-serif;
-    font-size: 10vw;
+    font-size: 7vw;
     padding-top: 4vw;
     width: 100%;
   }
@@ -284,49 +339,6 @@
     height: 100%;
     border: 1px solid #ddd;
     background-color: cornsilk;
-  }
-  .product-quickstats {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    position: absolute;
-    top: 15vw;
-    left: 56vw;
-  }
-  .quickstats-key {
-    width: 40%;
-  }
-  .quickstats-value {
-    width: 60%;
-  }
-  .product-stats {
-    width: 50%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    top: 15vw;
-    left: 50vw;
-  }
-  .stats-key {
-    width: 25%;
-  }
-  .stats-value {
-    width: 60%;
-  }
-  .wishform {
-    width: 8vw;
-    position: absolute;
-    left: 88.7%;
-  }
-  .add-wish-btn,
-  .remove-wish-btn,
-  .add-review-btn {
-    border: none;
-    background-color: transparent;
   }
   #bottombar {
     display: -webkit-box;

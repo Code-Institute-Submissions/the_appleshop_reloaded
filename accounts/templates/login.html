@@ -9,18 +9,21 @@
 
 <div class="login-wrapper ha">
 
-<div class="page-headline ha">
-    Login
-</div>
+    <div class="page-headline ha">
+        Login
+    </div>
     <form id="loginform" method="POST" action="">
         {% csrf_token %}
         {{ login_form | as_bootstrap }}
         <button type="submit" class="btn btn-default"><b>Login</b></button>
     </form>
-    <p>
-        <a href="{% url 'password_reset' %}"><b>Reset Password</b></a></p>
-
-        or <a href="{% url 'registration' %}"><b>Register here</b></a></p>
-</div>
-
-{% endblock %}
+    <div id="reset-register-wrapper">
+        <div id="password-reset-link btn">
+            <a href="{% url 'password_reset' %}"><b>Reset Password</b></a>
+        </div>
+        <div id="or-div"> or </div>
+        <div id="register-link btn">
+            <a href="{% url 'registration' %}"><b>Register here</b></a>
+        </div>
+    </div>
+    {% endblock %}

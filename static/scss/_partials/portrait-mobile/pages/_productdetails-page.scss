@@ -1,0 +1,31 @@
+
+.wishform {
+    width: 8vw;
+    position: absolute;
+    left: 88.7%;
+}
+
+.add-wish-btn,
+.remove-wish-btn,
+.add-review-btn {
+    border: none;
+    background-color: transparent;
+}
+
+.product-stats {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    //position: absolute;
+    top: 15vw;
+    left: 50vw;
+}
+
+.stats-key {
+    width: 25%;
+}
+
+.stats-value {
+    width: 60%;
+}
+
