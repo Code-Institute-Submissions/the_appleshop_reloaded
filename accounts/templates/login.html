@@ -16,8 +16,9 @@
         {% csrf_token %}
         {{ login_form | as_bootstrap }}
         <div id="login-btn-wrapper">
+            <button id="login-btn" type="submit" class="btn"><b>Login</b></button>
+        </div>
 
-        <button id="login-btn" type="submit" class="btn"><b>Login</b></button>
     </form>
     <div id="reset-register-wrapper">
         <div id="password-reset-link" class="btn">
