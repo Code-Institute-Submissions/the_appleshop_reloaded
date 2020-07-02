@@ -173,8 +173,8 @@
   }
   .checkout-btn {
     font-family: "Dosis", sans-serif;
-    font-size: 7.0vw;
-    width: 40%;
+    font-size: 16.0vw;
+    width: 40vw;
   }
   .product-wrapper {
     padding-bottom: 20vw;
@@ -183,6 +183,14 @@
   .search-field-wrapper {
     width: 100%;
     padding-bottom: 10vw;
+  }
+  .panel-default {
+    padding: 0 0;
+  }
+  .panel-body {
+    height: 100%;
+    border: 1px solid #ddd;
+    background-color: cornsilk;
   }
   .product-image {
     width: 50vw;
@@ -206,10 +214,10 @@
     left: 56vw;
   }
   .quickstats-key {
-    width: 40%;
+    width: 40vw;
   }
   .quickstats-value {
-    width: 60%;
+    width: 60vw;
   }
   .wishform {
     width: 8vw;
