@@ -15,6 +15,8 @@
     <form id="loginform" method="POST" action="">
         {% csrf_token %}
         {{ login_form | as_bootstrap }}
+        <div id="login-btn-wrapper">
+
         <button id="login-btn" type="submit" class="btn"><b>Login</b></button>
     </form>
     <div id="reset-register-wrapper">
@@ -22,7 +24,7 @@
             <a href="{% url 'password_reset' %}"><b>Reset Password</b></a>
         </div>
         <div id="or-div"> or </div>
-        <div id="register-link btn" class="btn">
+        <div id="register-link" class="btn">
             <a href="{% url 'registration' %}"><b>Register here</b></a>
         </div>
     </div>
