@@ -51,6 +51,8 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    font-family: "Dosis", sans-serif;
+    font-size: 5.5vw;
     width: 100%;
     margin-top: 2vw;
     margin-bottom: 2vw;
@@ -59,7 +61,7 @@
     width: 40%;
   }
   #or-div {
-    width: 10%;
+    width: 20%;
   }
   #register-link {
     width: 40%;
@@ -210,7 +212,7 @@
     background-color: transparent;
   }
   .product-stats {
-    width: 50%;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

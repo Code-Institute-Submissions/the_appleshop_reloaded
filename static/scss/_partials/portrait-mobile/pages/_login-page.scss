@@ -16,7 +16,8 @@
 
 #reset-register-wrapper {
     display: flex;
-    
+    font-family: $dosisFont;
+    font-size: 5.5vw;
     width: 100%;
     margin: {
         top: 2vw;
@@ -29,7 +30,7 @@
 }
 
 #or-div {
-    width: 10%;
+    width: 20%;
 }
 
 #register-link {

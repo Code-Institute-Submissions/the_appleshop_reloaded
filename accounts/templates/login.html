@@ -15,7 +15,7 @@
     <form id="loginform" method="POST" action="">
         {% csrf_token %}
         {{ login_form | as_bootstrap }}
-        <button type="submit" class="btn btn-default"><b>Login</b></button>
+        <button id="login-btn" type="submit" class="btn"><b>Login</b></button>
     </form>
     <div id="reset-register-wrapper">
         <div id="password-reset-link" class="btn">
