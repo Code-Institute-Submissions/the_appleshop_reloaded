@@ -162,9 +162,13 @@
   .nav-tabs {
     margin-top: 3vw;
   }
+  .orderline-header {
+    font-size: 4.8vw;
+  }
+  .profile-tabs {
+    font-size: 7.0vw;
+  }
   .form-control,
-  .profile-tabs,
-  .orderline-header,
   .orderline-value,
   .update-address-btn {
     font-family: "Dosis", sans-serif;
@@ -191,24 +195,23 @@
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .orderline-header,
-  .orderline-value {
-    width: 33%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  .orderline-order-header {
+    width: 50%;
   }
-  #profile-shipping-label {
-    padding-top: 8vw;
-    padding-bottom: 8vw;
-    font-family: "Dosis", sans-serif;
-    font-size: 4vw;
+  .orderline-product-header {
+    width: 30%;
+  }
+  .orderline-quantity-header {
+    width: 20%;
+  }
+  .orderline-order-value {
+    width: 50%;
+  }
+  .orderline-product-value {
+    width: 30%;
+  }
+  .orderline-quantity-value {
+    width: 20%;
   }
   .update-address-btn {
     background-color: lightblue;
@@ -240,6 +243,7 @@
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left: 15px;
+    font-size: 6.5vw;
   }
   .navbar-nav {
     margin: 14.5px 0;

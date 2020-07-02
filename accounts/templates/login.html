@@ -9,7 +9,7 @@
 
 <div class="login-wrapper ha">
 
-<div class="page-headline">
+<div class="page-headline ha">
     Login
 </div>
     <form id="loginform" method="POST" action="">
@@ -19,6 +19,8 @@
     </form>
     <p>
         <a href="{% url 'password_reset' %}"><b>Reset Password</b></a></p>
+
+        or <a href="{% url 'registration' %}"><b>Register here</b></a></p>
 </div>
 
 {% endblock %}

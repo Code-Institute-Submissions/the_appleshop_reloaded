@@ -6,9 +6,16 @@
     margin-top: 3vw;
 }
 
+.orderline-header {
+    font-size: 4.8vw;
+
+}
+
+.profile-tabs {
+    font-size: 7.0vw;
+}
+
 .form-control,
-.profile-tabs,
-.orderline-header,
 .orderline-value,
 .update-address-btn {
     font-family: $dosisFont;
@@ -36,22 +43,28 @@
     justify-content: center;
 }
 
-.orderline-header,
-.orderline-value {
-    width: 33%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.orderline-order-header {
+    width: 50%;
 }
 
-#profile-shipping-label {
-    padding: {
-        top: 8vw;
-        bottom: 8vw;
-    }
+.orderline-product-header {
+    width: 30%;
+}
 
-    font-family: $dosisFont;
-    font-size: 4vw;
+.orderline-quantity-header {
+    width: 20%;
+}
+
+.orderline-order-value {
+    width: 50%;
+}
+
+.orderline-product-value {
+    width: 30%;
+}
+
+.orderline-quantity-value {
+    width: 20%;
 }
 
 .update-address-btn {

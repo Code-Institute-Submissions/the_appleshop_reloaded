@@ -24,7 +24,7 @@
             {% if user_addressform.full_name.value == "" %}
             <p>No record found, please enter your shipping address.</p>
             {% else %}
-            <div class="ha" id="profile-shipping-label">Your current shipping address.</div>
+            <div class=" page-headline ha">Your current shipping address.</div>
             {% endif %}
             <form method="POST" action="{% url 'profile' %}">
                 {% csrf_token %}
@@ -36,15 +36,15 @@
         <!-- Tab panes for order details-->
         <div role="tabpanel" class="tab-pane tab-orders" id="orders">
             <div class="order-container">
-                <div class="orderline-header">Order number</div>
-                <div class="orderline-header">Product</div>
-                <div class="orderline-header">Quantity</div>
+                <div class="orderline-order-header vh">Order number</div>
+                <div class="orderline-product-header vh">Product</div>
+                <div class="orderline-quantity-header vh">Quantity</div>
                 <hr>
                 {% if user_orders %}
                 {% for order in user_orders %}
-                <div class="orderline-value">{{order.order}}</div>
-                <div class="orderline-value">{{order.product}}</div>
-                <div class="orderline-value">{{order.quantity}}</div>
+                <div class="orderline-order-value vh">{{order.order}}</div>
+                <div class="orderline-product-value vh">{{order.product}}</div>
+                <div class="orderline-quantity-value vh">{{order.quantity}}</div>
                 {% endfor %}
                 {% else %}
                 <p>Your have not placed orders yet.</p>
