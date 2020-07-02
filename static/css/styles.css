@@ -41,8 +41,19 @@
   #loginform {
     width: 90vw;
   }
+  #login-btn {
+    width: 40vw;
+    font-family: "Dosis", sans-serif;
+    font-size: 5.5vw;
+    background-color: lightblue;
+  }
   #reset-register-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     width: 100%;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
   }
   #password-reset-link {
     width: 40%;

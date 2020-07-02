@@ -7,8 +7,21 @@
     width: 90vw;
 }
 
+#login-btn {
+    width: 40vw;
+    font-family: $dosisFont;
+    font-size: 5.5vw;
+    background-color: lightblue;
+}
+
 #reset-register-wrapper {
+    display: flex;
+    
     width: 100%;
+    margin: {
+        top: 2vw;
+        bottom: 2vw;
+    }
 }
 
 #password-reset-link {
