@@ -46,7 +46,7 @@
                             <div class="input-group-addon">{{item.quantity}}</div>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-edit"
+                    <button type="submit" class="btn btn-primary amend-btn"><span class="glyphicon glyphicon-edit"
                             aria-hidden="true"></span> Amend</button>
                 </form>
 
@@ -64,7 +64,7 @@
                 {% endif %}
                 <p id="totalamount" class="ha">Total <span class="glyphicon glyphicon-euro" aria-hidden="true"> </span>
                     {{ total }}</p>
-                <a href="{% url 'checkout' %}" class="btn btn-success" role="button"><span
+                <a href="{% url 'checkout' %}" class="btn btn-success checkout-btn" role="button"><span
                         class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span> Checkout</a>
                 {% else %}
                 <div class="empty-cart-Wrapper ha">
@@ -76,4 +76,5 @@
         {% endif %}
     </div>
 </div>
+
 {% endblock %}
