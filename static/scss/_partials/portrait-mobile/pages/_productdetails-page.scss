@@ -2,8 +2,18 @@
 .wishform {
     width: 8vw;
     position: absolute;
-    left: 88.7%;
+    left: 69vw;
+    top: 4vw;
 }
+
+
+.revform {
+    width: 8vw;
+    position: absolute;
+    left: 70vw;
+    top: 14vw;
+}
+
 
 .add-wish-btn,
 .remove-wish-btn,
@@ -12,20 +22,5 @@
     background-color: transparent;
 }
 
-.product-stats {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    //position: absolute;
-    top: 15vw;
-    left: 50vw;
-}
 
-.stats-key {
-    width: 25%;
-}
-
-.stats-value {
-    width: 60%;
-}
 

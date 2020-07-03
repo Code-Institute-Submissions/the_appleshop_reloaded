@@ -8,13 +8,16 @@ from django.contrib import messages
 from products.views import get_user_purchases
 
 
-def get_reviews(request):
+def get_reviews(request, pk=None):
     """
     Creates view with overview of entered reviews prior to 'now'
     """
-    reviews = Review.objects.filter(created_date__lte=timezone.now()).order_by('-created_date')
+    if pk!=None:
+        reviews = Review.objects.filter(product=pk)
+    else:
+        reviews = Review.objects.filter(created_date__lte=timezone.now()).order_by('-created_date')
     return render(request, "reviews.html",
-                  {'reviews': reviews, "testvalue": 99})
+                  {'reviews': reviews})
 
 
 def review_detail(request, pk):
@@ -88,9 +91,12 @@ def delete_review(request, pk):
     View for deleting a review, requested by author
     """
     review = get_object_or_404(Review, pk=pk)
+    product = get_object_or_404(Product, review.product.id)
     if request.user.is_authenticated and review.author.id == request.user.id:
         if request.method == "GET":
             review.delete()
+            product.review_count-=1
+            product.save()
             messages.success(request, "Review has been deleted")
             return redirect(reverse('get_reviews'))
     else:

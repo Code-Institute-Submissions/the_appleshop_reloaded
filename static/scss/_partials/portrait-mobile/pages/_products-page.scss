@@ -1,7 +1,6 @@
 .product-wrapper {
     padding-bottom: 20vw;
     background-color: #9e988fcb;
-
 }
 
 .search-field-wrapper {
@@ -22,7 +21,14 @@
 .product-image {
     width: 50vw;
     height: 37.5vw;
+    border: none;
+    border-radius: 5px;
 }
+
+.add-review-btn {
+    font-size: 5.5vw;
+}
+
 
 .product-headline {
     font-family: $dosisFont;
@@ -33,19 +39,17 @@
     min-height: 40px;
 }
 
-.product-quickstats {
+.product-stats {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    position: absolute;
-    top: 12vw;
-    left: 56vw;
 }
 
-.quickstats-key {
-    width: 40vw;
+.stats-key {
+    width: 21vw;
 }
 
-.quickstats-value {
-    width: 60vw;
+.stats-value {
+    width: 53vw;
 }
 

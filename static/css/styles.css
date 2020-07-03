@@ -33,86 +33,10 @@
 }
 
 @media screen and (max-width: 414px) and (max-height: 823px) and (orientation: portrait) {
-  .login-wrapper {
-    height: 70vh;
-    -ms-flex-line-pack: center;
-        align-content: center;
-  }
-  #loginform {
-    width: 90vw;
-  }
-  #login-btn {
-    width: 40vw;
-    font-family: "Dosis", sans-serif;
-    font-size: 5.5vw;
-    background-color: lightblue;
-  }
-  #reset-register-wrapper,
-  .login-btn-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    font-family: "Dosis", sans-serif;
-    font-size: 5.5vw;
-    width: 100%;
-    margin-top: 12vw;
-    margin-bottom: 2vw;
-  }
-  #password-reset-link {
-    width: 40vw;
-    background-color: orange;
-    color: black;
-    font-family: "Dosis", sans-serif;
-    font-size: 5.5vw;
-  }
-  #or-div {
-    width: 10vw;
-    font-family: "Dosis", sans-serif;
-    font-size: 5.5vw;
-  }
-  #register-link {
-    width: 40vw;
-    background-color: #00aa00;
-    color: black;
-    font-family: "Dosis", sans-serif;
-    font-size: 5.5vw;
-  }
-  .password-reset-wrapper {
-    height: 70vh;
-    -ms-flex-line-pack: center;
-        align-content: center;
-  }
-  .accountform {
-    width: 90vw;
-    padding-top: 20px;
-  }
-  .emailfield-resetform-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    width: 100%;
-  }
-  #password-reset-label {
-    padding-right: 5px;
-    width: 44%;
-  }
-  .passwordresetform {
-    width: 50%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .passwordresetform #email-input-field {
-    width: 100%;
-  }
   .cart-wrapper {
     padding-bottom: 25vw;
     background-color: #9e988fcb;
-    min-height: 82vh;
+    min-height: 85vh;
   }
   .addcard-icon {
     font-size: 3vw;
@@ -176,6 +100,106 @@
     font-size: 16.0vw;
     width: 40vw;
   }
+  .checkout-wrapper {
+    padding-bottom: 20vw;
+  }
+  caption p {
+    word-wrap: break-word;
+  }
+  .login-wrapper {
+    height: 70vh;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  #loginform {
+    width: 90vw;
+  }
+  #reset-register-wrapper,
+  #login-btn-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-family: "Dosis", sans-serif;
+    font-size: 5.5vw;
+    width: 100%;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+  }
+  #login-btn {
+    background-color: lightblue;
+    color: #414141;
+  }
+  #password-reset-link {
+    background-color: orange;
+    margin-right: 2.4vw;
+  }
+  #register-link {
+    background-color: #00aa00;
+    margin-left: 2.4vw;
+  }
+  #login-btn, #password-reset-link, #register-link {
+    width: 40vw;
+    font-family: "Dosis", sans-serif;
+    font-size: 5.5vw;
+  }
+  #password-reset-link a, #register-link a {
+    color: #414141;
+    -webkit-transition: color .4s ease-in-out;
+    transition: color .4s ease-in-out;
+  }
+  #login-btn a:hover, #password-reset-link a:hover, #register-link a:hover {
+    color: darkred;
+  }
+  .password-reset-wrapper {
+    height: 70vh;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .accountform {
+    width: 90vw;
+    padding-top: 20px;
+  }
+  .emailfield-resetform-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+  }
+  #password-reset-label {
+    padding-right: 5px;
+    width: 44%;
+  }
+  .passwordresetform {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .passwordresetform #email-input-field {
+    width: 100%;
+  }
+  .wishform {
+    width: 8vw;
+    position: absolute;
+    left: 69vw;
+    top: 4vw;
+  }
+  .revform {
+    width: 8vw;
+    position: absolute;
+    left: 70vw;
+    top: 14vw;
+  }
+  .add-wish-btn,
+  .remove-wish-btn,
+  .add-review-btn {
+    border: none;
+    background-color: transparent;
+  }
   .product-wrapper {
     padding-bottom: 20vw;
     background-color: #9e988fcb;
@@ -195,6 +219,11 @@
   .product-image {
     width: 50vw;
     height: 37.5vw;
+    border: none;
+    border-radius: 5px;
+  }
+  .add-review-btn {
+    font-size: 5.5vw;
   }
   .product-headline {
     font-family: "Dosis", sans-serif;
@@ -203,33 +232,6 @@
   .product-description {
     min-height: 40px;
   }
-  .product-quickstats {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    position: absolute;
-    top: 12vw;
-    left: 56vw;
-  }
-  .quickstats-key {
-    width: 40vw;
-  }
-  .quickstats-value {
-    width: 60vw;
-  }
-  .wishform {
-    width: 8vw;
-    position: absolute;
-    left: 88.7%;
-  }
-  .add-wish-btn,
-  .remove-wish-btn,
-  .add-review-btn {
-    border: none;
-    background-color: transparent;
-  }
   .product-stats {
     width: 100%;
     display: -webkit-box;
@@ -237,14 +239,12 @@
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    top: 15vw;
-    left: 50vw;
   }
   .stats-key {
-    width: 25%;
+    width: 21vw;
   }
   .stats-value {
-    width: 60%;
+    width: 53vw;
   }
   .profile-wrapper {
     padding-bottom: 20vw;
@@ -307,6 +307,142 @@
   }
   .update-address-btn {
     background-color: lightblue;
+  }
+  .registration-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+    padding-bottom: 20vw;
+  }
+  #registrationform {
+    width: 90vw;
+  }
+  #submit-registration-btn {
+    width: 30vw;
+    background-color: lightblue;
+  }
+  .reviewsWrapper {
+    padding-top: 5vw;
+    padding-bottom: 20vw;
+    background-color: #9e988fcb;
+  }
+  .edit-review-wrapper {
+    padding-bottom: 25vw;
+    min-height: 82vh;
+    padding-top: 10vw;
+  }
+  #review-form {
+    width: 90vw;
+  }
+  #id_image {
+    height: 13vw;
+  }
+  #review-send-btn-wrapper {
+    width: 100%;
+  }
+  #review-send-btn {
+    font-family: "Dosis", sans-serif;
+    font-size: 5.5vw;
+    background-color: lightblue;
+    width: 40vw;
+  }
+  .review-stats {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+  }
+  #review-btn-bar {
+    width: 100%;
+  }
+  #back-to-product-btn,
+  #edit-review-btn,
+  #review-del-req-btn {
+    width: 28%;
+    font-family: "Dosis", sans-serif;
+    font-size: 3vw;
+    color: white;
+  }
+  #back-to-product-btn {
+    background-color: #89ac89;
+    margin-right: 2px;
+  }
+  #edit-review-btn {
+    width: 8vw;
+    position: absolute;
+    left: 70vw;
+    top: 7vw;
+  }
+  #review-del-req-btn {
+    width: 8vw;
+    position: absolute;
+    left: 70vw;
+    top: 14vw;
+  }
+  .review-headline {
+    font-family: "Dosis", sans-serif;
+    font-size: 5.5vw;
+  }
+  #confirm-delete-popup {
+    background-color: beige;
+    border-radius: 5px;
+    border: 1px solid grey;
+    width: 50vw;
+    height: 25vw;
+    position: absolute;
+    opacity: 0.0;
+    z-index: -1;
+    top: 30%;
+    left: 18%;
+    -webkit-transform: translateZ(-10px);
+            transform: translateZ(-10px);
+    -webkit-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+  }
+  #delete-popup-message {
+    width: 80%;
+    font-family: "Dosis", sans-serif;
+    font-size: 4vw;
+  }
+  #delete-confirm-btn {
+    background-color: lightcoral;
+    color: black;
+    margin-right: 2px;
+  }
+  #delete-cancel-btn {
+    background-color: lightslategray;
+    margin-left: 2px;
+    font-family: "Dosis", sans-serif;
+  }
+  .wishlist-wrapper {
+    padding-bottom: 25vw;
+    background-color: #9e988fcb;
+    min-height: 82vh;
+  }
+  .wishlist-remove-btn {
+    width: 8vw;
+    position: absolute;
+    left: 69vw;
+    top: 4vw;
+    color: #bd0000;
+  }
+  .wishlist-remove-btn i {
+    font-size: 7.5vw;
+  }
+  .staricon-not-added,
+  .staricon-added {
+    font-size: 7.5vw;
+  }
+  .staricon-not-added {
+    color: #971616;
+  }
+  .staricon-added {
+    color: green;
   }
   body {
     font-family: "Dosis", sans-serif;
@@ -372,14 +508,6 @@
     margin-left: 0;
     margin-right: 0;
   }
-  .panel-default {
-    padding: 0 0;
-  }
-  .panel-body {
-    height: 100%;
-    border: 1px solid #ddd;
-    background-color: cornsilk;
-  }
   #bottombar {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -407,6 +535,7 @@
     padding-left: 9px;
     padding-right: 9px;
     border-radius: 9px;
+    font-size: 4vw;
   }
   .label-warning[href],
   .badge-warning[href] {

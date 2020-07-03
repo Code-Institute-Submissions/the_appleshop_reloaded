@@ -15,16 +15,15 @@
     <form id="loginform" method="POST" action="">
         {% csrf_token %}
         {{ login_form | as_bootstrap }}
-        <div id="login-btn-wrapper">
+        <div id="login-btn-wrapper" class="ha">
             <button id="login-btn" type="submit" class="btn"><b>Login</b></button>
         </div>
 
     </form>
-    <div id="reset-register-wrapper">
+    <div id="reset-register-wrapper" class="ha">
         <div id="password-reset-link" class="btn">
             <a href="{% url 'password_reset' %}"><b>Reset Password</b></a>
         </div>
-        <div id="or-div"> or </div>
         <div id="register-link" class="btn">
             <a href="{% url 'registration' %}"><b>Register here</b></a>
         </div>

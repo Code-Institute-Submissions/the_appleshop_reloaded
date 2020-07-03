@@ -1,15 +1,18 @@
 @media screen and (max-width: 414px) and (max-height: 823px) and (orientation: portrait) {
 
+    // fontsize definitions
+
+    @import "pages/_cart-page.scss";
+    @import "pages/_checkout-page.scss";
     @import "pages/_login-page.scss";
     @import "pages/_password-reset-page.scss";
-    @import "pages/_cart-page.scss";
-    @import "pages/_products-page.scss";
     @import "pages/_productdetails-page.scss";
+    @import "pages/_products-page.scss";
     @import "pages/_profile-page.scss";
+    @import "pages/_register-page.scss";
+    @import "pages/_reviews-page.scss";
+    @import "pages/_wishlist-page.scss";
 
-
-    // fontsize definitions
-    $delPopupFontSize: 4vw;
 
     body {
         font-family: $dosisFont;
@@ -110,15 +113,6 @@
 
     }
 
-    .panel-default {
-        padding: 0 0;
-    }
-
-    .panel-body {
-        height: 100%;
-        border: 1px solid #ddd;
-        background-color: cornsilk;
-    }
 
     // bottom linkbar
 
@@ -150,6 +144,7 @@
         -webkit-border-radius: 9px;
         -moz-border-radius: 9px;
         border-radius: 9px;
+        font-size: 4vw;
     }
 
     .label-warning[href],

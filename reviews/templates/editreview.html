@@ -1,12 +1,14 @@
 {% extends "base.html" %}
 {% load bootstrap_tags %}
 {% block content %}
-<div class="editReviewWrapper ha">
+<div class="edit-review-wrapper ha">
     <div class="review-headline">Add a new or edit Review</div>
-    <form method="POST" enctype="multipart/form-data">
+    <form id="review-form" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form | as_bootstrap }}
-        <button type="submit" class="btn btn-info">Save</button>
+        <div id="review-send-btn-wrapper" class="ha">
+            <button id="review-send-btn" type="submit" class="btn">Save</button>
+        </div>
     </form>
 </div>
 {% endblock %}

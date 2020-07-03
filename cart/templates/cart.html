@@ -21,13 +21,13 @@
                 <img class="product-image" src="{{ MEDIA_URL }}{{item.product.image}}"
                     alt="image of {{item.product.name}}">
 
-                <div class="product-quickstats">
-                    <div class="quickstats-key vh"><i class="fa fa-eye"></i></div>
-                    <div class="quickstats-value">{{ item.product.view_count }}</div>
-                    <div class="quickstats-key vh"><i class="fa fa-comment"></i></div>
-                    <div class="quickstats-value">{{ item.product.review_count }}</div>
-                    <div class="quickstats-key vh">Sold:</div>
-                    <div class="quickstats-value">{{ item.product.ordered_pcs }}</div>
+                <div class="product-stats">
+                    <div class="stats-key vh"><i class="fa fa-eye"></i></div>
+                    <div class="stats-value">{{ item.product.view_count }}</div>
+                    <div class="stats-key vh"><i class="fa fa-comment"></i></div>
+                    <div class="stats-value">{{ item.product.review_count }}</div>
+                    <div class="stats-key vh">Sold:</div>
+                    <div class="stats-value">{{ item.product.ordered_pcs }}</div>
                 </div>
 
                 <h3><a class="product-headline"

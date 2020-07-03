@@ -11,25 +11,12 @@
             <div class="panel-body">
                 <h3 class="review-headline ha"><a href="{% url 'review_detail' review.id %}">{{ review.title }}</a></h3>
                 {% if review.image %}
-                <img src="{{ MEDIA_URL }}{{review.image}}" alt="image of {{review.product.name}} review"
-                    style="width:200px;height:150px;">
+                <img class="product-image" src="{{ MEDIA_URL }}{{review.image}}" alt="image of {{review.product.name}} review">
                 {% endif %}
-                <p></p>
-                <p class="product-description">{{ review.comment }}</p>
-                <p><span class="boldtext">Published by:</span> {{ review.author }} </p>
-                <p><span class="boldtext">Published on:</span> {{ review.created_date }} </p>
-                <div class="review-quickstats">
-                    <div class="quickstats-key vh"><i class="fa fa-eye"></i></div>
-                    <div class="quickstats-value">{{ review.view_count }}</div>
-                    <div class="quickstats-key vh">Rating:</div>
-                    <div class="quickstats-value">{{review.rating }}</div>
-                </div>
-                <div id="review-btn-bar" class="ha">
-                    <a id="back-to-product-btn" href="{% url 'product_detail' review.product.id %}" class="btn">Back to
-                        {{ review.product.name }}</a>
-                    {% if user.is_authenticated and review.author.id == user.id %}
-                    <a id="edit-review-btn" href="{% url 'edit_review' review.id %}" class="btn">Edit Review</a>
-                    <div id="review-del-req-btn" class="btn" onclick="showDeletePopup()">Delete</div>
+
+                {% if user.is_authenticated and review.author.id == user.id %}
+                    <a id="edit-review-btn" href="{% url 'edit_review' review.id %}" class="btn"><i class="fa fa-edit"></i></a>
+                    <div id="review-del-req-btn" class="btn" onclick="showDeletePopup()"><i class="fa fa-trash"></i></div>
 
                     <div id="confirm-delete-popup" class="vh">
                         <div id="delete-popup-message" class="ha">Delete Review?</div>
@@ -38,6 +25,24 @@
                         <div id="delete-cancel-btn" class="btn" onclick="closeDeletePopup()">Cancel</div>
                     </div>
                     {% endif %}
+
+
+                
+                <p></p>
+                <p class="product-description">{{ review.comment }}</p>
+                <p><span class="boldtext">Published by:</span> {{ review.author }} </p>
+                <p><span class="boldtext">Published on:</span> {{ review.created_date }} </p>
+                <div class="review-stats">
+                    <div class="stats-key"><i class="fa fa-eye"></i></div>
+                    <div class="stats-value">{{ review.view_count }}</div>
+                    <div class="stats-key">Rating:</div>
+                    <div class="stats-value">{{review.rating }}</div>
+                </div>
+                <div id="review-btn-bar" class="ha">
+                    <a id="back-to-product-btn" href="{% url 'product_detail' review.product.id %}" class="btn">Back to
+                        {{ review.product.name }}</a>
+                        <a id="back-to-product-btn" href="{% url 'product_detail' review.product.id %}" class="btn">Back to
+                            {{ review.product.name }}</a>
                 </div>
             </div>
         </div>

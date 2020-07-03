@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="product-wrapper ha">
-
+<div class="page-headline ha">Our bestsellers</div>
     <div class="row row-flex">
         <div class="search-field-wrapper ha">
             <div class="display">
@@ -12,7 +12,6 @@
                 </form>
             </div>
         </div>
-
 
         {% if products %}
         {% for product in products %}
@@ -38,20 +37,21 @@
                 {% endif %}
                 <img class="product-image" src="{{ MEDIA_URL }}{{product.image}}" alt="image of {{product.name}}">
 
-<div class="product-quickstats">
-    <div class="quickstats-key vh"><i class="fa fa-eye"></i></div>
-    <div class="quickstats-value">{{ product.view_count }}</div>
-    <div class="quickstats-key vh"><i class="fa fa-comment"></i></div>
-    <div class="quickstats-value">{{ product.review_count }}</div>
-    <div class="quickstats-key vh">Sold:</div>
-    <div class="quickstats-value">{{ product.ordered_pcs }}</div>
-</div>
                 <!--
             <div class="product" style="background-image: url('{{ MEDIA_URL }}{{product.image}}')"></div>-->
                 <h3><a class="product-headline" href="{% url 'product_detail' product.id %}"><b>{{product.name}}<b></a>
                 </h3>
 
                 <p class="product-description">{{ product.description|truncatewords:12 }}</p>
+                <div class="product-stats">
+                    <div class="stats-key"><i class="fa fa-eye"></i></div>
+                    <div class="stats-value">{{ product.view_count }}</div>
+                    <div class="stats-key"><i class="fa fa-comment"></i></div>
+                    <div class="stats-value">{{ product.review_count }}</div>
+                    <div class="stats-key">Sold:</div>
+                    <div class="stats-value">{{ product.ordered_pcs }}</div>
+                </div>
+                
                 <p><b>Our price:  {{ product.price }} EUR<b></p>
                 <form id="addcart{{product.id}}" method="POST" action="{% url 'add_to_cart' product.id %}">
                     {% csrf_token %}

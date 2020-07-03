@@ -12,8 +12,7 @@
             <div class="panel-body">
 
                 {% if product.id in wishlist %}
-                <form class="wishform" method="POST"
-                    action="{% url 'remove_from_wishlist' product.id %}">
+                <form class="wishform" method="POST" action="{% url 'remove_from_wishlist' product.id %}">
                     {% csrf_token %}
                     <span class="input-group-btn">
                         <input type="text" name="jumper" value="" hidden>
@@ -21,22 +20,22 @@
                     </span>
                 </form>
                 {% else %}
-                <form class="wishform" method="POST"
-                    action="{% url 'add_to_wishlist' product.id %}">
+                <form class="wishform" method="POST" action="{% url 'add_to_wishlist' product.id %}">
                     {% csrf_token %}
                     <span class="input-group-btn">
-                        <button class="add-wish-btn" type="submit"><i class="fa fa-star staricon-not-added"></i></button>
+                        <button class="add-wish-btn" type="submit"><i
+                                class="fa fa-star staricon-not-added"></i></button>
                     </span>
                 </form>
                 {% endif %}
 
 
                 {% if product.name in purchased_products %}
-                <form class="revform" method="POST"
-                    action="{% url 'new_review' product.id %}">
+                <form class="revform" method="POST" action="{% url 'new_review' product.id %}">
                     {% csrf_token %}
                     <span class="input-group-btn">
-                        <button class="add-review-btn" type="submit"><i class="fa fa-comment"></i></button>
+                        <button class="add-review-btn" type="submit"><span class="glyphicon glyphicon-comment"
+                                aria-hidden="true"></span></button>
                     </span>
                 </form>
                 {% endif %}
@@ -53,7 +52,9 @@
                     <div class="stats-value">{{ product.view_count }}</div>
                     <div class="stats-key"><i class="fa fa-comment"></i></div>
                     {% if product.review_count > 0 %}
-                    <a href="{% url 'get_reviews' product.id %}">{{ product.review_count }}</a>
+                    <div class="stats-value">
+                        <a href="{% url 'get_reviews' product.id %}">{{ product.review_count }}</a>
+                    </div>
                     {% else %}
                     <div class="stats-value">{{ product.review_count }}</div>
                     {% endif %}

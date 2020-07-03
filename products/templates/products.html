@@ -6,6 +6,7 @@
 {% block content %}
 
 <div class="product-wrapper ha">
+    <div class="page-headline ha">Daily fresh apples!</div>
 
     <div class="row row-flex">
         <div class="search-field-wrapper ha">
@@ -42,21 +43,31 @@
                 </form>
                 {% endif %}
 
-                <img class="product-image" src="{{ MEDIA_URL }}{{product.image}}" alt="image of {{product.name}}">
+                {% if product.name in purchased_products %}
+                <form class="revform" method="POST" action="{% url 'new_review' product.id %}">
+                    {% csrf_token %}
+                    <span class="input-group-btn">
+                        <button class="add-review-btn" type="submit"><span class="glyphicon glyphicon-comment"
+                                aria-hidden="true"></span></button>
+                    </span>
+                </form>
+                {% endif %}
 
-                <div class="product-quickstats">
-                    <div class="quickstats-key vh"><i class="fa fa-eye"></i></div>
-                    <div class="quickstats-value">{{ product.view_count }}</div>
-                    <div class="quickstats-key vh"><i class="fa fa-comment"></i></div>
-                    <div class="quickstats-value">{{ product.review_count }}</div>
-                    <div class="quickstats-key vh">Sold:</div>
-                    <div class="quickstats-value">{{ product.ordered_pcs }}</div>
-                </div>
+                <img class="product-image" src="{{ MEDIA_URL }}{{product.image}}" alt="image of {{product.name}}">
 
                 <h3><a class="product-headline" href="{% url 'product_detail' product.id %}"><b>{{product.name}}</b></a>
                 </h3>
 
                 <p class="product-description">{{ product.description|truncatewords:12 }}</p>
+                <div class="product-stats">
+                    <div class="stats-key"><i class="fa fa-eye"></i></div>
+                    <div class="stats-value">{{ product.view_count }}</div>
+                    <div class="stats-key"><i class="fa fa-comment"></i></div>
+                    <div class="stats-value">{{ product.review_count }}</div>
+                    <div class="stats-key">Sold:</div>
+                    <div class="stats-value">{{ product.ordered_pcs }}</div>
+                </div>
+                <br>
                 <p><b>Our price: {{ product.price }} EUR</b></p>
                 <form id="addcart{{product.id}}" method="POST" action="{% url 'add_to_cart' product.id %}">
                     {% csrf_token %}

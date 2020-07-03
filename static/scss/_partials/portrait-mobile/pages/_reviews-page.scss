@@ -5,26 +5,41 @@
     //min-height: 82vh;
 }
 
-.editReviewWrapper {
-    padding-bottom: 20vw;
-    background-color: #9e988fcb;
+.edit-review-wrapper {
+    padding-bottom: 25vw;
     min-height: 82vh;
     padding-top: 10vw;
 }
 
-.review-quickstats {
+#review-form {
+    width: 90vw;
+}
+
+#id_image {
+    height: 13vw;
+}
+
+#review-send-btn-wrapper {
+    width: 100%;
+}
+
+
+#review-send-btn {
+    font-family: $dosisFont;
+    font-size: 5.5vw;
+    background-color: lightblue;
+    width: 40vw;
+}
+
+.review-stats {
     display: flex;
     flex-wrap: wrap;
-    position: absolute;
-    width: 50%;
-    top: 22vw;
-    left: 52vw;
+    width: 100%;
 }
 
 #review-btn-bar {
     width: 100%
 }
-
 
 #back-to-product-btn,
 #edit-review-btn,
@@ -41,18 +56,17 @@
 }
 
 #edit-review-btn {
-    background-color: rgb(141, 144, 173);
-
-    margin: {
-        left: 2px;
-        right: 2px;
-    }
-
+    width: 8vw;
+    position: absolute;
+    left: 70vw;
+    top: 7vw;
 }
 
 #review-del-req-btn {
-    background-color: rgb(177, 25, 25);
-    margin-left: 2px;
+    width: 8vw;
+    position: absolute;
+    left: 70vw;
+    top: 14vw;
 
 }
 
@@ -61,17 +75,18 @@
     font-size: 5.5vw;
 }
 
-.revform {
-    width: 8vw;
-    position: absolute;
-    left: 88.7%;
-    top: 7%;
-}
 
-.add-review-btn {
-    font-size: 5.5vw;
 
-}
+
+
+
+// .delform {
+//     width: 8vw;
+//     position: absolute;
+//     left: 70vw;
+//     top: 14vw;
+
+// }
 
 #confirm-delete-popup {
     background-color: beige;

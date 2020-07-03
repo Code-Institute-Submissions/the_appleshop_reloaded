@@ -6,6 +6,7 @@
 
 
 <div class="wishlist-wrapper ha">
+    <div class="page-headline ha">Your apples wishlist</div>
     <div class="row row-flex">
         {% if wishlist_items %}
         {% for item in wishlist_items %}
@@ -13,26 +14,26 @@
             <div class="panel-body">
 
 
-                <a class="wishlist-remove-btn" href="{% url 'remove_from_wishlist' item.product.id %}"><i class="fa fa-times-circle"></i></a>
+                <a class="wishlist-remove-btn" href="{% url 'remove_from_wishlist' item.product.id %}"><i
+                        class="fa fa-times-circle"></i></a>
 
 
 
-                <img src="{{ MEDIA_URL }}{{item.product.image}}" alt="image of {{item.product.name}}" style="width:200px;height:150px;">
-
-
-                <div class="product-quickstats">
-                    <div class="quickstats-key vh"><i class="fa fa-eye"></i></div>
-                    <div class="quickstats-value">{{ item.product.view_count }}</div>
-                    <div class="quickstats-key vh"><i class="fa fa-comment"></i></div>
-                    <div class="quickstats-value">{{ item.product.review_count }}</div>
-                    <div class="quickstats-key vh">Sold:</div>
-                    <div class="quickstats-value">{{ item.product.ordered_pcs }}</div>
-                </div>
-
-                <h3><a class="product-headline" href="{% url 'product_detail' item.product.id %}"><b>{{item.product.name}}</b></a>
+                <img class="product-image" src="{{ MEDIA_URL }}{{item.product.image}}" alt="image of {{item.product.name}}">
+                <h3><a class="product-headline"
+                        href="{% url 'product_detail' item.product.id %}"><b>{{item.product.name}}</b></a>
                 </h3>
 
                 <p class="product-description">{{ item.product.description|truncatewords:12 }}</p>
+                <div class="product-stats">
+                    <div class="stats-key"><i class="fa fa-eye"></i></div>
+                    <div class="stats-value">{{ item.product.view_count }}</div>
+                    <div class="stats-key"><i class="fa fa-comment"></i></div>
+                    <div class="stats-value">{{ item.product.review_count }}</div>
+                    <div class="stats-key">Sold:</div>
+                    <div class="stats-value">{{ item.product.ordered_pcs }}</div>
+                </div>
+                
                 <p><b>Our price: {{ item.product.price }} EUR</b></p>
                 <form id="addcart{{product.id}}" method="POST" action="{% url 'add_to_cart' item.product.id %}">
                     {% csrf_token %}
