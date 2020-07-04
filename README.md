@@ -136,7 +136,7 @@ I have added in total 4 models and one form as listed below.
 
 * The wireframes can be accessed in this folder:
 
-    https://github.com/poldi2018/the_appleshop/tree/master/static/data/mockups
+    https://github.com/poldi2018/the_appleshop_reloaded/tree/master/static/data/mockups
 
 
 
@@ -144,7 +144,7 @@ I have added in total 4 models and one form as listed below.
 
 * Create a project in your IDE and clone it into that workplace folder by executing the bash command
 
-    git clone https://github.com/poldi2018/the_appleshop.git
+    git clone https://github.com/poldi2018/the_appleshop_reloaded.git
 
 * In working directory of that project please create a file (e.g. env.py) to host the env variables.
 * The optional keys TESTING is only needed for testing to force Django to use sqlite. USELOCALSTATIC is used to work with local static files instead of AWS.
@@ -238,7 +238,7 @@ The following Tabs need to checked for adaptation of settings
 * Type of policy: S3 bucket policy
 * Principal: *
 * Actions: GetObject
-* ARN: arn:aws:s3:::the-appleshop/*
+* ARN: arn:aws:s3:::the-appleshop-reloaded/*
 * generate bucket policy, the outcome should look like this:
 
 {
@@ -251,7 +251,7 @@ The following Tabs need to checked for adaptation of settings
         "s3:GetObject"
       ],
       "Effect": "Allow",
-      "Resource": "arn:aws:s3:::the-appleshop/*",
+      "Resource": "arn:aws:s3:::the-appleshop-reloaded/*",
       "Principal": "*"
     }
   ]
@@ -432,7 +432,7 @@ https://en.wikipedia.org/wiki/List_of_apple_cultivars
 
 * Compliance reports can be found in reports folder
 
-https://github.com/poldi2018/the_appleshop/tree/master/static/data/reports
+https://github.com/poldi2018/the_appleshop_reloaded/tree/master/static/data/reports
 
 
 
@@ -445,7 +445,7 @@ https://github.com/poldi2018/the_appleshop/tree/master/static/data/reports
 
 ## A detailed coverage report is available here:
 
-https://github.com/poldi2018/the_appleshop/tree/master/htmlcov
+https://github.com/poldi2018/the_appleshop_reloaded/tree/master/htmlcov
 
 
 * Testing with Travis CI has passed all tests.

@@ -27,6 +27,7 @@
 
 .add-review-btn {
     font-size: 5.5vw;
+    color: rgb(65, 106, 236);
 }
 
 
@@ -35,8 +36,14 @@
     font-size: 7.5vw;
 }
 
+
 .product-description {
     min-height: 40px;
+}
+
+h3 .product-headline {
+    text-decoration: none;
+
 }
 
 .product-stats {
@@ -46,10 +53,14 @@
 }
 
 .stats-key {
-    width: 21vw;
+    width: 25%;
 }
 
 .stats-value {
-    width: 53vw;
+    width: 75%;
+}
+
+.stats-value a {
+    text-decoration: none;
 }
 

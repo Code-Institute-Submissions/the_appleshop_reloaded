@@ -1,5 +1,5 @@
 .profile-wrapper {
-    padding-bottom: 20vw;
+    padding-bottom: 28vw;
 }
 
 .nav-tabs {
@@ -37,42 +37,53 @@
     justify-content: center;
 }
 
-.orderline-order-header {
-    width: 50vw;
+.orderline-order-header,
+.orderline-product-header,
+.orderline-quantity-header {
     font-size: 4.5vw;
+}
 
+.orderline-order-header {
+    width: 45vw;
 }
 
 .orderline-product-header {
     width: 30vw;
-    font-size: 4.5vw;
-
 }
 
 .orderline-quantity-header {
     width: 20vw;
-    font-size: 4.5vw;
+}
 
+.orderline-order-value,
+.orderline-product-value,
+.orderline-quantity-value {
+    font-size: 3.8vw;
 }
 
 .orderline-order-value {
-    width: 50vw;
-    font-size: 4.5vw;
-
+    width: 45vw;
 }
 
 .orderline-product-value {
     width: 30vw;
-    font-size: 4.5vw;
-
 }
 
 .orderline-quantity-value {
     width: 20vw;
-    font-size: 4.5vw;
+}
 
+#update-address-btn-wrapper {
+    width: 100%;
 }
 
 .update-address-btn {
+    margin-top: 4vw;
     background-color: lightblue;
+    color: rgb(65, 65, 65);
+    transition: color .3s ease-in-out;
+}
+
+.update-address-btn:hover {
+    color: darkred;
 }

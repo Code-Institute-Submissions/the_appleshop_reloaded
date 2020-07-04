@@ -24,12 +24,14 @@
             {% if user_addressform.full_name.value == "" %}
             <p>No record found, please enter your shipping address.</p>
             {% else %}
-            <div class=" page-headline ha">Your current shipping address.</div>
+            <div class=" page-headline ha">Your shipping address.</div>
             {% endif %}
             <form method="POST" action="{% url 'profile' %}">
                 {% csrf_token %}
                 {{ user_addressform | as_bootstrap }}
+                <div id="update-address-btn-wrapper" class="ha">
                 <button type="submit" class="btn btn update-address-btn">Update Address!</button>
+            </div>
             </form>
         </div>
 

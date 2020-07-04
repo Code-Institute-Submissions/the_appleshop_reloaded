@@ -29,7 +29,6 @@
                 </form>
                 {% endif %}
 
-
                 {% if product.name in purchased_products %}
                 <form class="revform" method="POST" action="{% url 'new_review' product.id %}">
                     {% csrf_token %}
@@ -80,6 +79,9 @@
                         </span>
                     </div>
                 </form>
+                <div id="to-products-btn-wrapper" class="ha">
+                    <a id="to-products-btn" href="{% url 'products' %}" class="btn">Back to products</a>
+                </div>
             </div>
         </div>
     </div>

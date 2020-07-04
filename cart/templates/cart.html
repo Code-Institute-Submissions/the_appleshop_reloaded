@@ -17,24 +17,51 @@
         {% for item in cart_items %}
         <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">
             <div class="panel-body">
+                {% if item.product.id in wishlist %}
+                <form class="wishform" method="POST" action="{% url 'remove_from_wishlist' item.product.id %}">
+                    {% csrf_token %}
+                    <span class="input-group-btn">
+                        <input type="text" name="jumper" value="" hidden>
+                        <button class="remove-wish-btn" type="submit"><i class="fa fa-star staricon-added"></i></button>
+                    </span>
+                </form>
+                {% else %}
+                <form class="wishform" method="POST" action="{% url 'add_to_wishlist' item.product.id %}">
+                    {% csrf_token %}
+                    <span class="input-group-btn">
+                        <button class="add-wish-btn" type="submit"><i
+                                class="fa fa-star staricon-not-added"></i></button>
+                    </span>
+                </form>
+                {% endif %}
+
+                {% if item.product.name in purchased_products %}
+                <form class="revform" method="POST" action="{% url 'new_review' item.product.id %}">
+                    {% csrf_token %}
+                    <span class="input-group-btn">
+                        <button class="add-review-btn" type="submit"><span class="glyphicon glyphicon-comment"
+                                aria-hidden="true"></span></button>
+                    </span>
+                </form>
+                {% endif %}
 
                 <img class="product-image" src="{{ MEDIA_URL }}{{item.product.image}}"
                     alt="image of {{item.product.name}}">
-
-                <div class="product-stats">
-                    <div class="stats-key vh"><i class="fa fa-eye"></i></div>
-                    <div class="stats-value">{{ item.product.view_count }}</div>
-                    <div class="stats-key vh"><i class="fa fa-comment"></i></div>
-                    <div class="stats-value">{{ item.product.review_count }}</div>
-                    <div class="stats-key vh">Sold:</div>
-                    <div class="stats-value">{{ item.product.ordered_pcs }}</div>
-                </div>
 
                 <h3><a class="product-headline"
                         href="{% url 'product_detail' item.product.id %}"><b>{{item.product.name}}</b></a>
                 </h3>
 
                 <p class="product-description">{{ item.product.description|truncatewords:12 }}</p>
+                <div class="product-stats">
+                    <div class="stats-key"><i class="fa fa-eye"></i></div>
+                    <div class="stats-value">{{ item.product.view_count }}</div>
+                    <div class="stats-key"><i class="fa fa-comment"></i></div>
+                    <div class="stats-value">{{ item.product.review_count }}</div>
+                    <div class="stats-key">Sold:</div>
+                    <div class="stats-value">{{ item.product.ordered_pcs }}</div>
+                </div>
+                <br>
                 <p><b>Our price: {{ item.product.price }} EUR</b></p>
                 <form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
                     {% csrf_token %}
@@ -46,10 +73,11 @@
                             <div class="input-group-addon">{{item.quantity}}</div>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary amend-btn"><span class="glyphicon glyphicon-edit"
-                            aria-hidden="true"></span> Amend</button>
+                    <div id="amend-btn-wrapper" class="ha">
+                        <button type="submit" class="btn btn-primary amend-btn"><span class="glyphicon glyphicon-edit"
+                                aria-hidden="true"></span> Amend</button>
+                    </div>
                 </form>
-
             </div>
         </div>
         {% endfor %}
@@ -67,14 +95,14 @@
                 <a href="{% url 'checkout' %}" class="btn btn-success checkout-btn" role="button"><span
                         class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span> Checkout</a>
                 {% else %}
-                <div class="empty-cart-Wrapper ha">
+                <div class="empty-cart-wrapper ha">
                     <p class="no-cart-items">No products in your shopping cart</p>
-                    <a href="{% url 'products' %}"><i class="fa fa-home"></i> Products</a>
+                    <a id="emptycart-product-link" href="{% url 'products' %}"><span
+                            class="glyphicon glyphicon-apple active-app"></span></a>
                 </div>
             </div>
         </div>
         {% endif %}
     </div>
 </div>
-
 {% endblock %}

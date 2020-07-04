@@ -28,3 +28,16 @@
 .staricon-added {
     color: green;
 }
+
+#empty-wishlist-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+#emptywishlist-product-link {
+    width: 80%;
+    font-size: 8vw;
+    text-align: center;
+}

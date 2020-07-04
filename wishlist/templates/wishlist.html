@@ -17,9 +17,8 @@
                 <a class="wishlist-remove-btn" href="{% url 'remove_from_wishlist' item.product.id %}"><i
                         class="fa fa-times-circle"></i></a>
 
-
-
-                <img class="product-image" src="{{ MEDIA_URL }}{{item.product.image}}" alt="image of {{item.product.name}}">
+                <img class="product-image" src="{{ MEDIA_URL }}{{item.product.image}}"
+                    alt="image of {{item.product.name}}">
                 <h3><a class="product-headline"
                         href="{% url 'product_detail' item.product.id %}"><b>{{item.product.name}}</b></a>
                 </h3>
@@ -33,7 +32,7 @@
                     <div class="stats-key">Sold:</div>
                     <div class="stats-value">{{ item.product.ordered_pcs }}</div>
                 </div>
-                
+
                 <p><b>Our price: {{ item.product.price }} EUR</b></p>
                 <form id="addcart{{product.id}}" method="POST" action="{% url 'add_to_cart' item.product.id %}">
                     {% csrf_token %}
@@ -50,7 +49,11 @@
         </div>
         {% endfor %}
         {% else %}
-        <p>No products in your wishlist.</p>
+        <div id="empty-wishlist-wrapper">
+            <p>No products in your wishlist.</p>
+            <a id="emptywishlist-product-link" href="{% url 'products' %}"><span
+                    class="glyphicon glyphicon-apple active-app"></span></a>
+        </div>
         {% endif %}
     </div>
 </div>

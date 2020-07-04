@@ -69,6 +69,7 @@ def edit_review(request, pk):
     or edit a review depending if the Review ID
     is null or not
     """
+    print("PK", pk)
     review = get_object_or_404(Review, pk=pk) if pk else None
     if request.user.is_authenticated and review.author.id == request.user.id:
         if request.method == "POST":
