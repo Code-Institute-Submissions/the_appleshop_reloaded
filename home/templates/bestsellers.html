@@ -4,14 +4,6 @@
 <div class="product-wrapper ha">
 <div class="page-headline ha">Our bestsellers</div>
     <div class="row row-flex">
-        <div class="search-field-wrapper ha">
-            <div class="display">
-                <form action="{% url 'product_search' %}" method="GET">
-                    <input type="text" name="q">
-                    <button type="submit">Search</button>
-                </form>
-            </div>
-        </div>
 
         {% if products %}
         {% for product in products %}
@@ -22,7 +14,6 @@
                     action="{% url 'remove_from_wishlist' product.id %}">
                     {% csrf_token %}
                     <span class="input-group-btn">
-                        <input type="text" name="jumper" value="" hidden>
                         <button class="add-wish-btn" type="submit"><i class="fa fa-star staricon-added"></i></button>
                     </span>
                 </form>

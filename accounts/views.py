@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from checkout.models import OrderLineItem
 from .forms import UserLoginForm, UserRegistrationForm, UserAddressForm, UserAddress
+from cart.contexts import sync_carts
 
 
 @login_required
@@ -27,6 +28,7 @@ def login(request):
             if user:
                 auth.login(user=user, request=request)
                 messages.success(request, "You have successfully logged in!")
+                sync_carts(request)
                 return redirect(reverse('profile'))
             else:
                 login_form.add_error(None,

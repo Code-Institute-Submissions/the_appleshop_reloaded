@@ -21,7 +21,6 @@
                 <form class="wishform" method="POST" action="{% url 'remove_from_wishlist' item.product.id %}">
                     {% csrf_token %}
                     <span class="input-group-btn">
-                        <input type="text" name="jumper" value="" hidden>
                         <button class="remove-wish-btn" type="submit"><i class="fa fa-star staricon-added"></i></button>
                     </span>
                 </form>
