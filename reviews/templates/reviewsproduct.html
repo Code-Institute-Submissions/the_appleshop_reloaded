@@ -5,19 +5,9 @@
 {% endblock head_js %}
 {% block content %}
 <div class="reviews-wrapper ha">
+    <div class="page-headline ha">Reviews per Product</div>
     <div class="row row-flex">
-
         {% if reviews %}
-
-        <div class="search-field-wrapper ha">
-            <div class="display">
-                <form action="{% url 'review_search' %}" method="GET">
-                    <input type="text" name="q">
-                    <button type="submit">Search</button>
-                </form>
-            </div>
-        </div>
-
         {% for review in reviews %}
         <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">
             <div class="panel-body">
@@ -27,7 +17,9 @@
                     alt="image of {{review.product.name}} review">
                 {% endif %}
 
-                <h3><div class="product-headline"><b>Review for {{review.product.name}}</b></div></h3>
+                <h3>
+                    <div class="product-headline"><b>Review for {{review.product.name}}</b></div>
+                </h3>
                 <p></p>
                 <p class="product-description">{{ review.comment|truncatewords:10 }}</p>
                 <p><span class="boldtext">Published by:</span> {{ review.author }} </p>
@@ -39,7 +31,10 @@
                     <div class="stats-value">{{review.rating }}</div>
                 </div>
                 <div class="review-btn-bar ha">
+                    <a class="btn return-product-btn ha" href="{% url 'product_detail' review.product.id %}">Return
+                        Product</a>
                     <a class="btn review-details-btn ha" href="{% url 'review_detail' review.id %}">Review Details</a>
+
                 </div>
             </div>
         </div>

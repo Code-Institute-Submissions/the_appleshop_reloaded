@@ -1,8 +1,8 @@
-.reviewsWrapper {
+.reviews-wrapper {
     padding-top: 5vw;
     padding-bottom: 20vw;
     background-color: #9e988fcb;
-    //min-height: 82vh;
+    min-height: 82vh;
 }
 
 .edit-review-wrapper {
@@ -17,7 +17,6 @@
 
 #id_image {
     height: 13vw;
-    padding-top: 13px;
     display: flex;
     align-items: center;
 }
@@ -50,14 +49,14 @@
     color: darkred;
 }
 
-#edit-review-btn {
+.edit-review-btn {
     width: 8vw;
     position: absolute;
     left: 62vw;
     top: 30vw;
 }
 
-#review-del-req-btn {
+.review-del-req-btn {
     width: 8vw;
     position: absolute;
     left: 62vw;
@@ -65,13 +64,13 @@
 
 }
 
-#edit-review-btn {
+.edit-review-btn {
     font-size: 7.5vw;
     color: orange;
 }
 
 
-#review-del-req-btn {
+.review-del-req-btn {
     font-size: 7.5vw;
     color: red;
 }
@@ -82,7 +81,7 @@
     width: 100%;
 }
 
-#review-btn-bar {
+.review-btn-bar {
     margin: {
         top: 4vw;
         bottom: 4vw;
@@ -92,45 +91,46 @@
     justify-content: center;
 }
 
-#back-to-products-btn {
-    width: 35vw;
+.back-to-products-btn,
+.back-to-reviews-btn,
+.return-product-btn,
+.review-details-btn {
+    width: 33vw;
     font-family: $dosisFont;
-    font-size: 3.5vw;
+    font-size: 4.5vw;
     color: rgb(65, 65, 65);
-    margin-right: 2px;
     transition: color .3s ease-in-out;
+}
+
+.back-to-products-btn {
+    margin-right: 2px;
     background-color: lightblue;
 }
 
-#back-to-reviews-btn {
-    width: 35vw;
-    font-family: $dosisFont;
-    font-size: 3.5vw;
-    color: rgb(65, 65, 65);
+.back-to-reviews-btn {
     margin-left: 2px;
-    transition: color .3s ease-in-out;
     background-color: orange;
 }
 
-#review-details-btn {
-    width: 46vw;
-    font-size: 5.5vw;
-    color: rgb(65, 65, 65);
-    transition: color .3s ease-in-out;
+.return-product-btn {
+    background-color: lightblue;
+    margin: 2px;
+}
+
+.review-details-btn {
     background-color: orange;
+    margin: 2px;
 }
 
 
-#back-to-products-btn:hover, #back-to-reviews-btn:hover, #review-details-btn:hover {
+.back-to-products-btn:hover, .back-to-reviews-btn:hover, .review-details-btn:hover, return-product-btn:hover {
     color:darkred;
 }
 
-
 .review-headline {
     font-family: $dosisFont;
-    font-size: 6.5vw;
+    font-size: 7.5vw;
     margin-bottom: 6vw;
-
 }
 
 .review-headline a {
@@ -138,7 +138,7 @@
 }
 
 
-#confirm-delete-popup {
+.confirm-delete-popup {
     background-color: beige;
     border-radius: 5px;
     border: 1px solid grey;
@@ -156,7 +156,7 @@
     transition: opacity .3s ease-in-out;
 }
 
-#delete-popup-message {
+.delete-popup-message {
     width: 80%;
 
     margin: {
@@ -170,29 +170,22 @@
     }
 }
 
-#delete-btn-bar {
-    width: 100%;
-
-}
-
-#delete-confirm-btn {
+.delete-confirm-btn {
     background-color: lightcoral;
     color: rgb(65, 65, 65);
     margin-right: 2px;
     width: 35vw;
-}
-
-#delete-confirm-btn a {
-    color: rgb(65, 65, 65);
     transition: color .3s ease-in-out;
     text-decoration: none;
 }
 
-#delete-confirm-btn a:hover {
+
+.delete-confirm-btn:hover {
     color: whitesmoke;
 }
 
-#delete-cancel-btn {
+.delete-cancel-btn {
+    width: 35vw;
     background-color: lightslategray;
     margin-left: 2px;
     font-family: $dosisFont;
@@ -200,7 +193,6 @@
     transition: color .3s ease-in-out;
 }
 
-#delete-cancel-btn:hover {
+.delete-cancel-btn:hover {
     color: darkred;
 }
-

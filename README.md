@@ -438,7 +438,7 @@ https://github.com/poldi2018/the_appleshop_reloaded/tree/master/static/data/repo
 
 # Automatic Testing
 
-* All methods have been tested by using Django Testkit.
+* All methods have been tested by using Django Testkit, 98% coverage.
 
 ![Coverage overview](static/data/mockups/screens/coverage-ms5.jpg)
 

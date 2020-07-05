@@ -139,8 +139,13 @@
 
     #wishlist-badge-bottom {
         position: absolute;
-        top: -3vw;
-        left: 9vw;
+        top: -2vw;
+        left: 8.7vw;
+        padding: {
+            left: 2vw;
+            right: 2vw;
+        }
+        max-width: none;
     }
 
     
@@ -154,8 +159,13 @@
 
     #cart-badge-bottom {
         position: absolute;
-        top: -3vw;
-        left: 9vw;
+        top: -2vw;
+        left: 8.7vw;
+        padding: {
+            left: 1.5vw;
+            right: 1.5vw;
+        }
+        max-width: none;
     }
 
     .badge-cart {
@@ -163,6 +173,11 @@
         -moz-border-radius: 3vw;
         border-radius: 3vw;
         font-size: 4vw;
+    }
+
+    .badge {
+        padding-right: 5px;
+        padding-left: 5px;
     }
 
     .label-warning[href],

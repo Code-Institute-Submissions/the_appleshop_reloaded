@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% load static from staticfiles %}
+{% load bootstrap_tags %}
 {% block head_js %}
 {% endblock head_js %}
 {% block content %}
-
 
 <div class="wishlist-wrapper ha">
     <div class="page-headline ha">Your apples wishlist</div>
@@ -12,7 +12,6 @@
         {% for item in wishlist_items %}
         <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">
             <div class="panel-body">
-
 
                 <a class="wishlist-remove-btn" href="{% url 'remove_from_wishlist' item.product.id %}"><i
                         class="fa fa-times-circle"></i></a>
@@ -32,9 +31,9 @@
                     <div class="stats-key">Sold:</div>
                     <div class="stats-value">{{ item.product.ordered_pcs }}</div>
                 </div>
-
+                <br>
                 <p><b>Our price: {{ item.product.price }} EUR</b></p>
-                <form id="addcart{{product.id}}" method="POST" action="{% url 'add_to_cart' item.product.id %}">
+                <form method="POST" action="{% url 'add_to_cart' item.product.id %}">
                     {% csrf_token %}
                     <div class="input-group">
                         <input name="quantity" type="number" min="1" max="999" class="form-control"

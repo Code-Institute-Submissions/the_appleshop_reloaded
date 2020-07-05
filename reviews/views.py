@@ -14,10 +14,11 @@ def get_reviews(request, pk=None):
     """
     if pk!=None:
         reviews = Review.objects.filter(product=pk)
+        return render(request, "reviewsproduct.html", {'reviews': reviews})
+
     else:
         reviews = Review.objects.filter(created_date__lte=timezone.now()).order_by('-created_date')
-    return render(request, "reviews.html",
-                  {'reviews': reviews})
+        return render(request, "reviews.html", {'reviews': reviews})
 
 
 def review_detail(request, pk):
@@ -51,14 +52,14 @@ def create_review(request, pk):
                 review.author.id = request.user.id
                 review.product.pk = pk
                 review.name = product.name
+                review.save()
                 product.review_count+=1
                 product.save()
-                review.save()
                 return redirect(review_detail, review.pk)
         else:
             form = ReviewForm(instance=review)
 
-        return render(request, 'editreview.html', {'form': form})
+        return render(request, 'editreview.html', {'form': form, 'pk': product.id})
     else:
         return redirect(reverse('get_reviews'))
 
@@ -69,7 +70,6 @@ def edit_review(request, pk):
     or edit a review depending if the Review ID
     is null or not
     """
-    print("PK", pk)
     review = get_object_or_404(Review, pk=pk) if pk else None
     if request.user.is_authenticated and review.author.id == request.user.id:
         if request.method == "POST":
@@ -81,7 +81,7 @@ def edit_review(request, pk):
         else:
             form = ReviewForm(instance=review)
 
-        return render(request, 'editreview.html', {'form': form})
+        return render(request, 'editreview.html', {'form': form, 'pk': review.product.id})
 
     else:
         return redirect(reverse('get_reviews'))
@@ -92,7 +92,7 @@ def delete_review(request, pk):
     View for deleting a review, requested by author
     """
     review = get_object_or_404(Review, pk=pk)
-    product = get_object_or_404(Product, review.product.id)
+    product = get_object_or_404(Product, pk=review.product.id)
     if request.user.is_authenticated and review.author.id == request.user.id:
         if request.method == "GET":
             review.delete()
