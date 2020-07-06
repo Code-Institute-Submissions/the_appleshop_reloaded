@@ -14,59 +14,105 @@
 
 {% block content %}
 <div class="checkout-wrapper ha">
-
+    <div class="page-headline ha">
+        Checkout with payment
+    </div>
     <div class="row row-flex">
         {% for item in cart_items %}
         <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">
             <div class="panel-body">
-                <img class="product-image" src="{{ MEDIA_URL }}{{product.image}}" alt="image of {{product.name}}">
-                <div class="caption">
-                    <h3>{{ item.product.name }}</h3>
-                    <p class="product-description">{{ item.product.description }}</p>
-                    <p>{{ item.quantity }}</p>
-                    <p>{{ item.product.price }}</p>
+                {% if item.product.id in wishlist %}
+                <form class="wishform" method="POST" action="{% url 'remove_from_wishlist' item.product.id %}">
+                    {% csrf_token %}
+                    <span class="input-group-btn">
+                        <button class="remove-wish-btn" type="submit"><i class="fa fa-star staricon-added"></i></button>
+                    </span>
+                </form>
+                {% else %}
+                <form class="wishform" method="POST" action="{% url 'add_to_wishlist' item.product.id %}">
+                    {% csrf_token %}
+                    <span class="input-group-btn">
+                        <button class="add-wish-btn" type="submit"><i
+                                class="fa fa-star staricon-not-added"></i></button>
+                    </span>
+                </form>
+                {% endif %}
+
+                <img class="product-image" src="{{ MEDIA_URL }}{{item.product.image}}"
+                    alt="image of {{item.product.name}}">
+
+                <h3><a class="product-headline"
+                        href="{% url 'product_detail' item.product.id %}"><b>{{item.product.name}}</b></a>
+                </h3>
+
+                <p class="product-description">{{ item.product.description|truncatewords:12 }}</p>
+                <div class="product-stats">
+                    <div class="stats-key"><i class="fa fa-eye"></i></div>
+                    <div class="stats-value">{{ item.product.view_count }}</div>
+                    <div class="stats-key"><i class="fa fa-comment"></i></div>
+                    <div class="stats-value">{{ item.product.review_count }}</div>
+                    <div class="stats-key">Sold:</div>
+                    <div class="stats-value">{{ item.product.ordered_pcs }}</div>
                 </div>
+                <br>
+                <p><b>Our price: {{ item.product.price }} EUR</b></p>
+                <form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="exampleInputAmount" class="sr-only">New Qty</label>
+                        <div class="input-group">
+                            <div class="input-group-addon">Qty</div>
+                            <input name="quantity" type="number" min="0" max="999" class="form-control">
+                            <div class="input-group-addon">{{item.quantity}}</div>
+                        </div>
+                    </div>
+                    <div class="amend-btn-wrapper ha">
+                        <button type="submit" class="btn btn-primary amend-btn"><span class="glyphicon glyphicon-edit"
+                                aria-hidden="true"></span> Amend</button>
+                    </div>
+                </form>
             </div>
         </div>
         {% endfor %}
+
+        <div class="checkout-summary-wrapper ha">
+            <div class="checkout-summary">
+                <div class="checkout-summary-items">Total: <span class="glyphicon glyphicon-euro" aria-hidden="true"></span> {{ total }}</div>
+                {% if total < 50 %}
+                <div class="checkout-summary-items">(incl. {{ shippingfee }} EUR shipping fee)</div>
+                {% else %}
+                <div class="checkout-summary-items">{{shippingfee}} Shipping</div>
+                {% endif %}
+            </div>
+        
+            <form role="form" method="post" id="payment-form" action="{% url 'checkout' %}">
+                <legend>Payment Details</legend>
+        
+                <div id="credit-card-errors" style="display: none;">
+                    <div class="alert-message block-message error" id="stripe-error-message"></div>
+                </div>
+        
+                <div class="form-group col-md-6">
+                    {% if order_form.full_name.value == "" %}
+                    <p>Please enter your shipping address</p>
+                    {% else %}
+                    <p class="page-headline ha">Your current shipping address</p>
+                    {% endif %}
+                    {{ order_form | as_bootstrap }}
+                </div>
+        
+                <div class="form-group col-md-6">
+                    <p>Please enter your payment details</p>
+                    {{ payment_form | as_bootstrap }}
+                </div>
+        
+                {% csrf_token %}
+                <div class="form-group col-md-12 ha">
+                    <input class=" btn btn-primary" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
+                </div>
+            </form>
+        </div>
     </div>
-    <div class="row">
-        <p>Total</p>
-        <p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ total }}</p>
-        {% if total < 50 %}
-        <p>(incl. {{ shippingfee }} EUR shipping fee)</p>
-        {% else %}
-        <p>{{shippingfee}} Shipping</p>
-        {% endif %}
-    </div>
-
-    <form role="form" method="post" id="payment-form" action="{% url 'checkout' %}">
-        <legend>Payment Details</legend>
-
-        <div id="credit-card-errors" style="display: none;">
-            <div class="alert-message block-message error" id="stripe-error-message"></div>
-        </div>
-
-        <div class="form-group col-md-6">
-            {% if order_form.full_name.value == "" %}
-            <p>Please enter your shipping address</p>
-            {% else %}
-            <p>Your current shipping address</p>
-            {% endif %}
-            {{ order_form | as_bootstrap }}
-        </div>
-
-        <div class="form-group col-md-6">
-            <p>Please enter your payment details</p>
-            {{ payment_form | as_bootstrap }}
-        </div>
-
-        {% csrf_token %}
-        <div class="form-group col-md-12">
-            <input class=" btn btn-primary" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
-        </div>
-    </form>
-
 </div>
 
 {% endblock %}

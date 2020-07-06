@@ -129,6 +129,8 @@
                     </li>
                     <li class="mobile-list-items">
                         {% if "wishlist" in app_path %}
+                        {{app_path}}
+
                         <a href="{% url 'view_wishlist' %}"><i class="fa fa-star active-app"></i> Wishlist
                             {% else %}
                             <a href="{% url 'view_wishlist' %}"><i class="fa fa-star"></i> Wishlist
@@ -234,6 +236,7 @@
                                 {% endif %}
                             </a>
                     </li>
+
                     <li class="quicklinks">
                         {% if "accounts" in app_path %}
                         <a href="{% url 'profile' %}"><i class="fa fa-user active-app"></i> </a>

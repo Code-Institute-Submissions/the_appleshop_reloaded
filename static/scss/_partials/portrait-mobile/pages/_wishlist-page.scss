@@ -33,7 +33,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-content: center;
+}
+
+#empty-wishlist-wrapper p {
+    font-size: 5.5vw;
+
 }
 
 #empty-wishlist-product-link {

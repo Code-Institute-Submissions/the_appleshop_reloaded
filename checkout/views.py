@@ -27,6 +27,9 @@ def update_ordered_pcs(request):
 
 @login_required()
 def checkout(request):
+    cart = request.session.get('cart', {})
+    if cart == {}:
+        return redirect(reverse('view_cart'))
     user_address_current = None
     shippingfee = 8
     try:

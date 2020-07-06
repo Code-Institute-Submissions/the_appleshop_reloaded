@@ -1,0 +1,57 @@
+.login-wrapper {
+    height: 70vh;
+    align-content: center;
+}
+
+#loginform {
+    width: 90vw;
+}
+
+#reset-register-wrapper,
+#login-btn-wrapper {
+    display: flex;
+    width: 100%;
+
+    margin: {
+        top: 2vw;
+        bottom: 2vw;
+    }
+}
+
+#login-btn {
+    background-color: lightblue;
+    color: rgb(65, 65, 65);
+    width: 40vw;
+    font-family: $dosisFont;
+    font-size: 5.5vw;
+    transition: color .3s ease-in-out;
+}
+
+
+#password-reset-link {
+    background-color: orange;
+    margin-right: 2.4vw;
+}
+
+#register-link {
+    background-color: rgb(0, 170, 0);
+    margin-left: 2.4vw;
+}
+
+
+#password-reset-link,  #register-link {
+    width: 44vw;
+    font-family: $dosisFont;
+    font-size: 4.5vw;
+}
+
+
+#password-reset-link a, #register-link a {
+    color: rgb(65, 65, 65);
+    transition: color .3s ease-in-out;
+    text-decoration: none;
+}
+
+#login-btn:hover, #password-reset-link a:hover, #register-link a:hover {
+    color: darkred;
+}

@@ -34,16 +34,6 @@
                 </form>
                 {% endif %}
 
-                {% if item.product.name in purchased_products %}
-                <form class="revform" method="POST" action="{% url 'new_review' item.product.id %}">
-                    {% csrf_token %}
-                    <span class="input-group-btn">
-                        <button class="add-review-btn" type="submit"><span class="glyphicon glyphicon-comment"
-                                aria-hidden="true"></span></button>
-                    </span>
-                </form>
-                {% endif %}
-
                 <img class="product-image" src="{{ MEDIA_URL }}{{item.product.image}}"
                     alt="image of {{item.product.name}}">
 
@@ -81,9 +71,9 @@
         </div>
         {% endfor %}
 
-        <div class="checkout-summary-wrapper ha">
+        <div class="cart-summary-wrapper ha">
 
-            <div class="checkout-summary">
+            <div class="cart-summary">
                 {% if shippingfee == "FREE" %}
                 <p>FREE SHIPPING!</p>
                 {% else %}

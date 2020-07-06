@@ -1,7 +1,43 @@
 .checkout-wrapper {
-    padding-bottom: 20vw;
-}
+    padding-bottom: 25vw;
+    background-color: #9e988fcb;
+    min-height: 85vh;}
 
 caption p {
     word-wrap: break-word;
+}
+
+
+.checkout-summary-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 4vw;
+}
+
+.checkout-summary {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 60%;
+}
+
+.checkout-summary-items {
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-size: 7.0vw;
+}
+
+#payment-form {
+    margin-top: 6vw;
+}
+
+#submit_payment_btn {
+    display: flex;
+    justify-content: center;
+    width: 40vw;
+    font-size: 5.5vw;
+
 }

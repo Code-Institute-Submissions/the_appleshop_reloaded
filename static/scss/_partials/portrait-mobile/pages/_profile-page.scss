@@ -1,19 +1,32 @@
 .profile-wrapper {
-    padding-bottom: 28vw;
+    padding-bottom: 25vw;
+    background-color: #9e988fcb;
+    min-height: 85vh;
 }
 
 .nav-tabs {
-    margin-top: 3vw;
+    padding-top: 6vw;
+}
+
+.nav-tabs a {
+    color: white;
 }
 
 .profile-tabs {
     font-size: 7.0vw;
+    width: 28vw;
+    text-align: center;
 }
 
-.form-control,
+.form-control {
+    font-family: $dosisFont;
+    font-size: 5.0vw;
+    font-weight: 900;
+}
+
 .update-address-btn {
     font-family: $dosisFont;
-    font-size: 4.5vw;
+    font-size: 5.5vw;
     font-weight: 900;
 }
 
@@ -41,6 +54,7 @@
 .orderline-product-header,
 .orderline-quantity-header {
     font-size: 4.5vw;
+    color: white;
 }
 
 .orderline-order-header {
@@ -59,6 +73,7 @@
 .orderline-product-value,
 .orderline-quantity-value {
     font-size: 3.8vw;
+    color: white;
 }
 
 .orderline-order-value {

@@ -1,0 +1,199 @@
+@media screen and (width: 768px) and (height: 1024px) and (orientation: portrait),
+screen and (width: 1024px) and (height: 1366px) and (orientation: portrait) {
+
+
+@import "pages/_cart-page.scss";
+@import "pages/_checkout-page.scss";
+@import "pages/_login-page.scss";
+@import "pages/_password-reset-page.scss";
+@import "pages/_productdetails-page.scss";
+@import "pages/_products-page.scss";
+@import "pages/_profile-page.scss";
+@import "pages/_register-page.scss";
+@import "pages/_reviews-page.scss";
+@import "pages/_wishlist-page.scss";
+
+
+body {
+    font-family: $dosisFont;
+    padding-top: 56px;
+    font-size: 5.0vw;
+}
+
+.page-headline {
+    font-family: $dosisFont;
+    font-size: 7vw;
+    padding-top: 8vw;
+    padding-bottom: 2vw;
+    width: 100%;
+    color: white;
+}
+
+.form-group {
+    color: white;
+}
+
+// footer {
+//     margin-top: 40px;
+//     padding-top: 20px;
+//     padding-bottom: 20px;
+//     border-top: 1px solid #ededed;
+//     color: #A9A9A9;
+// }
+
+// navbar header
+
+.container>.navbar-header {
+    margin: {
+        left: 0;
+        right: 0;
+    }
+
+    height: 15vw;
+}
+
+.container {
+    padding: {
+        left: 0;
+        right: 0;
+    }
+}
+
+.desktop-navbar {
+    display: none;
+}
+
+.mobile-list-items {
+
+    margin: {
+        top: 20px;
+        bottom: 20px;
+        left: 15px;
+    }
+
+    font-size: 6.5vw;
+
+}
+
+.navbar-nav {
+    margin: 14.5px 0;
+}
+
+.navbar-fixed-top .navbar-collapse {
+    max-height: 380px;
+}
+
+#brandicon {
+    color: rgb(182, 29, 24);
+    font-size: 6vw;
+}
+
+.navbar-brand {
+    font-family: $dosisFont;
+    font-size: 7vw;
+}
+
+#menubutton {
+    margin-top: 15px;
+}
+
+.alert {
+    margin-bottom: 0;
+}
+
+.icon-bar {
+    background-color: #fff;
+}
+
+.row.row-flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.row {
+    margin: {
+        left: 0;
+        right: 0;
+    }
+
+}
+
+
+// bottom linkbar
+
+#bottombar {
+    display: flex;
+}
+
+#bottombar .quicklinks {
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+    font-size: 7.5vw;
+    height: 20px;
+}
+
+.products-icon {
+    top: -1px;
+    font-size: 7.3vw;
+}
+
+.nav>li>a {
+    padding: 0;
+
+}
+
+#wishlist-badge-bottom {
+    position: absolute;
+    top: -2vw;
+    left: 8.7vw;
+    padding: {
+        left: 2vw;
+        right: 2vw;
+    }
+    max-width: none;
+}
+
+
+.badge-wishlist {
+    -webkit-border-radius: 3vw;
+    -moz-border-radius: 3vw;
+    border-radius: 3vw;
+    font-size: 4vw;
+}
+
+
+#cart-badge-bottom {
+    position: absolute;
+    top: -2vw;
+    left: 8.7vw;
+    padding: {
+        left: 1.5vw;
+        right: 1.5vw;
+    }
+    max-width: none;
+}
+
+.badge-cart {
+    -webkit-border-radius: 3vw;
+    -moz-border-radius: 3vw;
+    border-radius: 3vw;
+    font-size: 4vw;
+}
+
+.badge {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.label-warning[href],
+.badge-warning[href] {
+    background-color: #c67605;
+}
+
+.active-app {
+    color: rgba(255, 0, 0, 0.5);
+}
+
+}

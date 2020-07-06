@@ -24,7 +24,7 @@
             {% if user_addressform.full_name.value == "" %}
             <p>No record found, please enter your shipping address.</p>
             {% else %}
-            <div class=" page-headline ha">Your shipping address.</div>
+            <div class="page-headline ha">Your shipping address.</div>
             {% endif %}
             <form method="POST" action="{% url 'profile' %}">
                 {% csrf_token %}
