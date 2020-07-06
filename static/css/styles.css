@@ -164,9 +164,11 @@
     font-size: 5.5vw;
   }
   .login-wrapper {
-    height: 70vh;
     -ms-flex-line-pack: center;
         align-content: center;
+    padding-bottom: 25vw;
+    background-color: #9e988fcb;
+    min-height: 85vh;
   }
   #loginform {
     width: 90vw;
@@ -264,12 +266,9 @@
   .revform {
     width: 8vw;
     position: absolute;
-    left: 70vw;
+    left: 69vw;
     top: 16vw;
-  }
-  .revform > .input-group-btn {
-    text-align: center;
-    padding-left: 3px;
+    margin-left: 3px;
   }
   .add-wish-btn,
   .remove-wish-btn,
@@ -317,7 +316,6 @@
   .add-review-btn {
     font-size: 5.5vw;
     color: #416aec;
-    padding: 0;
   }
   .product-headline {
     font-family: "Dosis", sans-serif;
@@ -944,9 +942,11 @@
     font-size: 5.5vw;
   }
   .login-wrapper {
-    height: 70vh;
     -ms-flex-line-pack: center;
         align-content: center;
+    padding-bottom: 25vw;
+    background-color: #9e988fcb;
+    min-height: 85vh;
   }
   #loginform {
     width: 90vw;
@@ -1044,12 +1044,8 @@
   .revform {
     width: 8vw;
     position: absolute;
-    left: 70vw;
+    left: 69vw;
     top: 16vw;
-  }
-  .revform > .input-group-btn {
-    text-align: center;
-    padding-left: 3px;
   }
   .add-wish-btn,
   .remove-wish-btn,
@@ -1097,7 +1093,6 @@
   .add-review-btn {
     font-size: 5.5vw;
     color: #416aec;
-    padding: 0;
   }
   .product-headline {
     font-family: "Dosis", sans-serif;
@@ -1724,9 +1719,11 @@
     font-size: 5.5vw;
   }
   .login-wrapper {
-    height: 70vh;
     -ms-flex-line-pack: center;
         align-content: center;
+    padding-bottom: 25vw;
+    background-color: #9e988fcb;
+    min-height: 85vh;
   }
   #loginform {
     width: 90vw;
@@ -1824,12 +1821,8 @@
   .revform {
     width: 8vw;
     position: absolute;
-    left: 70vw;
+    left: 69vw;
     top: 16vw;
-  }
-  .revform > .input-group-btn {
-    text-align: center;
-    padding-left: 3px;
   }
   .add-wish-btn,
   .remove-wish-btn,
@@ -1877,7 +1870,6 @@
   .add-review-btn {
     font-size: 5.5vw;
     color: #416aec;
-    padding: 0;
   }
   .product-headline {
     font-family: "Dosis", sans-serif;

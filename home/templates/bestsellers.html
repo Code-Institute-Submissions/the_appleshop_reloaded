@@ -13,17 +13,13 @@
                 <form class="wishform" method="POST"
                     action="{% url 'remove_from_wishlist' product.id %}">
                     {% csrf_token %}
-                    <span class="input-group-btn">
                         <button class="add-wish-btn" type="submit"><i class="fa fa-star staricon-added"></i></button>
-                    </span>
                 </form>
                 {% else %}
                 <form class="wishform" method="POST"
                     action="{% url 'add_to_wishlist' product.id %}">
                     {% csrf_token %}
-                    <span class="input-group-btn">
                         <button class="add-wish-btn" type="submit"><i class="fa fa-star staricon-not-added"></i></button>
-                    </span>
                 </form>
                 {% endif %}
                 <img class="product-image" src="{{ MEDIA_URL }}{{product.image}}" alt="image of {{product.name}}">

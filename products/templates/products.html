@@ -28,27 +28,20 @@
                 <form class="wishform" method="POST"
                     action="{% url 'remove_from_wishlist' product.id %}">
                     {% csrf_token %}
-                    <span class="input-group-btn">
                         <button class="remove-wish-btn" type="submit"><i class="fa fa-star staricon-added"></i></button>
-                    </span>
                 </form>
                 {% else %}
                 <form class="wishform" method="POST"
                     action="{% url 'add_to_wishlist' product.id %}">
                     {% csrf_token %}
-                    <span class="input-group-btn">
                         <button class="add-wish-btn" type="submit"><i class="fa fa-star staricon-not-added"></i></button>
-                    </span>
                 </form>
                 {% endif %}
 
                 {% if product.name in purchased_products %}
                 <form class="revform" method="POST" action="{% url 'new_review' product.id %}">
                     {% csrf_token %}
-                    <span class="input-group-btn">
-                        <button class="add-review-btn" type="submit"><span class="glyphicon glyphicon-comment"
-                                aria-hidden="true"></span></button>
-                    </span>
+                        <button class="add-review-btn" type="submit"><i class="fa fa-comment"></i></button>
                 </form>
                 {% endif %}
 
