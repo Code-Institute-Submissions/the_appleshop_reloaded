@@ -20,17 +20,18 @@
 }
 
 .edit-review-wrapper {
-    padding-bottom: 25vw;
+    padding-bottom: 2vw;
     min-height: 82vh;
-    padding-top: 10vw;
+    padding-top: 2vw;
+    background-color: #9e988fcb;
 }
 
 #review-form {
-    width: 90vw;
+    width: 30vw;
 }
 
 #id_image {
-    height: 13vw;
+    height: 4vw;
     display: flex;
     align-items: center;
 }
@@ -41,19 +42,19 @@
 
 #review-send-btn {
     font-family: $dosisFont;
-    font-size: 5.5vw;
+    font-size: 2.0vw;
     background-color: lightblue;
-    width: 40vw;
+    width: 8vw;
     margin-right: 2vw;
     transition: color .3s ease-in-out;
 }
 
 #review-cancel-btn {
     font-family: $dosisFont;
-    font-size: 5.5vw;
+    font-size: 2.0vw;
     background-color: orange;
     color: rgb(65, 65, 65);
-    width: 40vw;
+    width: 8vw;
     margin-left: 2vw;
     transition: color .3s ease-in-out;
 }
@@ -136,6 +137,7 @@ return-product-btn:hover {
     font-size: 2.5vw;
     margin-bottom: 2vw;
     width: 100%;
+    text-align: center;
 }
 
 .review-headline a {
