@@ -1,5 +1,10 @@
 .cart-wrapper {
-    padding-bottom: 25vw;
+    padding: {
+        top: 2vw;
+        bottom: 25vw;
+
+    }
+
     background-color: #9e988fcb;
     min-height: 85vh;
 }
@@ -63,7 +68,8 @@
     font-size: 5.0vw;
 }
 
-.shipping-fee, #totalamount {
+.shipping-fee,
+#totalamount {
     width: 100%;
     font-size: 6vw;
 }

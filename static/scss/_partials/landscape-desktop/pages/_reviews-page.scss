@@ -1,6 +1,9 @@
 .reviews-wrapper {
-    padding-top: 5vw;
-    padding-bottom: 20vw;
+    padding: {
+        top: 2vw;
+        bottom: 25vw;
+    }
+
     background-color: #9e988fcb;
     min-height: 82vh;
 }
@@ -86,6 +89,7 @@
         top: 4vw;
         bottom: 4vw;
     }
+
     width: 100%;
     display: flex;
     justify-content: center;
@@ -123,8 +127,11 @@
 }
 
 
-.back-to-products-btn:hover, .back-to-reviews-btn:hover, .review-details-btn:hover, return-product-btn:hover {
-    color:darkred;
+.back-to-products-btn:hover,
+.back-to-reviews-btn:hover,
+.review-details-btn:hover,
+return-product-btn:hover {
+    color: darkred;
 }
 
 .review-headline {

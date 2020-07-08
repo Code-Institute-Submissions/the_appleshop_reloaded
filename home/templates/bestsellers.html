@@ -3,26 +3,28 @@
 {% block content %}
 <div class="product-wrapper ha">
 <div class="page-headline ha">Our bestsellers</div>
-    <div class="row row-flex">
 
         {% if products %}
         {% for product in products %}
-        <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">
+        <div class="productcard display panel panel-default">
             <div class="panel-body">
-                {% if product.id in wishlist %}
-                <form class="wishform" method="POST"
-                    action="{% url 'remove_from_wishlist' product.id %}">
-                    {% csrf_token %}
-                        <button class="add-wish-btn" type="submit"><i class="fa fa-star staricon-added"></i></button>
-                </form>
-                {% else %}
-                <form class="wishform" method="POST"
-                    action="{% url 'add_to_wishlist' product.id %}">
-                    {% csrf_token %}
-                        <button class="add-wish-btn" type="submit"><i class="fa fa-star staricon-not-added"></i></button>
-                </form>
-                {% endif %}
                 <img class="product-image" src="{{ MEDIA_URL }}{{product.image}}" alt="image of {{product.name}}">
+
+                <div class="btn-bar-wrapper">
+                    {% if product.id in wishlist %}
+                    <form class="wishform" method="POST"
+                        action="{% url 'remove_from_wishlist' product.id %}">
+                        {% csrf_token %}
+                            <button class="add-wish-btn" type="submit"><i class="fa fa-star staricon-added"></i></button>
+                    </form>
+                    {% else %}
+                    <form class="wishform" method="POST"
+                        action="{% url 'add_to_wishlist' product.id %}">
+                        {% csrf_token %}
+                            <button class="add-wish-btn" type="submit"><i class="fa fa-star staricon-not-added"></i></button>
+                    </form>
+                    {% endif %}
+                </div>
 
                 <!--
             <div class="product" style="background-image: url('{{ MEDIA_URL }}{{product.image}}')"></div>-->
@@ -45,8 +47,8 @@
                     <div class="stats-value">{{ product.ordered_pcs }}</div>
                 </div>
                 
-                <p><b>Our price:  {{ product.price }} EUR<b></p>
-                <form method="POST" action="{% url 'add_to_cart' product.id %}">
+                <p class="price" ><b>Our price:  {{ product.price }} EUR<b></p>
+                <form class="cart-form" method="POST" action="{% url 'add_to_cart' product.id %}">
                     {% csrf_token %}
                     <div class="input-group">
                         <input name="quantity" type="number" min="1" max="999" class="form-control"
@@ -63,9 +65,6 @@
         {% else %}
         <p>Bestseller criterion not met.</p>
         {% endif %}
-    </div>
-
-
 </div>
 
 {% endblock %}

@@ -21,7 +21,7 @@
     .page-headline {
         font-family: $dosisFont;
         font-size: 7vw;
-        padding-top: 8vw;
+        padding-top: 2vw;
         padding-bottom: 2vw;
         width: 100%;
         color: white;
@@ -117,6 +117,12 @@
 
     }
 
+    .btn-bar-wrapper {
+        width: 30vw;
+        display: block;
+        text-align: right;
+    }
+
 
     // bottom linkbar
 
@@ -146,14 +152,16 @@
         position: absolute;
         top: -2vw;
         left: 8.7vw;
+
         padding: {
             left: 2vw;
             right: 2vw;
         }
+
         max-width: none;
     }
 
-    
+
     .badge-wishlist {
         -webkit-border-radius: 3vw;
         -moz-border-radius: 3vw;
@@ -166,10 +174,12 @@
         position: absolute;
         top: -2vw;
         left: 8.7vw;
+
         padding: {
             left: 1.5vw;
             right: 1.5vw;
         }
+
         max-width: none;
     }
 

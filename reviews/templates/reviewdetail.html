@@ -5,42 +5,44 @@
 {% endblock head_js %}
 {% block content %}
 
-<div class="reviews-wrapper">
-    <div class="row row-flex">
-        <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">
-            <div class="panel-body">
-                <h3 class="review-headline ha">{{ review.title }} </h3>
-                {% if review.image %}
-                <img class="product-image" src="{{ MEDIA_URL }}{{review.image}}" alt="image of {{review.product.name}} review">
-                {% endif %}
-
+<div class="reviews-wrapper ha">
+    <div class="reviewcard display panel panel-default">
+        <div class="panel-body">
+            <h3 class="review-headline ha">{{ review.title }} </h3>
+            {% if review.image %}
+            <img class="product-image" src="{{ MEDIA_URL }}{{review.image}}"
+                alt="image of {{review.product.name}} review">
+            {% endif %}
+            <div class="btn-bar-wrapper">
                 {% if user.is_authenticated and review.author.id == user.id %}
                 <a class="btn edit-review-btn" href="{% url 'edit_review' review.id %}"><i class="fa fa-edit"></i></a>
                 <div class="btn review-del-req-btn" onclick="showDeletePopup()"><i class="fa fa-trash"></i></div>
 
                 <div class="confirm-delete-popup vh">
-                    <div class="delete-popup-message ha">Delete Review?</div>                 
-                            <a class="btn delete-confirm-btn" href="{% url 'delete_review' review.id %}"><b>Delete</b></a>
-                        <div class="btn delete-cancel-btn ha" onclick="closeDeletePopup()">
-                            Cancel
-                        </div>
+                    <div class="delete-popup-message ha">Delete Review?</div>
+                    <a class="btn delete-confirm-btn" href="{% url 'delete_review' review.id %}"><b>Delete</b></a>
+                    <div class="btn delete-cancel-btn ha" onclick="closeDeletePopup()">
+                        Cancel
+                    </div>
                 </div>
                 {% endif %}
-                <h3><div class="product-headline"><b>Review for {{review.product.name}}</b></div></h3>
-                <p></p>
-                <p class="product-description">{{ review.comment }}</p>
-                <p><span class="boldtext">Published by:</span> {{ review.author }} </p>
-                <p><span class="boldtext">Date:</span> {{ review.created_date }} </p>
-                <div class="review-stats">
-                    <div class="stats-key"><i class="fa fa-eye"></i></div>
-                    <div class="stats-value">{{ review.view_count }}</div>
-                    <div class="stats-key">Rating:</div>
-                    <div class="stats-value">{{review.rating }}</div>
-                </div>
-                <div class="review-btn-bar ha">
-                    <a class="btn back-to-products-btn ha" href="{% url 'products'%}">Back Products</a>
-                        <a class="btn back-to-reviews-btn ha" href="{% url 'get_reviews' %}">Back Reviews</a>
-                </div>
+            </div>
+            <h3>
+                <div class="product-headline"><b>Review for {{review.product.name}}</b></div>
+            </h3>
+            <p></p>
+            <p class="product-description">{{ review.comment }}</p>
+            <p><span class="boldtext">Published by:</span> {{ review.author }} </p>
+            <p><span class="boldtext">Date:</span> {{ review.created_date }} </p>
+            <div class="review-stats">
+                <div class="stats-key"><i class="fa fa-eye"></i></div>
+                <div class="stats-value">{{ review.view_count }}</div>
+                <div class="stats-key">Rating:</div>
+                <div class="stats-value">{{review.rating }}</div>
+            </div>
+            <div class="review-btn-bar ha">
+                <a class="btn back-to-products-btn ha" href="{% url 'products'%}">Back Products</a>
+                <a class="btn back-to-reviews-btn ha" href="{% url 'get_reviews' %}">Back Reviews</a>
             </div>
         </div>
     </div>

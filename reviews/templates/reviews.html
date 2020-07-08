@@ -5,8 +5,6 @@
 {% endblock head_js %}
 {% block content %}
 <div class="reviews-wrapper ha">
-    <div class="row row-flex">
-
         {% if reviews %}
 
         <div class="search-field-wrapper ha">
@@ -19,7 +17,7 @@
         </div>
 
         {% for review in reviews %}
-        <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">
+        <div class="reviewcard display panel panel-default">
             <div class="panel-body">
                 <h3 class="review-headline ha"><a href="{% url 'review_detail' review.id %}">{{ review.title }}</a></h3>
                 {% if review.image %}
@@ -47,6 +45,5 @@
         {% else %}
         <p class="ha">No reviews have been found.</p>
         {% endif %}
-    </div>
 </div>
 {% endblock %}

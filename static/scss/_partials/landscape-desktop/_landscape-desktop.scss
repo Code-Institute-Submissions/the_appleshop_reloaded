@@ -20,8 +20,8 @@
 
     .page-headline {
         font-family: $dosisFont;
-        font-size: 7vw;
-        padding-top: 8vw;
+        font-size: 4vw;
+        padding-top: 2vw;
         padding-bottom: 2vw;
         width: 100%;
         color: white;
@@ -57,6 +57,11 @@
     .navbar-brand {
         font-family: $dosisFont;
         font-size: 3vw;
+        padding-left: 20px;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
     }
 
     .navbar .navbar-nav {
@@ -64,18 +69,24 @@
     }
 
     .desktop-navbar-icons {
-        font-size: 3vw;
+        font-size: 2vw;
         min-width: 3vw;
         width: 9.2vw;
     }
 
+
+
+    .navbar>.container {
+        //height: 10vw;
+
+    }
+
+
     .container>.navbar-header {
         margin: {
-            left: 0;
+            left: 20px;
             right: 0;
         }
-
-        //height: 15vw;
     }
 
     .container {
@@ -189,7 +200,7 @@
         -webkit-border-radius: 3vw;
         -moz-border-radius: 3vw;
         border-radius: 3vw;
-        font-size: 4vw;
+        font-size: 1.2vw;
     }
 
 
@@ -210,7 +221,7 @@
         -webkit-border-radius: 3vw;
         -moz-border-radius: 3vw;
         border-radius: 3vw;
-        font-size: 4vw;
+        font-size: 1.2vw;
     }
 
     .badge {

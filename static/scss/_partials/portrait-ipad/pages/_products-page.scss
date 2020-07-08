@@ -1,11 +1,19 @@
 .product-wrapper {
-    padding-bottom: 20vw;
+    padding: {
+        top: 2vw;
+        bottom: 25vw;
+
+    }
     background-color: #9e988fcb;
 }
 
 .search-field-wrapper {
     width: 100%;
     padding-bottom: 10vw;
+}
+
+.productcard {
+    width: 90vw;
 }
 
 .panel-default {
@@ -16,6 +24,8 @@
     height: 100%;
     border: 1px solid #ddd;
     background-color: cornsilk;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .product-image {
@@ -39,6 +49,7 @@
 
 .product-description {
     min-height: 40px;
+    width: 100%;
 }
 
 h3 .product-headline {
@@ -57,10 +68,18 @@ h3 .product-headline {
 }
 
 .stats-value {
-    width: 52vw;;
+    width: 52vw;
+    ;
 }
 
 .stats-value a {
     text-decoration: none;
 }
 
+.price {
+    width: 100%;
+}
+
+.cart-form {
+    width: 100%;
+}

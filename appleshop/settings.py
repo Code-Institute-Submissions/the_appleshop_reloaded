@@ -29,7 +29,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-ALLOWED_HOSTS = ['127.0.0.1', 'the-appleshop-reloaded.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', '192.168.2.100', 'the-appleshop-reloaded.herokuapp.com']
 
 
 # Application definition

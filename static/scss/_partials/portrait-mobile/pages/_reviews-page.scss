@@ -11,6 +11,10 @@
     padding-top: 10vw;
 }
 
+.reviewcard {
+    width: 90vw;
+}
+
 #review-form {
     width: 90vw;
 }
@@ -50,29 +54,17 @@
 }
 
 .edit-review-btn {
-    width: 8vw;
-    position: absolute;
-    left: 62vw;
-    top: 30vw;
-}
-
-.review-del-req-btn {
-    width: 8vw;
-    position: absolute;
-    left: 62vw;
-    top: 44vw;
-
-}
-
-.edit-review-btn {
+    width: 31vw;
     font-size: 7.5vw;
     color: orange;
+    text-align: right;
 }
 
-
 .review-del-req-btn {
+    width: 30vw;
     font-size: 7.5vw;
     color: red;
+    text-align: right;
 }
 
 .review-stats {
@@ -131,6 +123,7 @@
     font-family: $dosisFont;
     font-size: 7.5vw;
     margin-bottom: 6vw;
+    width: 100%;
 }
 
 .review-headline a {

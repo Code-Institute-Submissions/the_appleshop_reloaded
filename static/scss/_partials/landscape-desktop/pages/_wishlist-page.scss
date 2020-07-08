@@ -1,5 +1,9 @@
 .wishlist-wrapper {
-    padding-bottom: 25vw;
+    padding: {
+        top: 2vw;
+        bottom: 25vw;
+
+    }
     background-color: #9e988fcb;
     min-height: 82vh;
 }

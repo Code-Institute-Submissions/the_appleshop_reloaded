@@ -1,16 +1,10 @@
 .wishform {
-    width: 8vw;
-    position: absolute;
-    left: 69vw;
-    top: 4vw;
+    width: 30vw;
 }
 
 
 .revform {
-    width: 8vw;
-    position: absolute;
-    left: 69vw;
-    top: 16vw;
+    width: 29vw;
     margin-left: 3px;
 }
 
@@ -27,12 +21,13 @@
         top: 6vw;
         bottom: 4vw;
     }
+    width: 100%;
 }
 
 #to-products-btn {
     width: 48vw;
     font-size: 5.0vw;
-    background-color: orange;
+    background-color: lightblue;
     color: black;
     transition: color .3s ease-in-out;
 }
