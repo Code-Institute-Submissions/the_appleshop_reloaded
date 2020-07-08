@@ -1,7 +1,7 @@
 .checkout-wrapper {
-    padding-bottom: 25vw;
+    padding-bottom: 2vw;
     background-color: #9e988fcb;
-    min-height: 85vh;}
+    min-height: 92vh;}
 
 caption p {
     word-wrap: break-word;
@@ -27,17 +27,18 @@ caption p {
     width: 100%;
     color: white;
     text-align: center;
-    font-size: 7.0vw;
+    font-size: 3.0vw;
 }
 
 #payment-form {
-    margin-top: 6vw;
+    margin-top: 2vw;
+    width: 44vw;
 }
 
 #submit_payment_btn {
     display: flex;
     justify-content: center;
-    width: 40vw;
-    font-size: 5.5vw;
+    width: 16vw;
+    font-size: 2.0vw;
 
 }

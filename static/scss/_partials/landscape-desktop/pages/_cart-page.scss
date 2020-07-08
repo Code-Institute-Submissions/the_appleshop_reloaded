@@ -1,11 +1,11 @@
 .cart-wrapper {
-    padding-bottom: 25vw;
+    padding-bottom: 2vw;
     background-color: #9e988fcb;
-    min-height: 85vh;
+    min-height: 92vh;
 }
 
 .addcard-icon {
-    font-size: 3vw;
+    font-size: 1.4vw;
 }
 
 .cart-summary-wrapper {
@@ -23,6 +23,10 @@
     width: 60%;
 }
 
+.free-shipping-message {
+    font-size: 2.0vw;
+}
+
 .empty-cart-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -30,7 +34,7 @@
 }
 
 .empty-cart-wrapper p {
-    font-size: 5.5vw;
+    font-size: 2.5vw;
 
 }
 
@@ -46,26 +50,28 @@
 
 #emptycart-product-link {
     width: 100%;
-    font-size: 10vw;
+    font-size: 4vw;
     text-align: center;
 }
 
 .input-group-addon {
-    font-size: 4vw;
+    width: 100%;
+    font-size: 1.5vw;
 }
 
 .amend-btn-wrapper {
+    padding-top: 2vw;
     width: 100%;
 }
 
 .amend-btn {
-    width: 40vw;
-    font-size: 5.0vw;
+    width: 10vw;
+    font-size: 2.0vw;
 }
 
 .shipping-fee, #totalamount {
     width: 100%;
-    font-size: 6vw;
+    font-size: 3vw;
 }
 
 .glyphicon-euro {
@@ -73,10 +79,11 @@
         left: 5px;
         right: 5px;
     }
+    top: 7px;
 }
 
 .checkout-btn {
     font-family: $dosisFont;
-    font-size: 5.0vw;
-    width: 40vw;
+    font-size: 2.0vw;
+    width: 14vw;
 }

@@ -15,20 +15,34 @@
     body {
         font-family: $dosisFont;
         padding-top: 56px;
-        font-size: 5.0vw;
+        font-size: 1.5vw;
     }
 
     .page-headline {
         font-family: $dosisFont;
-        font-size: 4vw;
-        padding-top: 2vw;
-        padding-bottom: 2vw;
+        font-size: 2.5vw;
+        padding: {
+            top: 1vw;
+            bottom: 2vw;
+
+        }
+    
         width: 100%;
         color: white;
     }
 
     .form-group {
         color: white;
+        width: 100%;
+    }
+
+    .form-group > .input-group {
+        width: 100%;
+    }
+
+    .form-group > p {
+        text-align: center;
+        font-size: 2.5vw;
     }
 
     // footer {
@@ -74,11 +88,8 @@
         width: 9.2vw;
     }
 
-
-
     .navbar>.container {
-        //height: 10vw;
-
+        height: 4.5vw;
     }
 
 
@@ -149,11 +160,21 @@
 
     }
 
+    .btn-bar-wrapper {
+        width: 8vw;
+        display: block;
+        text-align: right;
+    }
+
 
     // bottom linkbar
 
+    #bottomnavbar {
+        display: none;
+    }
+
     #bottombar {
-        display: flex;
+        display: none;
     }
 
     #bottombar .quicklinks {
@@ -165,21 +186,13 @@
     }
 
     .products-icon {
-        top: -1px;
-        font-size: 7.3vw;
+        top: -2px;
+        font-size: 2.0vw;
     }
 
     .nav>li>a {
         padding: 0;
 
-    }
-
-    #bottomnavbar {
-        display: none;
-    }
-
-    #bottombar {
-        display: none;
     }
 
     #wishlist-badge-bottom {

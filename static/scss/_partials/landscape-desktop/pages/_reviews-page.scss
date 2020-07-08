@@ -1,11 +1,22 @@
 .reviews-wrapper {
     padding: {
-        top: 2vw;
-        bottom: 25vw;
+        bottom: 2vw;
     }
 
     background-color: #9e988fcb;
-    min-height: 82vh;
+    min-height: 92vh;
+}
+
+.reviewcard {
+    width: 32vw;
+    margin: {
+        left: 5px;
+        right: 5px;
+    }
+}
+
+.panel-body p {
+    width: 100%;
 }
 
 .edit-review-wrapper {
@@ -53,28 +64,14 @@
 }
 
 .edit-review-btn {
-    width: 8vw;
-    position: absolute;
-    left: 62vw;
-    top: 30vw;
-}
-
-.review-del-req-btn {
-    width: 8vw;
-    position: absolute;
-    left: 62vw;
-    top: 44vw;
-
-}
-
-.edit-review-btn {
-    font-size: 7.5vw;
+    width: 16vw;
+    font-size: 2.5vw;
     color: orange;
 }
 
-
 .review-del-req-btn {
-    font-size: 7.5vw;
+    width: 16vw;
+    font-size: 2.5vw;
     color: red;
 }
 
@@ -86,8 +83,8 @@
 
 .review-btn-bar {
     margin: {
-        top: 4vw;
-        bottom: 4vw;
+        top: 2vw;
+        bottom: 2vw;
     }
 
     width: 100%;
@@ -99,9 +96,9 @@
 .back-to-reviews-btn,
 .return-product-btn,
 .review-details-btn {
-    width: 33vw;
+    width: 12vw;
     font-family: $dosisFont;
-    font-size: 4.5vw;
+    font-size: 1.5vw;
     color: rgb(65, 65, 65);
     transition: color .3s ease-in-out;
 }
@@ -136,8 +133,9 @@ return-product-btn:hover {
 
 .review-headline {
     font-family: $dosisFont;
-    font-size: 7.5vw;
-    margin-bottom: 6vw;
+    font-size: 2.5vw;
+    margin-bottom: 2vw;
+    width: 100%;
 }
 
 .review-headline a {
@@ -149,8 +147,8 @@ return-product-btn:hover {
     background-color: beige;
     border-radius: 5px;
     border: 1px solid grey;
-    width: 80vw;
-    height: 40vw;
+    width: 32vw;
+    height: 32vh;
     position: fixed;
     opacity: 0.0;
     z-index: -1;
@@ -166,11 +164,6 @@ return-product-btn:hover {
 .delete-popup-message {
     width: 80%;
 
-    margin: {
-        top: 2vw;
-        bottom: 2vw;
-    }
-
     font: {
         family: $dosisFont;
         size: $delPopupFontSize;
@@ -181,7 +174,7 @@ return-product-btn:hover {
     background-color: lightcoral;
     color: rgb(65, 65, 65);
     margin-right: 2px;
-    width: 35vw;
+    width: 14vw;
     transition: color .3s ease-in-out;
     text-decoration: none;
 }
@@ -192,7 +185,7 @@ return-product-btn:hover {
 }
 
 .delete-cancel-btn {
-    width: 35vw;
+    width: 14vw;
     background-color: lightslategray;
     margin-left: 2px;
     font-family: $dosisFont;
