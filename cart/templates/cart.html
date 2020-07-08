@@ -46,9 +46,9 @@
                 <div class="stats-value">{{ item.product.review_count }}</div>
                 <div class="stats-key">Sold:</div>
                 <div class="stats-value">{{ item.product.ordered_pcs }}</div>
+                <div class="stats-key price"><b>Our price:</b></div>
+                <div class="stats-value price"><b>{{ item.product.price }} EUR</b></div>
             </div>
-            <br>
-            <p class="price"><b>Our price: {{ item.product.price }} EUR</b></p>
             <form class="form-inline cart-form" method="post" action="{% url 'adjust_cart' item.id %}">
                 {% csrf_token %}
                 <div class="form-group">

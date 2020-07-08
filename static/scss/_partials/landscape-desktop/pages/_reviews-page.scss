@@ -8,10 +8,11 @@
 }
 
 .reviewcard {
-    width: 32vw;
+    width: 24vw;
     margin: {
         left: 5px;
         right: 5px;
+        top: 2vw;
     }
 }
 
@@ -31,7 +32,7 @@
 }
 
 #id_image {
-    height: 4vw;
+    height: 3.5vw;
     display: flex;
     align-items: center;
 }
@@ -42,7 +43,7 @@
 
 #review-send-btn {
     font-family: $dosisFont;
-    font-size: 2.0vw;
+    font-size: 1.2vw;
     background-color: lightblue;
     width: 8vw;
     margin-right: 2vw;
@@ -51,7 +52,7 @@
 
 #review-cancel-btn {
     font-family: $dosisFont;
-    font-size: 2.0vw;
+    font-size: 1.2vw;
     background-color: orange;
     color: rgb(65, 65, 65);
     width: 8vw;
@@ -65,13 +66,13 @@
 }
 
 .edit-review-btn {
-    width: 16vw;
+    width: 4vw;
     font-size: 2.5vw;
     color: orange;
 }
 
 .review-del-req-btn {
-    width: 16vw;
+    width: 4vw;
     font-size: 2.5vw;
     color: red;
 }
@@ -84,8 +85,8 @@
 
 .review-btn-bar {
     margin: {
-        top: 2vw;
-        bottom: 2vw;
+        top: 1vw;
+        bottom: 1vw;
     }
 
     width: 100%;
@@ -97,9 +98,9 @@
 .back-to-reviews-btn,
 .return-product-btn,
 .review-details-btn {
-    width: 12vw;
+    width: 10vw;
     font-family: $dosisFont;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
     color: rgb(65, 65, 65);
     transition: color .3s ease-in-out;
 }
@@ -134,7 +135,7 @@ return-product-btn:hover {
 
 .review-headline {
     font-family: $dosisFont;
-    font-size: 2.5vw;
+    font-size: 2.0vw;
     margin-bottom: 2vw;
     width: 100%;
     text-align: center;
@@ -149,7 +150,7 @@ return-product-btn:hover {
     background-color: beige;
     border-radius: 5px;
     border: 1px solid grey;
-    width: 32vw;
+    width: 24vw;
     height: 32vh;
     position: fixed;
     opacity: 0.0;
@@ -176,7 +177,7 @@ return-product-btn:hover {
     background-color: lightcoral;
     color: rgb(65, 65, 65);
     margin-right: 2px;
-    width: 14vw;
+    width: 6vw;
     transition: color .3s ease-in-out;
     text-decoration: none;
 }
@@ -187,7 +188,7 @@ return-product-btn:hover {
 }
 
 .delete-cancel-btn {
-    width: 14vw;
+    width: 6vw;
     background-color: lightslategray;
     margin-left: 2px;
     font-family: $dosisFont;

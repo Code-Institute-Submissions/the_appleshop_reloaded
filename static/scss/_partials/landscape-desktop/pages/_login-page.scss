@@ -17,8 +17,8 @@
     display: flex;
 
     margin: {
-        top: 2vw;
-        bottom: 2vw;
+        top: 1vw;
+        bottom: 1vw;
     }
 }
 
@@ -36,9 +36,9 @@
 #login-btn {
     background-color: lightblue;
     color: rgb(65, 65, 65);
-    width: 14vw;
+    width: 10vw;
     font-family: $dosisFont;
-    font-size: 2.0vw;
+    font-size: 1.2vw;
     transition: color .3s ease-in-out;
 }
 
@@ -55,9 +55,9 @@
 
 
 #password-reset-link,  #register-link {
-    width: 14.5vw;
+    width: 10vw;
     font-family: $dosisFont;
-    font-size: 2.0vw;
+    font-size: 1.2vw;
 }
 
 

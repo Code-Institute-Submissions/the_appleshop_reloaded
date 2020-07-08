@@ -5,6 +5,7 @@
     }
         
     background-color: #9e988fcb;
+    min-height: 92vh;
 }
 
 .search-field-wrapper {
@@ -16,7 +17,7 @@
 }
 
 .productcard {
-    width: 32vw;
+    width: 24vw;
     margin: {
         left: 5px;
         right: 5px;
@@ -36,8 +37,8 @@
 }
 
 .product-image {
-    width: 20vw;
-    height: 15vw;
+    width: 16vw;
+    height: 11.1vw;
     border: none;
     border-radius: 5px;
 }
@@ -72,17 +73,22 @@ h3 .product-headline {
 }
 
 .stats-key {
-    width: 6vw;
+    width: 23%;
 }
 
 .stats-value {
-    width: 23vw;;
+    width: 75%;
 }
 
 .stats-value a {
     text-decoration: none;
 }
 
+.price {
+    margin-top: 5px;
+}
+
 .cart-form {
+    margin-top: 5px;
     width: 100%;
 }

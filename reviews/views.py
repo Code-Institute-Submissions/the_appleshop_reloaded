@@ -29,7 +29,12 @@ def review_detail(request, pk):
     Or return a 404 error if the review is
     not found
     """
-    review = get_object_or_404(Review, pk=pk)
+    try:
+        review = get_object_or_404(Review, pk=pk)
+    except:
+        messages.error(request, "Sorry, this review does not exist")
+        return redirect(reverse('get_reviews'))
+
     review.view_count += 1
     review.save()
     return render(request, "reviewdetail.html", {'review': review})

@@ -12,16 +12,14 @@
             <img class="product-image" src="{{ MEDIA_URL }}{{product.image}}" alt="image of {{product.name}}">
             <div class="btn-bar-wrapper">
                 {% if product.id in wishlist %}
-                <form class="wishform" method="POST"
-                    action="{% url 'remove_from_wishlist' product.id %}">
+                <form class="wishform" method="POST" action="{% url 'remove_from_wishlist' product.id %}">
                     {% csrf_token %}
-                        <button class="remove-wish-btn" type="submit"><i class="fa fa-star staricon-added"></i></button>
+                    <button class="remove-wish-btn" type="submit"><i class="fa fa-star staricon-added"></i></button>
                 </form>
                 {% else %}
-                <form class="wishform" method="POST"
-                    action="{% url 'add_to_wishlist' product.id %}">
+                <form class="wishform" method="POST" action="{% url 'add_to_wishlist' product.id %}">
                     {% csrf_token %}
-                        <button class="add-wish-btn" type="submit"><i class="fa fa-star staricon-not-added"></i></button>
+                    <button class="add-wish-btn" type="submit"><i class="fa fa-star staricon-not-added"></i></button>
                 </form>
                 {% endif %}
 
@@ -43,14 +41,13 @@
                 {% endif %}
                 <div class="stats-key">Sold:</div>
                 <div class="stats-value">{{ product.ordered_pcs }}</div>
+                <div class="stats-key price"><b>Our price:</b></div>
+                <div class="stats-value price"><b>{{ product.price }} EUR</b></div>
             </div>
-            <br>
-            <p class="price"><b>Our price: {{ product.price }} EUR</b></p>
             <form class="cart-form" method="POST" action="{% url 'add_to_cart' product.id %}">
                 {% csrf_token %}
                 <div class="input-group">
-                    <input name="quantity" type="number" min="1" max="999" class="form-control"
-                        placeholder="Quantity">
+                    <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity">
                     <span class="input-group-btn">
                         <button class="btn btn-success" type="submit"><i
                                 class="fa fa-shopping-cart addcard-icon"></i></button>

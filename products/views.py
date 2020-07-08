@@ -1,6 +1,7 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from .models import Product
 from checkout.models import OrderLineItem
+from django.contrib import messages
 
 
 def get_user_purchases(user):
@@ -23,7 +24,13 @@ def all_products(request):
 
 
 def product_detail(request, id):
-    product = get_object_or_404(Product, pk=id)
+    try:
+        product = get_object_or_404(Product, pk=id)
+    
+    except:
+        messages.error(request, "Sorry, this product does not exist")
+        return redirect(reverse('products'))
+
     product.view_count += 1
     product.save()
     purchased_products = []

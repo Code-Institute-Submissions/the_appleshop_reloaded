@@ -12,7 +12,7 @@
     <div class="productcard display panel panel-default">
         <div class="panel-body">
             <img class="product-image" src="{{ MEDIA_URL }}{{item.product.image}}" alt="image of {{item.product.name}}">
-            
+
             <div class="btn-bar-wrapper">
                 <a class="wishlist-remove-btn" href="{% url 'remove_from_wishlist' item.product.id %}"><i
                         class="fa fa-times-circle"></i></a>
@@ -29,9 +29,9 @@
                 <div class="stats-value">{{ item.product.review_count }}</div>
                 <div class="stats-key">Sold:</div>
                 <div class="stats-value">{{ item.product.ordered_pcs }}</div>
+                <div class="stats-key price"><b>Our price:</b></div>
+                <div class="stats-value price"><b>{{ item.product.price }} EUR</b></div>
             </div>
-            <br>
-            <p class="price"><b>Our price: {{ item.product.price }} EUR</b></p>
             <form class="cart-form" method="POST" action="{% url 'add_to_cart' item.product.id %}">
                 {% csrf_token %}
                 <div class="input-group">

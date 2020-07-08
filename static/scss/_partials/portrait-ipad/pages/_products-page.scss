@@ -5,6 +5,7 @@
 
     }
     background-color: #9e988fcb;
+    min-height: 92vh;
 }
 
 .search-field-wrapper {
@@ -29,8 +30,8 @@
 }
 
 .product-image {
-    width: 50vw;
-    height: 37.5vw;
+    width: 18vw;
+    height: 12.5vw;
     border: none;
     border-radius: 5px;
 }
@@ -64,12 +65,11 @@ h3 .product-headline {
 }
 
 .stats-key {
-    width: 21vw;
+    width: 23%;
 }
 
 .stats-value {
-    width: 52vw;
-    ;
+    width: 75%;
 }
 
 .stats-value a {

@@ -56,9 +56,9 @@
                 <div class="stats-value"> {{ product.first_developed }}</div>
                 <div class="stats-key">Use: </div>
                 <div class="stats-value"> {{ product.use }}</div>
+                <div class="stats-key price"><b>Our price:</b></div>
+                <div class="stats-value price"><b>{{ product.price }} EUR</b></div>
             </div>
-            <br>
-            <p class="price"><b>Our price: {{ product.price }} EUR</b></p>
             <form class="cart-form" method="POST" action="{% url 'add_to_cart' product.id %}">
                 {% csrf_token %}
                 <div class="input-group">
