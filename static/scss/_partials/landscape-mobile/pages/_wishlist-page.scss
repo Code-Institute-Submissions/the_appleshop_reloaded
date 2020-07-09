@@ -1,25 +1,25 @@
 .wishlist-wrapper {
     padding: {
         top: 2vw;
-        bottom: 25vw;
+        bottom: 2vw;
 
     }
     background-color: $page-bgr-clr;
-    min-height: 92vh;
+    min-height: 85vh;
 }
 
 .wishlist-remove-btn {
-    width: 30vw;
+    width: 2.5vw;
     color: rgb(189, 0, 0);
 }
 
 .wishlist-remove-btn i {
-    font-size: 8.5vw;
+    font-size: 2.5vw;
 }
 
 .staricon-not-added,
 .staricon-added {
-    font-size: 8.5vw;
+    font-size: 2.5vw;
 }
 
 .staricon-not-added {
@@ -38,6 +38,7 @@
 
 #empty-wishlist-product-link {
     width: 80%;
-    font-size: 8vw;
+    font-size: 4vw;
     text-align: center;
+    text-decoration: none;
 }

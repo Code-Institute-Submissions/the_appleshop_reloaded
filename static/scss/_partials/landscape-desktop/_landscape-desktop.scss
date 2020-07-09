@@ -23,7 +23,6 @@
         font-size: 2.5vw;
 
         padding: {
-            top: 1vw;
             bottom: 1vw;
 
         }
@@ -182,12 +181,12 @@
         display: none;
     }
 
-    #bottombar .quicklinks {
-        width: 20vw;
-        display: flex;
-        justify-content: center;
-        font-size: 7.5vw;
-        height: 20px;
+    #bottomnavbar-ipad {
+        display: none;
+    }
+
+    #bottombar-ipad {
+        display: none;
     }
 
     .products-icon {
@@ -254,6 +253,11 @@
 
     .active-app {
         color: rgba(255, 0, 0, 0.5);
+    }
+
+    .no-results-message {
+        color: white;
+        font-size: 1.5vw;
     }
 
 }

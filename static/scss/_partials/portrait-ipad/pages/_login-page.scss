@@ -1,12 +1,15 @@
 .login-wrapper {
-    align-content: center;
-    padding-bottom: 25vw;
+
+    padding: {
+        top: 2vw;
+        bottom: 25vw;
+    }
     background-color: $page-bgr-clr;
-    min-height: 85vh;
+    min-height: 92vh;
 }
 
 #loginform {
-    width: 90vw;
+    width: 52vw;
 }
 
 #reset-register-wrapper,
@@ -23,7 +26,7 @@
 #login-btn {
     background-color: lightblue;
     color: rgb(65, 65, 65);
-    width: 40vw;
+    width: 24vw;
     font-family: $dosisFont;
     font-size: 5.5vw;
     transition: color .3s ease-in-out;
@@ -42,7 +45,7 @@
 
 
 #password-reset-link,  #register-link {
-    width: 44vw;
+    width: 32vw;
     font-family: $dosisFont;
     font-size: 4.5vw;
 }

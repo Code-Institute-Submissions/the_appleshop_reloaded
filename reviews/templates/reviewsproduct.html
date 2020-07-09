@@ -6,39 +6,39 @@
 {% block content %}
 <div class="reviews-wrapper vac ha">
     <div class="page-headline ha">Reviews per Product</div>
-        {% if reviews %}
-        {% for review in reviews %}
-        <div class="reviewcard display panel panel-default">
-            <div class="panel-body">
-                {% if review.image %}
-                <img class="product-image" src="{{ MEDIA_URL }}{{review.image}}"
-                    alt="image of {{review.product.name}} review">
-                {% endif %}
+    {% if reviews %}
+    {% for review in reviews %}
+    <div class="reviewcard display panel panel-default">
+        <div class="panel-body">
+            {% if review.image %}
+            <img class="product-image" src="{{ MEDIA_URL }}{{review.image}}"
+                alt="image of {{review.product.name}} review">
+            {% endif %}
+            <div class="review-headline"><b><a href="{% url 'review_detail' review.id %}">{{ review.title }}</a></b></div>
+            <a class="product-headline"
+                href="{% url 'product_detail' review.product.id %}"><b>{{review.product.name}}</b></a>
+            <p class="product-description">{{ review.comment|truncatewords:10 }}</p>
+            <div class="review-stats">
+                <div class="stats-key">Author:</div>
+                <div class="stats-value">{{ review.author }}</div>
+                <div class="stats-key">Date:</div>
+                <div class="stats-value">{{ review.created_date }}</div>
+                <div class="stats-key"><i class="fa fa-eye"></i></div>
+                <div class="stats-value">{{ review.view_count }}</div>
+                <div class="stats-key">Rating:</div>
+                <div class="stats-value">{{review.rating }}</div>
+            </div>
+            <div class="review-btn-bar ha">
+                <a class="btn return-product-btn ha" href="{% url 'product_detail' review.product.id %}">Return
+                    Product</a>
+                <a class="btn review-details-btn ha" href="{% url 'review_detail' review.id %}">Review Details</a>
 
-                <h3>
-                    <div class="review-headline"><b>Review for {{review.product.name}}</b></div>
-                </h3>
-                <p></p>
-                <p class="product-description">{{ review.comment|truncatewords:10 }}</p>
-                <p><span class="boldtext">Published by:</span> {{ review.author }} </p>
-                <p><span class="boldtext">Date:</span> {{ review.created_date }} </p>
-                <div class="review-stats">
-                    <div class="stats-key"><i class="fa fa-eye"></i></div>
-                    <div class="stats-value">{{ review.view_count }}</div>
-                    <div class="stats-key">Rating:</div>
-                    <div class="stats-value">{{review.rating }}</div>
-                </div>
-                <div class="review-btn-bar ha">
-                    <a class="btn return-product-btn ha" href="{% url 'product_detail' review.product.id %}">Return
-                        Product</a>
-                    <a class="btn review-details-btn ha" href="{% url 'review_detail' review.id %}">Review Details</a>
-
-                </div>
             </div>
         </div>
-        {% endfor %}
-        {% else %}
-        <p class="ha">No reviews have been found.</p>
-        {% endif %}
+    </div>
+    {% endfor %}
+    {% else %}
+    <p class="no-results-message ha">No reviews have been found.</p>
+    {% endif %}
 </div>
 {% endblock %}

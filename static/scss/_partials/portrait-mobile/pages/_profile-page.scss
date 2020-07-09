@@ -1,5 +1,9 @@
 .profile-wrapper {
-    padding-bottom: 25vw;
+    padding: {
+        top: 4vw;
+        bottom: 25vw;
+
+    }
     background-color: $page-bgr-clr;
     min-height: 85vh;
 }

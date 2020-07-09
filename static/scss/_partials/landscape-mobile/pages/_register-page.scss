@@ -2,26 +2,22 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    padding: {
-        top: 2vw;
-        bottom: 20vw;
-
-    }
+    padding-bottom: 2vw;
     background-color: $page-bgr-clr;
+    min-height: 92vh;
 }
 
 #registration-message {
     width: 90vw;
     margin: {
-        top: 4vw;
-        bottom: 4vw;
+        bottom: 1.5vw;
     }
-    color: white;
     text-align: center;
+    color: white;
 }
 
 #registrationform {
-    width: 52vw;
+    width: 30vw;
 }
 
 .help-block {
@@ -33,10 +29,14 @@
 }
 
 #submit-registration-btn {
-    width: 40vw;
+    width: 10vw;
     background-color: lightblue;
     color: rgb(65, 65, 65);
     font-family: $dosisFont;
-    font-size: 5.5vw;
+    font-size: 1.2vw;
     transition: color .3s ease-in-out;
+}
+
+#submit-registration-btn:hover {
+    color: darkred;
 }

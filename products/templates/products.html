@@ -43,8 +43,8 @@
                 </form>
                 {% endif %}
             </div>
-            <h3><a class="product-headline" href="{% url 'product_detail' product.id %}"><b>{{product.name}}</b></a>
-            </h3>
+            <a class="product-headline" href="{% url 'product_detail' product.id %}"><b>{{product.name}}</b></a>
+            
 
             <p class="product-description">{{ product.description|truncatewords:12 }}</p>
             <div class="product-stats">
@@ -77,7 +77,7 @@
     </div>
     {% endfor %}
     {% else %}
-    <p>No results have been found.</p>
+    <p class="no-results-message">No results have been found.</p>
     {% endif %}
 </div>
 

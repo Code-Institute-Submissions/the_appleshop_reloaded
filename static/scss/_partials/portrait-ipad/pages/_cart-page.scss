@@ -6,7 +6,7 @@
     }
 
     background-color: $page-bgr-clr;
-    min-height: 85vh;
+    min-height: 92vh;
 }
 
 .addcard-icon {
@@ -34,15 +34,11 @@
     justify-content: center;
 }
 
-.empty-cart-wrapper p {
-    font-size: 5.5vw;
-
-}
-
 .no-cart-items {
     width: 95%;
-    font-size: 5.5vw;
+    font-size: 3.5vw;
     text-align: center;
+    color: white;
 }
 
 .no-cart-items a {

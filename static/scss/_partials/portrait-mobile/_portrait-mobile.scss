@@ -21,7 +21,6 @@
     .page-headline {
         font-family: $dosisFont;
         font-size: 7vw;
-        padding-top: 2vw;
         padding-bottom: 2vw;
         width: 100%;
         color: white;
@@ -31,10 +30,14 @@
         color: white;
     }
 
-    .form-group>p {
+    .form-group > .page-headline, .form-group > p {
         text-align: center;
         font-size: 6.0vw;
-        color: black;
+        color: white;
+        padding: {
+            top: 6vw;
+            bottom: 4vw;
+        }
     }
 
     // footer {
@@ -144,6 +147,14 @@
         height: 20px;
     }
 
+    #bottomnavbar-ipad {
+        display: none;
+    }
+
+    #bottombar-ipad {
+        display: none;
+    }
+
     .products-icon {
         top: -1px;
         font-size: 7.3vw;
@@ -166,7 +177,6 @@
 
         max-width: none;
     }
-
 
     .badge-wishlist {
         -webkit-border-radius: 3vw;
@@ -208,5 +218,10 @@
 
     .active-app {
         color: rgba(255, 0, 0, 0.5);
+    }
+
+    .no-results-message {
+        font-size: 5.5vw;
+        color: white;
     }
 }

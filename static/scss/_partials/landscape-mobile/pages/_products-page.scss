@@ -1,23 +1,26 @@
 .product-wrapper {
     padding: {
         top: 2vw;
-        bottom: 25vw;
-
+        bottom: 2vw;
     }
+        
     background-color: $page-bgr-clr;
-    min-height: 92vh;
+    min-height: 85vh;
 }
 
 .search-field-wrapper {
     width: 100%;
-    padding-bottom: 10vw;
+    padding: {
+        top: 2vw;
+        bottom: 5vw;
+    }
 }
 
 .productcard {
-    width: 70vw;
+    width: 24vw;
     margin: {
-        left: 10px;
-        right: 10px;
+        left: 5px;
+        right: 5px;
     }
 }
 
@@ -34,22 +37,23 @@
 }
 
 .product-image {
-    width: 44vw;
-    height: 30.46vw;
+    width: 16vw;
+    height: 11.1vw;
     border: none;
     border-radius: 5px;
     object-fit: cover;
 }
 
 .add-review-btn {
-    font-size: 8.5vw;
+    font-size: 2.5vw;
     color: rgb(65, 106, 236);
 }
 
 
 .product-headline {
     font-family: $dosisFont;
-    font-size: 5.5vw;
+    font-size: 1.5vw;
+    width: 100%;
     margin: {
         top: 5px;
         bottom: 5px;
@@ -79,7 +83,6 @@ h3 .product-headline {
 
 .stats-value {
     width: 70%;
-    ;
 }
 
 .stats-value a {
@@ -91,6 +94,6 @@ h3 .product-headline {
 }
 
 .cart-form {
+    margin-top: 5px;
     width: 100%;
-    margin-top: 1vw;
 }

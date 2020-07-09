@@ -5,7 +5,6 @@
 {% endblock head_js %}
 {% block content %}
 <div class="reviews-wrapper vac ha">
-        {% if reviews %}
 
         <div class="page-headline ha">Reviews by users</div>
         <div class="search-field-wrapper ha">
@@ -16,7 +15,7 @@
                 </form>
             </div>
         </div>
-
+        {% if reviews %}
         {% for review in reviews %}
         <div class="reviewcard display panel panel-default">
             <div class="panel-body">
@@ -25,11 +24,13 @@
                     alt="image of {{review.product.name}} review">
                 {% endif %}
                 <div class="review-headline"><b><a href="{% url 'review_detail' review.id %}">{{ review.title }}</a></b></div>
-                <p></p>
+                <a class="product-headline" href="{% url 'product_detail' review.product.id %}"><b>{{review.product.name}}</b></a>
                 <p class="product-description">{{ review.comment|truncatewords:10 }}</p>
-                <p><span class="boldtext">Published by:</span> {{ review.author }} </p>
-                <p><span class="boldtext">Date:</span> {{ review.created_date }} </p>
                 <div class="review-stats">
+                    <div class="stats-key">Author:</div>
+                    <div class="stats-value">{{ review.author }}</div>
+                    <div class="stats-key">Date:</div>
+                    <div class="stats-value">{{ review.created_date }}</div>
                     <div class="stats-key"><i class="fa fa-eye"></i></div>
                     <div class="stats-value">{{ review.view_count }}</div>
                     <div class="stats-key">Rating:</div>
@@ -42,7 +43,7 @@
         </div>
         {% endfor %}
         {% else %}
-        <p class="vh">No reviews have been found.</p>
+        <p class="no-results-message vh">No reviews have been found.</p>
         {% endif %}
 </div>
 {% endblock %}

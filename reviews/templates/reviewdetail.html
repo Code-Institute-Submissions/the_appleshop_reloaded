@@ -6,6 +6,7 @@
 {% block content %}
 
 <div class="reviews-wrapper vac ha">
+    <div class="page-headline ha">Review {{review.product.name}}</div>
     <div class="reviewcard display panel panel-default">
         <div class="panel-body">
             {% if review.image %}
@@ -26,12 +27,15 @@
                 </div>
                 {% endif %}
             </div>
-            <div class="product-headline">{{ review.title }} </div>
-            <p></p>
+            <div class="review-headline">{{ review.title }} </div>
+            <a class="product-headline"
+                href="{% url 'product_detail' review.product.id %}"><b>{{review.product.name}}</b></a>
             <p class="product-description">{{ review.comment }}</p>
-            <p><span class="boldtext">Published by:</span> {{ review.author }} </p>
-            <p><span class="boldtext">Date:</span> {{ review.created_date }} </p>
             <div class="review-stats">
+                <div class="stats-key">Author:</div>
+                <div class="stats-value">{{ review.author }}</div>
+                <div class="stats-key">Date:</div>
+                <div class="stats-value">{{ review.created_date }}</div>
                 <div class="stats-key"><i class="fa fa-eye"></i></div>
                 <div class="stats-value">{{ review.view_count }}</div>
                 <div class="stats-key">Rating:</div>

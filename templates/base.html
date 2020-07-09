@@ -67,31 +67,6 @@
                                 {% endif %}
                             </a>
                     </li>
-                    {% if user.is_authenticated %}
-                    <li class="desktop-navbar-icons">
-                        {% if "profile" in app_path %}
-                        <a href="{% url 'profile' %}" title="Profile"><i class="fa fa-user active-app"></i></a>
-                        {% else %}
-                        <a href="{% url 'profile' %}" title="Profile"><i class="fa fa-user"></i></a>
-                        {% endif %}
-                    </li>
-                    <li class="desktop-navbar-icons"><a href="{% url 'logout' %}" title="Logout"><i class="fa fa-sign-out"></i></a></li>
-                    {%  else %}
-                    <li class="desktop-navbar-icons">
-                        {% if "register" in app_path %}
-                        <a href="{% url 'registration' %}" title="Registration"><i class="fa fa-user-plus active-app"></i></a>
-                        {%  else %}
-                        <a href="{% url 'registration' %}" title="Registration"><i class="fa fa-user-plus"></i></a>
-                        {% endif %}
-                    </li>
-                    <li class="desktop-navbar-icons">
-                        {% if "login" in app_path %}
-                        <a href="{% url 'login' %}" title="Login"><i class="fa fa-sign-in active-app"></i></a>
-                        {%  else %}
-                        <a href="{% url 'login' %}" title="Login"><i class="fa fa-sign-in"></i></a>
-                        {% endif %}
-                    </li>
-                    {% endif %}
                     <li class="desktop-navbar-icons">
                         {% if "cart" in app_path %}
                         <a href="{% url 'view_cart' %}" title="Shopping Cart"><i class="fa fa-shopping-cart active-app"></i>
@@ -103,6 +78,31 @@
                                 {% endif %}
                             </a>
                     </li>
+                    {% if user.is_authenticated %}
+                    <li class="desktop-navbar-icons">
+                        {% if "profile" in app_path %}
+                        <a href="{% url 'profile' %}" title="Profile"><i class="fa fa-user active-app"></i></a>
+                        {% else %}
+                        <a href="{% url 'profile' %}" title="Profile"><i class="fa fa-user"></i></a>
+                        {% endif %}
+                    </li>
+                    <li class="desktop-navbar-icons"><a href="{% url 'logout' %}" title="Logout"><i class="fa fa-sign-out"></i></a></li>
+                    {%  else %}
+                    <li class="desktop-navbar-icons">
+                        {% if "login" in app_path %}
+                        <a href="{% url 'login' %}" title="Login"><i class="fa fa-sign-in active-app"></i></a>
+                        {%  else %}
+                        <a href="{% url 'login' %}" title="Login"><i class="fa fa-sign-in"></i></a>
+                        {% endif %}
+                    </li>
+                    <li class="desktop-navbar-icons">
+                        {% if "register" in app_path %}
+                        <a href="{% url 'registration' %}" title="Registration"><i class="fa fa-user-plus active-app"></i></a>
+                        {%  else %}
+                        <a href="{% url 'registration' %}" title="Registration"><i class="fa fa-user-plus"></i></a>
+                        {% endif %}
+                    </li>
+                    {% endif %}
                 </ul>
                 <ul class="nav navbar-nav navbar-right mobile-navbar">
                     <li class="mobile-list-items">
@@ -138,6 +138,17 @@
                                 {% endif %}
                             </a>
                     </li>
+                    <li class="mobile-list-items">
+                        {% if "cart" in app_path %}
+                        <a href="{% url 'view_cart' %}" title="Shopping Cart"><i class="fa fa-shopping-cart active-app"></i> Cart
+                            {% else %}
+                            <a href="{% url 'view_cart' %}" title="Shopping Cart"><i class="fa fa-shopping-cart"></i> Cart
+                                {% endif %}
+                                {%if product_count > 0 %}
+                                <label class="badge badge-cart badge-warning"><b>{{ product_count }}</b></label>
+                                {% endif %}
+                            </a>
+                    </li>
                     {% if user.is_authenticated %}
                     <li class="mobile-list-items">
                         {% if "profile" in app_path %}
@@ -150,31 +161,20 @@
                         <a href="{% url 'logout' %}" title="Logout"><i class="fa fa-sign-out"></i> Log Out</a></li>
                     {% else %}
                     <li class="mobile-list-items">
-                        {% if "register" in app_path %}
-                        <a href="{% url 'registration' %}" title="Registration"><i class="fa fa-user-plus active-app"></i> Register</a>
-                        {%  else %}
-                        <a href="{% url 'registration' %}" title="Registration"><i class="fa fa-user-plus"></i> Register</a>
-                        {% endif %}
-                    </li>
-                    <li class="mobile-list-items">
                         {% if "login" in app_path %}
                         <a href="{% url 'login' %}" title="Login"><i class="fa fa-sign-in active-app"></i> Log In</a>
                         {%  else %}
                         <a href="{% url 'login' %}" title="Login"><i class="fa fa-sign-in"></i> Log In</a>
                         {% endif %}
                     </li>
-                    {% endif %}
                     <li class="mobile-list-items">
-                        {% if "cart" in app_path %}
-                        <a href="{% url 'view_cart' %}" title="Shopping Cart"><i class="fa fa-shopping-cart active-app"></i> Cart
-                            {% else %}
-                            <a href="{% url 'view_cart' %}" title="Shopping Cart"><i class="fa fa-shopping-cart"></i> Cart
-                                {% endif %}
-                                {%if product_count > 0 %}
-                                <label class="badge badge-cart badge-warning"><b>{{ product_count }}</b></label>
-                                {% endif %}
-                            </a>
+                        {% if "register" in app_path %}
+                        <a href="{% url 'registration' %}" title="Registration"><i class="fa fa-user-plus active-app"></i> Register</a>
+                        {%  else %}
+                        <a href="{% url 'registration' %}" title="Registration"><i class="fa fa-user-plus"></i> Register</a>
+                        {% endif %}
                     </li>
+                    {% endif %}
                 </ul>
             </div>
         </div>
@@ -195,7 +195,7 @@
     </div>
     <nav class="navbar navbar-masthead navbar-default navbar-fixed-bottom" id="bottomnavbar">
         <div class="container">
-            <div class="navbar-header navbar-header-bottombar">
+            <div class="navbar-header">
                 <ul class="nav navbar-nav navbar-right" id="bottombar">
                     <li class="quicklinks">
                         {% if app_path == "/" %}
@@ -242,6 +242,87 @@
                         <a href="{% url 'profile' %}" title="Profile"><i class="fa fa-user"></i></a>
                         {% endif %}
                     </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <nav class="navbar navbar-masthead navbar-default navbar-fixed-bottom" id="bottomnavbar-ipad">
+        <div class="container">
+            <div class="navbar-header">
+                <ul class="nav navbar-nav navbar-right" id="bottombar-ipad">
+                    <li class="quicklinks">
+                        {% if app_path == "/" %}
+                        <a href="{% url 'index' %}" title="Our Bestsellers"><i class="fa fa-home active-app"></i></a>
+                        {% else %}
+                        <a href="{% url 'index' %}" title="Our Bestsellers"><i class="fa fa-home"></i></a>
+                        {% endif %}
+                    </li>
+                    <li class="quicklinks">
+                        {% if "products" in app_path %}
+                        <a href="{% url 'products' %}" title="Products"><span
+                                class="glyphicon glyphicon-apple products-icon active-app"></a>
+                        {% else %}
+                        <a href="{% url 'products' %}" title="Products"><span class="glyphicon glyphicon-apple products-icon"></a>
+                        {% endif %}
+                    </li>
+
+                    <li class="quicklinks">
+                        {% if "reviews" in app_path %}
+                        <a href="{% url 'get_reviews' %}" title="Reviews"><i class="fa fa-comment active-app"></i></a>
+                        {% else %}
+                        <a href="{% url 'get_reviews' %}" title="Reviews"><i class="fa fa-comment"></i></a>
+                        {% endif %}
+                    </li>
+
+                    <li class="quicklinks">
+                        {% if "wishlist" in app_path %}
+                        <a href="{% url 'view_wishlist' %}" title="Wishlist"><i class="fa fa-star active-app"></i>
+                            {% else %}
+                            <a href="{% url 'view_wishlist' %}" title="Wishlist"><i class="fa fa-star"></i>
+                                {% endif %}
+                                {%if wishlist_count > 0 %}
+                                <label id="wishlist-badge-bottom-ipad" class="badge badge-wishlist badge-warning">{{ wishlist_count }}</label>
+                                {% endif %}
+                            </a>
+                    </li>
+
+                    <li class="quicklinks">
+                        {% if "cart" in app_path %}
+                        <a href="{% url 'view_cart' %}" title="Shopping Cart"><i class="fa fa-shopping-cart active-app"></i>
+                            {% else %}
+                            <a href="{% url 'view_cart' %}" title="Shopping Cart"><i class="fa fa-shopping-cart"></i>
+                                {% endif %}
+                                {%if product_count > 0 %}
+                                <label id="cart-badge-bottom-ipad" class="badge badge-cart badge-warning">{{ product_count }}</label>
+                                {% endif %}
+                            </a>
+                    </li>
+                    {% if user.is_authenticated %}
+                    <li class="quicklinks">
+                        {% if "profile" in app_path %}
+                        <a href="{% url 'profile' %}" title="Profile"><i class="fa fa-user active-app"></i></a>
+                        {% else %}
+                        <a href="{% url 'profile' %}" title="Profile"><i class="fa fa-user"></i></a>
+                        {% endif %}
+                    </li>
+                    <li class="quicklinks">
+                        <a href="{% url 'logout' %}" title="Logout"><i class="fa fa-sign-out"></i></a></li>
+                    {% else %}
+                    <li class="quicklinks">
+                        {% if "login" in app_path %}
+                        <a href="{% url 'login' %}" title="Login"><i class="fa fa-sign-in active-app"></i></a>
+                        {%  else %}
+                        <a href="{% url 'login' %}" title="Login"><i class="fa fa-sign-in"></i></a>
+                        {% endif %}
+                    </li>
+                    <li class="quicklinks">
+                        {% if "register" in app_path %}
+                        <a href="{% url 'registration' %}" title="Registration"><i class="fa fa-user-plus active-app"></i></a>
+                        {%  else %}
+                        <a href="{% url 'registration' %}" title="Registration"><i class="fa fa-user-plus"></i></a>
+                        {% endif %}
+                    </li>
+                    {% endif %}
                 </ul>
             </div>
         </div>

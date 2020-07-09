@@ -1,6 +1,6 @@
 .product-wrapper {
     padding: {
-        top: 2vw;
+        top: 4vw;
         bottom: 25vw;
 
     }
@@ -15,6 +15,7 @@
 
 .productcard {
     width: 90vw;
+    margin-top: 2vw;
 }
 
 .panel-default {
@@ -46,11 +47,15 @@
 .product-headline {
     font-family: $dosisFont;
     font-size: 6.5vw;
+    margin: {
+        top: 5px;
+        bottom: 5px;
+
+    }
 }
 
 
 .product-description {
-    min-height: 40px;
     width: 100%;
 }
 
@@ -66,11 +71,11 @@ h3 .product-headline {
 }
 
 .stats-key {
-    width: 23%;
+    width: 30%;
 }
 
 .stats-value {
-    width: 75%;
+    width: 70%;
     ;
 }
 

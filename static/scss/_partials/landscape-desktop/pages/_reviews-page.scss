@@ -1,5 +1,6 @@
 .reviews-wrapper {
     padding: {
+        top: 2vw;
         bottom: 2vw;
     }
 
@@ -136,7 +137,6 @@ return-product-btn:hover {
 .review-headline {
     font-family: $dosisFont;
     font-size: 2.0vw;
-    margin-bottom: 2vw;
     width: 100%;
 }
 

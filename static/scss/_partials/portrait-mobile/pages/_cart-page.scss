@@ -1,12 +1,12 @@
 .cart-wrapper {
     padding: {
-        top: 2vw;
+        top: 4vw;
         bottom: 25vw;
 
     }
 
     background-color: $page-bgr-clr;
-    min-height: 85vh;
+    min-height: 92vh;
 }
 
 .addcard-icon {
@@ -34,15 +34,11 @@
     justify-content: center;
 }
 
-.empty-cart-wrapper p {
-    font-size: 5.5vw;
-
-}
-
 .no-cart-items {
     width: 95%;
     font-size: 5.5vw;
     text-align: center;
+    color: white;
 }
 
 .no-cart-items a {
@@ -72,6 +68,7 @@
 #totalamount {
     width: 100%;
     font-size: 6vw;
+    color: white;
 }
 
 .glyphicon-euro {

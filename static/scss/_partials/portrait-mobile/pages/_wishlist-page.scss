@@ -1,7 +1,11 @@
 .wishlist-wrapper {
-    padding-bottom: 25vw;
+    padding: {
+        top: 4vw;
+        bottom: 25vw;
+
+    }
     background-color: $page-bgr-clr;
-    min-height: 82vh;
+    min-height: 92vh;
 }
 
 .wishlist-remove-btn {
@@ -32,13 +36,8 @@
     justify-content: center;
 }
 
-#empty-wishlist-wrapper p {
-    font-size: 5.5vw;
-
-}
-
 #empty-wishlist-product-link {
     width: 80%;
-    font-size: 8vw;
+    font-size: 10vw;
     text-align: center;
 }
