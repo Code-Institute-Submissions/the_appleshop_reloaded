@@ -12,13 +12,22 @@
     justify-content: center;
 }
 
-.va {
+.vai {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+}
+
+.vac {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
 }
 
 
 // color definitions
+
+$page-bgr-clr: #003553;
 
 // font definitions
 

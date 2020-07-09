@@ -1,4 +1,262 @@
 @media screen and (width: 1024px) and (height: 768px) and (orientation: landscape),
 screen and (width: 1366px) and (height: 1024px) and (orientation: landscape) {
 
+    @import "pages/_cart-page.scss";
+    @import "pages/_checkout-page.scss";
+    @import "pages/_login-page.scss";
+    @import "pages/_password-reset-page.scss";
+    @import "pages/_productdetails-page.scss";
+    @import "pages/_products-page.scss";
+    @import "pages/_profile-page.scss";
+    @import "pages/_register-page.scss";
+    @import "pages/_reviews-page.scss";
+    @import "pages/_wishlist-page.scss";
+
+
+    body {
+        font-family: $dosisFont;
+        padding-top: 56px;
+        font-size: 1.2vw;
+    }
+
+    .page-headline {
+        font-family: $dosisFont;
+        font-size: 4.5vw;
+
+        padding: {
+            top: 1vw;
+            bottom: 1vw;
+
+        }
+
+        width: 100%;
+        color: white;
+    }
+
+    .form-group {
+        color: white;
+        width: 100%;
+    }
+
+    .form-group>.input-group {
+        width: 100%;
+    }
+
+    .form-group>p {
+        text-align: center;
+        font-size: 2.0vw;
+    }
+
+    // footer {
+    //     margin-top: 40px;
+    //     padding-top: 20px;
+    //     padding-bottom: 20px;
+    //     border-top: 1px solid #ededed;
+    //     color: #A9A9A9;
+    // }
+
+    // navbar header
+
+    .mobile-navbar {
+        display: none;
+    }
+
+    .desktop-navbar {
+        margin-right: 2vw;
+    }
+
+    #brandicon {
+        color: rgb(182, 29, 24);
+        font-size: 3vw;
+    }
+
+    .navbar-brand {
+        font-family: $dosisFont;
+        font-size: 3vw;
+        padding-left: 20px;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar .navbar-nav {
+        margin-right: 3vw;
+    }
+
+    .desktop-navbar-icons {
+        font-size: 2vw;
+        min-width: 3vw;
+        width: 9.2vw;
+    }
+
+    .navbar>.container {
+        height: 4.5vw;
+    }
+
+
+    .container>.navbar-header {
+        margin: {
+            left: 20px;
+            right: 0;
+        }
+    }
+
+    .container {
+        padding: {
+            left: 0;
+            right: 0;
+        }
+
+        min-width: 100%;
+    }
+
+
+    .mobile-list-items {
+
+        margin: {
+            top: 20px;
+            bottom: 20px;
+            left: 15px;
+        }
+
+        font-size: 6.5vw;
+    }
+
+    .navbar .navbar-nav>li>a {
+        text-align: center;
+    }
+
+    .navbar-nav {
+        margin: 14.5px 0;
+    }
+
+    .navbar-fixed-top .navbar-collapse {
+        max-height: 380px;
+    }
+
+
+    #menubutton {
+        margin-top: 15px;
+    }
+
+    .alert {
+        margin-bottom: 0;
+    }
+
+    .icon-bar {
+        background-color: #fff;
+    }
+
+    .row.row-flex {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 30px;
+    }
+
+    .row {
+        margin: {
+            left: 0;
+            right: 0;
+        }
+
+    }
+
+    .btn-bar-wrapper {
+        width: 5vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-content: baseline;
+    }
+
+
+
+
+    // bottom linkbar
+
+    #bottomnavbar {
+        display: none;
+    }
+
+    #bottombar {
+        display: none;
+    }
+
+    #bottombar .quicklinks {
+        width: 20vw;
+        display: flex;
+        justify-content: center;
+        font-size: 7.5vw;
+        height: 20px;
+    }
+
+    .products-icon {
+        top: -2px;
+        font-size: 2.0vw;
+    }
+
+    .nav>li>a {
+        padding: 0;
+
+    }
+
+    #wishlist-badge-bottom {
+        position: absolute;
+        top: -2vw;
+        left: 8.7vw;
+
+        padding: {
+            left: 2vw;
+            right: 2vw;
+        }
+
+        max-width: none;
+    }
+
+
+    .badge-wishlist {
+        -webkit-border-radius: 3vw;
+        -moz-border-radius: 3vw;
+        border-radius: 3vw;
+        font-size: 1.2vw;
+    }
+
+
+    #cart-badge-bottom {
+        position: absolute;
+        top: -2vw;
+        left: 8.7vw;
+
+        padding: {
+            left: 1.5vw;
+            right: 1.5vw;
+        }
+
+        max-width: none;
+    }
+
+    .badge-cart {
+        -webkit-border-radius: 3vw;
+        -moz-border-radius: 3vw;
+        border-radius: 3vw;
+        font-size: 1.2vw;
+    }
+
+    .badge {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+    .label-warning[href],
+    .badge-warning[href] {
+        background-color: #c67605;
+    }
+
+    .active-app {
+        color: rgba(255, 0, 0, 0.5);
+    }
+
+
+
 }

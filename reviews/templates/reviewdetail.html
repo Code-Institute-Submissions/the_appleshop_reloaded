@@ -5,10 +5,9 @@
 {% endblock head_js %}
 {% block content %}
 
-<div class="reviews-wrapper ha">
+<div class="reviews-wrapper vac ha">
     <div class="reviewcard display panel panel-default">
         <div class="panel-body">
-            <h3 class="review-headline ha">{{ review.title }} </h3>
             {% if review.image %}
             <img class="product-image" src="{{ MEDIA_URL }}{{review.image}}"
                 alt="image of {{review.product.name}} review">
@@ -27,9 +26,7 @@
                 </div>
                 {% endif %}
             </div>
-            <h3>
-                <div class="product-headline"><b>Review for {{review.product.name}}</b></div>
-            </h3>
+            <div class="product-headline">{{ review.title }} </div>
             <p></p>
             <p class="product-description">{{ review.comment }}</p>
             <p><span class="boldtext">Published by:</span> {{ review.author }} </p>

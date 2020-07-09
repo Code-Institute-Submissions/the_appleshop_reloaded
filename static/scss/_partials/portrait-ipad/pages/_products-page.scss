@@ -4,7 +4,7 @@
         bottom: 25vw;
 
     }
-    background-color: #9e988fcb;
+    background-color: $page-bgr-clr;
     min-height: 92vh;
 }
 
@@ -34,6 +34,7 @@
     height: 12.5vw;
     border: none;
     border-radius: 5px;
+    object-fit: cover;
 }
 
 .add-review-btn {

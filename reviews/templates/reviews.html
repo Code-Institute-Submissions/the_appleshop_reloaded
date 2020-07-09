@@ -4,7 +4,7 @@
 {% block head_js %}
 {% endblock head_js %}
 {% block content %}
-<div class="reviews-wrapper ha">
+<div class="reviews-wrapper vac ha">
         {% if reviews %}
 
         <div class="page-headline ha">Reviews by users</div>
@@ -20,13 +20,11 @@
         {% for review in reviews %}
         <div class="reviewcard display panel panel-default">
             <div class="panel-body">
-                <h3 class="review-headline ha"><a href="{% url 'review_detail' review.id %}">{{ review.title }}</a></h3>
                 {% if review.image %}
                 <img class="product-image" src="{{ MEDIA_URL }}{{review.image}}"
                     alt="image of {{review.product.name}} review">
                 {% endif %}
-
-                <h3><div class="product-headline"><b>Review for {{review.product.name}}</b></div></h3>
+                <div class="review-headline"><b><a href="{% url 'review_detail' review.id %}">{{ review.title }}</a></b></div>
                 <p></p>
                 <p class="product-description">{{ review.comment|truncatewords:10 }}</p>
                 <p><span class="boldtext">Published by:</span> {{ review.author }} </p>
