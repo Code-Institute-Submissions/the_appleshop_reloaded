@@ -150,7 +150,7 @@ return-product-btn:hover {
     border-radius: 5px;
     border: 1px solid grey;
     width: 24vw;
-    height: 32vh;
+    height: 15vh;
     position: fixed;
     opacity: 0.0;
     z-index: -1;
@@ -168,7 +168,7 @@ return-product-btn:hover {
 
     font: {
         family: $dosisFont;
-        size: $delPopupFontSize;
+        size: 2.5vw;
     }
 }
 
@@ -179,6 +179,7 @@ return-product-btn:hover {
     width: 6vw;
     transition: color .3s ease-in-out;
     text-decoration: none;
+    font-size: 2.0vw;
 }
 
 
@@ -193,6 +194,7 @@ return-product-btn:hover {
     font-family: $dosisFont;
     color: whitesmoke;
     transition: color .3s ease-in-out;
+    font-size: 2.0vw;
 }
 
 .delete-cancel-btn:hover {

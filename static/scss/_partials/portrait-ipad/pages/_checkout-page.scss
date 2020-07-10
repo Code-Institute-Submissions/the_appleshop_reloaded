@@ -26,7 +26,7 @@ caption p {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 60%;
+    width: 70%;
 }
 
 .checkout-summary-items {
@@ -38,6 +38,13 @@ caption p {
 
 #payment-form {
     margin-top: 6vw;
+    width: 83vw;
+
+}
+
+#payment-form > legend {
+    color: white;
+    font-size: 6vw;
 }
 
 #submit_payment_btn {

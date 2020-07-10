@@ -15,12 +15,12 @@
     body {
         font-family: $dosisFont;
         padding-top: 56px;
-        font-size: 1.2vw;
+        font-size: 3.0vw;
     }
 
     .page-headline {
         font-family: $dosisFont;
-        font-size: 4.5vw;
+        font-size: 5.5vw;
 
         padding: {
             bottom: 1vw;
@@ -42,7 +42,7 @@
 
     .form-group>p {
         text-align: center;
-        font-size: 2.0vw;
+        font-size: 3.5vw;
     }
 
     // footer {
@@ -56,21 +56,23 @@
     // navbar header
 
     .mobile-navbar {
-        display: none;
+        float: left;
+        background-color:rgba(0, 53, 83, 0.75);
     }
 
     .desktop-navbar {
+        display: none;
         margin-right: 2vw;
     }
 
     #brandicon {
         color: rgb(182, 29, 24);
-        font-size: 3vw;
+        font-size: 6vw;
     }
 
     .navbar-brand {
         font-family: $dosisFont;
-        font-size: 3vw;
+        font-size: 6vw;
         padding-left: 20px;
         margin: 0;
         padding: 0;
@@ -113,16 +115,16 @@
     .mobile-list-items {
 
         margin: {
-            top: 20px;
-            bottom: 20px;
+            top: 5px;
+            bottom: 18px;
             left: 15px;
         }
-
-        font-size: 6.5vw;
+        font-size: 3.5vw;
+        padding-right: 2vw;
     }
 
     .navbar .navbar-nav>li>a {
-        text-align: center;
+        text-align: left;
     }
 
     .navbar-nav {
@@ -161,7 +163,7 @@
     }
 
     .btn-bar-wrapper {
-        width: 5vw;
+        width: 6vw;
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-end;
@@ -181,12 +183,12 @@
         display: none;
     }
 
-    #bottombar .quicklinks {
-        width: 20vw;
-        display: flex;
-        justify-content: center;
-        font-size: 7.5vw;
-        height: 20px;
+    #bottomnavbar-ipad {
+        display: none;
+    }
+
+    #bottombar-ipad {
+        display: none;
     }
 
     .products-icon {
@@ -217,7 +219,7 @@
         -webkit-border-radius: 3vw;
         -moz-border-radius: 3vw;
         border-radius: 3vw;
-        font-size: 1.2vw;
+        font-size: 2.0vw;
     }
 
 
@@ -238,7 +240,7 @@
         -webkit-border-radius: 3vw;
         -moz-border-radius: 3vw;
         border-radius: 3vw;
-        font-size: 1.2vw;
+        font-size: 2.0vw;
     }
 
     .badge {
@@ -257,6 +259,6 @@
 
     .no-results-message {
         color: white;
-        font-size: 1.5vw;
+        font-size: 3.5vw;
     }
 }

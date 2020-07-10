@@ -2,7 +2,7 @@
 {% load bootstrap_tags %}
 {% block content %}
 <div class="edit-review-wrapper vac ha">
-    <div class="review-headline">Add a new or edit Review</div>
+    <div class="page-headline ha">Add a new or edit Review</div>
     <form id="review-form" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form | as_bootstrap }}

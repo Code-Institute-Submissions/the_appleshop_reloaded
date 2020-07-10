@@ -141,8 +141,8 @@
     background-color: beige;
     border-radius: 5px;
     border: 1px solid grey;
-    width: 80vw;
-    height: 40vw;
+    width: 70vw;
+    height: 30vw;
     position: fixed;
     opacity: 0.0;
     z-index: -1;
@@ -165,7 +165,7 @@
 
     font: {
         family: $dosisFont;
-        size: $delPopupFontSize;
+        size: 5.0vw;
     }
 }
 
@@ -173,9 +173,10 @@
     background-color: lightcoral;
     color: rgb(65, 65, 65);
     margin-right: 2px;
-    width: 35vw;
+    width: 20vw;
     transition: color .3s ease-in-out;
     text-decoration: none;
+    font-size: 4.0vw;
 }
 
 
@@ -184,12 +185,13 @@
 }
 
 .delete-cancel-btn {
-    width: 35vw;
+    width: 20vw;
     background-color: lightslategray;
     margin-left: 2px;
     font-family: $dosisFont;
     color: whitesmoke;
     transition: color .3s ease-in-out;
+    font-size: 4.0vw;
 }
 
 .delete-cancel-btn:hover {

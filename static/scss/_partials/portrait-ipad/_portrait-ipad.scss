@@ -31,6 +31,17 @@ screen and (width: 1024px) and (height: 1366px) and (orientation: portrait) {
 
     .form-group {
         color: white;
+        width: 100%;
+
+    }
+
+    .form-group>.input-group {
+        width: 100%;
+    }
+
+    .form-group>p {
+        text-align: center;
+        font-size: 6.0vw;
     }
 
     // footer {

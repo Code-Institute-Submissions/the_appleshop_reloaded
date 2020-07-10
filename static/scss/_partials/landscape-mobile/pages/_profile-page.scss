@@ -18,15 +18,15 @@
 }
 
 .profile-tabs {
-    font-size: 2.5vw;
-    width: 10vw;
+    font-size: 4.5vw;
+    width: 14vw;
     text-align: center;
 }
 
 
 .form-control {
     font-family: $dosisFont;
-    font-size: 1.4vw;
+    font-size: 2.5vw;
     font-weight: 900;
 }
 
@@ -35,7 +35,7 @@
 }
 
 .tab-address {
-    width: 40vw;
+    width: 55vw;
 }
 
 .tab-orders {
@@ -52,7 +52,7 @@
 .orderline-order-header,
 .orderline-product-header,
 .orderline-quantity-header {
-    font-size: 2.5vw;
+    font-size: 5.5vw;
     color: white;
 }
 
@@ -71,7 +71,7 @@
 .orderline-order-value,
 .orderline-product-value,
 .orderline-quantity-value {
-    font-size: 1.5vw;
+    font-size: 3.5vw;
     color: white;
 }
 
@@ -93,7 +93,7 @@
 
 .update-address-btn {
     font-family: $dosisFont;
-    font-size: 2.0vw;
+    font-size: 3.0vw;
     font-weight: 900;
     margin-top: 2vw;
     background-color: lightblue;

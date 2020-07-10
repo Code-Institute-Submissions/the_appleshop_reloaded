@@ -410,7 +410,7 @@ a:active {
   }
   .form-control {
     font-family: "Dosis", sans-serif;
-    font-size: 5.0vw;
+    font-size: 4.5vw;
     font-weight: 900;
   }
   .update-address-btn {
@@ -661,7 +661,7 @@ a:active {
     margin-top: 2vw;
     margin-bottom: 2vw;
     font-family: "Dosis", sans-serif;
-    font-size: 2vw;
+    font-size: 2.0vw;
   }
   .delete-confirm-btn {
     background-color: lightcoral;
@@ -739,6 +739,7 @@ a:active {
   }
   .form-group {
     color: white;
+    width: 100%;
   }
   .form-group > .page-headline, .form-group > p {
     text-align: center;
@@ -883,7 +884,7 @@ a:active {
     min-height: 92vh;
   }
   .addcard-icon {
-    font-size: 3vw;
+    font-size: 5vw;
   }
   .cart-summary-wrapper {
     width: 100%;
@@ -937,6 +938,7 @@ a:active {
   }
   .amend-btn-wrapper {
     width: 100%;
+    padding-top: 2vw;
   }
   .amend-btn {
     width: 40vw;
@@ -946,6 +948,7 @@ a:active {
   #totalamount {
     width: 100%;
     font-size: 6vw;
+    color: white;
   }
   .glyphicon-euro {
     margin-left: 5px;
@@ -986,7 +989,7 @@ a:active {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    width: 60%;
+    width: 70%;
   }
   .checkout-summary-items {
     width: 100%;
@@ -996,6 +999,11 @@ a:active {
   }
   #payment-form {
     margin-top: 6vw;
+    width: 83vw;
+  }
+  #payment-form > legend {
+    color: white;
+    font-size: 6vw;
   }
   #submit_payment_btn {
     display: -webkit-box;
@@ -1234,7 +1242,7 @@ a:active {
     font-family: "Dosis", sans-serif;
     font-size: 4.0vw;
     font-weight: 900;
-    height: 50px;
+    height: 70px;
   }
   .update-address-btn {
     font-family: "Dosis", sans-serif;
@@ -1467,8 +1475,8 @@ a:active {
     background-color: beige;
     border-radius: 5px;
     border: 1px solid grey;
-    width: 80vw;
-    height: 40vw;
+    width: 70vw;
+    height: 30vw;
     position: fixed;
     opacity: 0.0;
     z-index: -1;
@@ -1487,28 +1495,30 @@ a:active {
     margin-top: 2vw;
     margin-bottom: 2vw;
     font-family: "Dosis", sans-serif;
-    font-size: 2vw;
+    font-size: 5.0vw;
   }
   .delete-confirm-btn {
     background-color: lightcoral;
     color: #414141;
     margin-right: 2px;
-    width: 35vw;
+    width: 20vw;
     -webkit-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
     text-decoration: none;
+    font-size: 4.0vw;
   }
   .delete-confirm-btn:hover {
     color: whitesmoke;
   }
   .delete-cancel-btn {
-    width: 35vw;
+    width: 20vw;
     background-color: lightslategray;
     margin-left: 2px;
     font-family: "Dosis", sans-serif;
     color: whitesmoke;
     -webkit-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
+    font-size: 4.0vw;
   }
   .delete-cancel-btn:hover {
     color: darkred;
@@ -1566,6 +1576,14 @@ a:active {
   }
   .form-group {
     color: white;
+    width: 100%;
+  }
+  .form-group > .input-group {
+    width: 100%;
+  }
+  .form-group > p {
+    text-align: center;
+    font-size: 6.0vw;
   }
   .container > .navbar-header {
     margin-left: 0;
@@ -1839,6 +1857,9 @@ a:active {
   #payment-form {
     margin-top: 2vw;
     width: 44vw;
+  }
+  #payment-form > legend {
+    color: white;
   }
   #submit_payment_btn {
     display: -webkit-box;
@@ -2319,7 +2340,7 @@ a:active {
     border-radius: 5px;
     border: 1px solid grey;
     width: 24vw;
-    height: 32vh;
+    height: 15vh;
     position: fixed;
     opacity: 0.0;
     z-index: -1;
@@ -2336,7 +2357,7 @@ a:active {
   .delete-popup-message {
     width: 80%;
     font-family: "Dosis", sans-serif;
-    font-size: 2vw;
+    font-size: 2.5vw;
   }
   .delete-confirm-btn {
     background-color: lightcoral;
@@ -2346,6 +2367,7 @@ a:active {
     -webkit-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
     text-decoration: none;
+    font-size: 2.0vw;
   }
   .delete-confirm-btn:hover {
     color: whitesmoke;
@@ -2358,6 +2380,7 @@ a:active {
     color: whitesmoke;
     -webkit-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
+    font-size: 2.0vw;
   }
   .delete-cancel-btn:hover {
     color: darkred;
@@ -3186,7 +3209,7 @@ a:active {
     border-radius: 5px;
     border: 1px solid grey;
     width: 24vw;
-    height: 32vh;
+    height: 18vh;
     position: fixed;
     opacity: 0.0;
     z-index: -1;
@@ -3203,28 +3226,30 @@ a:active {
   .delete-popup-message {
     width: 80%;
     font-family: "Dosis", sans-serif;
-    font-size: 2vw;
+    font-size: 2.5vw;
   }
   .delete-confirm-btn {
     background-color: lightcoral;
     color: #414141;
     margin-right: 2px;
-    width: 6vw;
+    width: 10vw;
     -webkit-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
     text-decoration: none;
+    font-size: 2.0vw;
   }
   .delete-confirm-btn:hover {
     color: whitesmoke;
   }
   .delete-cancel-btn {
-    width: 6vw;
+    width: 10vw;
     background-color: lightslategray;
     margin-left: 2px;
     font-family: "Dosis", sans-serif;
     color: whitesmoke;
     -webkit-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
+    font-size: 2.0vw;
   }
   .delete-cancel-btn:hover {
     color: darkred;
@@ -3371,7 +3396,7 @@ a:active {
     margin-right: 0;
   }
   .btn-bar-wrapper {
-    width: 5vw;
+    width: 4vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3456,7 +3481,7 @@ a:active {
     min-height: 85vh;
   }
   .addcard-icon {
-    font-size: 1.4vw;
+    font-size: 2.5vw;
   }
   .cart-summary-wrapper {
     width: 100%;
@@ -3482,7 +3507,7 @@ a:active {
     width: 60%;
   }
   .free-shipping-message {
-    font-size: 1.5vw;
+    font-size: 4.5vw;
   }
   .empty-cart-wrapper {
     display: -webkit-box;
@@ -3505,24 +3530,24 @@ a:active {
   }
   #emptycart-product-link {
     width: 100%;
-    font-size: 4vw;
+    font-size: 6vw;
     text-align: center;
   }
   .input-group-addon {
-    width: 100%;
-    font-size: 1.2vw;
+    font-size: 2.0vw;
   }
   .amend-btn-wrapper {
     padding-top: 2vw;
     width: 100%;
   }
   .amend-btn {
-    width: 10vw;
-    font-size: 1.2vw;
+    width: 18vw;
+    font-size: 2.5vw;
   }
   .shipping-fee, #totalamount {
     width: 100%;
-    font-size: 2vw;
+    font-size: 4.0vw;
+    color: white;
   }
   .glyphicon-euro {
     margin-left: 5px;
@@ -3531,8 +3556,8 @@ a:active {
   }
   .checkout-btn {
     font-family: "Dosis", sans-serif;
-    font-size: 1.5vw;
-    width: 10vw;
+    font-size: 4.5vw;
+    width: 30vw;
   }
   .checkout-wrapper {
     padding-bottom: 2vw;
@@ -3569,11 +3594,14 @@ a:active {
     width: 100%;
     color: white;
     text-align: center;
-    font-size: 2.0vw;
+    font-size: 4.0vw;
   }
   #payment-form {
     margin-top: 2vw;
-    width: 44vw;
+    width: 55vw;
+  }
+  #payment-form > legend {
+    color: white;
   }
   #submit_payment_btn {
     display: -webkit-box;
@@ -3582,8 +3610,8 @@ a:active {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    width: 12vw;
-    font-size: 1.5vw;
+    width: 20vw;
+    font-size: 2.5vw;
     -webkit-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
@@ -3593,12 +3621,12 @@ a:active {
   .login-wrapper {
     -ms-flex-line-pack: center;
         align-content: center;
-    padding-top: 2vw;
+    padding-bottom: 2vw;
     background-color: #003553;
-    min-height: 92vh;
+    min-height: 86vh;
   }
   #loginform {
-    width: 30vw;
+    width: 40vw;
   }
   #reset-register-wrapper,
   #login-btn-wrapper {
@@ -3617,9 +3645,9 @@ a:active {
   #login-btn {
     background-color: lightblue;
     color: #414141;
-    width: 10vw;
+    width: 16vw;
     font-family: "Dosis", sans-serif;
-    font-size: 1.2vw;
+    font-size: 2.5vw;
     -webkit-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
@@ -3632,9 +3660,9 @@ a:active {
     margin-left: 0.4vw;
   }
   #password-reset-link, #register-link {
-    width: 10vw;
+    width: 18vw;
     font-family: "Dosis", sans-serif;
-    font-size: 1.2vw;
+    font-size: 2.0vw;
   }
   #password-reset-link a, #register-link a {
     color: #414141;
@@ -3650,10 +3678,10 @@ a:active {
     -ms-flex-line-pack: center;
         align-content: center;
     background-color: #003553;
-    min-height: 92vh;
+    min-height: 86vh;
   }
   .accountform {
-    width: 28vw;
+    width: 50vw;
     padding-top: 20px;
   }
   .accountform p {
@@ -3682,9 +3710,9 @@ a:active {
     width: 100%;
   }
   .pw-reset-btn {
-    width: 90%;
+    width: 100%;
     font-family: "Dosis", sans-serif;
-    font-size: 1.2vw;
+    font-size: 2.5vw;
     margin-top: 2.0vw;
     background-color: orange;
     -webkit-transition: color .3s ease-in-out;
@@ -3694,10 +3722,10 @@ a:active {
     color: darkred;
   }
   .wishform {
-    width: 2.6vw;
+    width: 4.0vw;
   }
   .revform {
-    width: 2.6vw;
+    width: 4.0vw;
   }
   .add-wish-btn,
   .remove-wish-btn,
@@ -3711,8 +3739,8 @@ a:active {
     width: 100%;
   }
   #to-products-btn {
-    width: 10vw;
-    font-size: 1.2vw;
+    width: 18vw;
+    font-size: 2.5vw;
     background-color: lightblue;
     color: black;
     -webkit-transition: color .3s ease-in-out;
@@ -3733,7 +3761,7 @@ a:active {
     padding-bottom: 5vw;
   }
   .productcard {
-    width: 24vw;
+    width: 47vw;
     margin-left: 5px;
     margin-right: 5px;
   }
@@ -3751,20 +3779,21 @@ a:active {
         flex-wrap: wrap;
   }
   .product-image {
-    width: 16vw;
-    height: 11.1vw;
+    width: 34vw;
+    height: 23.53vw;
     border: none;
     border-radius: 5px;
     -o-object-fit: cover;
        object-fit: cover;
   }
   .add-review-btn {
-    font-size: 2.5vw;
+    margin-left: 3px;
+    font-size: 4.0vw;
     color: #416aec;
   }
   .product-headline {
     font-family: "Dosis", sans-serif;
-    font-size: 1.5vw;
+    font-size: 3.5vw;
     width: 100%;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -3812,20 +3841,20 @@ a:active {
     color: white;
   }
   .profile-tabs {
-    font-size: 2.5vw;
-    width: 10vw;
+    font-size: 4.5vw;
+    width: 14vw;
     text-align: center;
   }
   .form-control {
     font-family: "Dosis", sans-serif;
-    font-size: 1.4vw;
+    font-size: 2.5vw;
     font-weight: 900;
   }
   .tab-content {
     width: 100%;
   }
   .tab-address {
-    width: 40vw;
+    width: 55vw;
   }
   .tab-orders {
     width: 95vw;
@@ -3844,7 +3873,7 @@ a:active {
   .orderline-order-header,
   .orderline-product-header,
   .orderline-quantity-header {
-    font-size: 2.5vw;
+    font-size: 5.5vw;
     color: white;
   }
   .orderline-order-header {
@@ -3859,7 +3888,7 @@ a:active {
   .orderline-order-value,
   .orderline-product-value,
   .orderline-quantity-value {
-    font-size: 1.5vw;
+    font-size: 3.5vw;
     color: white;
   }
   .orderline-order-value {
@@ -3876,7 +3905,7 @@ a:active {
   }
   .update-address-btn {
     font-family: "Dosis", sans-serif;
-    font-size: 2.0vw;
+    font-size: 3.0vw;
     font-weight: 900;
     margin-top: 2vw;
     background-color: lightblue;
@@ -3905,7 +3934,7 @@ a:active {
     color: white;
   }
   #registrationform {
-    width: 30vw;
+    width: 40vw;
   }
   .help-block {
     color: red;
@@ -3914,11 +3943,11 @@ a:active {
     width: 100%;
   }
   #submit-registration-btn {
-    width: 10vw;
+    width: 16vw;
     background-color: lightblue;
     color: #414141;
     font-family: "Dosis", sans-serif;
-    font-size: 1.2vw;
+    font-size: 2.5vw;
     -webkit-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
@@ -3932,7 +3961,7 @@ a:active {
     min-height: 85vh;
   }
   .reviewcard {
-    width: 24vw;
+    width: 47vw;
     margin-left: 5px;
     margin-right: 5px;
     margin-top: 2vw;
@@ -3947,10 +3976,10 @@ a:active {
     background-color: #003553;
   }
   #review-form {
-    width: 30vw;
+    width: 55vw;
   }
   #id_image {
-    height: 3.5vw;
+    height: 6.5vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3963,19 +3992,19 @@ a:active {
   }
   #review-send-btn {
     font-family: "Dosis", sans-serif;
-    font-size: 1.2vw;
+    font-size: 2.5vw;
     background-color: lightblue;
-    width: 8vw;
+    width: 10vw;
     margin-right: 2vw;
     -webkit-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   #review-cancel-btn {
     font-family: "Dosis", sans-serif;
-    font-size: 1.2vw;
+    font-size: 2.5vw;
     background-color: orange;
     color: #414141;
-    width: 8vw;
+    width: 10vw;
     margin-left: 2vw;
     -webkit-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
@@ -3985,13 +4014,13 @@ a:active {
     color: darkred;
   }
   .edit-review-btn {
-    width: 4vw;
-    font-size: 2.5vw;
+    width: 5vw;
+    font-size: 4.5vw;
     color: orange;
   }
   .review-del-req-btn {
-    width: 4vw;
-    font-size: 2.5vw;
+    width: 5vw;
+    font-size: 4.5vw;
     color: red;
   }
   .review-stats {
@@ -4017,9 +4046,9 @@ a:active {
   .back-to-reviews-btn,
   .return-product-btn,
   .review-details-btn {
-    width: 10vw;
+    width: 18vw;
     font-family: "Dosis", sans-serif;
-    font-size: 1.2vw;
+    font-size: 2.5vw;
     color: #414141;
     -webkit-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
@@ -4048,7 +4077,7 @@ a:active {
   }
   .review-headline {
     font-family: "Dosis", sans-serif;
-    font-size: 2.0vw;
+    font-size: 4.0vw;
     width: 100%;
   }
   .review-headline a {
@@ -4058,7 +4087,7 @@ a:active {
     background-color: beige;
     border-radius: 5px;
     border: 1px solid grey;
-    width: 24vw;
+    width: 30vw;
     height: 32vh;
     position: fixed;
     opacity: 0.0;
@@ -4076,28 +4105,30 @@ a:active {
   .delete-popup-message {
     width: 80%;
     font-family: "Dosis", sans-serif;
-    font-size: 2vw;
+    font-size: 3.0vw;
   }
   .delete-confirm-btn {
     background-color: lightcoral;
     color: #414141;
     margin-right: 2px;
-    width: 6vw;
+    width: 10vw;
     -webkit-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
     text-decoration: none;
+    font-size: 2.5vw;
   }
   .delete-confirm-btn:hover {
     color: whitesmoke;
   }
   .delete-cancel-btn {
-    width: 6vw;
+    width: 10vw;
     background-color: lightslategray;
     margin-left: 2px;
     font-family: "Dosis", sans-serif;
     color: whitesmoke;
     -webkit-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
+    font-size: 2.5vw;
   }
   .delete-cancel-btn:hover {
     color: darkred;
@@ -4109,15 +4140,15 @@ a:active {
     min-height: 85vh;
   }
   .wishlist-remove-btn {
-    width: 2.5vw;
+    width: 3.0vw;
     color: #bd0000;
   }
   .wishlist-remove-btn i {
-    font-size: 2.5vw;
+    font-size: 5.0vw;
   }
   .staricon-not-added,
   .staricon-added {
-    font-size: 2.5vw;
+    font-size: 5.0vw;
   }
   .staricon-not-added {
     color: #971616;
@@ -4137,18 +4168,18 @@ a:active {
   }
   #empty-wishlist-product-link {
     width: 80%;
-    font-size: 4vw;
+    font-size: 6vw;
     text-align: center;
     text-decoration: none;
   }
   body {
     font-family: "Dosis", sans-serif;
     padding-top: 56px;
-    font-size: 1.2vw;
+    font-size: 3.0vw;
   }
   .page-headline {
     font-family: "Dosis", sans-serif;
-    font-size: 4.5vw;
+    font-size: 5.5vw;
     padding-bottom: 1vw;
     width: 100%;
     color: white;
@@ -4162,21 +4193,23 @@ a:active {
   }
   .form-group > p {
     text-align: center;
-    font-size: 2.0vw;
+    font-size: 3.5vw;
   }
   .mobile-navbar {
-    display: none;
+    float: left;
+    background-color: rgba(0, 53, 83, 0.75);
   }
   .desktop-navbar {
+    display: none;
     margin-right: 2vw;
   }
   #brandicon {
     color: #b61d18;
-    font-size: 3vw;
+    font-size: 6vw;
   }
   .navbar-brand {
     font-family: "Dosis", sans-serif;
-    font-size: 3vw;
+    font-size: 6vw;
     padding-left: 20px;
     margin: 0;
     padding: 0;
@@ -4208,13 +4241,14 @@ a:active {
     min-width: 100%;
   }
   .mobile-list-items {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 5px;
+    margin-bottom: 18px;
     margin-left: 15px;
-    font-size: 6.5vw;
+    font-size: 3.5vw;
+    padding-right: 2vw;
   }
   .navbar .navbar-nav > li > a {
-    text-align: center;
+    text-align: left;
   }
   .navbar-nav {
     margin: 14.5px 0;
@@ -4244,7 +4278,7 @@ a:active {
     margin-right: 0;
   }
   .btn-bar-wrapper {
-    width: 5vw;
+    width: 6vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4262,16 +4296,11 @@ a:active {
   #bottombar {
     display: none;
   }
-  #bottombar .quicklinks {
-    width: 20vw;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    font-size: 7.5vw;
-    height: 20px;
+  #bottomnavbar-ipad {
+    display: none;
+  }
+  #bottombar-ipad {
+    display: none;
   }
   .products-icon {
     top: -2px;
@@ -4290,7 +4319,7 @@ a:active {
   }
   .badge-wishlist {
     border-radius: 3vw;
-    font-size: 1.2vw;
+    font-size: 2.0vw;
   }
   #cart-badge-bottom {
     position: absolute;
@@ -4302,7 +4331,7 @@ a:active {
   }
   .badge-cart {
     border-radius: 3vw;
-    font-size: 1.2vw;
+    font-size: 2.0vw;
   }
   .badge {
     padding-right: 5px;
@@ -4317,7 +4346,7 @@ a:active {
   }
   .no-results-message {
     color: white;
-    font-size: 1.5vw;
+    font-size: 3.5vw;
   }
 }
 /*# sourceMappingURL=styles.css.map */

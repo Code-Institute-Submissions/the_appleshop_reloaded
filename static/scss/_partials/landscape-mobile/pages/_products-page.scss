@@ -17,7 +17,7 @@
 }
 
 .productcard {
-    width: 24vw;
+    width: 47vw;
     margin: {
         left: 5px;
         right: 5px;
@@ -37,22 +37,23 @@
 }
 
 .product-image {
-    width: 16vw;
-    height: 11.1vw;
+    width: 34vw;
+    height: 23.53vw;
     border: none;
     border-radius: 5px;
     object-fit: cover;
 }
 
 .add-review-btn {
-    font-size: 2.5vw;
+    margin-left: 3px;
+    font-size: 4.0vw;
     color: rgb(65, 106, 236);
 }
 
 
 .product-headline {
     font-family: $dosisFont;
-    font-size: 1.5vw;
+    font-size: 3.5vw;
     width: 100%;
     margin: {
         top: 5px;
