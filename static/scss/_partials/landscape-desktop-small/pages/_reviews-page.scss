@@ -9,7 +9,7 @@
 }
 
 .reviewcard {
-    width: 24vw;
+    width: 40vw;
     margin: {
         left: 5px;
         right: 5px;
@@ -29,11 +29,11 @@
 }
 
 #review-form {
-    width: 30vw;
+    width: 50vw;
 }
 
 #id_image {
-    height: 3.5vw;
+    height: 6.0vw;
     display: flex;
     align-items: center;
 }
@@ -44,19 +44,19 @@
 
 #review-send-btn {
     font-family: $dosisFont;
-    font-size: 1.2vw;
+    font-size: 2.2vw;
     background-color: lightblue;
-    width: 8vw;
+    width: 10vw;
     margin-right: 2vw;
     transition: color .3s ease-in-out;
 }
 
 #review-cancel-btn {
     font-family: $dosisFont;
-    font-size: 1.2vw;
+    font-size: 2.2vw;
     background-color: orange;
     color: rgb(65, 65, 65);
-    width: 8vw;
+    width: 10vw;
     margin-left: 2vw;
     transition: color .3s ease-in-out;
 }
@@ -68,13 +68,13 @@
 
 .edit-review-btn {
     width: 4vw;
-    font-size: 2.5vw;
+    font-size: 4.5vw;
     color: orange;
 }
 
 .review-del-req-btn {
     width: 4vw;
-    font-size: 2.5vw;
+    font-size: 4.5vw;
     color: red;
 }
 
@@ -99,9 +99,9 @@
 .back-to-reviews-btn,
 .return-product-btn,
 .review-details-btn {
-    width: 10vw;
+    width: 16vw;
     font-family: $dosisFont;
-    font-size: 1.2vw;
+    font-size: 2.2vw;
     color: rgb(65, 65, 65);
     transition: color .3s ease-in-out;
 }
@@ -136,7 +136,7 @@ return-product-btn:hover {
 
 .review-headline {
     font-family: $dosisFont;
-    font-size: 2.0vw;
+    font-size: 4.0vw;
     width: 100%;
 }
 
@@ -149,8 +149,8 @@ return-product-btn:hover {
     background-color: beige;
     border-radius: 5px;
     border: 1px solid grey;
-    width: 24vw;
-    height: 15vh;
+    width: 40vw;
+    height: 20vh;
     position: fixed;
     opacity: 0.0;
     z-index: -1;
@@ -164,7 +164,7 @@ return-product-btn:hover {
 }
 
 .delete-popup-message {
-    width: 80%;
+    width: 100%;
 
     font: {
         family: $dosisFont;
@@ -176,10 +176,10 @@ return-product-btn:hover {
     background-color: lightcoral;
     color: rgb(65, 65, 65);
     margin-right: 2px;
-    width: 6vw;
+    width: 10vw;
     transition: color .3s ease-in-out;
     text-decoration: none;
-    font-size: 2.0vw;
+    font-size: 2.5vw;
 }
 
 
@@ -188,13 +188,13 @@ return-product-btn:hover {
 }
 
 .delete-cancel-btn {
-    width: 6vw;
+    width: 10vw;
     background-color: lightslategray;
     margin-left: 2px;
     font-family: $dosisFont;
     color: whitesmoke;
     transition: color .3s ease-in-out;
-    font-size: 2.0vw;
+    font-size: 2.5vw;
 }
 
 .delete-cancel-btn:hover {

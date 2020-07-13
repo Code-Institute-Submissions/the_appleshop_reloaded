@@ -15,12 +15,12 @@
     body {
         font-family: $dosisFont;
         padding-top: 56px;
-        font-size: 1.2vw;
+        font-size: 2.5vw;
     }
 
     .page-headline {
         font-family: $dosisFont;
-        font-size: 2.5vw;
+        font-size: 5.5vw;
 
         padding: {
             bottom: 1vw;
@@ -42,7 +42,7 @@
 
     .form-group>p {
         text-align: center;
-        font-size: 2.0vw;
+        font-size: 3.5vw;
     }
 
     // footer {
@@ -61,6 +61,7 @@
 
     .desktop-navbar {
         margin-right: 2vw;
+        background-color:rgba(0, 53, 83, 0.75);
     }
 
     #brandicon {
@@ -83,10 +84,14 @@
     }
 
     .desktop-navbar-icons {
-        font-size: 2vw;
+        font-size: 5vw;
         min-width: 3vw;
-        width: 9.2vw;
-        padding-left: 2vw;
+        width: 15.0vw;
+        padding: {
+            left: 2vw;
+            top: 1vw;
+            bottom: 1vw;
+        }
     }
 
     .navbar>.container {
@@ -193,7 +198,7 @@
 
     .products-icon {
         top: -2px;
-        font-size: 2.0vw;
+        font-size: 5.0vw;
     }
 
     .nav>li>a {
@@ -219,7 +224,7 @@
         -webkit-border-radius: 3vw;
         -moz-border-radius: 3vw;
         border-radius: 3vw;
-        font-size: 1.2vw;
+        font-size: 2.2vw;
     }
 
 
@@ -240,7 +245,7 @@
         -webkit-border-radius: 3vw;
         -moz-border-radius: 3vw;
         border-radius: 3vw;
-        font-size: 1.2vw;
+        font-size: 2.2vw;
     }
 
     .badge {
@@ -259,7 +264,7 @@
 
     .no-results-message {
         color: white;
-        font-size: 1.5vw;
+        font-size: 2.5vw;
     }
 
 }
