@@ -1,0 +1,94 @@
+.product-wrapper {
+    padding: {
+        top: 2vw;
+        bottom: 2vw;
+    }
+        
+    background-color: $page-bgr-clr;
+    min-height: 92vh;
+}
+
+.search-field-wrapper {
+    width: 100%;
+    padding: {
+        top: 2vw;
+        bottom: 2vw;
+    }
+}
+
+.productcard {
+    width: 24vw;
+    margin: {
+        left: 5px;
+        right: 5px;
+    }
+}
+
+.panel-default {
+    padding: 0 0;
+}
+
+.panel-body {
+    height: 100%;
+    border: 1px solid #ddd;
+    background-color: cornsilk;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1.2vw;
+}
+
+.product-image {
+    width: 16vw;
+    height: 11.1vw;
+    border: none;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.add-review-btn {
+    font-size: 2.5vw;
+    color: rgb(65, 106, 236);
+}
+
+
+.product-headline {
+    font-family: $dosisFont;
+    font-size: 1.5vw;
+    width: 100%;
+    margin: {
+        top: 5px;
+        bottom: 5px;
+
+    }
+}
+
+.product-description {
+    width: 100%;
+}
+
+.product-stats {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.stats-key {
+    width: 30%;
+}
+
+.stats-value {
+    width: 70%;
+}
+
+.stats-value a {
+    text-decoration: none;
+}
+
+.price {
+    margin-top: 5px;
+}
+
+.cart-form {
+    margin-top: 5px;
+    width: 100%;
+}

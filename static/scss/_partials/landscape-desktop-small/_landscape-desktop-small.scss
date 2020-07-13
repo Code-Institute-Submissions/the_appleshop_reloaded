@@ -1,5 +1,4 @@
-@media screen and (min-width: 415px) and (max-width: 672px) and (min-height: 600px) and (max-height: 970px) and (orientation: portrait) {
-
+@media screen and (min-height: 415px) and (min-width: 601px) and (max-width: 767px) and (orientation: landscape) {
 
     @import "pages/_cart-page.scss";
     @import "pages/_checkout-page.scss";
@@ -16,13 +15,18 @@
     body {
         font-family: $dosisFont;
         padding-top: 56px;
-        font-size: 5.0vw;
+        font-size: 1.2vw;
     }
 
     .page-headline {
         font-family: $dosisFont;
-        font-size: 7vw;
-        padding-bottom: 2vw;
+        font-size: 2.5vw;
+
+        padding: {
+            bottom: 1vw;
+
+        }
+
         width: 100%;
         color: white;
     }
@@ -32,14 +36,13 @@
         width: 100%;
     }
 
-    .form-group > .page-headline, .form-group > p {
+    .form-group>.input-group {
+        width: 100%;
+    }
+
+    .form-group>p {
         text-align: center;
-        font-size: 6.0vw;
-        color: white;
-        padding: {
-            top: 6vw;
-            bottom: 4vw;
-        }
+        font-size: 2.0vw;
     }
 
     // footer {
@@ -52,13 +55,50 @@
 
     // navbar header
 
+    .mobile-navbar {
+        display: none;
+    }
+
+    .desktop-navbar {
+        margin-right: 2vw;
+    }
+
+    #brandicon {
+        color: rgb(182, 29, 24);
+        font-size: 3vw;
+    }
+
+    .navbar-brand {
+        font-family: $dosisFont;
+        font-size: 3vw;
+        padding-left: 20px;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar .navbar-nav {
+        margin-right: 3vw;
+    }
+
+    .desktop-navbar-icons {
+        font-size: 2vw;
+        min-width: 3vw;
+        width: 9.2vw;
+        padding-left: 2vw;
+    }
+
+    .navbar>.container {
+        height: 4.5vw;
+    }
+
+
     .container>.navbar-header {
         margin: {
-            left: 0;
+            left: 20px;
             right: 0;
         }
-
-        height: 11vw;
     }
 
     .container {
@@ -66,11 +106,10 @@
             left: 0;
             right: 0;
         }
+
+        min-width: 100%;
     }
 
-    .desktop-navbar {
-        display: none;
-    }
 
     .mobile-list-items {
 
@@ -81,7 +120,11 @@
         }
 
         font-size: 6.5vw;
+        padding-right: 2vw;
+    }
 
+    .navbar .navbar-nav>li>a {
+        text-align: left;
     }
 
     .navbar-nav {
@@ -89,18 +132,9 @@
     }
 
     .navbar-fixed-top .navbar-collapse {
-        max-height: 450px;
+        max-height: 380px;
     }
 
-    #brandicon {
-        color: rgb(182, 29, 24);
-        font-size: 6vw;
-    }
-
-    .navbar-brand {
-        font-family: $dosisFont;
-        font-size: 7vw;
-    }
 
     #menubutton {
         margin-top: 15px;
@@ -129,10 +163,14 @@
     }
 
     .btn-bar-wrapper {
-        width: 30vw;
-        display: block;
-        text-align: right;
+        width: 4vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-content: baseline;
     }
+
+
 
 
     // bottom linkbar
@@ -154,8 +192,8 @@
     }
 
     .products-icon {
-        top: -1px;
-        font-size: 7.3vw;
+        top: -2px;
+        font-size: 2.0vw;
     }
 
     .nav>li>a {
@@ -176,11 +214,12 @@
         max-width: none;
     }
 
+
     .badge-wishlist {
         -webkit-border-radius: 3vw;
         -moz-border-radius: 3vw;
         border-radius: 3vw;
-        font-size: 4vw;
+        font-size: 1.2vw;
     }
 
 
@@ -201,7 +240,7 @@
         -webkit-border-radius: 3vw;
         -moz-border-radius: 3vw;
         border-radius: 3vw;
-        font-size: 4vw;
+        font-size: 1.2vw;
     }
 
     .badge {
@@ -219,11 +258,8 @@
     }
 
     .no-results-message {
-        font-size: 5.5vw;
         color: white;
+        font-size: 1.5vw;
     }
-
-
-
 
 }

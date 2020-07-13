@@ -1,0 +1,42 @@
+.registration-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-bottom: 2vw;
+    background-color: $page-bgr-clr;
+    min-height: 92vh;
+}
+
+#registration-message {
+    width: 90vw;
+    margin: {
+        bottom: 1.5vw;
+    }
+    text-align: center;
+    color: white;
+}
+
+.help-block {
+    color: red;
+}
+
+#registrationform {
+    width: 30vw;
+}
+
+#submit-registration-btn-wrapper {
+    width: 100%;
+}
+
+#submit-registration-btn {
+    width: 10vw;
+    background-color: lightblue;
+    color: rgb(65, 65, 65);
+    font-family: $dosisFont;
+    font-size: 1.2vw;
+    transition: color .3s ease-in-out;
+}
+
+#submit-registration-btn:hover {
+    color: darkred;
+}

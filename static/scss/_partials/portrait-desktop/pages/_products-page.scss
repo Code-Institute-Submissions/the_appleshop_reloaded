@@ -1,0 +1,92 @@
+.product-wrapper {
+    padding: {
+        top: 4vw;
+        bottom: 25vw;
+
+    }
+    background-color: $page-bgr-clr;
+    min-height: 92vh;
+}
+
+.search-field-wrapper {
+    width: 100%;
+    padding-bottom: 10vw;
+}
+
+.productcard {
+    width: 90vw;
+    margin-top: 2vw;
+}
+
+.panel-default {
+    padding: 0 0;
+}
+
+.panel-body {
+    height: 100%;
+    border: 1px solid #ddd;
+    background-color: cornsilk;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-image {
+    width: 50vw;
+    height: 37.5vw;
+    border: none;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.add-review-btn {
+    font-size: 5.5vw;
+    color: rgb(65, 106, 236);
+}
+
+
+.product-headline {
+    font-family: $dosisFont;
+    font-size: 6.5vw;
+    margin: {
+        top: 5px;
+        bottom: 5px;
+
+    }
+}
+
+
+.product-description {
+    width: 100%;
+}
+
+h3 .product-headline {
+    text-decoration: none;
+
+}
+
+.product-stats {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.stats-key {
+    width: 30%;
+}
+
+.stats-value {
+    width: 70%;
+    ;
+}
+
+.stats-value a {
+    text-decoration: none;
+}
+
+.price {
+    margin-top: 5px;
+}
+
+.cart-form {
+    width: 100%;
+}

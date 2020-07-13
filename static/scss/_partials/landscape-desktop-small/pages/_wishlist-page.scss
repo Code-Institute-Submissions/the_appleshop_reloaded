@@ -1,0 +1,44 @@
+.wishlist-wrapper {
+    padding: {
+        top: 2vw;
+        bottom: 2vw;
+
+    }
+    background-color: $page-bgr-clr;
+    min-height: 92vh;
+}
+
+.wishlist-remove-btn {
+    width: 2.5vw;
+    color: rgb(189, 0, 0);
+}
+
+.wishlist-remove-btn i {
+    font-size: 2.5vw;
+}
+
+.staricon-not-added,
+.staricon-added {
+    font-size: 2.5vw;
+}
+
+.staricon-not-added {
+    color: rgb(151, 22, 22);
+}
+
+.staricon-added {
+    color: green;
+}
+
+#empty-wishlist-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#empty-wishlist-product-link {
+    width: 80%;
+    font-size: 4vw;
+    text-align: center;
+    text-decoration: none;
+}

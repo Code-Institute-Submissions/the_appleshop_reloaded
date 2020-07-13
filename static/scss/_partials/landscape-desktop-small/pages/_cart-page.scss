@@ -1,0 +1,90 @@
+.cart-wrapper {
+    padding: {
+        top: 2vw;
+        bottom: 2vw;
+    }
+    background-color: $page-bgr-clr;
+    min-height: 92vh;
+}
+
+.addcard-icon {
+    font-size: 1.4vw;
+}
+
+.cart-summary-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 4vw;
+}
+
+.cart-summary {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 60%;
+}
+
+.free-shipping-message {
+    font-size: 1.5vw;
+    color: white;
+}
+
+.empty-cart-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.no-cart-items {
+    width: 95%;
+    font-size: 1.5vw;
+    color: white;
+    text-align: center;
+}
+
+.no-cart-items a {
+    font-size: 5.5vw;
+}
+
+#emptycart-product-link {
+    width: 100%;
+    font-size: 4vw;
+    text-align: center;
+}
+
+.input-group-addon {
+    width: 100%;
+    font-size: 1.2vw;
+}
+
+.amend-btn-wrapper {
+    padding-top: 2vw;
+    width: 100%;
+}
+
+.amend-btn {
+    width: 10vw;
+    font-size: 1.2vw;
+}
+
+.shipping-fee, #totalamount {
+    width: 100%;
+    font-size: 2vw;
+    color: white;
+}
+
+.glyphicon-euro {
+    margin: {
+        left: 5px;
+        right: 5px;
+    }
+    top: 2px;
+}
+
+.checkout-btn {
+    font-family: $dosisFont;
+    font-size: 1.5vw;
+    width: 10vw;
+}

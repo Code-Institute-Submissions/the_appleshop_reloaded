@@ -1,0 +1,109 @@
+.profile-wrapper {
+    padding: {
+        top: 4vw;
+        bottom: 25vw;
+
+    }
+    background-color: $page-bgr-clr;
+    min-height: 85vh;
+}
+
+.nav-tabs {
+    padding-top: 6vw;
+}
+
+.nav-tabs a {
+    color: white;
+}
+
+.profile-tabs {
+    font-size: 7.0vw;
+    width: 28vw;
+    text-align: center;
+}
+
+
+.form-control {
+    font-family: $dosisFont;
+    font-size: 4.5vw;
+    font-weight: 900;
+}
+
+.update-address-btn {
+    font-family: $dosisFont;
+    font-size: 5.5vw;
+    font-weight: 900;
+}
+
+
+.tab-content {
+    width: 100%;
+}
+
+.tab-address {
+    width: 80vw;
+}
+
+.tab-orders {
+    width: 95vw;
+}
+
+.order-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.orderline-order-header,
+.orderline-product-header,
+.orderline-quantity-header {
+    font-size: 4.5vw;
+    color: white;
+}
+
+.orderline-order-header {
+    width: 45vw;
+}
+
+.orderline-product-header {
+    width: 30vw;
+}
+
+.orderline-quantity-header {
+    width: 20vw;
+}
+
+.orderline-order-value,
+.orderline-product-value,
+.orderline-quantity-value {
+    font-size: 3.8vw;
+    color: white;
+}
+
+.orderline-order-value {
+    width: 45vw;
+}
+
+.orderline-product-value {
+    width: 30vw;
+}
+
+.orderline-quantity-value {
+    width: 20vw;
+}
+
+#update-address-btn-wrapper {
+    width: 100%;
+}
+
+.update-address-btn {
+    margin-top: 4vw;
+    background-color: lightblue;
+    color: rgb(65, 65, 65);
+    transition: color .3s ease-in-out;
+}
+
+.update-address-btn:hover {
+    color: darkred;
+}

@@ -1,4 +1,4 @@
-@media screen and (min-height: 415px) and (min-width: 510px) and (max-width: 3840px) and (orientation: landscape) {
+@media screen and (min-height: 415px) and (min-width: 768px) and (max-width: 3840px) and (orientation: landscape) {
 
     @import "pages/_cart-page.scss";
     @import "pages/_checkout-page.scss";
@@ -161,7 +161,7 @@
     }
 
     .btn-bar-wrapper {
-        width: 5vw;
+        width: 4vw;
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-end;

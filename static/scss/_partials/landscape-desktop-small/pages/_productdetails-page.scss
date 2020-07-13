@@ -1,0 +1,36 @@
+.wishform {
+    width: 2.6vw;
+}
+
+
+.revform {
+    width: 2.6vw;
+}
+
+
+.add-wish-btn,
+.remove-wish-btn,
+.add-review-btn {
+    border: none;
+    background-color: transparent;
+}
+
+#to-products-btn-wrapper {
+    margin: {
+        top: 1vw;
+        bottom: 1vw;
+    }
+    width: 100%;
+}
+
+#to-products-btn {
+    width: 10vw;
+    font-size: 1.2vw;
+    background-color: lightblue;
+    color: black;
+    transition: color .3s ease-in-out;
+}
+
+#to-products-btn:hover {
+    color: darkred;
+}
