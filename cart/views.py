@@ -17,9 +17,14 @@ def add_to_cart(request, id):
     cart = request.session.get('cart', {})
     if id in cart:
         cart[id] = int(cart[id]) + quantity
+        messages.success(request, "Amount on cart updated")
+
     else:
         cart[id] = quantity
+        messages.success(request, "Product added to cart")
+
     request.session['cart'] = cart
+
     if request.user.is_authenticated:
         try:
             user_cart = Cart.objects.get(user=request.user.id)
@@ -43,8 +48,12 @@ def adjust_cart(request, id):
     cart = request.session.get('cart', {})
     if quantity > 0:
         cart[id] = quantity
+        messages.success(request, "Amount on cart updated")
+
     else:
         cart.pop(id)
+        messages.success(request, "Product removed from cart")
+
     request.session['cart'] = cart
     if request.user.is_authenticated:
         try:

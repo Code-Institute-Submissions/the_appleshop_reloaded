@@ -1,5 +1,8 @@
 .checkout-wrapper {
-    padding-bottom: 2vw;
+    padding: {
+        top: 2vw;
+        bottom: 2vw;
+    }
     background-color: $page-bgr-clr;
     min-height: 92vh;
 }

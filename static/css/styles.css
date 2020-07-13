@@ -1733,6 +1733,7 @@ a:active {
 
 @media screen and (min-height: 415px) and (min-width: 510px) and (max-width: 3840px) and (orientation: landscape) {
   .cart-wrapper {
+    padding-top: 2vw;
     padding-bottom: 2vw;
     background-color: #003553;
     min-height: 92vh;
@@ -1765,6 +1766,7 @@ a:active {
   }
   .free-shipping-message {
     font-size: 1.5vw;
+    color: white;
   }
   .empty-cart-wrapper {
     display: -webkit-box;
@@ -1818,6 +1820,7 @@ a:active {
     width: 10vw;
   }
   .checkout-wrapper {
+    padding-top: 2vw;
     padding-bottom: 2vw;
     background-color: #003553;
     min-height: 92vh;
@@ -1930,7 +1933,6 @@ a:active {
     color: darkred;
   }
   .password-reset-wrapper {
-    height: 70vh;
     -ms-flex-line-pack: center;
         align-content: center;
     background-color: #003553;
@@ -2009,7 +2011,7 @@ a:active {
     padding-top: 2vw;
     padding-bottom: 2vw;
     background-color: #003553;
-    min-height: 85vh;
+    min-height: 92vh;
   }
   .search-field-wrapper {
     width: 100%;
@@ -2633,6 +2635,7 @@ a:active {
   }
   .free-shipping-message {
     font-size: 1.5vw;
+    color: white;
   }
   .empty-cart-wrapper {
     display: -webkit-box;
@@ -3508,6 +3511,7 @@ a:active {
   }
   .free-shipping-message {
     font-size: 4.5vw;
+    color: white;
   }
   .empty-cart-wrapper {
     display: -webkit-box;
