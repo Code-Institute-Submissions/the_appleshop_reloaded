@@ -59,7 +59,7 @@ a:active {
     min-height: 92vh;
   }
   .addcard-icon {
-    font-size: 3vw;
+    font-size: 4vw;
   }
   .cart-summary-wrapper {
     width: 100%;
@@ -83,6 +83,10 @@ a:active {
         -ms-flex-pack: center;
             justify-content: center;
     width: 60%;
+  }
+  .free-shipping-message {
+    font-size: 5.5vw;
+    color: white;
   }
   .empty-cart-wrapper {
     display: -webkit-box;
@@ -910,6 +914,10 @@ a:active {
             justify-content: center;
     width: 60%;
   }
+  .free-shipping-message {
+    font-size: 5.5vw;
+    color: white;
+  }
   .empty-cart-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1726,6 +1734,10 @@ a:active {
         -ms-flex-pack: center;
             justify-content: center;
     width: 60%;
+  }
+  .free-shipping-message {
+    font-size: 4.5vw;
+    color: white;
   }
   .empty-cart-wrapper {
     display: -webkit-box;
@@ -2555,7 +2567,7 @@ a:active {
     padding-top: 2vw;
     padding-bottom: 2vw;
     background-color: #003553;
-    min-height: 92vh;
+    min-height: 93vh;
   }
   .addcard-icon {
     font-size: 1.4vw;
@@ -2642,7 +2654,7 @@ a:active {
     padding-top: 2vw;
     padding-bottom: 2vw;
     background-color: #003553;
-    min-height: 92vh;
+    min-height: 93vh;
   }
   caption p {
     word-wrap: break-word;
@@ -2701,7 +2713,7 @@ a:active {
   .login-wrapper {
     padding-top: 2vw;
     background-color: #003553;
-    min-height: 92vh;
+    min-height: 93vh;
   }
   #loginform {
     width: 30vw;
@@ -2755,7 +2767,7 @@ a:active {
     -ms-flex-line-pack: center;
         align-content: center;
     background-color: #003553;
-    min-height: 92vh;
+    min-height: 93vh;
   }
   .accountform {
     width: 28vw;
@@ -2830,7 +2842,7 @@ a:active {
     padding-top: 2vw;
     padding-bottom: 2vw;
     background-color: #003553;
-    min-height: 92vh;
+    min-height: 93vh;
   }
   .search-field-wrapper {
     width: 100%;
@@ -2906,7 +2918,7 @@ a:active {
     padding-top: 2vw;
     padding-bottom: 2vw;
     background-color: #003553;
-    min-height: 92vh;
+    min-height: 93vh;
   }
   .nav-tabs {
     padding-top: 1vw;
@@ -2999,7 +3011,7 @@ a:active {
     width: 100%;
     padding-bottom: 2vw;
     background-color: #003553;
-    min-height: 92vh;
+    min-height: 93vh;
   }
   #registration-message {
     width: 90vw;
@@ -3032,7 +3044,7 @@ a:active {
     padding-top: 2vw;
     padding-bottom: 2vw;
     background-color: #003553;
-    min-height: 92vh;
+    min-height: 93vh;
   }
   .reviewcard {
     width: 24vw;
@@ -3211,7 +3223,7 @@ a:active {
     padding-top: 2vw;
     padding-bottom: 2vw;
     background-color: #003553;
-    min-height: 92vh;
+    min-height: 93vh;
   }
   .wishlist-remove-btn {
     width: 2.5vw;
@@ -3426,7 +3438,7 @@ a:active {
     padding-top: 2vw;
     padding-bottom: 2vw;
     background-color: #003553;
-    min-height: 92vh;
+    min-height: 93vh;
   }
   .addcard-icon {
     font-size: 2.4vw;
@@ -3513,7 +3525,7 @@ a:active {
     padding-top: 2vw;
     padding-bottom: 2vw;
     background-color: #003553;
-    min-height: 92vh;
+    min-height: 93vh;
   }
   caption p {
     word-wrap: break-word;
@@ -3572,7 +3584,7 @@ a:active {
   .login-wrapper {
     padding-top: 2vw;
     background-color: #003553;
-    min-height: 92vh;
+    min-height: 93vh;
   }
   #loginform {
     width: 50vw;
@@ -3626,7 +3638,7 @@ a:active {
     -ms-flex-line-pack: center;
         align-content: center;
     background-color: #003553;
-    min-height: 92vh;
+    min-height: 93vh;
   }
   .accountform {
     width: 50vw;
@@ -3701,7 +3713,7 @@ a:active {
     padding-top: 2vw;
     padding-bottom: 2vw;
     background-color: #003553;
-    min-height: 92vh;
+    min-height: 93vh;
   }
   .search-field-wrapper {
     width: 100%;
@@ -3777,7 +3789,7 @@ a:active {
     padding-top: 2vw;
     padding-bottom: 2vw;
     background-color: #003553;
-    min-height: 92vh;
+    min-height: 93vh;
   }
   .nav-tabs {
     padding-top: 1vw;
@@ -3871,7 +3883,7 @@ a:active {
     width: 100%;
     padding-bottom: 2vw;
     background-color: #003553;
-    min-height: 92vh;
+    min-height: 93vh;
   }
   #registration-message {
     width: 90vw;
@@ -3904,7 +3916,7 @@ a:active {
     padding-top: 2vw;
     padding-bottom: 2vw;
     background-color: #003553;
-    min-height: 92vh;
+    min-height: 93vh;
   }
   .reviewcard {
     width: 40vw;
@@ -4083,7 +4095,7 @@ a:active {
     padding-top: 2vw;
     padding-bottom: 2vw;
     background-color: #003553;
-    min-height: 92vh;
+    min-height: 93vh;
   }
   .wishlist-remove-btn {
     width: 2.5vw;

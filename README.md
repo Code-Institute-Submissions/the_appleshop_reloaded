@@ -1,7 +1,7 @@
 # Fullstack Django Milestone Project: The appleshop
 
 
-LIVELINK: https://https://the-appleshop-reloaded.herokuapp.com/ <br>
+LIVELINK: https://the-appleshop-reloaded.herokuapp.com/ <br>
 GITHUB: https://github.com/poldi2018/the_appleshop_reloaded
 
 The Django admin panel can be accessed with following credentials.
