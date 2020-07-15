@@ -30,11 +30,12 @@ class TestCheckoutModels(TestCase):
                                      street_address2='22',
                                      county='North',
                                      date='2020-06-09')
-        product = Product.objects.create(name='testproduct', description='description testproduct', price=2)
+        product = Product.objects.create(name='test1', description='descr t1',
+                                         price=2)
         new_user = User.objects.create_user('testuser', 'testuser@domain.com',
                                             'password')
         order_line_item = OrderLineItem(user=new_user, order=order,
                                         product=product,
                                         quantity=2)
 
-        self.assertEqual('2 testproduct @ 2', str(order_line_item))
+        self.assertEqual('2 test1 @ 2', str(order_line_item))

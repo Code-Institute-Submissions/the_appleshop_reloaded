@@ -10,8 +10,8 @@ from .models import UserAddress
 class TestAccountsRegistrationView(TestCase):
 
     def test_registration_page_response(self):
-        page = self.client.get("/accounts/register/", content_type="html/text",
-                               follow=True)
+        page = self.client.get("/accounts/register/",
+                               content_type="html/text", follow=True)
         self.assertEqual(page.status_code, 200)
         self.assertTemplateUsed(page, "registration.html")
 

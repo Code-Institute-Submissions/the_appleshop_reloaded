@@ -12,12 +12,13 @@ def get_reviews(request, pk=None):
     """
     Creates view with overview of entered reviews prior to 'now'
     """
-    if pk!=None:
+    if pk is not None:
         reviews = Review.objects.filter(product=pk)
         return render(request, "reviewsproduct.html", {'reviews': reviews})
 
     else:
-        reviews = Review.objects.filter(created_date__lte=timezone.now()).order_by('-created_date')
+        reviews = Review.objects.filter(created_date__lte=timezone.now()
+                                        ).order_by('-created_date')
         return render(request, "reviews.html", {'reviews': reviews})
 
 
@@ -58,13 +59,14 @@ def create_review(request, pk):
                 review.product.pk = pk
                 review.name = product.name
                 review.save()
-                product.review_count+=1
+                product.review_count += 1
                 product.save()
                 return redirect(review_detail, review.pk)
         else:
             form = ReviewForm(instance=review)
 
-        return render(request, 'editreview.html', {'form': form, 'pk': product.id})
+        return render(request, 'editreview.html',
+                      {'form': form, 'pk': product.id})
     else:
         return redirect(reverse('get_reviews'))
 
@@ -86,7 +88,8 @@ def edit_review(request, pk):
         else:
             form = ReviewForm(instance=review)
 
-        return render(request, 'editreview.html', {'form': form, 'pk': review.product.id})
+        return render(request, 'editreview.html',
+                      {'form': form, 'pk': review.product.id})
 
     else:
         return redirect(reverse('get_reviews'))
@@ -101,7 +104,7 @@ def delete_review(request, pk):
     if request.user.is_authenticated and review.author.id == request.user.id:
         if request.method == "GET":
             review.delete()
-            product.review_count-=1
+            product.review_count -= 1
             product.save()
             messages.success(request, "Review has been deleted")
             return redirect(reverse('get_reviews'))

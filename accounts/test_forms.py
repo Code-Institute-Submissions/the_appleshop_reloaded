@@ -10,7 +10,8 @@ class TestAccountsForms(TestCase):
         response = self.client.post('/accounts/register/',
                                     data={'username': 'testuser', 'email':
                                           'testuser@domain.com', 'password1':
-                                          'password', 'password2': 'password'})
+                                          'password', 'password2':
+                                          'password'})
         self.assertIn(b'Email address must be unique', response.content)
 
     def test_missing_passwords_registration_form(self):

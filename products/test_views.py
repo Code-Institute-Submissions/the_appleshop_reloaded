@@ -8,23 +8,32 @@ from checkout.models import Order, OrderLineItem
 class TestProductsViews(TestCase):
 
     def test_get_all_products(self):
-        product1 = Product.objects.create(name='testproduct1', description='description testproduct1', price=1)
-        product2 = Product.objects.create(name='testproduct2', description='description testproduct2', price=2)
-        product3 = Product.objects.create(name='testproduct3', description='description testproduct3', price=3)
-        product4 = Product.objects.create(name='testproduct4', description='description testproduct4', price=4)
-        response = self.client.get("/products/", content_type="html/text", follow=True)
+        product1 = Product.objects.create(name='test1', description='p1',
+                                          price=1)
+        product2 = Product.objects.create(name='test2', description='p2',
+                                          price=2)
+        product3 = Product.objects.create(name='test3', description='p3',
+                                          price=3)
+        product4 = Product.objects.create(name='test4', description='p4',
+                                          price=4)
+        response = self.client.get("/products/", content_type="html/text",
+                                   follow=True)
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, "products.html")
-        self.assertIn(b'testproduct1', response.content)
-        self.assertIn(b'testproduct2', response.content)
-        self.assertIn(b'testproduct3', response.content)
-        self.assertIn(b'testproduct4', response.content)
+        self.assertIn(b'test1', response.content)
+        self.assertIn(b'test2', response.content)
+        self.assertIn(b'test3', response.content)
+        self.assertIn(b'test4', response.content)
 
     def test_get_all_products_as_logged_in_user(self):
-        product1 = Product.objects.create(name='testproduct1', description='description testproduct1', price=1)
-        product2 = Product.objects.create(name='testproduct2', description='description testproduct2', price=2)
-        product3 = Product.objects.create(name='testproduct3', description='description testproduct3', price=3)
-        product4 = Product.objects.create(name='testproduct4', description='description testproduct4', price=4)
+        product1 = Product.objects.create(name='test1', description='p1',
+                                          price=1)
+        product2 = Product.objects.create(name='test2', description='p2',
+                                          price=2)
+        product3 = Product.objects.create(name='test3', description='p3',
+                                          price=3)
+        product4 = Product.objects.create(name='test4', description='p4',
+                                          price=4)
         new_user = User.objects.create_user('testuser', 'testuser@domain.com',
                                             'password')
         self.client.login(username='testuser', password='password')
@@ -49,18 +58,21 @@ class TestProductsViews(TestCase):
         response = self.client.get("/products/", content_type="html/text",
                                    follow=True)
         self.assertEqual(response.status_code, 200)
-        self.assertIn(b'testproduct1', response.content)
-        self.assertIn(b'testproduct2', response.content)
-        self.assertIn(b'testproduct3', response.content)
-        self.assertIn(b'testproduct4', response.content)
+        self.assertIn(b'test1', response.content)
+        self.assertIn(b'test2', response.content)
+        self.assertIn(b'test3', response.content)
+        self.assertIn(b'test4', response.content)
 
     def test_get_user_purchases(self):
         new_user = User.objects.create_user('testuser', 'testuser@domain.com',
                                             'password')
         self.client.login(username='testuser', password='password')
-        product1 = Product.objects.create(name='testproduct1', description='description testproduct1', price=1)
-        product2 = Product.objects.create(name='testproduct2', description='description testproduct2', price=2)
-        product3 = Product.objects.create(name='testproduct3', description='description testproduct3', price=3)
+        product1 = Product.objects.create(name='test1', description='p1',
+                                          price=1)
+        product2 = Product.objects.create(name='test2', description='p2',
+                                          price=2)
+        product3 = Product.objects.create(name='test3', description='p3',
+                                          price=3)
         product1.save()
         product2.save()
         product3.save()
@@ -83,13 +95,14 @@ class TestProductsViews(TestCase):
                                          product=product3, quantity=3)
         order_line_item3.save()
         self.assertEqual(get_user_purchases(new_user),
-                         ['testproduct1', 'testproduct2', 'testproduct3'])
+                         ['test1', 'test2', 'test3'])
 
     def test_product_detail_view(self):
         new_user = User.objects.create_user('testuser', 'testuser@domain.com',
                                             'password')
         self.client.login(username='testuser', password='password')
-        product1 = Product.objects.create(name='testproduct1', description='description testproduct1', price=1)
+        product1 = Product.objects.create(name='test1', description='p1',
+                                          price=1)
         product1.save()
         order = Order.objects.create(full_name='John Doe',
                                      phone_number='123456789',
@@ -107,4 +120,4 @@ class TestProductsViews(TestCase):
                                    follow=True)
         check_product = Product.objects.get(pk=1)
         self.assertEqual(check_product.view_count, 1)
-        self.assertEqual(get_user_purchases(new_user), ['testproduct1'])
+        self.assertEqual(get_user_purchases(new_user), ['test1'])

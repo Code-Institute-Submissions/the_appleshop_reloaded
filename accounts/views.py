@@ -3,7 +3,8 @@ from django.contrib import auth, messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from checkout.models import OrderLineItem
-from .forms import UserLoginForm, UserRegistrationForm, UserAddressForm, UserAddress
+from .forms import UserLoginForm, UserRegistrationForm, UserAddressForm,\
+    UserAddress
 from cart.contexts import sync_carts
 
 

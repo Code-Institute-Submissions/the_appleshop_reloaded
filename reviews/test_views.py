@@ -11,9 +11,11 @@ class TestReviewViews(TestCase):
     def test_get_reviews_view(self):
         new_user = User.objects.create_user('testuser', 'testuser@domain.com',
                                             'password')
-        product1 = Product.objects.create(name='testproduct1', description='description testproduct1', price=1)
+        product1 = Product.objects.create(name='test1',
+                                          description='descr test1', price=1)
         product1.save()
-        new_review = Review(title="review name", product=product1, author=new_user, rating=5, comment="Fantastic!")
+        new_review = Review(title="review name", product=product1,
+                            author=new_user, rating=5, comment="Fantastic!")
         new_review.save()
         response = self.client.get('/reviews/', content_type="html/text",
                                    follow=True)
@@ -24,30 +26,33 @@ class TestReviewViews(TestCase):
     def test_get_reviews_per_product_view(self):
         new_user = User.objects.create_user('testuser', 'testuser@domain.com',
                                             'password')
-        product1 = Product.objects.create(name='testproduct1', description='description testproduct1', price=1)
+        product1 = Product.objects.create(name='test1',
+                                          description='descr test1', price=1)
         product1.save()
-        new_review = Review(title="review name", product=product1, author=new_user, rating=5, comment="Fantastic!")
+        new_review = Review(title="review name", product=product1,
+                            author=new_user, rating=5, comment="Fantastic!")
         new_review.save()
-        new_review2 = Review(title="review2 name", product=product1, author=new_user, rating=3, comment="Fresh!")
+        new_review2 = Review(title="review2 name", product=product1,
+                             author=new_user, rating=3, comment="Fresh!")
         new_review2.save()
-        response = self.client.get('/reviews/perproduct/1', content_type="html/text",
-                                   follow=True)
+        response = self.client.get('/reviews/perproduct/1',
+                                   content_type="html/text", follow=True)
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, "reviewsproduct.html")
         self.assertIn(b'Fantastic!', response.content)
         self.assertIn(b'Fresh!', response.content)
 
-    
-    
-    
     def test_review_detail_view(self):
         new_user = User.objects.create_user('testuser', 'testuser@domain.com',
                                             'password')
-        product1 = Product.objects.create(name='testproduct1', description='description testproduct1', price=1)
+        product1 = Product.objects.create(name='test1',
+                                          description='descr test1', price=1)
         product1.save()
-        new_review = Review(title="review name", product=product1, author=new_user, rating=5, comment="Fantastic!")
+        new_review = Review(title="review name", product=product1,
+                            author=new_user, rating=5, comment="Fantastic!")
         new_review.save()
-        response = self.client.get('/reviews/read/1', content_type="html/text", follow=True)
+        response = self.client.get('/reviews/read/1',
+                                   content_type="html/text", follow=True)
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, "reviewdetail.html")
         self.assertIn(b'Fantastic!', response.content)
@@ -58,7 +63,8 @@ class TestReviewViews(TestCase):
         new_user = User.objects.create_user('testuser', 'testuser@domain.com',
                                             'password')
         self.client.login(username='testuser', password='password')
-        product1 = Product.objects.create(name='testproduct1', description='description testproduct1', price=1)
+        product1 = Product.objects.create(name='test1',
+                                          description='descr test1', price=1)
         product1.save()
         order = Order.objects.create(full_name='John Doe',
                                      phone_number='123456789',
@@ -82,9 +88,11 @@ class TestReviewViews(TestCase):
         new_user = User.objects.create_user('testuser', 'testuser@domain.com',
                                             'password')
         self.client.login(username='testuser', password='password')
-        product1 = Product.objects.create(name='testproduct1', description='description testproduct1', price=1)
+        product1 = Product.objects.create(name='test1',
+                                          description='descr test1', price=1)
         product1.save()
-        product2 = Product.objects.create(name='testproduct2', description='description testproduct2', price=1)
+        product2 = Product.objects.create(name='test2',
+                                          description='descr t2', price=1)
         product2.save()
         order = Order.objects.create(full_name='John Doe',
                                      phone_number='123456789',
@@ -98,15 +106,16 @@ class TestReviewViews(TestCase):
         order_line_item = OrderLineItem(user=new_user, order=order,
                                         product=product2, quantity=2)
         order_line_item.save()
-        response = self.client.get('/reviews/new/1', content_type="html/text",
-                                   follow=True)
+        response = self.client.get('/reviews/new/1',
+                                   content_type="html/text", follow=True)
         self.assertTemplateUsed("reviews.html")
 
     def test_create_review_with_post_valid_form_view(self):
         new_user = User.objects.create_user('testuser', 'testuser@domain.com',
                                             'password')
         self.client.login(username='testuser', password='password')
-        product1 = Product.objects.create(name='testproduct1', description='description testproduct1', price=1)
+        product1 = Product.objects.create(name='test1',
+                                          description='descr test1', price=1)
         product1.save()
         order = Order.objects.create(full_name='John Doe',
                                      phone_number='123456789',
@@ -131,9 +140,11 @@ class TestReviewViews(TestCase):
         new_user = User.objects.create_user('testuser', 'testuser@domain.com',
                                             'password')
         self.client.login(username='testuser', password='password')
-        product1 = Product.objects.create(name='testproduct1', description='description testproduct1', price=1)
+        product1 = Product.objects.create(name='test1',
+                                          description='descr test1', price=1)
         product1.save()
-        new_review = Review(title="review name", product=product1, author=new_user, rating=5, comment="Fantastic!")
+        new_review = Review(title="review name", product=product1,
+                            author=new_user, rating=5, comment="Fantastic!")
         new_review.save()
         response = self.client.get('/reviews/1/edit/',
                                    content_type="html/text", follow=True)
@@ -144,7 +155,8 @@ class TestReviewViews(TestCase):
     def test_edit_review_get_notloggedin_view(self):
         new_user = User.objects.create_user('testuser', 'testuser@domain.com',
                                             'password')
-        product1 = Product.objects.create(name='testproduct1', description='description testproduct1', price=1)
+        product1 = Product.objects.create(name='test1',
+                                          description='descr test1', price=1)
         product1.save()
         new_review = Review(title="review name", product=product1,
                             author=new_user, rating=5, comment="Fantastic!")
@@ -157,9 +169,11 @@ class TestReviewViews(TestCase):
         new_user = User.objects.create_user('testuser', 'testuser@domain.com',
                                             'password')
         self.client.login(username='testuser', password='password')
-        product1 = Product.objects.create(name='testproduct1', description='description testproduct1', price=1)
+        product1 = Product.objects.create(name='test1',
+                                          description='descr test1', price=1)
         product1.save()
-        new_review = Review(title="review name", product=product1, author=new_user, rating=5, comment="Fantastic!")
+        new_review = Review(title="review name", product=product1,
+                            author=new_user, rating=5, comment="Fantastic!")
         new_review.save()
         self.client.post('/reviews/1/edit/',
                          data={'title': 'title changed', 'rating': 3,
@@ -170,9 +184,13 @@ class TestReviewViews(TestCase):
         new_user = User.objects.create_user('testuser', 'testuser@domain.com',
                                             'password')
         self.client.login(username='testuser', password='password')
-        product1 = Product.objects.create(name='testproduct1', description='description testproduct1', price=1)
+        product1 = Product.objects.create(name='test1',
+                                          description='descr test1', price=1)
         product1.save()
-        new_review = Review.objects.create(title="review name", product=product1, author=new_user, rating=5, comment="Fantastic!")
+        new_review = Review.objects.create(title="review name",
+                                           product=product1,
+                                           author=new_user, rating=5,
+                                           comment="Fantastic!")
         new_review.save()
         check_review = Review.objects.get(pk=1)
         self.assertEqual(str(check_review), "review name")
@@ -183,9 +201,12 @@ class TestReviewViews(TestCase):
     def test_delete_review_notloggedin(self):
         new_user = User.objects.create_user('testuser', 'testuser@domain.com',
                                             'password')
-        product1 = Product.objects.create(name='testproduct1', description='description testproduct1', price=1)
+        product1 = Product.objects.create(name='test1',
+                                          description='descr test1', price=1)
         product1.save()
-        new_review = Review.objects.create(title="review name", product=product1, author=new_user, rating=5, comment="Fantastic!")
+        new_review = Review.objects.create(title="review name",
+                                           product=product1, author=new_user,
+                                           rating=5, comment="Fantastic!")
         new_review.save()
         self.client.post('/reviews/1/delete/')
         self.assertTemplateUsed("reviews.html")

@@ -16,8 +16,10 @@ class TestCheckoutView(TestCase):
         new_user = User.objects.create_user('testuser', 'testuser@domain.com',
                                             'password')
         self.client.login(username='testuser', password='password')
-        product1 = Product.objects.create(name='Boskop', description='description testproduct', price=2)
-        product2 = Product.objects.create(name='Golden Delicious', description='description testproduct', price=2)
+        product1 = Product.objects.create(name='Boskop', description='boskop',
+                                          price=2)
+        product2 = Product.objects.create(name='Golden Delicious',
+                                          description='descr t1', price=2)
         self.client.post('/cart/add/1', data={'quantity': '11'})
         self.client.post('/cart/add/2', data={'quantity': '22'})
         user_cart = Cart.objects.get(user=new_user.id)
@@ -47,8 +49,10 @@ class TestCheckoutView(TestCase):
         new_user = User.objects.create_user('testuser', 'testuser@domain.com',
                                             'password')
         self.client.login(username='testuser', password='password')
-        product1 = Product.objects.create(name='Boskop', description='description testproduct', price=2)
-        product2 = Product.objects.create(name='Golden Delicious', description='description testproduct', price=2)
+        product1 = Product.objects.create(name='Boskop', description='boskop',
+                                          price=2)
+        product2 = Product.objects.create(name='Golden Delicious',
+                                          description='descr t1', price=2)
         self.client.post('/cart/add/1', data={'quantity': '11'})
         self.client.post('/cart/add/2', data={'quantity': '22'})
         stripe_id = 'tok_mastercard'
@@ -70,8 +74,10 @@ class TestCheckoutView(TestCase):
         new_user = User.objects.create_user('testuser', 'testuser@domain.com',
                                             'password')
         self.client.login(username='testuser', password='password')
-        product1 = Product.objects.create(name='Boskop', description='description testproduct', price=2)
-        product2 = Product.objects.create(name='Golden Delicious', description='description testproduct', price=2)
+        product1 = Product.objects.create(name='Boskop', description='boskop',
+                                          price=2)
+        product2 = Product.objects.create(name='Golden Delicious',
+                                          description='descr t1', price=2)
         self.client.post('/cart/add/1', data={'quantity': '11'})
         self.client.post('/cart/add/2', data={'quantity': '22'})
         response = self.client.get('/checkout/', content_type="html/text",

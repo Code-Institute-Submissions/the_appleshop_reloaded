@@ -83,7 +83,7 @@ I have added in total 4 models and one form as listed below.
 * APP 'reviews'
 * APP 'wishlist'
 * APP 'cart' , 'Cart' model has been added to be able to save cart to database.
-* APP 'accounts', 'UserAdress' model and form for user address has been added.
+* APP 'accounts', 'UserAddress' model and form for user address has been added.
 
 
 
@@ -449,8 +449,6 @@ https://github.com/poldi2018/the_appleshop_reloaded/tree/master/htmlcov
 
 
 * Testing with Travis CI has passed all tests.
-
-![Travis CI confirmation](static/data/mockups/screens/travis-ms5.jpg)
 
 * Code is PEP8 conform, except a few lines, which were after changing not recognized by Django anymore.
 

@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .vh {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -191,6 +198,7 @@ a:active {
     width: 40vw;
     font-size: 5.5vw;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   #submit_payment_btn:hover {
@@ -221,6 +229,7 @@ a:active {
     font-family: "Dosis", sans-serif;
     font-size: 5.5vw;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   #password-reset-link {
@@ -239,6 +248,7 @@ a:active {
   #password-reset-link a, #register-link a {
     color: #414141;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
     text-decoration: none;
   }
@@ -287,6 +297,7 @@ a:active {
     margin-top: 6vw;
     background-color: orange;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   .pw-reset-btn:hover {
@@ -316,6 +327,7 @@ a:active {
     background-color: lightblue;
     color: black;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   #to-products-btn:hover {
@@ -480,6 +492,7 @@ a:active {
     background-color: lightblue;
     color: #414141;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   .update-address-btn:hover {
@@ -518,6 +531,7 @@ a:active {
     font-family: "Dosis", sans-serif;
     font-size: 5.5vw;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   .reviews-wrapper {
@@ -557,6 +571,7 @@ a:active {
     width: 40vw;
     margin-right: 2vw;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   #review-cancel-btn {
@@ -567,6 +582,7 @@ a:active {
     width: 40vw;
     margin-left: 2vw;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   #review-send-btn:hover,
@@ -613,6 +629,7 @@ a:active {
     font-size: 4.5vw;
     color: #414141;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   .back-to-products-btn {
@@ -659,6 +676,7 @@ a:active {
     -webkit-transform: translateZ(-10px);
             transform: translateZ(-10px);
     -webkit-transition: opacity .3s ease-in-out;
+    -o-transition: opacity .3s ease-in-out;
     transition: opacity .3s ease-in-out;
   }
   .delete-popup-message {
@@ -674,6 +692,7 @@ a:active {
     margin-right: 2px;
     width: 35vw;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
     text-decoration: none;
   }
@@ -687,6 +706,7 @@ a:active {
     font-family: "Dosis", sans-serif;
     color: whitesmoke;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   .delete-cancel-btn:hover {
@@ -1021,6 +1041,7 @@ a:active {
     width: 40vw;
     font-size: 5.5vw;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   #submit_payment_btn:hover {
@@ -1051,6 +1072,7 @@ a:active {
     font-family: "Dosis", sans-serif;
     font-size: 5.5vw;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   #password-reset-link {
@@ -1069,6 +1091,7 @@ a:active {
   #password-reset-link a, #register-link a {
     color: #414141;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
     text-decoration: none;
   }
@@ -1117,6 +1140,7 @@ a:active {
     margin-top: 6vw;
     background-color: orange;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   .pw-reset-btn:hover {
@@ -1146,6 +1170,7 @@ a:active {
     background-color: lightblue;
     color: black;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   #to-products-btn:hover {
@@ -1311,6 +1336,7 @@ a:active {
     background-color: lightblue;
     color: #414141;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   .update-address-btn:hover {
@@ -1349,6 +1375,7 @@ a:active {
     font-family: "Dosis", sans-serif;
     font-size: 5.5vw;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   .reviews-wrapper {
@@ -1388,6 +1415,7 @@ a:active {
     width: 40vw;
     margin-right: 2vw;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   #review-cancel-btn {
@@ -1398,6 +1426,7 @@ a:active {
     width: 40vw;
     margin-left: 2vw;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   #review-send-btn:hover,
@@ -1444,6 +1473,7 @@ a:active {
     font-size: 4.5vw;
     color: #414141;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   .back-to-products-btn {
@@ -1490,6 +1520,7 @@ a:active {
     -webkit-transform: translateZ(-10px);
             transform: translateZ(-10px);
     -webkit-transition: opacity .3s ease-in-out;
+    -o-transition: opacity .3s ease-in-out;
     transition: opacity .3s ease-in-out;
   }
   .delete-popup-message {
@@ -1505,6 +1536,7 @@ a:active {
     margin-right: 2px;
     width: 35vw;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
     text-decoration: none;
   }
@@ -1518,6 +1550,7 @@ a:active {
     font-family: "Dosis", sans-serif;
     color: whitesmoke;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   .delete-cancel-btn:hover {
@@ -1845,6 +1878,7 @@ a:active {
     width: 40vw;
     font-size: 5.5vw;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   #submit_payment_btn:hover {
@@ -1875,6 +1909,7 @@ a:active {
     font-family: "Dosis", sans-serif;
     font-size: 5.5vw;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   #password-reset-link {
@@ -1893,6 +1928,7 @@ a:active {
   #password-reset-link a, #register-link a {
     color: #414141;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
     text-decoration: none;
   }
@@ -1941,6 +1977,7 @@ a:active {
     margin-top: 6vw;
     background-color: orange;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   .pw-reset-btn:hover {
@@ -1970,6 +2007,7 @@ a:active {
     background-color: lightblue;
     color: black;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   #to-products-btn:hover {
@@ -2137,6 +2175,7 @@ a:active {
     background-color: lightblue;
     color: #414141;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   .update-address-btn:hover {
@@ -2176,6 +2215,7 @@ a:active {
     font-family: "Dosis", sans-serif;
     font-size: 5.5vw;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   .reviews-wrapper {
@@ -2217,6 +2257,7 @@ a:active {
     width: 40vw;
     margin-right: 2vw;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   #review-cancel-btn {
@@ -2227,6 +2268,7 @@ a:active {
     width: 40vw;
     margin-left: 2vw;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   #review-send-btn:hover,
@@ -2273,6 +2315,7 @@ a:active {
     font-size: 4.5vw;
     color: #414141;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   .back-to-products-btn {
@@ -2319,6 +2362,7 @@ a:active {
     -webkit-transform: translateZ(-10px);
             transform: translateZ(-10px);
     -webkit-transition: opacity .3s ease-in-out;
+    -o-transition: opacity .3s ease-in-out;
     transition: opacity .3s ease-in-out;
   }
   .delete-popup-message {
@@ -2334,6 +2378,7 @@ a:active {
     margin-right: 2px;
     width: 20vw;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
     text-decoration: none;
     font-size: 4.0vw;
@@ -2348,6 +2393,7 @@ a:active {
     font-family: "Dosis", sans-serif;
     color: whitesmoke;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
     font-size: 4.0vw;
   }
@@ -2705,6 +2751,7 @@ a:active {
     width: 12vw;
     font-size: 1.5vw;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   #submit_payment_btn:hover {
@@ -2739,6 +2786,7 @@ a:active {
     font-family: "Dosis", sans-serif;
     font-size: 1.2vw;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   #password-reset-link {
@@ -2757,6 +2805,7 @@ a:active {
   #password-reset-link a, #register-link a {
     color: #414141;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
     text-decoration: none;
   }
@@ -2805,6 +2854,7 @@ a:active {
     margin-top: 2.0vw;
     background-color: orange;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   .pw-reset-btn:hover {
@@ -2833,6 +2883,7 @@ a:active {
     background-color: lightblue;
     color: black;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   #to-products-btn:hover {
@@ -2997,6 +3048,7 @@ a:active {
     background-color: lightblue;
     color: #414141;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   .update-address-btn:hover {
@@ -3035,6 +3087,7 @@ a:active {
     font-family: "Dosis", sans-serif;
     font-size: 1.2vw;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   #submit-registration-btn:hover {
@@ -3083,6 +3136,7 @@ a:active {
     width: 8vw;
     margin-right: 2vw;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   #review-cancel-btn {
@@ -3093,6 +3147,7 @@ a:active {
     width: 8vw;
     margin-left: 2vw;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   #review-send-btn:hover,
@@ -3137,6 +3192,7 @@ a:active {
     font-size: 1.2vw;
     color: #414141;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   .back-to-products-btn {
@@ -3186,6 +3242,7 @@ a:active {
     -webkit-transform: translateZ(-10px);
             transform: translateZ(-10px);
     -webkit-transition: opacity .3s ease-in-out;
+    -o-transition: opacity .3s ease-in-out;
     transition: opacity .3s ease-in-out;
   }
   .delete-popup-message {
@@ -3199,6 +3256,7 @@ a:active {
     margin-right: 2px;
     width: 10vw;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
     text-decoration: none;
     font-size: 2.0vw;
@@ -3213,6 +3271,7 @@ a:active {
     font-family: "Dosis", sans-serif;
     color: whitesmoke;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
     font-size: 2.0vw;
   }
@@ -3576,6 +3635,7 @@ a:active {
     width: 20vw;
     font-size: 2.5vw;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   #submit_payment_btn:hover {
@@ -3610,6 +3670,7 @@ a:active {
     font-family: "Dosis", sans-serif;
     font-size: 2.2vw;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   #password-reset-link {
@@ -3628,6 +3689,7 @@ a:active {
   #password-reset-link a, #register-link a {
     color: #414141;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
     text-decoration: none;
   }
@@ -3676,6 +3738,7 @@ a:active {
     margin-top: 2.0vw;
     background-color: orange;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   .pw-reset-btn:hover {
@@ -3704,6 +3767,7 @@ a:active {
     background-color: lightblue;
     color: black;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   #to-products-btn:hover {
@@ -3869,6 +3933,7 @@ a:active {
     background-color: lightblue;
     color: #414141;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   .update-address-btn:hover {
@@ -3907,6 +3972,7 @@ a:active {
     font-family: "Dosis", sans-serif;
     font-size: 2.2vw;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   #submit-registration-btn:hover {
@@ -3955,6 +4021,7 @@ a:active {
     width: 10vw;
     margin-right: 2vw;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   #review-cancel-btn {
@@ -3965,6 +4032,7 @@ a:active {
     width: 10vw;
     margin-left: 2vw;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   #review-send-btn:hover,
@@ -4009,6 +4077,7 @@ a:active {
     font-size: 2.2vw;
     color: #414141;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   .back-to-products-btn {
@@ -4058,6 +4127,7 @@ a:active {
     -webkit-transform: translateZ(-10px);
             transform: translateZ(-10px);
     -webkit-transition: opacity .3s ease-in-out;
+    -o-transition: opacity .3s ease-in-out;
     transition: opacity .3s ease-in-out;
   }
   .delete-popup-message {
@@ -4071,6 +4141,7 @@ a:active {
     margin-right: 2px;
     width: 10vw;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
     text-decoration: none;
     font-size: 2.5vw;
@@ -4085,6 +4156,7 @@ a:active {
     font-family: "Dosis", sans-serif;
     color: whitesmoke;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
     font-size: 2.5vw;
   }
@@ -4447,6 +4519,7 @@ a:active {
     width: 12vw;
     font-size: 1.5vw;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   #submit_payment_btn:hover {
@@ -4483,6 +4556,7 @@ a:active {
     font-family: "Dosis", sans-serif;
     font-size: 1.2vw;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   #password-reset-link {
@@ -4501,6 +4575,7 @@ a:active {
   #password-reset-link a, #register-link a {
     color: #414141;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
     text-decoration: none;
   }
@@ -4550,6 +4625,7 @@ a:active {
     margin-top: 2.0vw;
     background-color: orange;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   .pw-reset-btn:hover {
@@ -4578,6 +4654,7 @@ a:active {
     background-color: lightblue;
     color: black;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   #to-products-btn:hover {
@@ -4744,6 +4821,7 @@ a:active {
     background-color: lightblue;
     color: #414141;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   .update-address-btn:hover {
@@ -4782,6 +4860,7 @@ a:active {
     font-family: "Dosis", sans-serif;
     font-size: 1.2vw;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   #submit-registration-btn:hover {
@@ -4830,6 +4909,7 @@ a:active {
     width: 8vw;
     margin-right: 2vw;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   #review-cancel-btn {
@@ -4840,6 +4920,7 @@ a:active {
     width: 8vw;
     margin-left: 2vw;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   #review-send-btn:hover,
@@ -4884,6 +4965,7 @@ a:active {
     font-size: 1.2vw;
     color: #414141;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   .back-to-products-btn {
@@ -4933,6 +5015,7 @@ a:active {
     -webkit-transform: translateZ(-10px);
             transform: translateZ(-10px);
     -webkit-transition: opacity .3s ease-in-out;
+    -o-transition: opacity .3s ease-in-out;
     transition: opacity .3s ease-in-out;
   }
   .delete-popup-message {
@@ -4946,6 +5029,7 @@ a:active {
     margin-right: 2px;
     width: 10vw;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
     text-decoration: none;
     font-size: 2.0vw;
@@ -4960,6 +5044,7 @@ a:active {
     font-family: "Dosis", sans-serif;
     color: whitesmoke;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
     font-size: 2.0vw;
   }
@@ -5326,6 +5411,7 @@ a:active {
     width: 20vw;
     font-size: 2.5vw;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   #submit_payment_btn:hover {
@@ -5362,6 +5448,7 @@ a:active {
     font-family: "Dosis", sans-serif;
     font-size: 2.5vw;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   #password-reset-link {
@@ -5380,6 +5467,7 @@ a:active {
   #password-reset-link a, #register-link a {
     color: #414141;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
     text-decoration: none;
   }
@@ -5429,6 +5517,7 @@ a:active {
     margin-top: 2.0vw;
     background-color: orange;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   .pw-reset-btn:hover {
@@ -5457,6 +5546,7 @@ a:active {
     background-color: lightblue;
     color: black;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   #to-products-btn:hover {
@@ -5624,6 +5714,7 @@ a:active {
     background-color: lightblue;
     color: #414141;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   .update-address-btn:hover {
@@ -5662,6 +5753,7 @@ a:active {
     font-family: "Dosis", sans-serif;
     font-size: 2.5vw;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   #submit-registration-btn:hover {
@@ -5710,6 +5802,7 @@ a:active {
     width: 10vw;
     margin-right: 2vw;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   #review-cancel-btn {
@@ -5720,6 +5813,7 @@ a:active {
     width: 10vw;
     margin-left: 2vw;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   #review-send-btn:hover,
@@ -5764,6 +5858,7 @@ a:active {
     font-size: 2.5vw;
     color: #414141;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
   }
   .back-to-products-btn {
@@ -5813,6 +5908,7 @@ a:active {
     -webkit-transform: translateZ(-10px);
             transform: translateZ(-10px);
     -webkit-transition: opacity .3s ease-in-out;
+    -o-transition: opacity .3s ease-in-out;
     transition: opacity .3s ease-in-out;
   }
   .delete-popup-message {
@@ -5826,6 +5922,7 @@ a:active {
     margin-right: 2px;
     width: 10vw;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
     text-decoration: none;
     font-size: 2.5vw;
@@ -5840,6 +5937,7 @@ a:active {
     font-family: "Dosis", sans-serif;
     color: whitesmoke;
     -webkit-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
     font-size: 2.5vw;
   }
@@ -6062,4 +6160,3 @@ a:active {
     font-size: 3.5vw;
   }
 }
-/*# sourceMappingURL=styles.css.map */

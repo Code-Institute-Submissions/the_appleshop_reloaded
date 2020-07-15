@@ -13,8 +13,10 @@ class TestCartContexts(TestCase):
         self.assertEqual(cart, {})
 
     def test_cart_contents_return_values(self):
-        product1 = Product.objects.create(name='Boskop', description='description testproduct', price=2)
-        product2 = Product.objects.create(name='Golden delicious', description='description', price=1)
+        product1 = Product.objects.create(name='Boskop',
+                                          description='boskop', price=2)
+        product2 = Product.objects.create(name='Golden delicious',
+                                          description='golden', price=1)
         self.client.post('/cart/add/1', data={'quantity': 11})
         self.client.post('/cart/add/2', data={'quantity': 22})
         cart = self.client.session.get('cart', {})

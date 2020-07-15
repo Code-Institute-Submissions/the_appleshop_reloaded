@@ -26,7 +26,7 @@ def all_products(request):
 def product_detail(request, id):
     try:
         product = get_object_or_404(Product, pk=id)
-    
+
     except:
         messages.error(request, "Sorry, this product does not exist")
         return redirect(reverse('products'))

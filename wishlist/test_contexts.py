@@ -3,7 +3,8 @@ from products.models import Product
 from django.views.generic import View, TemplateView, RedirectView
 from django.contrib.auth.models import User
 from .models import Wishlist
-from .contexts import make_wishlist_string, make_wishlist_list, merge_wishlists, sync_wishlists, wishlist_contents
+from .contexts import make_wishlist_string, make_wishlist_list,\
+    merge_wishlists, sync_wishlists, wishlist_contents
 
 
 class TestWishlistContexts(TestCase):
@@ -13,8 +14,10 @@ class TestWishlistContexts(TestCase):
         self.assertEqual(wishlist, [])
 
     def test_wishlist_contents_return_values(self):
-        product1 = Product.objects.create(name='Boskop', description='description testproduct', price=2)
-        product2 = Product.objects.create(name='Golden delicious', description='description', price=1)
+        product1 = Product.objects.create(name='Boskop', description='boskop',
+                                          price=2)
+        product2 = Product.objects.create(name='Golden delicious',
+                                          description='golden', price=1)
         self.client.post('/wishlist/add/1')
         self.client.post('/wishlist/add/2')
         wishlist = self.client.session.get('wishlist', [])
@@ -67,10 +70,14 @@ class TestWishlistMethods(TestCase):
         new_user = User.objects.create_user('testuser', 'testuser@domain.com',
                                             'password')
         self.client.login(username='testuser', password='password')
-        product1 = Product.objects.create(name='Boskop', description='description testproduct', price=2)
-        product2 = Product.objects.create(name='Golden delicious', description='description', price=1)
-        product4 = Product.objects.create(name='Elstar', description='description testproduct', price=2)
-        product5 = Product.objects.create(name='Junami', description='description', price=1)
+        product1 = Product.objects.create(name='Boskop', description='boskop',
+                                          price=2)
+        product2 = Product.objects.create(name='Golden delicious',
+                                          description='golden', price=1)
+        product4 = Product.objects.create(name='Elstar',
+                                          description='elstar', price=2)
+        product5 = Product.objects.create(name='Junami',
+                                          description='junami', price=1)
         self.client.post('/wishlist/add/1')
         self.client.post('/wishlist/add/2')
         wishlist = self.client.session.get('wishlist', [])
@@ -95,10 +102,14 @@ class TestWishlistMethods(TestCase):
         self.client.login(username='testuser', password='password')
         wishlist = self.client.session.get('wishlist', [])
         self.assertEqual(wishlist, [])
-        product1 = Product.objects.create(name='Boskop', description='description testproduct', price=2)
-        product2 = Product.objects.create(name='Golden delicious', description='description', price=1)
-        product4 = Product.objects.create(name='Elstar', description='description testproduct', price=2)
-        product5 = Product.objects.create(name='Junami', description='description', price=1)
+        product1 = Product.objects.create(name='Boskop', description='boskop',
+                                          price=2)
+        product2 = Product.objects.create(name='Golden delicious',
+                                          description='golden', price=1)
+        product4 = Product.objects.create(name='Elstar',
+                                          description='elstar', price=2)
+        product5 = Product.objects.create(name='Junami',
+                                          description='junami', price=1)
         response = self.client.get('/products/', content_type="html/text",
                                    follow=True)
         user_wishlist = Wishlist.objects.get(user=new_user.id)
@@ -112,8 +123,10 @@ class TestWishlistMethods(TestCase):
         self.assertEqual(wishlist, [4, 5])
 
     def test_sync_wishlists_with_empty_db_wishlist_and_locallist(self):
-        product1 = Product.objects.create(name='Boskop', description='description testproduct', price=2)
-        product2 = Product.objects.create(name='Golden delicious', description='description', price=1)
+        product1 = Product.objects.create(name='Boskop', description='boskop',
+                                          price=2)
+        product2 = Product.objects.create(name='Golden delicious',
+                                          description='golden', price=1)
         wishlist = self.client.session.get('wishlist', [])
         self.assertEqual(wishlist, [])
         self.client.post('/wishlist/add/1')

@@ -12,8 +12,10 @@ class TestWishlistViews(TestCase):
         self.assertTemplateUsed(response, "wishlist.html")
 
     def test_remove_from_wishlist_when_logged_out(self):
-        product1 = Product.objects.create(name='Boskop', description='description testproduct', price=2)
-        product2 = Product.objects.create(name='Golden delicious', description='description', price=1)
+        product1 = Product.objects.create(name='Boskop', description='boskop',
+                                          price=2)
+        product2 = Product.objects.create(name='Golden delicious',
+                                          description='golden', price=1)
         self.client.post('/wishlist/add/1')
         self.client.post('/wishlist/add/2')
         wishlist = self.client.session.get('wishlist', [])
@@ -26,8 +28,10 @@ class TestWishlistViews(TestCase):
         new_user = User.objects.create_user('testuser', 'testuser@domain.com',
                                             'password')
         self.client.login(username='testuser', password='password')
-        product1 = Product.objects.create(name='Boskop', description='description testproduct', price=2)
-        product2 = Product.objects.create(name='Golden delicious', description='description', price=1)
+        product1 = Product.objects.create(name='Boskop', description='boskop',
+                                          price=2)
+        product2 = Product.objects.create(name='Golden delicious',
+                                          description='golden', price=1)
         self.client.post('/wishlist/add/1')
         self.client.post('/wishlist/add/2')
         self.client.post('/wishlist/remove/1')
@@ -38,8 +42,10 @@ class TestWishlistViews(TestCase):
         new_user = User.objects.create_user('testuser', 'testuser@domain.com',
                                             'password')
         self.client.login(username='testuser', password='password')
-        product1 = Product.objects.create(name='Boskop', description='description testproduct', price=2)
-        product2 = Product.objects.create(name='Golden delicious', description='description', price=1)
+        product1 = Product.objects.create(name='Boskop', description='boskop',
+                                          price=2)
+        product2 = Product.objects.create(name='Golden delicious',
+                                          description='golden', price=1)
         self.client.post('/wishlist/add/1')
         self.client.post('/wishlist/add/2')
         user_wishlist = Wishlist.objects.get(user=new_user.id).delete()
@@ -55,8 +61,10 @@ class TestWishlistViews(TestCase):
         self.client.login(username='testuser', password='password')
         user_wishlist = Wishlist(user=new_user, name='name', product_list="")
         user_wishlist.save()
-        product1 = Product.objects.create(name='Boskop', description='description testproduct', price=2)
-        product2 = Product.objects.create(name='Golden delicious', description='description', price=1)
+        product1 = Product.objects.create(name='Boskop', description='boskop',
+                                          price=2)
+        product2 = Product.objects.create(name='Golden delicious',
+                                          description='golden', price=1)
         self.client.post('/wishlist/add/1')
         self.client.post('/wishlist/add/2')
         response = self.client.get("/wishlist/remove/1",
