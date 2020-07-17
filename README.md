@@ -9,6 +9,8 @@ The Django admin panel can be accessed with following credentials.
 * login: admin
 * password: Codeinstitute
 
+* To checkout purchases, the stripe test creditcard number 4242 4242 4242 4242 with CVV 111 can be used.
+
 
 [![Build Status](https://travis-ci.org/poldi2018/the_appleshop_reloaded.svg?branch=master)](https://travis-ci.org/poldi2018/the_appleshop_reloaded)
 

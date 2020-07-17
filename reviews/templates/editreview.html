@@ -6,10 +6,10 @@
     <form id="review-form" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form | as_bootstrap }}
-        <div id="review-send-btn-wrapper" class="ha">
-            <button id="review-send-btn" type="submit" class="btn">Save</button>
-            <a id="review-cancel-btn" href="{% url 'product_detail' pk %}" class="btn">Cancel</a>
-        </div>
     </form>
+    <div id="review-send-btn-wrapper" class="ha">
+        <button id="review-send-btn" class="btn" onclick="saveReview()">Save</button>
+        <a id="review-cancel-btn" href="{% url 'product_detail' pk %}" class="btn">Cancel</a>
+    </div>
 </div>
 {% endblock %}

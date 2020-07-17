@@ -15,7 +15,7 @@
 
             <div class="btn-bar-wrapper">
                 <a class="wishlist-remove-btn" href="{% url 'remove_from_wishlist' item.product.id %}"><i
-                        class="fa fa-times-circle"></i></a>
+                        class="fa fa-times-circle" title="remove from wishlist"></i></a>
             </div>
             <h3><a class="product-headline"
                     href="{% url 'product_detail' item.product.id %}"><b>{{item.product.name}}</b></a>

@@ -27,12 +27,12 @@
                 {% if item.product.id in wishlist %}
                 <form class="wishform" method="POST" action="{% url 'remove_from_wishlist' item.product.id %}">
                     {% csrf_token %}
-                    <button class="remove-wish-btn" type="submit"><i class="fa fa-star staricon-added"></i></button>
+                    <button class="remove-wish-btn" type="submit"><i class="fa fa-star staricon-added" title="remove from wishlist"></i></button>
                 </form>
                 {% else %}
                 <form class="wishform" method="POST" action="{% url 'add_to_wishlist' item.product.id %}">
                     {% csrf_token %}
-                    <button class="add-wish-btn" type="submit"><i class="fa fa-star staricon-not-added"></i></button>
+                    <button class="add-wish-btn" type="submit"><i class="fa fa-star staricon-not-added" title="add to wishlist"></i></button>
                 </form>
                 {% endif %}
             </div>
