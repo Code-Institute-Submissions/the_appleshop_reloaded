@@ -69,6 +69,10 @@ screen and (width: 1366px) and (height: 1024px) and (orientation: landscape) {
         font-size: 3vw;
     }
 
+    .navbar {
+        min-height: 58px;
+    }
+
     .navbar-brand {
         font-family: $dosisFont;
         font-size: 3vw;

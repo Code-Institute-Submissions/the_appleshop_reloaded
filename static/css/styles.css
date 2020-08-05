@@ -2504,7 +2504,7 @@ a:active {
     height: 7vw;
   }
   #bottombar-ipad .quicklinks {
-    width: 14.28vw;
+    width: 14.1vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -5037,6 +5037,9 @@ a:active {
   #brandicon {
     color: #b61d18;
     font-size: 3vw;
+  }
+  .navbar {
+    min-height: 58px;
   }
   .navbar-brand {
     font-family: "Dosis", sans-serif;
