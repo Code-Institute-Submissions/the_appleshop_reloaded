@@ -46,7 +46,7 @@
             <a class="product-headline" href="{% url 'product_detail' product.id %}"><b>{{product.name}}</b></a>
             
 
-            <p class="product-description">{{ product.description|truncatewords:12 }}</p>
+            <p class="product-description">{{ product.description|truncatewords:10 }}</p>
             <div class="product-stats">
                 <div class="stats-key"><i class="fa fa-eye"></i></div>
                 <div class="stats-value">{{ product.view_count }}</div>

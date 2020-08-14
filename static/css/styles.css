@@ -1702,7 +1702,7 @@ a:active {
   }
 }
 
-@media screen and (width: 768px) and (height: 1024px) and (orientation: portrait), screen and (width: 1024px) and (height: 1366px) and (orientation: portrait) {
+@media screen and (min-width: 767px) and (max-width: 768px) and (min-height: 1023px) and (max-height: 1024px) and (orientation: portrait), screen and (min-width: 833px) and (max-width: 834px) and (height: 1112px) and (orientation: portrait), screen and (min-width: 1023px) and (max-width: 1024px) and (min-height: 1365px) and (max-height: 1366px) and (orientation: portrait) {
   .cart-wrapper {
     padding-top: 2vw;
     padding-bottom: 25vw;
@@ -4310,7 +4310,7 @@ a:active {
   }
 }
 
-@media screen and (width: 1024px) and (height: 768px) and (orientation: landscape), screen and (width: 1366px) and (height: 1024px) and (orientation: landscape) {
+@media screen and (min-width: 1023px) and (max-width: 1024px) and (min-height: 767px) and (max-height: 768px) and (orientation: landscape), screen and (width: 1112px) and (min-height: 833px) and (max-height: 834px) and (orientation: landscape), screen and (min-width: 1365px) and (max-width: 1366px) and (min-height: 1023px) and (max-height: 1024px) and (orientation: landscape) {
   .cart-wrapper {
     padding-bottom: 2vw;
     background-color: #003553;
