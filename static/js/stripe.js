@@ -1,3 +1,19 @@
+function showCardErrorPopup() {
+    $('#card-error-popup').css("transform", "translateZ(400px)").css("z-index", "400");
+    setTimeout(function () {
+        $('#card-error-popup').css("opacity", "1.0");
+    }, 300);
+}
+
+function closeCardErrorPopup() {
+    $('#card-error-popup').css("opacity", "0.0");
+    setTimeout(function () {
+        $('card-error-popup-message').html(``);
+        $('#card-error-popup').css("transform", "translateZ(-10px)").css("z-index", "-1");
+    }, 700);
+}
+
+
 $(function() {
     $("#payment-form").submit(function() {
         var form = this;
@@ -22,7 +38,9 @@ $(function() {
             form.submit();
         } else {
             $("#stripe-error-message").text(response.error.message);
+            $('#card-error-popup-message').html(response.error.message);
             $("#credit-card-errors").show();
+            showCardErrorPopup();
             $("#validate_card_btn").attr("disabled", false);
         }
     });

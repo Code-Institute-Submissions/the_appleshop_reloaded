@@ -56,3 +56,47 @@ caption p {
 #submit_payment_btn:hover {
     color: darkred;
 }
+
+#card-error-popup {
+    background-color: beige;
+    border-radius: 5px;
+    border: 1px solid grey;
+    width: 80vw;
+    height: 40vw;
+    position: fixed;
+    opacity: 0.0;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transform: translateZ(-10px);
+    transition: opacity .3s ease-in-out;
+}
+
+#card-error-popup-message {
+    width: 90%;
+
+    font: {
+        family: $dosisFont;
+        size: 5.0vw;
+    }
+}
+
+.card-error-popup-btn {
+    width: 35vw;
+    background-color: lightslategray;
+    margin-left: 2px;
+    font: {
+        family: $dosisFont;
+        size: 5.0vw;
+    }
+    color: rgb(65, 65, 65);
+    transition: color .3s ease-in-out;
+}
+
+
+.card-error-popup-btn:hover {
+    color: whitesmoke;
+}
