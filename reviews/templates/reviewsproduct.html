@@ -14,7 +14,8 @@
             <img class="product-image" src="{{ MEDIA_URL }}{{review.image}}"
                 alt="image of {{review.product.name}} review">
             {% endif %}
-            <div class="review-headline"><b><a href="{% url 'review_detail' review.id %}">{{ review.title }}</a></b></div>
+            <div class="review-headline"><b><a href="{% url 'review_detail' review.id %}">{{ review.title }}</a></b>
+            </div>
             <a class="product-headline"
                 href="{% url 'product_detail' review.product.id %}"><b>{{review.product.name}}</b></a>
             <p class="product-description">{{ review.comment|truncatewords:10 }}</p>

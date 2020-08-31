@@ -1,5 +1,9 @@
-@media screen and (min-width: 767px) and (min-height: 1024px) and (orientation: portrait) {
-
+@media handheld,
+(width: 768px) and (orientation: portrait),
+handheld,
+(min-width: 833px) and (max-width: 834px) and (orientation: portrait),
+handheld,
+(width: 1024px) and (orientation: portrait) {
 
     @import "pages/_cart-page.scss";
     @import "pages/_checkout-page.scss";
@@ -114,6 +118,10 @@
     .alert {
         margin-bottom: 0;
         padding-top: 7vw;
+    }
+
+    .messages {
+        height: 5vw;
     }
 
     .icon-bar {

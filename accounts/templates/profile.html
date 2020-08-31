@@ -11,14 +11,15 @@
 
     <!-- Nav tabs -->
     <ul class="nav nav-tabs ha" role="tablist">
-        <li role="presentation" class="active"><a class="profile-tabs" href="#address" aria-controls="address" role="tab"
-                data-toggle="tab">Address</a></li>
-        <li role="presentation"><a class="profile-tabs" href="#orders" aria-controls="orders" role="tab" data-toggle="tab">Orders</a></li>
+        <li role="presentation" class="active"><a class="profile-tabs" href="#address" aria-controls="address"
+                role="tab" data-toggle="tab">Address</a></li>
+        <li role="presentation"><a class="profile-tabs" href="#orders" aria-controls="orders" role="tab"
+                data-toggle="tab">Orders</a></li>
     </ul>
 
     <!-- Tab panes for address details and orders -->
     <div class="tab-content ha">
-            <!-- Tab panes for address details-->
+        <!-- Tab panes for address details-->
 
         <div role="tabpanel" class="tab-pane active tab-address" id="address">
             {% if user_addressform.full_name.value == "" %}
@@ -30,8 +31,8 @@
                 {% csrf_token %}
                 {{ user_addressform | as_bootstrap }}
                 <div id="update-address-btn-wrapper" class="ha">
-                <button type="submit" class="btn update-address-btn">Update Address!</button>
-            </div>
+                    <button type="submit" class="btn update-address-btn">Update Address!</button>
+                </div>
             </form>
         </div>
 

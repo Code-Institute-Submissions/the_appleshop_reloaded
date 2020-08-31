@@ -15,8 +15,10 @@
             {% endif %}
             <div class="btn-bar-wrapper">
                 {% if user.is_authenticated and review.author.id == user.id %}
-                <a class="btn edit-review-btn" href="{% url 'edit_review' review.id %}"><i class="fa fa-edit" title="edit review"></i></a>
-                <div class="btn review-del-req-btn" onclick="showDeletePopup()"><i class="fa fa-trash" title="delete review"></i></div>
+                <a class="btn edit-review-btn" href="{% url 'edit_review' review.id %}"><i class="fa fa-edit"
+                        title="edit review"></i></a>
+                <div class="btn review-del-req-btn" onclick="showDeletePopup()"><i class="fa fa-trash"
+                        title="delete review"></i></div>
 
                 <div class="confirm-delete-popup vh">
                     <div class="delete-popup-message ha">Delete Review?</div>

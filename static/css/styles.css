@@ -1776,7 +1776,7 @@ a:active {
   }
 }
 
-@media screen and (min-width: 767px) and (min-height: 1024px) and (orientation: portrait) {
+@media handheld, (width: 768px) and (orientation: portrait), handheld, (min-width: 833px) and (max-width: 834px) and (orientation: portrait), handheld, (width: 1024px) and (orientation: portrait) {
   .cart-wrapper {
     padding-top: 2vw;
     padding-bottom: 25vw;
@@ -1997,7 +1997,7 @@ a:active {
     margin-left: 2.4vw;
   }
   #password-reset-link, #register-link {
-    width: 32vw;
+    width: 35vw;
     font-family: "Dosis", sans-serif;
     font-size: 4.5vw;
   }
@@ -2310,7 +2310,8 @@ a:active {
     width: 90vw;
   }
   #id_image {
-    height: 13vw;
+    height: 7vw;
+    padding-top: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2580,6 +2581,9 @@ a:active {
   .alert {
     margin-bottom: 0;
     padding-top: 7vw;
+  }
+  .messages {
+    height: 5vw;
   }
   .icon-bar {
     background-color: #fff;
@@ -5411,7 +5415,7 @@ a:active {
   }
 }
 
-@media screen and (min-width: 1023px) and (max-width: 1024px) and (min-height: 767px) and (max-height: 768px) and (orientation: landscape), screen and (width: 1112px) and (min-height: 833px) and (max-height: 834px) and (orientation: landscape), screen and (min-width: 1365px) and (max-width: 1366px) and (min-height: 1023px) and (max-height: 1024px) and (orientation: landscape) {
+@media handheld, (width: 1024px) and (orientation: landscape), handheld, (min-width: 1111px) and (max-width: 1112px) and (orientation: landscape), handheld, (min-width: 1365px) and (max-width: 1366px) and (orientation: landscape) {
   .cart-wrapper {
     padding-bottom: 2vw;
     background-color: #003553;
@@ -5699,6 +5703,9 @@ a:active {
   .revform {
     width: 2.6vw;
   }
+  .add-review-btn {
+    padding-left: 12px;
+  }
   .add-wish-btn,
   .remove-wish-btn,
   .add-review-btn {
@@ -5733,7 +5740,7 @@ a:active {
     padding-bottom: 5vw;
   }
   .productcard {
-    width: 24vw;
+    width: 23vw;
     margin-left: 5px;
     margin-right: 5px;
   }
@@ -6232,6 +6239,10 @@ a:active {
   }
   .alert {
     margin-bottom: 0;
+    font-size: 2vw;
+  }
+  .messages {
+    height: 2.5vw;
   }
   .icon-bar {
     background-color: #fff;

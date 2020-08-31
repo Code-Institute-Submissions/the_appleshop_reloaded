@@ -16,19 +16,22 @@
                 {% if product.id in wishlist %}
                 <form class="wishform" method="POST" action="{% url 'remove_from_wishlist' product.id %}">
                     {% csrf_token %}
-                    <button class="remove-wish-btn" type="submit"><i class="fa fa-star staricon-added" title="remove from wishlist"></i></button>
+                    <button class="remove-wish-btn" type="submit"><i class="fa fa-star staricon-added"
+                            title="remove from wishlist"></i></button>
                 </form>
                 {% else %}
                 <form class="wishform" method="POST" action="{% url 'add_to_wishlist' product.id %}">
                     {% csrf_token %}
-                    <button class="add-wish-btn" type="submit"><i class="fa fa-star staricon-not-added" title="add to wishlist"></i></button>
+                    <button class="add-wish-btn" type="submit"><i class="fa fa-star staricon-not-added"
+                            title="add to wishlist"></i></button>
                 </form>
                 {% endif %}
 
                 {% if product.name in purchased_products %}
                 <form class="revform" method="POST" action="{% url 'new_review' product.id %}">
                     {% csrf_token %}
-                    <button class="add-review-btn" type="submit"><i class="fa fa-comment" title="add new review"></i></button>
+                    <button class="add-review-btn" type="submit"><i class="fa fa-comment"
+                            title="add new review"></i></button>
                 </form>
                 {% endif %}
             </div>

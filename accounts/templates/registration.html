@@ -6,8 +6,8 @@
 {% block content %}
 <div class="registration-wrapper vac ha">
     <div class="page-headline ha">Registration</div>
-    <div id="registration-message">If you have already an account, you can sign in <a
-            href="{% url 'login' %}">here</a></div>
+    <div id="registration-message">If you have already an account, you can sign in <a href="{% url 'login' %}">here</a>
+    </div>
     <form id="registrationform" method="POST" action="">
         {% csrf_token %}
         {{ registration_form | as_bootstrap }}
