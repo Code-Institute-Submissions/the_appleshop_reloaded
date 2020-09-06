@@ -2,17 +2,20 @@
 {% load static from staticfiles %}
 {% load bootstrap_tags %}
 {% block head_js %}
-<script src="">
-
-</script>
 {% endblock head_js %}
 
 {% block content %}
+
+<!-- Outer cartwrapper -->
 <div class="cart-wrapper vac ha">
+
     <div class="page-headline ha">
         Your cart
     </div>
+
+    <!-- show products on card,if any -->
     {% if cart_items %}
+
     {% for item in cart_items %}
     <div class="productcard display panel panel-default">
         <div class="panel-body">
@@ -54,10 +57,10 @@
             <form class="form-inline cart-form" method="post" action="{% url 'adjust_cart' item.id %}">
                 {% csrf_token %}
                 <div class="form-group">
-                    <label for="exampleInputAmount" class="sr-only">New Qty</label>
+                    <label for="new-qty-product{{item.product.id}}" class="sr-only">New Qty</label>
                     <div class="input-group">
                         <div class="input-group-addon">Qty</div>
-                        <input name="quantity" type="number" min="0" max="999" class="form-control">
+                        <input id="new-qty-product{{item.product.id}}" name="quantity" type="number" min="0" max="999" class="form-control">
                         <div class="input-group-addon">{{item.quantity}}</div>
                     </div>
                 </div>
@@ -82,13 +85,14 @@
                 {{ total }}</p>
             <a href="{% url 'checkout' %}" class="btn btn-success checkout-btn" role="button"><span
                     class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span> Checkout</a>
-            {% else %}
-            <div class="empty-cart-wrapper ha">
-                <p class="no-cart-items">No products in your shopping cart</p>
-                <a id="emptycart-product-link" href="{% url 'products' %}"><span
-                        class="glyphicon glyphicon-apple active-app"></span></a>
-            </div>
+
         </div>
+    </div>
+    {% else %}
+    <div class="empty-cart-wrapper ha">
+        <p class="no-cart-items">No products in your shopping cart</p>
+        <a id="emptycart-product-link" href="{% url 'products' %}"><span
+                class="glyphicon glyphicon-apple active-app"></span></a>
     </div>
     {% endif %}
 </div>

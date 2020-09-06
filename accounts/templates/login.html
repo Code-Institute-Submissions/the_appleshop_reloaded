@@ -12,7 +12,7 @@
     <div class="page-headline ha">
         Login
     </div>
-    <form id="loginform" method="POST" action="">
+    <form id="loginform" method="POST">
         {% csrf_token %}
         {{ login_form | as_bootstrap }}
         <div id="login-btn-wrapper" class="ha">
@@ -28,4 +28,5 @@
             <a href="{% url 'registration' %}"><b>Register here</b></a>
         </div>
     </div>
-    {% endblock %}
+</div>
+{% endblock %}
