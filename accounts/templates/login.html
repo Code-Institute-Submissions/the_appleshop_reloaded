@@ -3,16 +3,25 @@
 {% load bootstrap_tags %}
 
 {% block page_title %}Login Page{% endblock %}
+
 {% block page_heading %}User Login{% endblock %}
 
 {% block content %}
 
+<!-- outer wrapper -->
+
 <div class="login-wrapper vac ha">
 
+    <!-- page headline -->
+    
     <div class="page-headline ha">
         Login
     </div>
+
+    <!-- login form -->
+
     <form id="loginform" method="POST">
+
         {% csrf_token %}
         {{ login_form | as_bootstrap }}
         <div id="login-btn-wrapper" class="ha">
@@ -20,6 +29,9 @@
         </div>
 
     </form>
+
+    <!-- reset password / register button -->
+
     <div id="reset-register-wrapper" class="ha">
         <div id="password-reset-link" class="btn">
             <a href="{% url 'password_reset' %}"><b>Reset Password</b></a>
@@ -28,5 +40,7 @@
             <a href="{% url 'registration' %}"><b>Register here</b></a>
         </div>
     </div>
+
 </div>
+
 {% endblock %}

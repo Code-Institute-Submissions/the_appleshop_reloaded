@@ -4,9 +4,13 @@
 {% block head_js %}
 {% endblock head_js %}
 {% block content %}
+
+<!-- outer wrapper -->
 <div class="reviews-wrapper vac ha">
 
     <div class="page-headline ha">Reviews by users</div>
+
+    <!-- searchfield -->
     <div class="search-field-wrapper ha">
         <div class="display">
             <form action="{% url 'review_search' %}" method="GET">
@@ -15,8 +19,12 @@
             </form>
         </div>
     </div>
+
+    <!-- when reviews are in database -->
     {% if reviews %}
     {% for review in reviews %}
+
+    <!-- review card -->
     <div class="reviewcard display panel panel-default">
         <div class="panel-body">
             {% if review.image %}
@@ -44,8 +52,11 @@
         </div>
     </div>
     {% endfor %}
+    <!-- if no reviews are in database -->
     {% else %}
+
     <p class="no-results-message vh">No reviews have been found.</p>
+
     {% endif %}
 </div>
 {% endblock %}

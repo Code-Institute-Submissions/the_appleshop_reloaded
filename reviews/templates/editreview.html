@@ -1,15 +1,26 @@
 {% extends "base.html" %}
 {% load bootstrap_tags %}
 {% block content %}
+
+<!-- outer wrapper -->
 <div class="edit-review-wrapper vac ha">
+
+    <!--  page headline -->
+
     <div class="page-headline ha">Add a new or edit Review</div>
+
+    <!--  review edit form -->
     <form id="review-form" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form | as_bootstrap }}
     </form>
+
+    <!-- button wrapper -->
+
     <div id="review-send-btn-wrapper" class="ha">
         <button id="review-send-btn" class="btn" onclick="saveReview()">Save</button>
         <a id="review-cancel-btn" href="{% url 'product_detail' pk %}" class="btn">Cancel</a>
     </div>
+
 </div>
 {% endblock %}

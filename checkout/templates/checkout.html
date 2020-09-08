@@ -13,11 +13,21 @@
 {% endblock %}
 
 {% block content %}
+
+<!-- outer wrapper -->
+
 <div class="checkout-wrapper vac ha">
+
+    <!-- page headline -->
     <div class="page-headline ha">
         Checkout with payment
     </div>
+
+    <!-- if products are on cart -->
+
     {% for item in cart_items %}
+
+    <!-- product card -->
     <div class="productcard display panel panel-default">
         <div class="panel-body">
 
@@ -44,6 +54,7 @@
             </h3>
 
             <p class="product-description">{{ item.product.description|truncatewords:12 }}</p>
+
             <div class="product-stats">
                 <div class="stats-key"><i class="fa fa-eye"></i></div>
                 <div class="stats-value">{{ item.product.view_count }}</div>
@@ -54,6 +65,8 @@
                 <div class="stats-key price"><b>Our price:</b></div>
                 <div class="stats-value price"><b>{{ item.product.price }} EUR</b></div>
             </div>
+
+            <!-- adjust product quantity form  -->
             <form class="form-inline cart-form" method="post" action="{% url 'adjust_cart' item.id %}">
                 {% csrf_token %}
                 <div class="form-group">
@@ -70,10 +83,12 @@
                             aria-hidden="true"></span> Amend</button>
                 </div>
             </form>
+
         </div>
     </div>
     {% endfor %}
 
+    <!--  summary section of total amount -->
     <div class="checkout-summary-wrapper ha">
         <div class="checkout-summary">
             <div class="checkout-summary-items">Total: <span class="glyphicon glyphicon-euro" aria-hidden="true"></span>
@@ -92,6 +107,8 @@
                 <div class="alert-message block-message error" id="stripe-error-message"></div>
             </div>
 
+            <!-- shipping address section -->
+
             <div class="form-group col-md-6">
                 {% if order_form.full_name.value == "" %}
                 <p>Please enter your shipping address</p>
@@ -100,6 +117,8 @@
                 {% endif %}
                 {{ order_form | as_bootstrap }}
             </div>
+
+            <!-- payment form section -->
 
             <div class="form-group col-md-6">
                 <p>Please enter your payment details</p>
@@ -112,9 +131,11 @@
                     value="Submit Payment">
             </div>
         </form>
+
     </div>
 </div>
 
+<!--  popup for errors on entered payment data -->
 <div id="card-error-popup" class="vh">
     <div id="card-error-popup-message" class="ha"></div>
     <div class="btn card-error-popup-btn ha" onclick="closeCardErrorPopup()">Got it!</div>

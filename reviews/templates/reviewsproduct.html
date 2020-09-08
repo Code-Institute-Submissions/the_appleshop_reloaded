@@ -4,10 +4,18 @@
 {% block head_js %}
 {% endblock head_js %}
 {% block content %}
+
+<!-- outer wrapper -->
+
 <div class="reviews-wrapper vac ha">
+
     <div class="page-headline ha">Reviews per Product</div>
+
+    <!-- display reviews per product, if any -->
     {% if reviews %}
     {% for review in reviews %}
+
+    <!-- reviewcard -->
     <div class="reviewcard display panel panel-default">
         <div class="panel-body">
             {% if review.image %}
@@ -38,8 +46,12 @@
         </div>
     </div>
     {% endfor %}
+
+    <!-- in case no reviews per product are found -->
     {% else %}
+
     <p class="no-results-message ha">No reviews have been found.</p>
+
     {% endif %}
 </div>
 {% endblock %}

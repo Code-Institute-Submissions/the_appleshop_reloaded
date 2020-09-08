@@ -5,10 +5,19 @@
 {% endblock head_js %}
 {% block content %}
 
+<!-- outer wrapper -->
+
 <div class="wishlist-wrapper vac ha">
+
     <div class="page-headline ha">Your apples wishlist</div>
+
+    <!-- if there are products on wishlist -->
+
     {% if wishlist_items %}
     {% for item in wishlist_items %}
+
+    <!-- product card -->
+
     <div class="productcard display panel panel-default">
         <div class="panel-body">
             <img class="product-image" src="{{ MEDIA_URL }}{{item.product.image}}" alt="image of {{item.product.name}}">
@@ -45,7 +54,11 @@
         </div>
     </div>
     {% endfor %}
+
+    <!-- if wishlist has no products -->
+
     {% else %}
+    
     <div id="empty-wishlist-wrapper">
         <p class="no-results-message">No products in your wishlist.</p>
         <a id="empty-wishlist-product-link" class="ha" href="{% url 'products' %}"><span

@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <!-- Fixed masthead -->
+    <!-- Top navbar -->
     <nav class="navbar navbar-masthead navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -30,12 +30,19 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+
+                <!-- logo -->
                 <a class="navbar-brand" href="/" title="Index The Apple Shop"><span id="brandicon"
                         class="glyphicon glyphicon-apple"></span> The
                     Apple Shop</a>
             </div>
+
             <div id="navbar" class="navbar-collapse collapse">
+
+                <!-- menuitems for desktop -->
+
                 <ul class="nav navbar-nav navbar-right desktop-navbar">
+
                     <li class="desktop-navbar-icons">
                         {% if app_path == "/" %}
                         <a href="{% url 'index' %}" title="Our Bestsellers"><i class="fa fa-home active-app"></i></a>
@@ -43,6 +50,7 @@
                         <a href="{% url 'index' %}" title="Our Bestsellers"><i class="fa fa-home"></i></a>
                         {% endif %}
                     </li>
+
                     <li class="desktop-navbar-icons">
                         {% if "products" in app_path %}
                         <a href="{% url 'products' %}" title="Products"><span
@@ -52,6 +60,7 @@
                                 class="glyphicon products-icon glyphicon-apple"></span></a>
                         {% endif %}
                     </li>
+
                     <li class="desktop-navbar-icons">
                         {% if "reviews" in app_path %}
                         <a href="{% url 'get_reviews' %}" title="Reviews"><i class="fa fa-comment active-app"></i></a>
@@ -59,6 +68,7 @@
                         <a href="{% url 'get_reviews' %}" title="Reviews"><i class="fa fa-comment"></i></a>
                         {% endif %}
                     </li>
+
                     <li class="desktop-navbar-icons">
                         {% if "wishlist" in app_path %}
                         <a href="{% url 'view_wishlist' %}" title="Wishlist"><i class="fa fa-star active-app"></i></a>
@@ -69,6 +79,7 @@
                         <label class="badge badge-wishlist badge-warning"><b>{{ wishlist_count }}</b></label>
                         {% endif %}
                     </li>
+
                     <li class="desktop-navbar-icons">
                         {% if "cart" in app_path %}
                         <a href="{% url 'view_cart' %}" title="Shopping Cart"><i
@@ -80,6 +91,7 @@
                         <label class="badge badge-cart badge-warning"><b>{{ product_count }}</b></label>
                         {% endif %}
                     </li>
+
                     {% if user.is_authenticated %}
                     <li class="desktop-navbar-icons">
                         {% if "profile" in app_path %}
@@ -88,9 +100,11 @@
                         <a href="{% url 'profile' %}" title="Profile"><i class="fa fa-user"></i></a>
                         {% endif %}
                     </li>
+
                     <li class="desktop-navbar-icons"><a href="{% url 'logout' %}" title="Logout"><i
                                 class="fa fa-sign-out"></i></a></li>
                     {%  else %}
+
                     <li class="desktop-navbar-icons">
                         {% if "login" in app_path %}
                         <a href="{% url 'login' %}" title="Login"><i class="fa fa-sign-in active-app"></i></a>
@@ -98,6 +112,7 @@
                         <a href="{% url 'login' %}" title="Login"><i class="fa fa-sign-in"></i></a>
                         {% endif %}
                     </li>
+
                     <li class="desktop-navbar-icons">
                         {% if "register" in app_path %}
                         <a href="{% url 'registration' %}" title="Registration"><i
@@ -106,9 +121,14 @@
                         <a href="{% url 'registration' %}" title="Registration"><i class="fa fa-user-plus"></i></a>
                         {% endif %}
                     </li>
+
                     {% endif %}
                 </ul>
+
+                <!-- menuitems for mobile -->
+
                 <ul class="nav navbar-nav navbar-right mobile-navbar">
+
                     <li class="mobile-list-items">
                         {% if app_path == "/" %}
                         <a href="{% url 'index' %}" title="Our Bestsellers"><i class="fa fa-home active-app"></i>
@@ -117,6 +137,7 @@
                         <a href="{% url 'index' %}" title="Our Bestsellers"><i class="fa fa-home"></i> Topsellers</a>
                         {% endif %}
                     </li>
+
                     <li class="mobile-list-items">
                         {% if "products" in app_path %}
                         <a href="{% url 'products' %}" title="Products"><span
@@ -127,6 +148,7 @@
                             Products</a>
                         {% endif %}
                     </li>
+
                     <li class="mobile-list-items">
                         {% if "reviews" in app_path %}
                         <a href="{% url 'get_reviews' %}" title="Reviews"><i class="fa fa-comment active-app"></i>
@@ -135,6 +157,7 @@
                         <a href="{% url 'get_reviews' %}" title="Reviews"><i class="fa fa-comment"></i> Reviews</a>
                         {% endif %}
                     </li>
+
                     <li class="mobile-list-items">
                         {% if "wishlist" in app_path %}
                         <a href="{% url 'view_wishlist' %}" title="Wishlist"><i class="fa fa-star active-app"></i>
@@ -146,6 +169,7 @@
                         <label class="badge badge-wishlist badge-warning"><b>{{ wishlist_count }}</b></label>
                         {% endif %}
                     </li>
+
                     <li class="mobile-list-items">
                         {% if "cart" in app_path %}
                         <a href="{% url 'view_cart' %}" title="Shopping Cart"><i
@@ -158,6 +182,7 @@
                         <label class="badge badge-cart badge-warning"><b>{{ product_count }}</b></label>
                         {% endif %}
                     </li>
+
                     {% if user.is_authenticated %}
                     <li class="mobile-list-items">
                         {% if "profile" in app_path %}
@@ -166,9 +191,12 @@
                         <a href="{% url 'profile' %}" title="Profile"><i class="fa fa-user"></i> Profile</a>
                         {% endif %}
                     </li>
+
                     <li class="mobile-list-items">
                         <a href="{% url 'logout' %}" title="Logout"><i class="fa fa-sign-out"></i> Log Out</a></li>
+
                     {% else %}
+
                     <li class="mobile-list-items">
                         {% if "login" in app_path %}
                         <a href="{% url 'login' %}" title="Login"><i class="fa fa-sign-in active-app"></i> Log In</a>
@@ -176,6 +204,7 @@
                         <a href="{% url 'login' %}" title="Login"><i class="fa fa-sign-in"></i> Log In</a>
                         {% endif %}
                     </li>
+
                     <li class="mobile-list-items">
                         {% if "register" in app_path %}
                         <a href="{% url 'registration' %}" title="Registration"><i
@@ -185,12 +214,14 @@
                             Register</a>
                         {% endif %}
                     </li>
+                    
                     {% endif %}
                 </ul>
             </div>
         </div>
     </nav>
 
+    <!-- messages banner -->
     {% if messages %}
     <div class="alert alert-success">
         <div class="messages">
@@ -206,10 +237,14 @@
 
         {% block content %}{% endblock %}
     </div>
+
+    <!-- mobile bottom navbar -->
+
     <nav class="navbar navbar-masthead navbar-default navbar-fixed-bottom" id="bottomnavbar">
         <div class="container">
             <div class="navbar-header">
                 <ul class="nav navbar-nav navbar-right" id="bottombar">
+
                     <li class="quicklinks">
                         {% if app_path == "/" %}
                         <a href="{% url 'index' %}" title="Our Bestsellers"><i class="fa fa-home active-app"></i></a>
@@ -217,6 +252,7 @@
                         <a href="{% url 'index' %}" title="Our Bestsellers"><i class="fa fa-home"></i></a>
                         {% endif %}
                     </li>
+
                     <li class="quicklinks">
                         {% if "products" in app_path %}
                         <a href="{% url 'products' %}" title="Products"><span
@@ -226,6 +262,7 @@
                                 class="glyphicon glyphicon-apple products-icon"></span></a>
                         {% endif %}
                     </li>
+
                     <li class="quicklinks">
                         {% if "wishlist" in app_path %}
                         <a href="{% url 'view_wishlist' %}" title="Wishlist"><i class="fa fa-star active-app"></i></a>
@@ -237,6 +274,7 @@
                             class="badge badge-wishlist badge-warning">{{ wishlist_count }}</label>
                         {% endif %}
                     </li>
+
                     <li class="quicklinks">
                         {% if "cart" in app_path %}
                         <a href="{% url 'view_cart' %}" title="Shopping Cart"><i
@@ -256,14 +294,19 @@
                         <a href="{% url 'profile' %}" title="Profile"><i class="fa fa-user"></i></a>
                         {% endif %}
                     </li>
+
                 </ul>
             </div>
         </div>
     </nav>
+
+    <!-- ipad bottom navbar -->
+
     <nav class="navbar navbar-masthead navbar-default navbar-fixed-bottom" id="bottomnavbar-ipad">
         <div class="container">
             <div class="navbar-header">
                 <ul class="nav navbar-nav navbar-right" id="bottombar-ipad">
+
                     <li class="quicklinks">
                         {% if app_path == "/" %}
                         <a href="{% url 'index' %}" title="Our Bestsellers"><i class="fa fa-home active-app"></i></a>
@@ -271,6 +314,7 @@
                         <a href="{% url 'index' %}" title="Our Bestsellers"><i class="fa fa-home"></i></a>
                         {% endif %}
                     </li>
+
                     <li class="quicklinks">
                         {% if "products" in app_path %}
                         <a href="{% url 'products' %}" title="Products"><span
@@ -313,6 +357,9 @@
                             class="badge badge-cart badge-warning">{{ product_count }}</label>
                         {% endif %}
                     </li>
+
+                    <!-- for logged on users -->
+
                     {% if user.is_authenticated %}
                     <li class="quicklinks">
                         {% if "profile" in app_path %}
@@ -323,7 +370,10 @@
                     </li>
                     <li class="quicklinks">
                         <a href="{% url 'logout' %}" title="Logout"><i class="fa fa-sign-out"></i></a></li>
+
                     {% else %}
+                    <!-- for logged off users -->
+
                     <li class="quicklinks">
                         {% if "login" in app_path %}
                         <a href="{% url 'login' %}" title="Login"><i class="fa fa-sign-in active-app"></i></a>
@@ -344,7 +394,9 @@
             </div>
         </div>
     </nav>
+
     <script src="{% static 'js/appleshop.js' %}"></script>
+
 </body>
 
 </html>

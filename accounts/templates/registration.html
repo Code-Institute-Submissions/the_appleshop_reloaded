@@ -4,10 +4,22 @@
 {% block page_heading %}User Registration{% endblock %}
 
 {% block content %}
+
+<!--  outer wrapper -->
+
 <div class="registration-wrapper vac ha">
+
+    <!-- page headline  -->
+
     <div class="page-headline ha">Registration</div>
+
+    <!--  message to user  -->
+    
     <div id="registration-message">If you have already an account, you can sign in <a href="{% url 'login' %}">here</a>
     </div>
+
+    <!--  registration form  -->
+
     <form id="registrationform" method="POST">
         {% csrf_token %}
         {{ registration_form | as_bootstrap }}
@@ -17,4 +29,5 @@
     </form>
 
 </div>
+
 {% endblock %}

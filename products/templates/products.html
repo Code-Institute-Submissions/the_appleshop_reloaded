@@ -5,8 +5,14 @@
 {% endblock head_js %}
 {% block content %}
 
+<!-- outer wrapper -->
+
 <div class="product-wrapper vac ha">
+
+    <!-- page headline -->
     <div class="page-headline ha">Daily fresh apples, please choose!</div>
+
+    <!--  searchfield -->
     <div class="search-field-wrapper ha">
         <div class="display">
             <form action="{% url 'product_search' %}" method="GET">
@@ -19,6 +25,8 @@
 
     {% if products %}
     {% for product in products %}
+
+    <!-- product card -->
 
     <div class="productcard display panel panel-default">
         <div class="panel-body">
@@ -79,6 +87,8 @@
         </div>
     </div>
     {% endfor %}
+
+    <!-- no products found -->
     {% else %}
     <p class="no-results-message">No results have been found.</p>
     {% endif %}

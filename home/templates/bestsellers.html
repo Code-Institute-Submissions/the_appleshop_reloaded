@@ -4,9 +4,12 @@
 <div class="product-wrapper vac ha">
     <div class="page-headline ha">Our bestsellers</div>
 
+
+    <!-- check and render bestseller products if sold amount > 99  -->
     {% if products %}
     {% for product in products %}
 
+    <!-- product card -->
     <div class="productcard display panel panel-default">
         <div class="panel-body">
             <img class="product-image" src="{{ MEDIA_URL }}{{product.image}}" alt="image of {{product.name}}">
@@ -57,8 +60,11 @@
         </div>
     </div>
     {% endfor %}
+
     {% else %}
+
     <p class="no-results-message">Bestseller criterion not met.</p>
+    
     {% endif %}
 </div>
 

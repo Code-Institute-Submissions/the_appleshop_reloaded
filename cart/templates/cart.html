@@ -7,16 +7,22 @@
 {% block content %}
 
 <!-- Outer cartwrapper -->
+
 <div class="cart-wrapper vac ha">
+
+    <!-- page headline -->
 
     <div class="page-headline ha">
         Your cart
     </div>
 
     <!-- show products on card,if any -->
+
     {% if cart_items %}
 
     {% for item in cart_items %}
+
+    <!-- product card -->
     <div class="productcard display panel panel-default">
         <div class="panel-body">
 
@@ -24,24 +30,31 @@
 
             <div class="btn-bar-wrapper">
 
+                <!--  check if product is on wishlist to set add/remove button accordingly -->
+
                 {% if item.product.id in wishlist %}
                 <form class="wishform" method="POST" action="{% url 'remove_from_wishlist' item.product.id %}">
                     {% csrf_token %}
                     <button class="remove-wish-btn" type="submit"><i class="fa fa-star staricon-added"
                             title="remove from wishlist"></i></button>
                 </form>
+
                 {% else %}
+
                 <form class="wishform" method="POST" action="{% url 'add_to_wishlist' item.product.id %}">
                     {% csrf_token %}
                     <button class="add-wish-btn" type="submit"><i class="fa fa-star staricon-not-added"
                             title="add to wishlist"></i></button>
                 </form>
+
                 {% endif %}
             </div>
 
             <h3><a class="product-headline"
                     href="{% url 'product_detail' item.product.id %}"><b>{{item.product.name}}</b></a>
             </h3>
+
+            <!--  product stats section -->
 
             <p class="product-description">{{ item.product.description|truncatewords:12 }}</p>
             <div class="product-stats">
@@ -54,6 +67,8 @@
                 <div class="stats-key price"><b>Our price:</b></div>
                 <div class="stats-value price"><b>{{ item.product.price }} EUR</b></div>
             </div>
+
+            <!--  quantity adjust form -->
             <form class="form-inline cart-form" method="post" action="{% url 'adjust_cart' item.id %}">
                 {% csrf_token %}
                 <div class="form-group">
@@ -73,6 +88,7 @@
     </div>
     {% endfor %}
 
+    <!-- shipping fee and total amount section -->
     <div class="cart-summary-wrapper ha">
 
         <div class="cart-summary">
@@ -88,12 +104,16 @@
 
         </div>
     </div>
+
     {% else %}
+    <!-- if no products are on cart -->
+
     <div class="empty-cart-wrapper ha">
         <p class="no-cart-items">No products in your shopping cart</p>
         <a id="emptycart-product-link" href="{% url 'products' %}"><span
                 class="glyphicon glyphicon-apple active-app"></span></a>
     </div>
     {% endif %}
+    
 </div>
 {% endblock %}
