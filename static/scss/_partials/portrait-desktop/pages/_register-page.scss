@@ -2,20 +2,25 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+
     padding: {
-        top: 4vw;
-        bottom: 20vw;
+        top: 14vw;
+        bottom: 25vw;
 
     }
+
+    min-height: 100vh;
     background-color: $page-bgr-clr;
 }
 
 #registration-message {
     width: 90vw;
+
     margin: {
         top: 4vw;
         bottom: 4vw;
     }
+
     color: white;
 }
 

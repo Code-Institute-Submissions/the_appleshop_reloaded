@@ -3,10 +3,12 @@
     flex-wrap: wrap;
     width: 100%;
     padding: {
-        top: 4vw;
-        bottom: 20vw;
+        top: 20vw;
+        bottom: 25vw;
 
     }
+
+    min-height: 100vh;
     background-color: $page-bgr-clr;
 }
 

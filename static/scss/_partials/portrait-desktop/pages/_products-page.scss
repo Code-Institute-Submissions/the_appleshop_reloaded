@@ -1,11 +1,12 @@
 .product-wrapper {
     padding: {
-        top: 4vw;
+        top: 14vw;
         bottom: 25vw;
 
     }
+
+    min-height: 100vh;
     background-color: $page-bgr-clr;
-    min-height: 92vh;
 }
 
 .search-field-wrapper {
@@ -28,6 +29,7 @@
     background-color: cornsilk;
     display: flex;
     flex-wrap: wrap;
+    padding: 12px;
 }
 
 .product-image {
@@ -47,6 +49,7 @@
 .product-headline {
     font-family: $dosisFont;
     font-size: 6.5vw;
+
     margin: {
         top: 5px;
         bottom: 5px;

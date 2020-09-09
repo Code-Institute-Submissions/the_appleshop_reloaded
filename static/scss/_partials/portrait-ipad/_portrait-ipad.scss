@@ -19,7 +19,6 @@ handheld,
 
     body {
         font-family: $dosisFont;
-        padding-top: 56px;
         font-size: 4.0vw;
         background-color: grey;
     }
@@ -116,8 +115,10 @@ handheld,
     }
 
     .alert {
-        margin-bottom: 0;
-        padding-top: 7vw;
+        margin: {
+            top: 12.2vw;
+            bottom: 0;
+        }
     }
 
     .messages {
@@ -189,7 +190,7 @@ handheld,
     #wishlist-badge-bottom-ipad {
         position: absolute;
         top: -2vw;
-        left: 7.0vw;
+        left: 10.0vw;
 
         padding: {
             left: 2vw;
@@ -197,6 +198,7 @@ handheld,
         }
 
         max-width: none;
+        font-size: 3.3vw;
     }
 
 
@@ -211,7 +213,7 @@ handheld,
     #cart-badge-bottom-ipad {
         position: absolute;
         top: -2vw;
-        left: 7.5vw;
+        left: 10.4vw;
 
         padding: {
             left: 1.5vw;
@@ -219,6 +221,7 @@ handheld,
         }
 
         max-width: none;
+        font-size: 3.3vw;
     }
 
     .badge-cart {

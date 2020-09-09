@@ -1,10 +1,13 @@
 .login-wrapper {
     align-content: center;
+
     padding: {
+        top: 10vw;
         bottom: 2vw;
     }
+
+    min-height: 100vh;
     background-color: $page-bgr-clr;
-    min-height: 86vh;
 }
 
 #loginform {
@@ -53,19 +56,23 @@
 }
 
 
-#password-reset-link,  #register-link {
+#password-reset-link,
+#register-link {
     width: 18vw;
     font-family: $dosisFont;
     font-size: 2.0vw;
 }
 
 
-#password-reset-link a, #register-link a {
+#password-reset-link a,
+#register-link a {
     color: rgb(65, 65, 65);
     transition: color .3s ease-in-out;
     text-decoration: none;
 }
 
-#login-btn:hover, #password-reset-link a:hover, #register-link a:hover {
+#login-btn:hover,
+#password-reset-link a:hover,
+#register-link a:hover {
     color: darkred;
 }

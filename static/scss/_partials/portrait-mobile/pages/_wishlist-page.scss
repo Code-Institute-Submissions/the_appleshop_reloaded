@@ -1,11 +1,12 @@
 .wishlist-wrapper {
     padding: {
-        top: 4vw;
+        top: 20vw;
         bottom: 25vw;
 
     }
+
+    min-height: 100vh;
     background-color: $page-bgr-clr;
-    min-height: 92vh;
 }
 
 .wishlist-remove-btn {

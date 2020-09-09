@@ -14,7 +14,6 @@
 
     body {
         font-family: $dosisFont;
-        padding-top: 56px;
         font-size: 5.0vw;
     }
 
@@ -83,6 +82,10 @@
 
     }
 
+    .mobile-list-items a i, .mobile-list-items a span {
+        margin-right: 10vw;
+    }
+
     .navbar-nav {
         margin: 14.5px 0;
     }
@@ -106,7 +109,10 @@
     }
 
     .alert {
-        margin-bottom: 0;
+        margin: {
+            top: 14.5vw;
+            bottom: 0;
+        }
     }
 
     .icon-bar {
@@ -169,7 +175,7 @@
     #wishlist-badge-bottom {
         position: absolute;
         top: -2vw;
-        left: 8.7vw;
+        left: 13.7vw;
 
         padding: {
             left: 2vw;
@@ -184,13 +190,16 @@
         -moz-border-radius: 3vw;
         border-radius: 3vw;
         font-size: 4vw;
+        position: absolute;
+        top: -2vw;
+        left: 7.0vw;
     }
 
 
     #cart-badge-bottom {
         position: absolute;
         top: -2vw;
-        left: 8.7vw;
+        left: 14.0vw;
 
         padding: {
             left: 1.5vw;
@@ -205,6 +214,9 @@
         -moz-border-radius: 3vw;
         border-radius: 3vw;
         font-size: 4vw;
+        position: absolute;
+        top: -2vw;
+        left: 7.0vw;
     }
 
     .badge {

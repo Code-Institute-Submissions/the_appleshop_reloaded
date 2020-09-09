@@ -1,12 +1,12 @@
 .checkout-wrapper {
     padding: {
-        top: 4vw;
+        top: 20vw;
         bottom: 25vw;
 
     }
 
+    min-height: 100vh;
     background-color: $page-bgr-clr;
-    min-height: 85vh;
 }
 
 caption p {
@@ -40,7 +40,7 @@ caption p {
     margin-top: 6vw;
 }
 
-#payment-form > legend {
+#payment-form>legend {
     color: white;
 }
 
@@ -88,10 +88,12 @@ caption p {
     width: 35vw;
     background-color: lightslategray;
     margin-left: 2px;
+
     font: {
         family: $dosisFont;
         size: 5.0vw;
     }
+
     color: rgb(65, 65, 65);
     transition: color .3s ease-in-out;
 }

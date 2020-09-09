@@ -53,10 +53,10 @@ a:active {
 
 @media screen and (max-width: 414px) and (max-height: 823px) and (orientation: portrait) {
   .cart-wrapper {
-    padding-top: 4vw;
+    padding-top: 20vw;
     padding-bottom: 25vw;
+    min-height: 100vh;
     background-color: #003553;
-    min-height: 92vh;
   }
   .addcard-icon {
     font-size: 4vw;
@@ -138,10 +138,10 @@ a:active {
     width: 40vw;
   }
   .checkout-wrapper {
-    padding-top: 4vw;
+    padding-top: 20vw;
     padding-bottom: 25vw;
+    min-height: 100vh;
     background-color: #003553;
-    min-height: 85vh;
   }
   caption p {
     word-wrap: break-word;
@@ -234,10 +234,10 @@ a:active {
     color: whitesmoke;
   }
   .login-wrapper {
-    padding-top: 4vw;
+    padding-top: 20vw;
     padding-bottom: 25vw;
+    min-height: 100vh;
     background-color: #003553;
-    min-height: 92vh;
   }
   #loginform {
     width: 90vw;
@@ -268,25 +268,29 @@ a:active {
     background-color: #00aa00;
     margin-left: 2.4vw;
   }
-  #password-reset-link, #register-link {
+  #password-reset-link,
+  #register-link {
     width: 44vw;
     font-family: "Dosis", sans-serif;
     font-size: 4.5vw;
   }
-  #password-reset-link a, #register-link a {
+  #password-reset-link a,
+  #register-link a {
     color: #414141;
     -webkit-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
     text-decoration: none;
   }
-  #login-btn:hover, #password-reset-link a:hover, #register-link a:hover {
+  #login-btn:hover,
+  #password-reset-link a:hover,
+  #register-link a:hover {
     color: darkred;
   }
   .password-reset-wrapper {
-    height: 70vh;
     background-color: #003553;
-    min-height: 92vh;
-    padding-top: 4vw;
+    padding-top: 20vw;
+    padding-bottom: 25vw;
+    min-height: 100vh;
   }
   .accountform {
     width: 90vw;
@@ -330,10 +334,10 @@ a:active {
     color: darkred;
   }
   .wishform {
-    width: 30vw;
+    width: 36vw;
   }
   .revform {
-    width: 29vw;
+    width: 35vw;
     margin-left: 3px;
   }
   .add-wish-btn,
@@ -359,10 +363,10 @@ a:active {
     color: darkred;
   }
   .product-wrapper {
-    padding-top: 4vw;
+    padding-top: 20vw;
     padding-bottom: 25vw;
+    min-height: 100vh;
     background-color: #003553;
-    min-height: 92vh;
   }
   .search-field-wrapper {
     width: 100%;
@@ -384,6 +388,7 @@ a:active {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    padding: 12px;
   }
   .product-image {
     width: 50vw;
@@ -433,10 +438,10 @@ a:active {
     width: 100%;
   }
   .profile-wrapper {
-    padding-top: 4vw;
+    padding-top: 20vw;
     padding-bottom: 25vw;
+    min-height: 100vh;
     background-color: #003553;
-    min-height: 85vh;
   }
   .nav-tabs {
     padding-top: 6vw;
@@ -529,8 +534,9 @@ a:active {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     width: 100%;
-    padding-top: 4vw;
-    padding-bottom: 20vw;
+    padding-top: 20vw;
+    padding-bottom: 25vw;
+    min-height: 100vh;
     background-color: #003553;
   }
   #registration-message {
@@ -558,10 +564,10 @@ a:active {
     transition: color .3s ease-in-out;
   }
   .reviews-wrapper {
-    padding-top: 4vw;
-    padding-bottom: 20vw;
+    padding-top: 20vw;
+    padding-bottom: 25vw;
+    min-height: 100vh;
     background-color: #003553;
-    min-height: 92vh;
   }
   .edit-review-wrapper {
     padding-bottom: 25vw;
@@ -668,7 +674,10 @@ a:active {
     background-color: orange;
     margin: 2px;
   }
-  .back-to-products-btn:hover, .back-to-reviews-btn:hover, .review-details-btn:hover, return-product-btn:hover {
+  .back-to-products-btn:hover,
+  .back-to-reviews-btn:hover,
+  .review-details-btn:hover,
+  return-product-btn:hover {
     color: darkred;
   }
   .review-headline {
@@ -730,10 +739,10 @@ a:active {
     color: darkred;
   }
   .wishlist-wrapper {
-    padding-top: 4vw;
+    padding-top: 20vw;
     padding-bottom: 25vw;
+    min-height: 100vh;
     background-color: #003553;
-    min-height: 92vh;
   }
   .wishlist-remove-btn {
     width: 30vw;
@@ -769,7 +778,6 @@ a:active {
   }
   body {
     font-family: "Dosis", sans-serif;
-    padding-top: 56px;
     font-size: 5.0vw;
   }
   .page-headline {
@@ -808,6 +816,9 @@ a:active {
     margin-left: 15px;
     font-size: 6.5vw;
   }
+  .mobile-list-items a i, .mobile-list-items a span {
+    margin-right: 10vw;
+  }
   .navbar-nav {
     margin: 14.5px 0;
   }
@@ -826,6 +837,7 @@ a:active {
     margin-top: 15px;
   }
   .alert {
+    margin-top: 14.5vw;
     margin-bottom: 0;
   }
   .icon-bar {
@@ -880,7 +892,7 @@ a:active {
   #wishlist-badge-bottom {
     position: absolute;
     top: -2vw;
-    left: 8.7vw;
+    left: 13.7vw;
     padding-left: 2vw;
     padding-right: 2vw;
     max-width: none;
@@ -888,11 +900,14 @@ a:active {
   .badge-wishlist {
     border-radius: 3vw;
     font-size: 4vw;
+    position: absolute;
+    top: -2vw;
+    left: 7.0vw;
   }
   #cart-badge-bottom {
     position: absolute;
     top: -2vw;
-    left: 8.7vw;
+    left: 14.0vw;
     padding-left: 1.5vw;
     padding-right: 1.5vw;
     max-width: none;
@@ -900,6 +915,9 @@ a:active {
   .badge-cart {
     border-radius: 3vw;
     font-size: 4vw;
+    position: absolute;
+    top: -2vw;
+    left: 7.0vw;
   }
   .badge {
     padding-right: 5px;
@@ -920,13 +938,13 @@ a:active {
 
 @media screen and (min-width: 415px) and (max-width: 672px) and (min-height: 600px) and (max-height: 970px) and (orientation: portrait) {
   .cart-wrapper {
-    padding-top: 4vw;
+    padding-top: 14vw;
     padding-bottom: 25vw;
+    min-height: 100vh;
     background-color: #003553;
-    min-height: 92vh;
   }
   .addcard-icon {
-    font-size: 3vw;
+    font-size: 5.5vw;
   }
   .cart-summary-wrapper {
     width: 100%;
@@ -1005,10 +1023,10 @@ a:active {
     width: 40vw;
   }
   .checkout-wrapper {
-    padding-top: 4vw;
+    padding-top: 14vw;
     padding-bottom: 25vw;
+    min-height: 100vh;
     background-color: #003553;
-    min-height: 85vh;
   }
   caption p {
     word-wrap: break-word;
@@ -1101,10 +1119,10 @@ a:active {
     color: whitesmoke;
   }
   .login-wrapper {
-    padding-top: 4vw;
+    padding-top: 14vw;
     padding-bottom: 25vw;
+    min-height: 100vh;
     background-color: #003553;
-    min-height: 92vh;
   }
   #loginform {
     width: 90vw;
@@ -1135,25 +1153,29 @@ a:active {
     background-color: #00aa00;
     margin-left: 2.4vw;
   }
-  #password-reset-link, #register-link {
+  #password-reset-link,
+  #register-link {
     width: 44vw;
     font-family: "Dosis", sans-serif;
     font-size: 4.5vw;
   }
-  #password-reset-link a, #register-link a {
+  #password-reset-link a,
+  #register-link a {
     color: #414141;
     -webkit-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
     text-decoration: none;
   }
-  #login-btn:hover, #password-reset-link a:hover, #register-link a:hover {
+  #login-btn:hover,
+  #password-reset-link a:hover,
+  #register-link a:hover {
     color: darkred;
   }
   .password-reset-wrapper {
-    height: 70vh;
     background-color: #003553;
-    min-height: 92vh;
-    padding-top: 4vw;
+    padding-top: 14vw;
+    padding-bottom: 25vw;
+    min-height: 100vh;
   }
   .accountform {
     width: 90vw;
@@ -1197,10 +1219,10 @@ a:active {
     color: darkred;
   }
   .wishform {
-    width: 30vw;
+    width: 36vw;
   }
   .revform {
-    width: 29vw;
+    width: 35vw;
     margin-left: 3px;
   }
   .add-wish-btn,
@@ -1226,10 +1248,10 @@ a:active {
     color: darkred;
   }
   .product-wrapper {
-    padding-top: 4vw;
+    padding-top: 14vw;
     padding-bottom: 25vw;
+    min-height: 100vh;
     background-color: #003553;
-    min-height: 92vh;
   }
   .search-field-wrapper {
     width: 100%;
@@ -1251,6 +1273,7 @@ a:active {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    padding: 12px;
   }
   .product-image {
     width: 50vw;
@@ -1300,10 +1323,10 @@ a:active {
     width: 100%;
   }
   .profile-wrapper {
-    padding-top: 4vw;
+    padding-top: 14vw;
     padding-bottom: 25vw;
+    min-height: 100vh;
     background-color: #003553;
-    min-height: 85vh;
   }
   .nav-tabs {
     padding-top: 6vw;
@@ -1397,8 +1420,9 @@ a:active {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     width: 100%;
-    padding-top: 4vw;
-    padding-bottom: 20vw;
+    padding-top: 14vw;
+    padding-bottom: 25vw;
+    min-height: 100vh;
     background-color: #003553;
   }
   #registration-message {
@@ -1426,10 +1450,10 @@ a:active {
     transition: color .3s ease-in-out;
   }
   .reviews-wrapper {
-    padding-top: 4vw;
-    padding-bottom: 20vw;
+    padding-top: 14vw;
+    padding-bottom: 25vw;
+    min-height: 100vh;
     background-color: #003553;
-    min-height: 92vh;
   }
   .edit-review-wrapper {
     padding-bottom: 25vw;
@@ -1536,7 +1560,10 @@ a:active {
     background-color: orange;
     margin: 2px;
   }
-  .back-to-products-btn:hover, .back-to-reviews-btn:hover, .review-details-btn:hover, return-product-btn:hover {
+  .back-to-products-btn:hover,
+  .back-to-reviews-btn:hover,
+  .review-details-btn:hover,
+  return-product-btn:hover {
     color: darkred;
   }
   .review-headline {
@@ -1598,10 +1625,10 @@ a:active {
     color: darkred;
   }
   .wishlist-wrapper {
-    padding-top: 4vw;
+    padding-top: 14vw;
     padding-bottom: 25vw;
+    min-height: 100vh;
     background-color: #003553;
-    min-height: 92vh;
   }
   .wishlist-remove-btn {
     width: 30vw;
@@ -1637,7 +1664,6 @@ a:active {
   }
   body {
     font-family: "Dosis", sans-serif;
-    padding-top: 56px;
     font-size: 5.0vw;
   }
   .page-headline {
@@ -1675,6 +1701,9 @@ a:active {
     margin-bottom: 20px;
     margin-left: 15px;
     font-size: 6.5vw;
+  }
+  .mobile-list-items a i, .mobile-list-items a span {
+    margin-right: 10vw;
   }
   .navbar-nav {
     margin: 14.5px 0;
@@ -1746,6 +1775,9 @@ a:active {
   .badge-wishlist {
     border-radius: 3vw;
     font-size: 4vw;
+    position: absolute;
+    top: -1vw;
+    left: 7.0vw;
   }
   #cart-badge-bottom {
     position: absolute;
@@ -1758,6 +1790,9 @@ a:active {
   .badge-cart {
     border-radius: 3vw;
     font-size: 4vw;
+    position: absolute;
+    top: -1vw;
+    left: 7.0vw;
   }
   .badge {
     padding-right: 5px;
@@ -1778,10 +1813,10 @@ a:active {
 
 @media handheld, (width: 768px) and (orientation: portrait), handheld, (min-width: 833px) and (max-width: 834px) and (orientation: portrait), handheld, (width: 1024px) and (orientation: portrait) {
   .cart-wrapper {
-    padding-top: 2vw;
+    padding-top: 10vw;
     padding-bottom: 25vw;
+    min-height: 100vh;
     background-color: #003553;
-    min-height: 92vh;
   }
   .addcard-icon {
     font-size: 5vw;
@@ -1864,10 +1899,10 @@ a:active {
     width: 40vw;
   }
   .checkout-wrapper {
-    padding-top: 2vw;
+    padding-top: 10vw;
     padding-bottom: 25vw;
+    min-height: 100vh;
     background-color: #003553;
-    min-height: 85vh;
   }
   caption p {
     word-wrap: break-word;
@@ -1962,10 +1997,10 @@ a:active {
     color: whitesmoke;
   }
   .login-wrapper {
-    padding-top: 2vw;
+    padding-top: 10vw;
     padding-bottom: 25vw;
+    min-height: 100vh;
     background-color: #003553;
-    min-height: 92vh;
   }
   #loginform {
     width: 52vw;
@@ -1996,25 +2031,29 @@ a:active {
     background-color: #00aa00;
     margin-left: 2.4vw;
   }
-  #password-reset-link, #register-link {
+  #password-reset-link,
+  #register-link {
     width: 35vw;
     font-family: "Dosis", sans-serif;
     font-size: 4.5vw;
   }
-  #password-reset-link a, #register-link a {
+  #password-reset-link a,
+  #register-link a {
     color: #414141;
     -webkit-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
     text-decoration: none;
   }
-  #login-btn:hover, #password-reset-link a:hover, #register-link a:hover {
+  #login-btn:hover,
+  #password-reset-link a:hover,
+  #register-link a:hover {
     color: darkred;
   }
   .password-reset-wrapper {
-    height: 70vh;
     background-color: #003553;
-    min-height: 92vh;
-    padding-top: 2vw;
+    padding-top: 10vw;
+    padding-bottom: 25vw;
+    min-height: 100vh;
   }
   .accountform {
     width: 90vw;
@@ -2087,10 +2126,10 @@ a:active {
     color: darkred;
   }
   .product-wrapper {
-    padding-top: 2vw;
+    padding-top: 10vw;
     padding-bottom: 25vw;
+    min-height: 100vh;
     background-color: #003553;
-    min-height: 92vh;
   }
   .search-field-wrapper {
     width: 100%;
@@ -2113,6 +2152,7 @@ a:active {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    padding: 12px;
   }
   .product-image {
     width: 44vw;
@@ -2163,10 +2203,10 @@ a:active {
     margin-top: 1vw;
   }
   .profile-wrapper {
-    padding-top: 2vw;
+    padding-top: 10vw;
     padding-bottom: 25vw;
+    min-height: 100vh;
     background-color: #003553;
-    min-height: 85vh;
   }
   .nav-tabs {
     padding-top: 6vw;
@@ -2260,8 +2300,9 @@ a:active {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     width: 100%;
-    padding-top: 2vw;
-    padding-bottom: 20vw;
+    padding-top: 10vw;
+    padding-bottom: 25vw;
+    min-height: 100vh;
     background-color: #003553;
   }
   #registration-message {
@@ -2506,7 +2547,6 @@ a:active {
   }
   body {
     font-family: "Dosis", sans-serif;
-    padding-top: 56px;
     font-size: 4.0vw;
     background-color: grey;
   }
@@ -2579,8 +2619,8 @@ a:active {
     margin-top: 15px;
   }
   .alert {
+    margin-top: 12.2vw;
     margin-bottom: 0;
-    padding-top: 7vw;
   }
   .messages {
     height: 5vw;
@@ -2640,10 +2680,11 @@ a:active {
   #wishlist-badge-bottom-ipad {
     position: absolute;
     top: -2vw;
-    left: 7.0vw;
+    left: 10.0vw;
     padding-left: 2vw;
     padding-right: 2vw;
     max-width: none;
+    font-size: 3.3vw;
   }
   .badge-wishlist {
     border-radius: 3vw;
@@ -2652,10 +2693,11 @@ a:active {
   #cart-badge-bottom-ipad {
     position: absolute;
     top: -2vw;
-    left: 7.5vw;
+    left: 10.4vw;
     padding-left: 1.5vw;
     padding-right: 1.5vw;
     max-width: none;
+    font-size: 3.3vw;
   }
   .badge-cart {
     border-radius: 3vw;
@@ -2680,10 +2722,10 @@ a:active {
 
 @media screen and (max-height: 414px) and (max-width: 823px) and (orientation: landscape) {
   .cart-wrapper {
-    padding-top: 2vw;
+    padding-top: 10vw;
     padding-bottom: 2vw;
+    min-height: 100vh;
     background-color: #003553;
-    min-height: 85vh;
   }
   .addcard-icon {
     font-size: 2.5vw;
@@ -2750,7 +2792,8 @@ a:active {
     width: 18vw;
     font-size: 2.5vw;
   }
-  .shipping-fee, #totalamount {
+  .shipping-fee,
+  #totalamount {
     width: 100%;
     font-size: 4.0vw;
     color: white;
@@ -2766,9 +2809,10 @@ a:active {
     width: 30vw;
   }
   .checkout-wrapper {
+    padding-top: 10vw;
     padding-bottom: 2vw;
+    min-height: 100vh;
     background-color: #003553;
-    min-height: 92vh;
   }
   caption p {
     word-wrap: break-word;
@@ -2864,9 +2908,10 @@ a:active {
   .login-wrapper {
     -ms-flex-line-pack: center;
         align-content: center;
+    padding-top: 10vw;
     padding-bottom: 2vw;
+    min-height: 100vh;
     background-color: #003553;
-    min-height: 86vh;
   }
   #loginform {
     width: 40vw;
@@ -2902,26 +2947,31 @@ a:active {
     background-color: #00aa00;
     margin-left: 0.4vw;
   }
-  #password-reset-link, #register-link {
+  #password-reset-link,
+  #register-link {
     width: 18vw;
     font-family: "Dosis", sans-serif;
     font-size: 2.0vw;
   }
-  #password-reset-link a, #register-link a {
+  #password-reset-link a,
+  #register-link a {
     color: #414141;
     -webkit-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
     text-decoration: none;
   }
-  #login-btn:hover, #password-reset-link a:hover, #register-link a:hover {
+  #login-btn:hover,
+  #password-reset-link a:hover,
+  #register-link a:hover {
     color: darkred;
   }
   .password-reset-wrapper {
-    height: 70vh;
     -ms-flex-line-pack: center;
         align-content: center;
     background-color: #003553;
-    min-height: 86vh;
+    padding-top: 10vw;
+    padding-bottom: 2vw;
+    min-height: 100vh;
   }
   .accountform {
     width: 50vw;
@@ -2968,7 +3018,7 @@ a:active {
     width: 4.0vw;
   }
   .revform {
-    width: 4.0vw;
+    width: 5.0vw;
   }
   .add-wish-btn,
   .remove-wish-btn,
@@ -2993,10 +3043,10 @@ a:active {
     color: darkred;
   }
   .product-wrapper {
-    padding-top: 2vw;
+    padding-top: 10vw;
     padding-bottom: 2vw;
+    min-height: 100vh;
     background-color: #003553;
-    min-height: 85vh;
   }
   .search-field-wrapper {
     width: 100%;
@@ -3020,6 +3070,7 @@ a:active {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    padding: 12px;
   }
   .product-image {
     width: 34vw;
@@ -3072,10 +3123,10 @@ a:active {
     width: 100%;
   }
   .profile-wrapper {
-    padding-top: 2vw;
+    padding-top: 10vw;
     padding-bottom: 2vw;
+    min-height: 100vh;
     background-color: #003553;
-    min-height: 92vh;
   }
   .nav-tabs {
     padding-top: 1vw;
@@ -3166,9 +3217,10 @@ a:active {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     width: 100%;
-    padding-bottom: 2vw;
     background-color: #003553;
-    min-height: 92vh;
+    padding-top: 10vw;
+    padding-bottom: 2vw;
+    min-height: 100vh;
   }
   #registration-message {
     width: 90vw;
@@ -3198,10 +3250,10 @@ a:active {
     color: darkred;
   }
   .reviews-wrapper {
-    padding-top: 2vw;
+    padding-top: 10vw;
     padding-bottom: 2vw;
+    min-height: 100vh;
     background-color: #003553;
-    min-height: 85vh;
   }
   .reviewcard {
     width: 47vw;
@@ -3377,10 +3429,10 @@ a:active {
     color: darkred;
   }
   .wishlist-wrapper {
-    padding-top: 2vw;
+    padding-top: 10vw;
     padding-bottom: 2vw;
+    min-height: 100vh;
     background-color: #003553;
-    min-height: 85vh;
   }
   .wishlist-remove-btn {
     width: 3.0vw;
@@ -3417,7 +3469,6 @@ a:active {
   }
   body {
     font-family: "Dosis", sans-serif;
-    padding-top: 56px;
     font-size: 3.0vw;
   }
   .page-headline {
@@ -3479,8 +3530,8 @@ a:active {
     margin-right: 0;
   }
   .container {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 0px;
+    padding-right: 0px;
     min-width: 100%;
   }
   .mobile-list-items {
@@ -3489,6 +3540,9 @@ a:active {
     margin-left: 15px;
     font-size: 3.5vw;
     padding-right: 2vw;
+  }
+  .mobile-list-items a i, .mobile-list-items a span {
+    margin-right: 5.5vw;
   }
   .navbar .navbar-nav > li > a {
     text-align: left;
@@ -3503,6 +3557,7 @@ a:active {
     margin-top: 15px;
   }
   .alert {
+    margin-top: 7.5vw;
     margin-bottom: 0;
   }
   .icon-bar {
@@ -3563,6 +3618,9 @@ a:active {
   .badge-wishlist {
     border-radius: 3vw;
     font-size: 2.0vw;
+    position: absolute;
+    top: -1vw;
+    left: 3.7vw;
   }
   #cart-badge-bottom {
     position: absolute;
@@ -3575,6 +3633,9 @@ a:active {
   .badge-cart {
     border-radius: 3vw;
     font-size: 2.0vw;
+    position: absolute;
+    top: -1vw;
+    left: 3.7vw;
   }
   .badge {
     padding-right: 5px;
@@ -3595,10 +3656,10 @@ a:active {
 
 @media screen and (min-height: 415px) and (min-width: 768px) and (max-width: 3840px) and (orientation: landscape) {
   .cart-wrapper {
-    padding-top: 2vw;
+    padding-top: 6vw;
     padding-bottom: 2vw;
     background-color: #003553;
-    min-height: 93vh;
+    min-height: 100vh;
   }
   .addcard-icon {
     font-size: 1.4vw;
@@ -3682,10 +3743,10 @@ a:active {
     width: 10vw;
   }
   .checkout-wrapper {
-    padding-top: 2vw;
+    padding-top: 6vw;
     padding-bottom: 2vw;
     background-color: #003553;
-    min-height: 93vh;
+    min-height: 100vh;
   }
   caption p {
     word-wrap: break-word;
@@ -3779,9 +3840,9 @@ a:active {
     color: whitesmoke;
   }
   .login-wrapper {
-    padding-top: 2vw;
+    padding-top: 6vw;
     background-color: #003553;
-    min-height: 93vh;
+    min-height: 100vh;
   }
   #loginform {
     width: 30vw;
@@ -3835,7 +3896,7 @@ a:active {
     -ms-flex-line-pack: center;
         align-content: center;
     background-color: #003553;
-    min-height: 93vh;
+    min-height: 100vh;
   }
   .accountform {
     width: 28vw;
@@ -3907,10 +3968,10 @@ a:active {
     color: darkred;
   }
   .product-wrapper {
-    padding-top: 2vw;
+    padding-top: 6vw;
     padding-bottom: 2vw;
     background-color: #003553;
-    min-height: 93vh;
+    min-height: 100vh;
   }
   .search-field-wrapper {
     width: 100%;
@@ -3934,7 +3995,7 @@ a:active {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    padding: 1.2vw;
+    padding: 12px;
   }
   .product-image {
     width: 16vw;
@@ -3983,10 +4044,10 @@ a:active {
     width: 100%;
   }
   .profile-wrapper {
-    padding-top: 2vw;
+    padding-top: 6vw;
     padding-bottom: 2vw;
     background-color: #003553;
-    min-height: 93vh;
+    min-height: 100vh;
   }
   .nav-tabs {
     padding-top: 1vw;
@@ -4077,9 +4138,10 @@ a:active {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     width: 100%;
+    padding-top: 6vw;
     padding-bottom: 2vw;
     background-color: #003553;
-    min-height: 93vh;
+    min-height: 100vh;
   }
   #registration-message {
     width: 90vw;
@@ -4109,10 +4171,10 @@ a:active {
     color: darkred;
   }
   .reviews-wrapper {
-    padding-top: 2vw;
+    padding-top: 6vw;
     padding-bottom: 2vw;
     background-color: #003553;
-    min-height: 93vh;
+    min-height: 100vh;
   }
   .reviewcard {
     width: 24vw;
@@ -4288,10 +4350,10 @@ a:active {
     color: darkred;
   }
   .wishlist-wrapper {
-    padding-top: 2vw;
+    padding-top: 6vw;
     padding-bottom: 2vw;
     background-color: #003553;
-    min-height: 93vh;
+    min-height: 100vh;
   }
   .wishlist-remove-btn {
     width: 2.5vw;
@@ -4328,7 +4390,6 @@ a:active {
   }
   body {
     font-family: "Dosis", sans-serif;
-    padding-top: 56px;
     font-size: 1.2vw;
   }
   .page-headline {
@@ -4411,6 +4472,7 @@ a:active {
     margin-top: 15px;
   }
   .alert {
+    margin-top: 4.5vw;
     margin-bottom: 0;
   }
   .icon-bar {
@@ -4471,6 +4533,9 @@ a:active {
   .badge-wishlist {
     border-radius: 3vw;
     font-size: 1.2vw;
+    position: absolute;
+    top: -0.5vw;
+    left: 6vw;
   }
   #cart-badge-bottom {
     position: absolute;
@@ -4483,6 +4548,9 @@ a:active {
   .badge-cart {
     border-radius: 3vw;
     font-size: 1.2vw;
+    position: absolute;
+    top: -0.5vw;
+    left: 6vw;
   }
   .badge {
     padding-right: 5px;
@@ -4503,10 +4571,10 @@ a:active {
 
 @media screen and (min-height: 415px) and (min-width: 601px) and (max-width: 767px) and (orientation: landscape) {
   .cart-wrapper {
-    padding-top: 2vw;
+    padding-top: 6vw;
     padding-bottom: 2vw;
     background-color: #003553;
-    min-height: 93vh;
+    min-height: 100vh;
   }
   .addcard-icon {
     font-size: 2.4vw;
@@ -4590,10 +4658,10 @@ a:active {
     width: 22vw;
   }
   .checkout-wrapper {
-    padding-top: 2vw;
+    padding-top: 6vw;
     padding-bottom: 2vw;
     background-color: #003553;
-    min-height: 93vh;
+    min-height: 100vh;
   }
   caption p {
     word-wrap: break-word;
@@ -4687,9 +4755,9 @@ a:active {
     color: whitesmoke;
   }
   .login-wrapper {
-    padding-top: 2vw;
+    padding-top: 6vw;
     background-color: #003553;
-    min-height: 93vh;
+    min-height: 100vh;
   }
   #loginform {
     width: 50vw;
@@ -4742,8 +4810,10 @@ a:active {
   .password-reset-wrapper {
     -ms-flex-line-pack: center;
         align-content: center;
+    padding-top: 6vw;
+    padding-bottom: 2vw;
     background-color: #003553;
-    min-height: 93vh;
+    min-height: 100vh;
   }
   .accountform {
     width: 50vw;
@@ -4815,10 +4885,10 @@ a:active {
     color: darkred;
   }
   .product-wrapper {
-    padding-top: 2vw;
+    padding-top: 6vw;
     padding-bottom: 2vw;
     background-color: #003553;
-    min-height: 93vh;
+    min-height: 100vh;
   }
   .search-field-wrapper {
     width: 100%;
@@ -4842,7 +4912,7 @@ a:active {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    padding: 1.2vw;
+    padding: 12px;
   }
   .product-image {
     width: 30vw;
@@ -4986,9 +5056,10 @@ a:active {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     width: 100%;
+    padding-top: 6vw;
     padding-bottom: 2vw;
     background-color: #003553;
-    min-height: 93vh;
+    min-height: 100vh;
   }
   #registration-message {
     width: 90vw;
@@ -5018,10 +5089,10 @@ a:active {
     color: darkred;
   }
   .reviews-wrapper {
-    padding-top: 2vw;
+    padding-top: 6vw;
     padding-bottom: 2vw;
     background-color: #003553;
-    min-height: 93vh;
+    min-height: 100vh;
   }
   .reviewcard {
     width: 40vw;
@@ -5197,10 +5268,10 @@ a:active {
     color: darkred;
   }
   .wishlist-wrapper {
-    padding-top: 2vw;
+    padding-top: 6vw;
     padding-bottom: 2vw;
     background-color: #003553;
-    min-height: 93vh;
+    min-height: 100vh;
   }
   .wishlist-remove-btn {
     width: 2.5vw;
@@ -5237,7 +5308,6 @@ a:active {
   }
   body {
     font-family: "Dosis", sans-serif;
-    padding-top: 56px;
     font-size: 2.5vw;
   }
   .page-headline {
@@ -5325,6 +5395,7 @@ a:active {
     margin-top: 15px;
   }
   .alert {
+    margin-top: 4.5vw;
     margin-bottom: 0;
   }
   .icon-bar {
@@ -5417,9 +5488,10 @@ a:active {
 
 @media handheld, (width: 1024px) and (orientation: landscape), handheld, (min-width: 1111px) and (max-width: 1112px) and (orientation: landscape), handheld, (min-width: 1365px) and (max-width: 1366px) and (orientation: landscape) {
   .cart-wrapper {
+    padding-top: 6vw;
     padding-bottom: 2vw;
+    min-height: 100vh;
     background-color: #003553;
-    min-height: 92vh;
   }
   .addcard-icon {
     font-size: 1.4vw;
@@ -5502,9 +5574,10 @@ a:active {
     width: 10vw;
   }
   .checkout-wrapper {
-    padding-bottom: 2vw;
     background-color: #003553;
-    min-height: 92vh;
+    padding-top: 6vw;
+    padding-bottom: 2vw;
+    min-height: 100vh;
   }
   caption p {
     word-wrap: break-word;
@@ -5597,9 +5670,10 @@ a:active {
   .login-wrapper {
     -ms-flex-line-pack: center;
         align-content: center;
-    padding-top: 2vw;
+    padding-top: 6vw;
+    padding-bottom: 2vw;
+    min-height: 100vh;
     background-color: #003553;
-    min-height: 92vh;
   }
   #loginform {
     width: 30vw;
@@ -5635,26 +5709,31 @@ a:active {
     background-color: #00aa00;
     margin-left: 0.4vw;
   }
-  #password-reset-link, #register-link {
+  #password-reset-link,
+  #register-link {
     width: 10vw;
     font-family: "Dosis", sans-serif;
     font-size: 1.2vw;
   }
-  #password-reset-link a, #register-link a {
+  #password-reset-link a,
+  #register-link a {
     color: #414141;
     -webkit-transition: color .3s ease-in-out;
     transition: color .3s ease-in-out;
     text-decoration: none;
   }
-  #login-btn:hover, #password-reset-link a:hover, #register-link a:hover {
+  #login-btn:hover,
+  #password-reset-link a:hover,
+  #register-link a:hover {
     color: darkred;
   }
   .password-reset-wrapper {
-    height: 70vh;
     -ms-flex-line-pack: center;
         align-content: center;
     background-color: #003553;
-    min-height: 92vh;
+    padding-top: 6vw;
+    padding-bottom: 2vw;
+    min-height: 100vh;
   }
   .accountform {
     width: 28vw;
@@ -5729,10 +5808,10 @@ a:active {
     color: darkred;
   }
   .product-wrapper {
-    padding-top: 2vw;
+    padding-top: 6vw;
     padding-bottom: 2vw;
+    min-height: 100vh;
     background-color: #003553;
-    min-height: 95vh;
   }
   .search-field-wrapper {
     width: 100%;
@@ -5756,6 +5835,7 @@ a:active {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    padding: 12px;
   }
   .product-image {
     width: 16vw;
@@ -5807,10 +5887,10 @@ a:active {
     width: 100%;
   }
   .profile-wrapper {
-    padding-top: 2vw;
+    padding-top: 6vw;
     padding-bottom: 2vw;
+    min-height: 100vh;
     background-color: #003553;
-    min-height: 92vh;
   }
   .nav-tabs {
     padding-top: 1vw;
@@ -5901,9 +5981,10 @@ a:active {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     width: 100%;
-    padding-bottom: 2vw;
     background-color: #003553;
-    min-height: 92vh;
+    padding-top: 6vw;
+    padding-bottom: 2vw;
+    min-height: 100vh;
   }
   #registration-message {
     width: 90vw;
@@ -5933,10 +6014,10 @@ a:active {
     color: darkred;
   }
   .reviews-wrapper {
-    padding-top: 2vw;
+    padding-top: 6vw;
     padding-bottom: 2vw;
+    min-height: 100vh;
     background-color: #003553;
-    min-height: 95vh;
   }
   .reviewcard {
     width: 24vw;
@@ -6112,10 +6193,10 @@ a:active {
     color: darkred;
   }
   .wishlist-wrapper {
-    padding-top: 2vw;
+    padding-top: 6vw;
     padding-bottom: 2vw;
+    min-height: 100vh;
     background-color: #003553;
-    min-height: 92vh;
   }
   .wishlist-remove-btn {
     width: 2.5vw;
@@ -6152,7 +6233,6 @@ a:active {
   }
   body {
     font-family: "Dosis", sans-serif;
-    padding-top: 55px;
     font-size: 1.2vw;
   }
   .page-headline {
@@ -6238,6 +6318,7 @@ a:active {
     margin-top: 15px;
   }
   .alert {
+    margin-top: 4.5vw;
     margin-bottom: 0;
     font-size: 2vw;
   }

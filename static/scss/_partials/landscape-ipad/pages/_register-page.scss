@@ -2,16 +2,23 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    padding-bottom: 2vw;
     background-color: $page-bgr-clr;
-    min-height: 92vh;
+
+    padding: {
+        top: 6vw;
+        bottom: 2vw;
+    }
+
+    min-height: 100vh;
 }
 
 #registration-message {
     width: 90vw;
+
     margin: {
         bottom: 1.5vw;
     }
+
     text-align: center;
     color: white;
 }

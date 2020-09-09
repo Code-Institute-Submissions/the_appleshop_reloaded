@@ -2,9 +2,12 @@
 // screen and (width: 1112px) and (min-height: 833px) and (max-height: 834px) and (orientation: landscape),
 // screen and (min-width: 1365px) and (max-width: 1366px) and (min-height: 1023px) and (max-height: 1024px) and (orientation: landscape) {
 
-@media handheld, (width: 1024px) and (orientation: landscape),
-handheld, (min-width: 1111px) and (max-width: 1112px) and (orientation: landscape),
-handheld, (min-width: 1365px) and (max-width: 1366px) and (orientation: landscape) {
+@media handheld,
+(width: 1024px) and (orientation: landscape),
+handheld,
+(min-width: 1111px) and (max-width: 1112px) and (orientation: landscape),
+handheld,
+(min-width: 1365px) and (max-width: 1366px) and (orientation: landscape) {
 
     @import "pages/_cart-page.scss";
     @import "pages/_checkout-page.scss";
@@ -20,7 +23,6 @@ handheld, (min-width: 1365px) and (max-width: 1366px) and (orientation: landscap
 
     body {
         font-family: $dosisFont;
-        padding-top: 55px;
         font-size: 1.2vw;
     }
 
@@ -148,8 +150,13 @@ handheld, (min-width: 1365px) and (max-width: 1366px) and (orientation: landscap
         margin-top: 15px;
     }
 
+
     .alert {
-        margin-bottom: 0;
+        margin: {
+            top: 4.5vw;
+            bottom: 0;
+        }
+
         font-size: 2vw;
     }
 

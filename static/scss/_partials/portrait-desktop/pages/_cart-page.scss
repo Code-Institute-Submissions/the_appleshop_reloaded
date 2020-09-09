@@ -1,16 +1,17 @@
 .cart-wrapper {
     padding: {
-        top: 4vw;
+        top: 14vw;
         bottom: 25vw;
 
     }
 
+    min-height: 100vh;
+
     background-color: $page-bgr-clr;
-    min-height: 92vh;
 }
 
 .addcard-icon {
-    font-size: 3vw;
+    font-size: 5.5vw;
 }
 
 .cart-summary-wrapper {

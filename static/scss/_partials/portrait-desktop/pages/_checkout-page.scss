@@ -1,12 +1,13 @@
 .checkout-wrapper {
     padding: {
-        top: 4vw;
+        top: 14vw;
         bottom: 25vw;
 
     }
 
+    min-height: 100vh;
+
     background-color: $page-bgr-clr;
-    min-height: 85vh;
 }
 
 caption p {
@@ -40,7 +41,7 @@ caption p {
     margin-top: 6vw;
 }
 
-#payment-form > legend {
+#payment-form>legend {
     color: white;
 }
 

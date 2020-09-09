@@ -1,7 +1,11 @@
 .cart-wrapper {
-    padding-bottom: 2vw;
+    padding: {
+        top: 6vw;
+        bottom: 2vw;
+    }
+    min-height: 100vh;
+
     background-color: $page-bgr-clr;
-    min-height: 92vh;
 }
 
 .addcard-icon {

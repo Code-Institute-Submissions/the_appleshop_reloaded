@@ -1,11 +1,12 @@
 .cart-wrapper {
     padding: {
-        top: 2vw;
+        top: 10vw;
         bottom: 2vw;
     }
 
+    min-height: 100vh;
+
     background-color: $page-bgr-clr;
-    min-height: 85vh;
 }
 
 .addcard-icon {
@@ -70,7 +71,8 @@
     font-size: 2.5vw;
 }
 
-.shipping-fee, #totalamount {
+.shipping-fee,
+#totalamount {
     width: 100%;
     font-size: 4.0vw;
     color: white;
@@ -81,6 +83,7 @@
         left: 5px;
         right: 5px;
     }
+
     top: 2px;
 }
 

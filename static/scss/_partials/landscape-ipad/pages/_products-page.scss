@@ -1,11 +1,11 @@
 .product-wrapper {
     padding: {
-        top: 2vw;
+        top: 6vw;
         bottom: 2vw;
     }
+    min-height: 100vh;
         
     background-color: $page-bgr-clr;
-    min-height: 95vh;
 }
 
 .search-field-wrapper {
@@ -34,6 +34,7 @@
     background-color: cornsilk;
     display: flex;
     flex-wrap: wrap;
+    padding: 12px;
 }
 
 .product-image {

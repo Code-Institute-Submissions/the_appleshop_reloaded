@@ -131,39 +131,34 @@
 
                     <li class="mobile-list-items">
                         {% if app_path == "/" %}
-                        <a href="{% url 'index' %}" title="Our Bestsellers"><i class="fa fa-home active-app"></i>
-                            Topsellers</a>
+                        <a href="{% url 'index' %}" title="Our Bestsellers"><i class="fa fa-home active-app"></i>Topsellers</a>
                         {% else %}
-                        <a href="{% url 'index' %}" title="Our Bestsellers"><i class="fa fa-home"></i> Topsellers</a>
+                        <a href="{% url 'index' %}" title="Our Bestsellers"><i class="fa fa-home"></i>Topsellers</a>
                         {% endif %}
                     </li>
 
                     <li class="mobile-list-items">
                         {% if "products" in app_path %}
                         <a href="{% url 'products' %}" title="Products"><span
-                                class="glyphicon glyphicon-apple active-app"></span>
-                            Products</a>
+                                class="glyphicon glyphicon-apple active-app"></span>Products</a>
                         {% else %}
-                        <a href="{% url 'products' %}" title="Products"><span class="glyphicon glyphicon-apple"></span>
-                            Products</a>
+                        <a href="{% url 'products' %}" title="Products"><span class="glyphicon glyphicon-apple"></span>Products</a>
                         {% endif %}
                     </li>
 
                     <li class="mobile-list-items">
                         {% if "reviews" in app_path %}
-                        <a href="{% url 'get_reviews' %}" title="Reviews"><i class="fa fa-comment active-app"></i>
-                            Reviews</a>
+                        <a href="{% url 'get_reviews' %}" title="Reviews"><i class="fa fa-comment active-app"></i>Reviews</a>
                         {% else %}
-                        <a href="{% url 'get_reviews' %}" title="Reviews"><i class="fa fa-comment"></i> Reviews</a>
+                        <a href="{% url 'get_reviews' %}" title="Reviews"><i class="fa fa-comment"></i>Reviews</a>
                         {% endif %}
                     </li>
 
                     <li class="mobile-list-items">
                         {% if "wishlist" in app_path %}
-                        <a href="{% url 'view_wishlist' %}" title="Wishlist"><i class="fa fa-star active-app"></i>
-                            Wishlist</a>
+                        <a href="{% url 'view_wishlist' %}" title="Wishlist"><i class="fa fa-star active-app"></i>Wishlist</a>
                         {% else %}
-                        <a href="{% url 'view_wishlist' %}" title="Wishlist"><i class="fa fa-star"></i> Wishlist</a>
+                        <a href="{% url 'view_wishlist' %}" title="Wishlist"><i class="fa fa-star"></i>Wishlist</a>
                         {% endif %}
                         {%if wishlist_count > 0 %}
                         <label class="badge badge-wishlist badge-warning"><b>{{ wishlist_count }}</b></label>
@@ -173,10 +168,9 @@
                     <li class="mobile-list-items">
                         {% if "cart" in app_path %}
                         <a href="{% url 'view_cart' %}" title="Shopping Cart"><i
-                                class="fa fa-shopping-cart active-app"></i> Cart</a>
+                                class="fa fa-shopping-cart active-app"></i>Cart</a>
                         {% else %}
-                        <a href="{% url 'view_cart' %}" title="Shopping Cart"><i class="fa fa-shopping-cart"></i>
-                            Cart</a>
+                        <a href="{% url 'view_cart' %}" title="Shopping Cart"><i class="fa fa-shopping-cart"></i>Cart</a>
                         {% endif %}
                         {%if product_count > 0 %}
                         <label class="badge badge-cart badge-warning"><b>{{ product_count }}</b></label>
@@ -184,6 +178,7 @@
                     </li>
 
                     {% if user.is_authenticated %}
+
                     <li class="mobile-list-items">
                         {% if "profile" in app_path %}
                         <a href="{% url 'profile' %}" title="Profile"><i class="fa fa-user active-app"></i> Profile</a>
@@ -193,25 +188,24 @@
                     </li>
 
                     <li class="mobile-list-items">
-                        <a href="{% url 'logout' %}" title="Logout"><i class="fa fa-sign-out"></i> Log Out</a></li>
+                        <a href="{% url 'logout' %}" title="Logout"><i class="fa fa-sign-out"></i>Log Out</a></li>
 
                     {% else %}
 
                     <li class="mobile-list-items">
                         {% if "login" in app_path %}
-                        <a href="{% url 'login' %}" title="Login"><i class="fa fa-sign-in active-app"></i> Log In</a>
+                        <a href="{% url 'login' %}" title="Login"><i class="fa fa-sign-in active-app"></i>Log In</a>
                         {%  else %}
-                        <a href="{% url 'login' %}" title="Login"><i class="fa fa-sign-in"></i> Log In</a>
+                        <a href="{% url 'login' %}" title="Login"><i class="fa fa-sign-in"></i>Log In</a>
                         {% endif %}
                     </li>
 
                     <li class="mobile-list-items">
                         {% if "register" in app_path %}
                         <a href="{% url 'registration' %}" title="Registration"><i
-                                class="fa fa-user-plus active-app"></i> Register</a>
+                                class="fa fa-user-plus active-app"></i>Register</a>
                         {%  else %}
-                        <a href="{% url 'registration' %}" title="Registration"><i class="fa fa-user-plus"></i>
-                            Register</a>
+                        <a href="{% url 'registration' %}" title="Registration"><i class="fa fa-user-plus"></i>Register</a>
                         {% endif %}
                     </li>
                     

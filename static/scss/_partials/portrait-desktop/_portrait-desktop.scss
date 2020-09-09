@@ -15,7 +15,6 @@
 
     body {
         font-family: $dosisFont;
-        padding-top: 56px;
         font-size: 5.0vw;
     }
 
@@ -82,6 +81,10 @@
 
         font-size: 6.5vw;
 
+    }
+
+    .mobile-list-items a i, .mobile-list-items a span {
+        margin-right: 10vw;
     }
 
     .navbar-nav {
@@ -181,6 +184,9 @@
         -moz-border-radius: 3vw;
         border-radius: 3vw;
         font-size: 4vw;
+        position: absolute;
+        top: -1vw;
+        left: 7.0vw;
     }
 
 
@@ -202,6 +208,9 @@
         -moz-border-radius: 3vw;
         border-radius: 3vw;
         font-size: 4vw;
+        position: absolute;
+        top: -1vw;
+        left: 7.0vw;
     }
 
     .badge {

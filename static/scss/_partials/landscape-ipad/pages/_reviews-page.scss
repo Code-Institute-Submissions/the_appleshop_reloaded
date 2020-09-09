@@ -1,15 +1,17 @@
 .reviews-wrapper {
     padding: {
-        top: 2vw;
+        top: 6vw;
         bottom: 2vw;
     }
 
+    min-height: 100vh;
+
     background-color: $page-bgr-clr;
-    min-height: 95vh;
 }
 
 .reviewcard {
     width: 24vw;
+
     margin: {
         left: 5px;
         right: 5px;

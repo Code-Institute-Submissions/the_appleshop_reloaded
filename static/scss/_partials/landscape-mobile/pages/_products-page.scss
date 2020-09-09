@@ -1,15 +1,17 @@
 .product-wrapper {
     padding: {
-        top: 2vw;
+        top: 10vw;
         bottom: 2vw;
     }
-        
+
+    min-height: 100vh;
+
     background-color: $page-bgr-clr;
-    min-height: 85vh;
 }
 
 .search-field-wrapper {
     width: 100%;
+
     padding: {
         top: 2vw;
         bottom: 5vw;
@@ -18,6 +20,7 @@
 
 .productcard {
     width: 47vw;
+
     margin: {
         left: 5px;
         right: 5px;
@@ -34,6 +37,7 @@
     background-color: cornsilk;
     display: flex;
     flex-wrap: wrap;
+    padding: 12px;
 }
 
 .product-image {
@@ -55,6 +59,7 @@
     font-family: $dosisFont;
     font-size: 3.5vw;
     width: 100%;
+
     margin: {
         top: 5px;
         bottom: 5px;
