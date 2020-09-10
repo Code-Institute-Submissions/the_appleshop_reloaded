@@ -68,7 +68,8 @@ def registration(request):
 
 
 def user_profile(request):
-    """ The user's profile page """
+    """ The user's profile page. Checks for user's address and order
+    details in database """
     if not request.user.is_authenticated:
         return redirect(reverse('login'))
     else:

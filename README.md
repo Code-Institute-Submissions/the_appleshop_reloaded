@@ -9,7 +9,7 @@ The Django admin panel can be accessed with following credentials.
 * login: admin
 * password: Codeinstitute
 
-* To checkout purchases, the stripe test creditcard number 4242 4242 4242 4242 with CVV 111 can be used.
+* To checkout purchases, the stripe test creditcard number 4242 4242 4242 4242 with CVV 111 and any future 'valid til date' can be used.
 
 
 [![Build Status](https://travis-ci.org/poldi2018/the_appleshop_reloaded.svg?branch=master)](https://travis-ci.org/poldi2018/the_appleshop_reloaded)
@@ -45,11 +45,9 @@ The Django admin panel can be accessed with following credentials.
 
 13. [Acknowledgements](#acknowledgements)
 
-14. [Compliance reports](#compliance-reports)
+14. [Testing](#testing)
 
-15. [Automated Testing](#automated-testing)
 
-16. [Manual Testing](#manual-testing)
 
 
 
@@ -118,19 +116,19 @@ I have added in total 4 models and one form as listed below.
 
 * HTML for browser presentation, https://www.w3.org/html/
 * CSS with SCSS and BOOTSTRAP for styling the frontend.
-* JAVASCRIPT for handling of form validation and DOM frontend
+* JAVASCRIPT for popup and form handling
 * JQUERY for manipulation of DOM elements, https://jquery.com
 * PYTHON with DJANGO 1.11.29 is used for backend engine, https://www.python.org/
 * JINJA2 used as templating language on HTML files.
 * AWS for uploaded product and review images, https://aws.amazon.com
 * HEROKU for deploying project to the web, https://heroku.com/
 * FONTAWESOME for icons, https://fontawesome.com/
-* BOOTSTRAP for using styles for forms and other elements.
+* BOOTSTRAP for using styles for forms and other elements, https://getbootstrap.com 
 * BALSAMIQ has been used for creation of wireframes, https://balsamiq.com/
 * AUTOPREFIXER was used to get the CSS vendor codes, https://autoprefixer.github.io/
-* YAML for converting back database dictionary-string into dictionary
-* TRAVIS-CI for CI/CD testing
-* GITHUB for code version handling
+* YAML for converting back database dictionary-string into dictionary, https://pyyaml.org/wiki/PyYAMLDocumentation
+* TRAVIS-CI for CI/CD testing, https://travis-ci.org
+* GITHUB for code version handling, https://github.com
 
 
 
@@ -154,7 +152,7 @@ I have added in total 4 models and one form as listed below.
 
 * The env.py file should only contain the environment variable and imports, such as:
 
-Begin file:
+```
 
 import os
 
@@ -171,7 +169,7 @@ os.environ.setdefault("AWS_ACCESS_KEY_ID", "PROVIDED BY AWS")
 os.environ.setdefault("AWS_SECRET_ACCESS_KEY", "PROVIDED BY AWS")
 
 
-End file.
+```
 
 !! Please add the env.py file to .gitignore file !!
 
@@ -215,6 +213,8 @@ To run this project locally, the following steps need to be done.
 * needs to be executed again to feed the new database with model and user information.
 
 # S3 bucket creation
+
+In order to create a S3 bucket for hosting of media- and static files, please create an account on www.aws.amazon.com.
 
 ## S3 section:
 
@@ -276,6 +276,7 @@ The following Tabs need to checked for adaptation of settings
     <AllowedHeader>Authorization</AllowedHeader>
 </CORSRule>
 </CORSConfiguration>
+
 ```
 
 * click to save CORS configuration
@@ -384,7 +385,7 @@ echo web: gunicorn appleshop.wsgi:application > Procfile
 
 heroku git:remote -a YOUR_HEROKU_APP_NAME
 
-* Push the repository content to Heroku:
+* Finally, push the repository content to Heroku:
 
 git push -u heroku master
 
@@ -430,36 +431,11 @@ https://en.wikipedia.org/wiki/List_of_apple_cultivars
 
 
 
-# Compliance reports
+# Testing
 
-* Compliance reports can be found in reports folder
+A detailed description of testing process can be found here:
 
-https://github.com/poldi2018/the_appleshop_reloaded/tree/master/static/data/reports
-
-
-
-# Automatic Testing
-
-* All methods have been tested by using Django Testkit, 98% coverage.
-
-![Coverage overview](static/data/mockups/screens/coverage-ms5.jpg)
-
-
-## A detailed coverage report is available here:
-
-https://github.com/poldi2018/the_appleshop_reloaded/tree/master/htmlcov
-
-
-* Testing with Travis CI has passed all tests.
-
-* Code is PEP8 conform, except a few lines, which were after changing not recognized by Django anymore.
-
-
-# Manual Testing
-
-* All the functionality was also tested by hand
-
-* I used firefox and Chrome
+https://github.com/poldi2018/the_appleshop_reloaded/blob/master/TESTING.md
 
 
 

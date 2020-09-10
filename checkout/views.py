@@ -18,6 +18,10 @@ stripe.api_key = settings.STRIPE_SECRET
 
 
 def update_ordered_pcs(request):
+    """
+    This method is called after successful payment to increment ordered_pcs
+    of a product.
+    """
     cart = request.session.get('cart', {})
     for id, quantity in cart.items():
         product = get_object_or_404(Product, pk=id)
@@ -27,6 +31,10 @@ def update_ordered_pcs(request):
 
 @login_required()
 def checkout(request):
+    """
+    Prepares and creates payment details for stripe. Creates OrderLineItems
+    and User address entries in database.
+    """
     cart = request.session.get('cart', {})
     if cart == {}:
         return redirect(reverse('view_cart'))

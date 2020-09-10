@@ -5,6 +5,10 @@ from django.contrib import messages
 
 
 def get_user_purchases(user):
+    """
+    Pulls user's purchased products from the past. Used to check if customer
+    is eligible to review a product.
+    """
     purchased_products = []
     orderline_items = OrderLineItem.objects.filter(user=user)
     if orderline_items:
@@ -14,6 +18,9 @@ def get_user_purchases(user):
 
 
 def all_products(request):
+    """
+    Retrieves all products to render the all products overview.
+    """
     products = Product.objects.all()
     purchased_products = []
     if request.user.is_authenticated:
@@ -24,6 +31,10 @@ def all_products(request):
 
 
 def product_detail(request, id):
+    """
+    Retrieves product details and checks if the given product has been
+    purchased by logged on user (so a review button can be offered). 
+    """
     try:
         product = get_object_or_404(Product, pk=id)
 

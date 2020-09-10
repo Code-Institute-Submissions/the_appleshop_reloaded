@@ -63,6 +63,10 @@ def make_cart_dict(productstring, quantitystring):
 
 
 def merge_carts(tmp_cart_from_db, cart):
+    """
+    Compares both carts and if products found on both carts (cart in session)
+    and cart in database. They are merged with higher product quantity. 
+    """
     merged_cart = cart
     quantity_change = False
 
@@ -78,6 +82,11 @@ def merge_carts(tmp_cart_from_db, cart):
 
 @login_required
 def sync_carts(request):
+    """
+    When user already has added products to the shopping cart and loggs in,
+    the idea is to merge that local cart with the shopping cart found in
+    database (if any).
+    """
     cart = request.session.get('cart', {})
     user_cart = None
 

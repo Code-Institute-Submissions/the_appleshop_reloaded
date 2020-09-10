@@ -2097,10 +2097,10 @@ a:active {
     color: darkred;
   }
   .wishform {
-    width: 20vw;
+    width: 26vw;
   }
   .revform {
-    width: 20vw;
+    width: 30vw;
     margin-left: 3px;
   }
   .add-wish-btn,
@@ -5780,7 +5780,7 @@ a:active {
     width: 2.6vw;
   }
   .revform {
-    width: 2.6vw;
+    width: 3.0vw;
   }
   .add-review-btn {
     padding-left: 12px;
