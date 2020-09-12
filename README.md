@@ -115,6 +115,10 @@ I have added in total 4 models and one form as listed below.
 
 # Color schema
 
+<div align="center">
+<img src="https://github.com/poldi2018/the_appleshop_reloaded/blob/master/static/images/colors.jpg" alt="color schema" />
+</div>
+
 
 # Technologies used
 
