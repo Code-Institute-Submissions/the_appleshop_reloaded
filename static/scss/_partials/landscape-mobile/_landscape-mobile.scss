@@ -56,7 +56,7 @@
 
     .mobile-navbar {
         float: left;
-        background-color:rgba(0, 53, 83, 0.75);
+        background-color: rgba(0, 53, 83, 0.75);
     }
 
     .desktop-navbar {
@@ -65,7 +65,7 @@
     }
 
     #brandicon {
-        color: rgb(182, 29, 24);
+        color: #971616;
         font-size: 6vw;
     }
 
@@ -118,11 +118,13 @@
             bottom: 18px;
             left: 15px;
         }
+
         font-size: 3.5vw;
         padding-right: 2vw;
     }
 
-    .mobile-list-items a i, .mobile-list-items a span {
+    .mobile-list-items a i,
+    .mobile-list-items a span {
         margin-right: 5.5vw;
     }
 

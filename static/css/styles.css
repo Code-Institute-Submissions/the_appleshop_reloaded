@@ -791,7 +791,8 @@ a:active {
     color: white;
     width: 100%;
   }
-  .form-group > .page-headline, .form-group > p {
+  .form-group > .page-headline,
+  .form-group > p {
     text-align: center;
     font-size: 6.0vw;
     color: white;
@@ -816,7 +817,8 @@ a:active {
     margin-left: 15px;
     font-size: 6.5vw;
   }
-  .mobile-list-items a i, .mobile-list-items a span {
+  .mobile-list-items a i,
+  .mobile-list-items a span {
     margin-right: 10vw;
   }
   .navbar-nav {
@@ -826,7 +828,7 @@ a:active {
     max-height: 380px;
   }
   #brandicon {
-    color: #b61d18;
+    color: #971616;
     font-size: 6vw;
   }
   .navbar-brand {
@@ -936,7 +938,7 @@ a:active {
   }
 }
 
-@media screen and (min-width: 415px) and (max-width: 672px) and (min-height: 600px) and (max-height: 970px) and (orientation: portrait) {
+@media screen and (min-width: 415px) and (max-width: 687px) and (max-height: 970px) and (orientation: portrait) {
   .cart-wrapper {
     padding-top: 14vw;
     padding-bottom: 25vw;
@@ -1712,7 +1714,7 @@ a:active {
     max-height: 490px;
   }
   #brandicon {
-    color: #b61d18;
+    color: #971616;
     font-size: 6vw;
   }
   .navbar-brand {
@@ -2607,7 +2609,7 @@ a:active {
     max-height: 380px;
   }
   #brandicon {
-    color: #b61d18;
+    color: #971616;
     font-size: 6vw;
   }
   .navbar-brand {
@@ -3498,7 +3500,7 @@ a:active {
     margin-right: 2vw;
   }
   #brandicon {
-    color: #b61d18;
+    color: #971616;
     font-size: 6vw;
   }
   .navbar-brand {
@@ -3541,7 +3543,8 @@ a:active {
     font-size: 3.5vw;
     padding-right: 2vw;
   }
-  .mobile-list-items a i, .mobile-list-items a span {
+  .mobile-list-items a i,
+  .mobile-list-items a span {
     margin-right: 5.5vw;
   }
   .navbar .navbar-nav > li > a {
@@ -4417,7 +4420,7 @@ a:active {
     margin-right: 2vw;
   }
   #brandicon {
-    color: #b61d18;
+    color: #971616;
     font-size: 3vw;
   }
   .navbar-brand {
@@ -4571,7 +4574,7 @@ a:active {
 
 @media screen and (min-height: 415px) and (min-width: 601px) and (max-width: 767px) and (orientation: landscape) {
   .cart-wrapper {
-    padding-top: 6vw;
+    padding-top: 10vw;
     padding-bottom: 2vw;
     background-color: #003553;
     min-height: 100vh;
@@ -4658,7 +4661,7 @@ a:active {
     width: 22vw;
   }
   .checkout-wrapper {
-    padding-top: 6vw;
+    padding-top: 10vw;
     padding-bottom: 2vw;
     background-color: #003553;
     min-height: 100vh;
@@ -4755,7 +4758,7 @@ a:active {
     color: whitesmoke;
   }
   .login-wrapper {
-    padding-top: 6vw;
+    padding-top: 10vw;
     background-color: #003553;
     min-height: 100vh;
   }
@@ -4810,7 +4813,7 @@ a:active {
   .password-reset-wrapper {
     -ms-flex-line-pack: center;
         align-content: center;
-    padding-top: 6vw;
+    padding-top: 10vw;
     padding-bottom: 2vw;
     background-color: #003553;
     min-height: 100vh;
@@ -4885,7 +4888,7 @@ a:active {
     color: darkred;
   }
   .product-wrapper {
-    padding-top: 6vw;
+    padding-top: 10vw;
     padding-bottom: 2vw;
     background-color: #003553;
     min-height: 100vh;
@@ -4961,10 +4964,10 @@ a:active {
     width: 100%;
   }
   .profile-wrapper {
-    padding-top: 2vw;
+    padding-top: 10vw;
     padding-bottom: 2vw;
     background-color: #003553;
-    min-height: 93vh;
+    min-height: 100vh;
   }
   .nav-tabs {
     padding-top: 1vw;
@@ -5056,7 +5059,7 @@ a:active {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     width: 100%;
-    padding-top: 6vw;
+    padding-top: 10vw;
     padding-bottom: 2vw;
     background-color: #003553;
     min-height: 100vh;
@@ -5089,7 +5092,7 @@ a:active {
     color: darkred;
   }
   .reviews-wrapper {
-    padding-top: 6vw;
+    padding-top: 10vw;
     padding-bottom: 2vw;
     background-color: #003553;
     min-height: 100vh;
@@ -5268,7 +5271,7 @@ a:active {
     color: darkred;
   }
   .wishlist-wrapper {
-    padding-top: 6vw;
+    padding-top: 10vw;
     padding-bottom: 2vw;
     background-color: #003553;
     min-height: 100vh;
@@ -5336,7 +5339,7 @@ a:active {
     background-color: rgba(0, 53, 83, 0.75);
   }
   #brandicon {
-    color: #b61d18;
+    color: #971616;
     font-size: 3vw;
   }
   .navbar-brand {
@@ -5456,6 +5459,9 @@ a:active {
   .badge-wishlist {
     border-radius: 3vw;
     font-size: 2.2vw;
+    position: absolute;
+    top: 0vw;
+    left: 7.0vw;
   }
   #cart-badge-bottom {
     position: absolute;
@@ -5468,6 +5474,9 @@ a:active {
   .badge-cart {
     border-radius: 3vw;
     font-size: 2.2vw;
+    position: absolute;
+    top: 0vw;
+    left: 7.0vw;
   }
   .badge {
     padding-right: 5px;
@@ -6260,7 +6269,7 @@ a:active {
     margin-right: 2vw;
   }
   #brandicon {
-    color: #b61d18;
+    color: #971616;
     font-size: 3vw;
   }
   .navbar {

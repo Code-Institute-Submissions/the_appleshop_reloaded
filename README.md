@@ -29,23 +29,25 @@ The Django admin panel can be accessed with following credentials.
 
 5. [Database schema](#database-schema)
 
-6. [Technologies used](#technologies-used)
+6. [Color schema](#color-schema)
 
-7. [Wireframes](#wireframes)
+7. [Technologies used](#technologies-used)
 
-8. [Cloning project](#cloning-project)
+8. [Wireframes](#wireframes)
 
-9. [S3 bucket creation](#s3-bucket-creation)
+9. [Cloning project](#cloning-project)
 
-10. [Deployment on Heroku](#deployment-on-heroku)
+10. [S3 bucket creation](#s3-bucket-creation)
 
-11. [Future features to implement](#future-features-to-implement)
+11. [Deployment on Heroku](#deployment-on-heroku)
 
-12. [Current issues](#current-issues)
+12. [Future features to implement](#future-features-to-implement)
 
-13. [Acknowledgements](#acknowledgements)
+13. [Current issues](#current-issues)
 
-14. [Testing](#testing)
+14. [Acknowledgements](#acknowledgements)
+
+15. [Testing](#testing)
 
 
 
@@ -110,6 +112,8 @@ I have added in total 4 models and one form as listed below.
 
 ![Relational database schema](static/data/mockups/screens/Relational-database-schema.jpg)
 
+
+# Color schema
 
 
 # Technologies used

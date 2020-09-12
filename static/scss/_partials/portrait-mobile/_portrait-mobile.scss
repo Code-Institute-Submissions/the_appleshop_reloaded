@@ -30,10 +30,12 @@
         width: 100%;
     }
 
-    .form-group > .page-headline, .form-group > p {
+    .form-group>.page-headline,
+    .form-group>p {
         text-align: center;
         font-size: 6.0vw;
         color: white;
+
         padding: {
             top: 6vw;
             bottom: 4vw;
@@ -82,7 +84,8 @@
 
     }
 
-    .mobile-list-items a i, .mobile-list-items a span {
+    .mobile-list-items a i,
+    .mobile-list-items a span {
         margin-right: 10vw;
     }
 
@@ -95,7 +98,7 @@
     }
 
     #brandicon {
-        color: rgb(182, 29, 24);
+        color: #971616;
         font-size: 6vw;
     }
 
