@@ -2333,10 +2333,10 @@ a:active {
     transition: color .3s ease-in-out;
   }
   .reviews-wrapper {
-    padding-top: 2vw;
+    padding-top: 10vw;
     padding-bottom: 20vw;
     background-color: #003553;
-    min-height: 92vh;
+    min-height: 100vh;
   }
   .edit-review-wrapper {
     padding-bottom: 25vw;
