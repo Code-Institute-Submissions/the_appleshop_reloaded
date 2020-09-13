@@ -19,37 +19,64 @@ The Django admin panel can be accessed with following credentials.
 # Table of Contents
 
 
-1. [User stories](#user-stories)
+1. [UX/UI](#ux/ui)
 
-2. [Shop features](#shop-features)
+2. [Wireframes](#wireframes)
 
-3. [Implemented Apps](#implemented-apps)
+3. [User stories](#user-stories)
 
-4. [Models](#models)
+4. [Shop features](#shop-features)
 
-5. [Database schema](#database-schema)
+5. [Implemented Apps](#implemented-apps)
 
-6. [Color schema](#color-schema)
+6. [Models](#models)
 
-7. [Technologies used](#technologies-used)
+7. [Database schema](#database-schema)
 
-8. [Wireframes](#wireframes)
+8. [Color schema](#color-schema)
 
-9. [Cloning project](#cloning-project)
+9. [Technologies used](#technologies-used)
 
-10. [S3 bucket creation](#s3-bucket-creation)
+10. [Cloning project](#cloning-project)
 
-11. [Deployment on Heroku](#deployment-on-heroku)
+11. [S3 bucket creation](#s3-bucket-creation)
 
-12. [Future features to implement](#future-features-to-implement)
+12. [Deployment on Heroku](#deployment-on-heroku)
 
-13. [Current issues](#current-issues)
+13. [Future features to implement](#future-features-to-implement)
 
-14. [Acknowledgements](#acknowledgements)
+14. [Current issues](#current-issues)
 
-15. [Testing](#testing)
+15. [Acknowledgements](#acknowledgements)
+
+16. [Testing](#testing)
 
 
+# Goal
+
+For my Full-Stack-Development project I decided to make a shop to offer various, rarely found and delicious apples.
+The shop is intented to provide an easy to understand structure and process to make successful purchases.
+
+
+
+# UX/UI
+
+I orientated myself on different shop sites (e.g. ZooPlus) to decide on a proper and easy to use UX / UI design.
+
+The desktop version hosts a top nav bar which contains all the major links to access the different functionalities.
+
+The mobile version (portrait) contains these links from desktop version in a drop down menu, typically seen on mobile applications. Also a bottom nav bar has been implemented to access some of the major functionality even more easily.
+
+On the tablet version (portrait) the special bottom nav bar contains all the link buttons,
+which fit nicely over the full width of a tablet.
+
+
+
+# Wireframes
+
+* The wireframes can be accessed in this folder:
+
+    https://github.com/poldi2018/the_appleshop_reloaded/tree/master/static/data/mockups
 
 
 
@@ -137,15 +164,6 @@ I have added in total 4 models and one form as listed below.
 * YAML for converting back database dictionary-string into dictionary, https://pyyaml.org/wiki/PyYAMLDocumentation
 * TRAVIS-CI for CI/CD testing, https://travis-ci.org
 * GITHUB for code version handling, https://github.com
-
-
-
-# Wireframes
-
-* The wireframes can be accessed in this folder:
-
-    https://github.com/poldi2018/the_appleshop_reloaded/tree/master/static/data/mockups
-
 
 
 # Cloning project
