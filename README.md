@@ -19,7 +19,7 @@ The Django admin panel can be accessed with following credentials.
 # Table of Contents
 
 
-1. [UX/UI](#ux/ui)
+1. [UI](#ui)
 
 2. [Wireframes](#wireframes)
 
@@ -59,7 +59,7 @@ The shop is intented to provide an easy to understand structure and process to m
 
 
 
-# UX/UI
+# UI
 
 I orientated myself on different shop sites (e.g. ZooPlus) to decide on a proper and easy to use UX / UI design.
 
